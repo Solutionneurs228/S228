@@ -72,11 +72,10 @@
 
     @section('content')
 
-        <a href="{{ route('admin') }}">page admin</a>
 
         <div class="session hook">
             <div class="hook-content">
-                <h1 class="big-title hook-title">Solutionneurs228</h1>
+                <h1 class="big-title">Solutionneurs228</h1>
                 <h3 class="hook-tag">un bon travail en un temps reccord !</h3>
                 <p class="hook-description">
                     Bienvenue chez SOLUTIONNEURS228,
@@ -89,7 +88,7 @@
                     Découvrez ce
                     <a href="https://wa.me/+22892671533?text=salut%2C%20je%20souhaite%20m'informer%20sur%20votre%20système%20de%20réduction%20de%20prix."
                         target="_blank">
-                        💬 système de réduction ici
+                        💬 système de réduction des prix
                     </a>
                 </p>
             </div>
@@ -143,7 +142,6 @@
                             </div>
 
                             <div class="wrapperText">
-                                {{-- <h2 class="card-title title"> --}}
                                 <div>
                                     <h5 class="card-title">
                                         Photographie & Vidéographie
@@ -170,7 +168,6 @@
                             </div>
 
                             <div class="wrapperText">
-                                {{-- <h2 class="card-title title"> --}}
                                 <div>
                                     <h5 class="card-title">
                                         Développement Web
@@ -197,7 +194,6 @@
                             </div>
 
                             <div class="wrapperText">
-                                {{-- <h2 class="card-title title"> --}}
                                 <div>
                                     <h5 class="card-title">
                                         Infographie
@@ -234,7 +230,7 @@
                 <div class="box">
 
                     <div>
-                        <div class="icone-titre">
+                        <div class="icone-title">
                             <span class="icon"><i class="fa-solid fa-2x fa-computer"></i></span> <!-- Ordinateur -->
                             <h5 class="formation-card-title">Initiation à l'informatique</h5>
                         </div>
@@ -252,7 +248,7 @@
                 <div class="box">
 
                     <div>
-                        <div class="icone-titre">
+                        <div class="icone-title">
                             <span class="icon"><i class="fa-solid fa-2x fa-computer"></i></span> <!-- Ordinateur -->
                             <h5 class="formation-card-title">Informatique Avancée</h5>
                         </div>
@@ -270,7 +266,7 @@
                 <div class="box">
 
                     <div>
-                        <div class="icone-titre">
+                        <div class="icone-title">
                             <span class="icon"><i class="fa-solid fa-2x fa-computer"></i></span> <!-- Ordinateur -->
                             <h5 class="formation-card-title">Développement Web</h5>
                         </div>
@@ -287,7 +283,7 @@
                 <div class="box">
 
                     <div>
-                        <div class="icone-titre">
+                        <div class="icone-title">
                             <span class="icon"><i class="fa-solid fa-2x fa-computer"></i></span> <!-- Ordinateur -->
                             <h5 class="formation-card-title">Montage Vidéo</h5>
                         </div>
@@ -304,7 +300,7 @@
                 <div class="box">
 
                     <div>
-                        <div class="icone-titre">
+                        <div class="icone-title">
                             <span class="icon"><i class="fa-solid fa-2x fa-computer"></i></span> <!-- Ordinateur -->
                             <h5 class="formation-card-title">Infographie</h5>
                         </div>
@@ -322,7 +318,7 @@
                 <div class="box">
 
                     <div>
-                        <div class="icone-titre">
+                        <div class="icone-title">
                             <span class="icon"><i class="fa-solid fa-2x fa-computer"></i></span> <!-- Ordinateur -->
                             <h5 class="formation-card-title">Photoshop</h5>
                         </div>
@@ -405,6 +401,7 @@
             </div>
 
 
+            <a href="{{ route('admin') }}">page admin</a>
         </div>
 
 
