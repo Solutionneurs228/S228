@@ -611,32 +611,164 @@ i {
 
 
 
-/* Styles par défaut pour les desktops (>= 1200px) */
 
+    /* 1 Tablette large (entre 992px et 1199px) */
 @media (max-width: 1199px) {
-    /* Tablette large (entre 992px et 1199px) */
+
     .boxes {
         -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
     }
 
-    .big-title{
-        color: red;
-        }
+
+#carouselExampleIndicators {
+    bottom: 0rem;
+}
+.carousel-indicators {
+    bottom: 12rem;
+
+}
+.session {
+    margin: 3rem 2.5rem;
+}
+.hook{
+    min-height: auto;
+
+}
+
   }
 
+
+
+
+
+/* 2 Tablette portrait (entre 768px et 991px) */
   @media (max-width: 991px) {
-    /* Tablette portrait (entre 768px et 991px) */
+
+    .nav-home-img {
+        height: auto;
+    }
     .boxes {
         -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .big-title{
+          font-size: 2.2rem;
+          margin: 0px 0px 40px 0px;
+        }
+        .hook-content{
+            width: 80%;
+        }
+        .hook-content .big-title {
+            margin-top: 4rem;
+        }
+        .home-title {
+            font-size: 2rem;
+        }
+        .home-description {
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+        }
+        #carouselExampleIndicators {
+            bottom: -2rem;
+        }
+        .carousel-indicators {
+            bottom: 10rem;
+
+        }
+        .session {
+            margin: 2rem;
+        }
+        .formations-boxes {
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 5rem;
+        }
+        .adress{
+            font-size: 15px;
+        }
+
   }
 
+
+
+
+  /* 3 Mobile paysage (entre 576px et 767px) */
   @media (max-width: 767px) {
-    /* Mobile paysage (entre 576px et 767px) */
+    .session {
+        margin: 1rem 2rem;
+    }
+    .hook-content{
+        width: 90%;
+    }
+    .hook-content .big-title {
+        margin-top: 2rem;
+    }
+.btn{
+    font-size: 15px;
+}
+      .big-title{
+        font-size: 2rem;
+        margin: 35px 0px;
+      }
+      .home-title {
+          font-size: 1.5rem;
+          margin-bottom: 0px;
+      }
+      .home-description {
+          font-size: 1.1rem;
+          margin-bottom: 0.2rem;
+      }
+      #carouselExampleIndicators {
+          bottom: -2rem;
+      }
+      .carousel-indicators {
+          bottom: 5rem;
+
+      }
+      .carousel-caption .hook-btn-grp{
+        margin-top: 0.6rem;
+      }
+      .contact-bloc-content{
+        display: block;
+        width: 90%;
+      }
+      .adress .adress-group div{
+        text-align: left;
+      }
   }
 
+
+    /* 4 Mobile petit écran (moins de 576px) */
   @media (max-width: 575px) {
-    /* Mobile petit écran (moins de 576px) */
+    .big-title{
+
+          color: red;
+      }
+      .carousel-indicators {
+        bottom: 2rem;
+
+    }
+    .big-title{
+        font-size: 2rem;
+        margin: 35px 0px;
+      }
+      .home-title {
+          font-size: 1.1rem;
+      }
+
+      .home-description {
+          font-size: 1rem;
+          margin-bottom: 0.3rem;
+      }
+      .formations-boxes {
+        grid-template-columns: 1fr;
+        -ms-grid-columns: (1fr);
+    }
+    .boxes {
+display: block;
+    }
+    .box{
+        margin-bottom: 2rem;
+    }
   }
