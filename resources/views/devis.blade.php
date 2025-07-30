@@ -16,7 +16,11 @@
                 <h1 class="big-title">Demande de devis</h1>
             </div>
 
-            <form class="">
+            <form class=""
+            action="{{ route('devis.store') }}"
+            method="POST">
+            @csrf
+
                 <div class="form devis-form">
 
                         <div class="form-rows">
@@ -25,7 +29,16 @@
                                         </div> --}}
 
                             <div>
-                                <input type="text" placeholder="votre nom complet" class="contact-input">
+                                <input type="text" name="name" placeholder="votre nom complet" class="contact-input">
+                            </div>
+                        </div>
+                        <div class="form-rows">
+                            {{-- <div>
+                                            <label for="" class="contact-label">Nom Complet</label>
+                                        </div> --}}
+
+                            <div>
+                                <input type="text" name="adress" placeholder="votre ville et pays ex : Lomé-Togo" class="contact-input">
                             </div>
                         </div>
                         <div class="form-rows">
@@ -33,7 +46,7 @@
                                             <label for="" class="contact-label">Télephone</label>
                                         </div> --}}
                             <div>
-                                <input type="text" placeholder="votre N° de télephone" class="contact-input">
+                                <input type="text" name="phone" placeholder="votre N° de télephone" class="contact-input">
                             </div>
                         </div>
                         <div class="form-rows">
@@ -41,7 +54,7 @@
                                             <label for="" class="contact-label">service désiré</label>
                                         </div> --}}
                             <div>
-                                <input type="text" placeholder="lequel de nos services désirez-vous"
+                                <input type="text" name="service" placeholder="lequel de nos services désirez-vous"
                                     class="contact-input">
                             </div>
                         </div>
@@ -50,7 +63,7 @@
                                             <label for="" class="contact-label">E-mail</label>
                                         </div> --}}
                             <div>
-                                <input type="text" placeholder="votre adresse E-mail" class="contact-input">
+                                <input type="email" name="email" placeholder="votre adresse E-mail" class="contact-input">
                             </div>
                         </div>
                         <div class="form-rows">
@@ -59,7 +72,7 @@
                                     </div> --}}
 
                            <div>
-                            <textarea name="" id="" placeholder="Décrivez votre besoins ici" cols="30" rows="3"
+                            <textarea name="message" id="" placeholder="Décrivez votre besoins ici" cols="30" rows="3"
                             class="contact-input"></textarea>
                            </div>
                         </div>

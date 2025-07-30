@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\NoteController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DevisController;
 // use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,9 +21,8 @@ Route::get('/', function () {
 Route::get('/admin', function () {
     return view('admin');
 })->name('admin');
-Route::get('/devis', function () {
-    return view('devis');
-})->name('devis');
+
+
 
 Route::get('/services/mir', function () {
     return view('services/services-mir');
@@ -49,7 +49,10 @@ Route::get('/contact', function () {
 })->name('contact');
 Route::post('/contact', [ContactController::class,'store'])->name('contact.store');
 
-
+Route::get('/devis', function () {
+    return view('devis');
+})->name('devis');
+Route::post('/devis', [DevisController::class,'store'])->name('devis.store');
 // Route::redirect('/', 'home')->name('home');
 
 

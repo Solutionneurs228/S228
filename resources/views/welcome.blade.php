@@ -378,7 +378,7 @@
                                         <label for="" class="contact-label">Télephone</label>
                                     </div> --}}
                                     <div>
-                                        <input type="number" name="phone" placeholder="votre télephone" class="contact-input" required>
+                                        <input type="text" name="phone" placeholder="votre télephone" class="contact-input" required>
                                     </div>
                                 </div>
                                 <div class="contact-rows">

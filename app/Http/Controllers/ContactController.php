@@ -12,6 +12,10 @@ class ContactController extends Controller
 $validated = $request->validate([
     'name' => 'required|string|max:100',
     'phone' => 'nullable|string|max:20',
+
+    // dans le formulaire de contact il peut ne pas avoir service
+    // 'service' => 'nullable|string|max:100',
+
     'email' => 'required|email|max:100',
     'message' => 'required|string|max:1000',
 
