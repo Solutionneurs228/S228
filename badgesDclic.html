@@ -1,0 +1,248 @@
+<style>
+    /* .row {
+    display: flex
+;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.site-menu-list {
+    list-style: none;
+    margin: 0 -.2rem;
+    padding: 1rem 0 0 0;
+    font-size: .9rem;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+ul, ol {
+    padding-left: 2rem;
+}
+ol, ul, dl {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.site-menu-list li {
+    display: inline-block;
+    margin: .2rem;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+.site-menu-list {
+    list-style: none;
+    margin: 0 -.2rem;
+    padding: 1rem 0 0 0;
+    font-size: .9rem;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+.site-menu-list li.item-coursepanel a, .site-menu-list li.item-dashboard a, .site-menu-list li.item-managecoursesandcats a {
+    color: #fff;
+    background-color: #144858;
+    border-color: #144858;
+}
+.btn-sm.isicon, .btn-group-sm>.isicon.btn, .style-default .block .btn.isicon, #block-region-content .block .btn.isicon {
+    padding: 0 .6rem;
+}
+.btn.isicon, .button.isicon, button.isicon, [type="button"].isicon, a[data-action="addstandardtag"].isicon, .tag-management-box .addtomyinterests.isicon, .tag-management-box .flagasinappropriate.isicon, .tag-management-box .edittag.isicon, .tag-management-box .removefrommyinterests.isicon, .addresourcemodchooser a.isicon, .add-sections.isicon {
+    padding: 0 1.28rem;
+}
+.btn-sm, .btn-group-sm>.btn, .style-default .block .btn, #block-region-content .block .btn {
+    padding: .27rem .6rem;
+    font-size: .9rem;
+    line-height: 1.485rem;
+    border-radius: .2rem;
+}
+.btn, .button, button, [type="button"], a[data-action="addstandardtag"], .tag-management-box .addtomyinterests, .tag-management-box .flagasinappropriate, .tag-management-box .edittag, .tag-management-box .removefrommyinterests, .addresourcemodchooser a, .add-sections {
+    transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0 ease-in-out;
+    color: #fff;
+    background-color: #435764;
+    border-color: #394a55;
+    padding: .37rem 1.28rem;
+    font-size: 1rem;
+    line-height: 1.65;
+    border-radius: .2rem;
+    display: inline-block;
+    border-width: 0;
+    border-style: solid;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none !important;
+    outline: .2rem solid transparent;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none!important;
+    -ms-box-shadow: none!important;
+    box-shadow: none !important;
+}
+.btn {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.btn-sm.isicon .btn-icon, .btn-group-sm>.isicon.btn .btn-icon, .style-default .block .btn.isicon .btn-icon, #block-region-content .block .btn.isicon .btn-icon
+Specificity: (0,4,0)
+ {
+    position: relative;
+    left: -.6rem;
+    display: inline-block;
+    width: 1.8rem;
+    padding: .27rem 0;
+    background-color: rgba(0, 0, 0, .21);
+    -webkit-border-radius: .2rem 0 0 .2rem;
+    -moz-border-radius: .2rem 0 0 .2rem;
+    -ms-border-radius: .2rem 0 0 .2rem;
+    border-radius: .2rem 0 0 .2rem;
+} */
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f3;
+  color: #333;
+}
+
+header {
+  background-color: #003366;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  background-color: #005599;
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 20px;
+  background-color: white;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li::before {
+  content: "✔️ ";
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #003366;
+  color: white;
+}
+
+
+</style>
+
+<!-- <div class="row">
+    <div class="col-md-12" style="min-height:0;">
+        <ul class="site-menu-list dropdown-list">
+            <li class="item-dashboard"><a class="btn btn-sm isicon" href="https://dclic.francophonie.org/my"><span
+                        class="btn-icon"><i class="fa fa-tachometer"></i></span><span class="item-text">Tableau de
+                        bord</span></a></li>
+            <li class="item-frontpage"><a class="btn btn-sm isicon"
+                    href="https://dclic.francophonie.org/?redirect=0"><span class="btn-icon"><i
+                            class="fa fa-home"></i></span><span class="item-text">Accueil du site</span></a></li>
+            <li class="item-badges"><a class="btn btn-sm isicon"
+                    href="https://dclic.francophonie.org/badges/mybadges.php"><span class="btn-icon"><i
+                            class="fa fa-bookmark"></i></span><span class="item-text">Badges</span></a></li>
+            <li class="item-mycourses"><a class="btn btn-sm isicon"
+                    href="https://dclic.francophonie.org/my/courses.php"><span class="btn-icon"><i
+                            class="fa fa-graduation-cap"></i></span><span class="item-text">Mes cours</span></a></li>
+            <li class="item-courses"><a class="btn btn-sm isicon" href="https://dclic.francophonie.org/course/"><span
+                        class="btn-icon"><i class="fa fa-book"></i></span><span class="item-text">Tous les
+                        cours</span></a></li>
+        </ul>
+    </div>
+</div> -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solutionneur IT - Technicien à distance</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Solutionneur IT</h1>
+    <p>Votre technicien en maintenance informatique à distance</p>
+  </header>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="apropos">
+    <h2>À propos</h2>
+    <p>Technicien informatique expérimenté, j'interviens à distance pour résoudre vos problèmes informatiques, optimiser vos machines et assurer votre sécurité numérique.</p>
+  </section>
+
+  <section id="services">
+    <h2>Nos services</h2>
+    <ul>
+      <li>✅ Assistance & dépannage à distance</li>
+      <li>✅ Installation de logiciels & antivirus</li>
+      <li>✅ Nettoyage & optimisation du PC</li>
+      <li>✅ Sauvegarde et récupération de données</li>
+      <li>✅ Sécurisation et conseils personnalisés</li>
+    </ul>
+  </section>
+
+  <section id="tarifs">
+    <h2>Tarifs</h2>
+    <ul>
+      <li>Diagnostic complet : 5 000 FCFA</li>
+      <li>Installation Windows + pilotes : 10 000 FCFA</li>
+      <li>Nettoyage PC lent : 6 000 FCFA</li>
+      <li>Pack mensuel assistance illimitée : 15 000 FCFA</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📱 WhatsApp : <a href="https://wa.me/22890000000">+228 90 00 00 00</a></p>
+    <p>📧 Email : contact@solutionneur-it.com</p>
+    <p>💬 Facebook : <a href="https://facebook.com/solutionneurIT">Solutionneur IT</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Solutionneur IT - Tous droits réservés</p>
+  </footer>
+</body>
+</html>

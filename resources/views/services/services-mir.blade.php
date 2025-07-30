@@ -95,11 +95,11 @@
                         </div>
 
                         <div>
+                            <ul>
+                                <li>votre ordinateur est en panne ?</li>
+                                <li>ou vous ne comprenez plus son fonctionnement ?</li>
+                            </ul>
                             <p>
-                                votre ordinateur est en panne ?
-                                <br>
-                                ou vous ne comprenez plus son fonctionnement ?
-                                <br>
                                 Nous vous offrons un service fiable et abordable pour garantir le bon fonctionnement de
                                 vos
                                 ordinateurs
@@ -136,11 +136,11 @@
                         </div>
 
                         <div>
+                            <ul>
+                                <li>Vous voulez mettre en place votre parc informatique ?</li>
+                                <li>ou juste qu'il vous faut un (des) ordinateur(s) pour votre travail ?</li>
+                            </ul>
                             <p>
-                                Vous voulez mettre en place votre parc informatique ?
-                                <br>
-                                ou juste qu'il vous faut un (des) ordinateur(s) pour votre travail ?
-                                <br>
                                 nous somme bien indiqués pour voir quel(s) ordinateur(s) il vous faut (bureaux ou portatif),
                                 de
                                 quelles performences minimales, en fontion de votre travail quels sont les logiciels à y
@@ -170,13 +170,13 @@
                         </div>
 
                         <div>
+                            <ul>
+                                <li>vous voulez informatiser votre travail (entreprise ou particulier) ?</li>
+                                <li>ou votre est déjà informatisé mais il vous faut la meilleur façon de tirer profit de
+                                    l'informatique ?</li>
+                            </ul>
                             <p>
-                                vous voulez informatiser votre travail (entreprise ou particulier) ?
-                                <br>
-                                ou votre est déjà informatisé mais il vous faut la meilleur façon de tirer profit de
-                                l'informatique ?
-                                <br>
-                                Nous comprenons d'abord votre travail et en suite nous nous occupons du reste
+                                Nous comprenons d'abord votre travail et en suite nous nous occupons du reste.
                             </p>
                         </div>
 
@@ -205,11 +205,11 @@
                         </div>
 
                         <div>
+                            <ul>
+                                <li>votre entreprise a un nombre d'ordinateurs dont le travail est complémentaire ?</li>
+                                <li> ou vous avez des collaborateurs avec qui vous devez coopérer à distance ?</li>
+                            </ul>
                             <p>
-                                votre entreprise a un nombre d'ordinateurs dont le travail est complémentaire ?
-                                <br>
-                                ou vous avez des collaborateurs avec qui vous devez coopérer à distance ?
-                                <br>
                                 Là encore nous comprenons d'abord votre travail et nous voyons quel système de informatique
                                 vous
                                 convient.
@@ -225,16 +225,10 @@
                             <a href="">whatsapp</a>
                             <a href="">passer par Mail</a>
                         </div>
-
-                    </section>
-
-
-                    <section class="section">
                         <div class="service-links-group">voulez vous voir <a href="">nos formations ?</a></div>
-                        chez nous il est important que vous comprenez d'abord
-                        <br>discutez avec nous
-                        <br>Notre slogan c'est : un bon travail en un temps record !!!
+                        <div class="slogan">Notre slogan : un bon travail en un temps record !!!</div>
                     </section>
+
 
                 </div>
 
@@ -242,7 +236,6 @@
 
 
             </div>
-            {{-- <button class="btn btn-primary" type="submit">contacter nous</button> --}}
 
         </div>
 

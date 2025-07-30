@@ -49,7 +49,7 @@
                         <div>
                             <a href="#assistance1">
                                 <span class="titleNumber">03 . </span>
-                                <span class="sommaireText">Site web CV</span>
+                                <span class="sommaireText">Site web CV (portfolio)</span>
                             </a>
                         </div>
 
@@ -67,14 +67,13 @@
                         </div>
 
                         <div>
+                            <ul>
+                                <li>Que vous soyez une entreprise ; petite ou grande, un comerçant ou un particuler,
+                                vous avez besoins d'un site web pour exposer vos activités et/ou vos produits à la vue du monde entier.</li>
+                                <li>Vous ête plutôt dans l'E-comerce ; Ne voyez-vous pas à quel point il vous est indispensable d'avoir un site web
+                                où l'on peut visiter votre boutique en ligne et y éffectuer des commandes directement et d'une manière proffessionelle ?</li>
+                            </ul>
                             <p>
-                                Que vous soyez une entreprise ; petite ou grande, un comerçant ou un particuler,
-                                vous avez besoins d'un site web pour exposer vos activités et/ou vos produits à la vue du monde entier.
-                                <br>
-                                Vous ête plutôt dans l'E-comerce ; Ne voyez-vous pas à quel point il vous est indispensable d'avoir un site web
-                                où l'on peut visiter votre boutique en ligne et y éffectuer des commandes directement et d'une manière proffessionelle ?
-                                <br>
-                                <br>
                                 Nous somme bien indiqués pour vous créer un <b>site web sur mesure</b>.
                                 Nous prénons soins de comprendre vos besoins, vos préférences, les fonctionnalités que vous desirez.
                                 avant de passer à la conception.
@@ -126,7 +125,7 @@
                         <div class="sectionTitle">
                             <span class="titleNumber">03 . </span>
                             <h4 class="titleText">
-                                Site web CV
+                                Site web CV (portfolio)
                                 <div class="underline">
                                     <span></span>
                                 </div>
@@ -134,18 +133,16 @@
                         </div>
 
                         <div>
+
+                            <p>savez vous que vous pouvez organiser votre CV comme un site web ?</p>
+                            <ul>
+                                <li>Ceci vous permet d'y mettre toutes les informations séduisante avec, des photos, vidéos si nécéssaires et
+                                toutes autres illustrations.</li>
+                                <li>Pensez à comment votre employeur sera exité d'aller visiter un site web CV ; une 1ère</li>
+                                <li> pensez à quel impact célà fera sur sa décision</li>
+                                <li>nous pouvons vous assurer que les autres CV n'aurons aucun goût à ses yeux.</li>
+                            </ul>
                             <p>
-                               savez vous que vous pouvez organiser votre CV comme un site web ?
-                                <br>
-                                Ceci vous permet d'y mettre toutes les informations séduisante avec, des photos, vidéos si nécéssaires,
-                                toutes autres illustrations.
-                                <br>
-                                Pensez à comment votre employeur sera exité d'aller visiter un site web CV ; une 1ère
-                                <br>
-                                pensez à quel impact célà fera sur sa décision
-                                <br>
-                                nous pouvons vous assurer que les autres CV n'aurons aucun goût à ses yeux.
-                                <br>
                                 ça vous tente de <a class="links" href="">voir le mien ?</a>
                             </p>
                         </div>
@@ -160,13 +157,9 @@
                             <a href="">passer par Mail</a>
                         </div>
 
-                    </section>
-
-                    <section class="section">
                         <div class="service-links-group">voulez vous voir <a href="">nos formations ?</a></div>
-                        chez nous il est important que vous comprenez d'abord
-                        <br>discutez avec nous
-                        <br>Notre slogan c'est : un bon travail en un temps record !!!
+                        <div class="slogan">Notre slogan : un bon travail en un temps record !!!</div>
+
                     </section>
 
                 </div>
@@ -175,7 +168,6 @@
 
 
             </div>
-            {{-- <button class="btn btn-primary" type="submit">contacter nous</button> --}}
 
         </div>
 

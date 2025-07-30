@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\NoteController;
+use App\Http\Controllers\ContactController;
 // use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -43,7 +44,10 @@ Route::get('/services/infographie', function () {
     return view('services/services-infographie');
 })->name('services/infographie');
 
-
+Route::get('/contact', function () {
+    return view('welcome');
+})->name('contact');
+Route::post('/contact', [ContactController::class,'store'])->name('contact.store');
 
 
 // Route::redirect('/', 'home')->name('home');

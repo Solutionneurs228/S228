@@ -109,7 +109,7 @@
                         <div class="webContent">
 
                             <div class="contentImg">
-                                <a href="#" target="_blank"><img src="images/mir1.JPG" class="contentImage"></a>
+                                <a href="{{ route('services/mir') }}" target="_blank"><img src="images/mir1.JPG" alt="service de maintenance" class="contentImage"></a>
                             </div>
 
                             <div class="wrapperText">
@@ -138,7 +138,7 @@
                         <div class="webContent">
 
                             <div class="contentImg">
-                                <a href="#" target="_blank"><img src="images/photo1.JPG" class="contentImage"></a>
+                                <a href="{{ route('services/photographie') }}" target="_blank"><img src="images/photo1.JPG" alt="service de photographie" class="contentImage"></a>
                             </div>
 
                             <div class="wrapperText">
@@ -152,7 +152,7 @@
                                 </div>
                                 <div class="btn-right">
 
-                                    <a href="{{ route('services/mir') }}" class="btn btn-primary">voir la page</a>
+                                    <a href="{{ route('services/photographie') }}" class="btn btn-primary">voir la page</a>
                                 </div>
                             </div>
 
@@ -164,7 +164,7 @@
                         <div class="webContent">
 
                             <div class="contentImg">
-                                <a href="#" target="_blank"><img src="images/web1.JPG" class="contentImage"></a>
+                                <a href="{{ route('services/webdev') }}" target="_blank"><img src="images/web1.JPG" alt="service web dev" class="contentImage"></a>
                             </div>
 
                             <div class="wrapperText">
@@ -178,7 +178,7 @@
                                 </div>
                                 <div class="btn-right">
 
-                                    <a href="{{ route('services/mir') }}" class="btn btn-primary">voir la page</a>
+                                    <a href="{{ route('services/webdev') }}" class="btn btn-primary">voir la page</a>
                                 </div>
                             </div>
 
@@ -189,7 +189,7 @@
                     <div class="box">
                         <div class="webContent">
                             <div class="contentImg">
-                                <a href="#" target="_blank"><img src="images/infographie.JPG"
+                                <a href="{{ route('services/infographie') }}" target="_blank"><img src="images/infographie.JPG" alt="service infographie"
                                         class="contentImage"></a>
                             </div>
 
@@ -205,7 +205,7 @@
                                 </div>
                                 <div class="btn-right">
 
-                                    <a href="{{ route('services/mir') }}" class="btn btn-primary">voir la page</a>
+                                    <a href="{{ route('services/infographie') }}" class="btn btn-primary">voir la page</a>
                                 </div>
                             </div>
 
@@ -357,7 +357,11 @@
                     </div>
                 </div>
                 <div class="contact-bloc-part form">
-                    <form>
+                    <form
+                    action="{{ route('contact.store') }}"
+                    method="POST">
+                    @csrf
+
                         <div class="form-container">
                             <div>
                                 <div class="contact-rows">
@@ -366,7 +370,7 @@
                                     </div> --}}
 
                                     <div>
-                                        <input type="text" placeholder="votre nom complet" class="contact-input">
+                                        <input type="text" name="name" placeholder="votre nom complet" class="contact-input" required>
                                     </div>
                                 </div>
                                 <div class="contact-rows">
@@ -374,7 +378,7 @@
                                         <label for="" class="contact-label">Télephone</label>
                                     </div> --}}
                                     <div>
-                                        <input type="text" placeholder="votre télephone" class="contact-input">
+                                        <input type="number" name="phone" placeholder="votre télephone" class="contact-input" required>
                                     </div>
                                 </div>
                                 <div class="contact-rows">
@@ -382,15 +386,15 @@
                                         <label for="" class="contact-label">E-mail</label>
                                     </div> --}}
                                     <div>
-                                        <input type="text" placeholder="votre adresse E-mail"
-                                            class="contact-input">
+                                        <input type="email" name="email" placeholder="votre adresse E-mail"
+                                            class="contact-input" required>
                                     </div>
                                 </div>
                                 {{-- <div>
                                     <label for="message" class="contact-label">Votre Message</label>
                                 </div> --}}
-                                <textarea name="" id="" placeholder="Saisissez votre massage ici" cols="30" rows="3"
-                                    class="contact-input"></textarea>
+                                <textarea name="message" id="" placeholder="Saisissez votre massage ici" cols="30" rows="3"
+                                    class="contact-input" required></textarea>
                                 <div class="contact-btn-div">
                                     <button class="btn my-2 my-sm-0 contact-btn" type="submit">Soumettre</button>
                                 </div>

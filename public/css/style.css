@@ -19,9 +19,9 @@
     --logoColor: #0181bd;
     --IconColor: #014d70;
     --vert: green;
-    --jaune: yellow;
-    --primaryColor: #00eaff;
-    --primaryHover: hsl(185, 92%, 41%);
+    --jaune: #FF9800;
+    --primaryColor: green;
+    --primaryHover:green ;
     --secondaryColor: rgb(150, 162, 188);
     --paragraphColor: rgb(127, 127, 175);
     --textColor: #031a30;
@@ -398,6 +398,22 @@ i {
 
 
 
+.sommaireText{
+font-size: 1em;
+}
+.titleText{
+    color: green;
+    display: inline;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.titleNumber{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+
 /* SERVICES PAGE */
 
 .service-sommaire {
@@ -445,11 +461,24 @@ i {
     font-weight: 600;
 }
 
-
+li::marker{
+    /* color: var(--jaune); */
+}
+.slogan{
+    margin-top: 1.2rem;
+    color: var(--vert);
+    text-align: center;
+    font-style: italic;
+}
 /* DEVIS */
 
+.devis-home{
+margin-top: 10rem;
+}
+
 .devis-form {
-    width: 65%;
+    /* background-color: red; */
+    width: 60%;
     margin: auto;
     padding: 3rem;
     border-radius: 20px;

@@ -31,6 +31,8 @@
     </div>
 
     @yield('content')
+
+    @include('footer')
 </body>
 
 </html>

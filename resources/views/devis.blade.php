@@ -10,8 +10,8 @@
 
 
 @section('content')
-    <div class="home">
-        <div class="session devis-form">
+    <div class="home devis-home">
+        <div class="session devis-form-container">
             <div class="elt-title">
                 <h1 class="big-title">Demande de devis</h1>
             </div>
@@ -71,13 +71,6 @@
                 </div>
             </form>
         </div>
-
-        <section class="section">
-            <div class="service-links-group">voulez vous voir <a href="">nos formations ?</a></div>
-            chez nous il est important que vous comprenez d'abord
-            <br>discutez avec nous
-            <br>Notre slogan c'est : un bon travail en un temps record !!!
-        </section>
 
     </div>
 @endsection
