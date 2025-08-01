@@ -543,6 +543,57 @@ margin-top: 10rem;
 
 
 
+/* FOOTER */
+
+footer{
+    margin-top: 3rem;
+    background-color: var(--textColor);
+
+    padding: 3rem;
+}
+.footer-bottom{
+    margin-top: 3rem;
+    color: white;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-around;
+
+}
+.footer-logo{
+    /* padding: 1rem; */
+    width: 4rem;
+
+}
+.footer-top{
+    margin-bottom: 2rem;
+    padding-left: 3rem;
+    display: flex;
+    color: white;
+    align-items: center;
+}
+.footer-title{
+    color: var(--vert);
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+.footer-ul{
+    margin: 0px;
+    padding: 0px;
+    border-left: 2px solid var(--jaune);
+    padding-left: 15px;
+}
+.footer-ul li a{
+    color: white;
+    font-size: 0.8rem;
+}
+.footer-ul li a:hover{
+    color: rgb(255, 187, 0);
+}
+.footer-col{
+    padding: 1rem;
+}
+
 /* ANIMATIONS */
 
 @-webkit-keyframes moveLine {

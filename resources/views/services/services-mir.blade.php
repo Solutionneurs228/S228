@@ -6,18 +6,6 @@
     @section('slide')
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            {{--
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100 h-auto" src="../images/2.JPG" alt="First slide">
-                <div class="carousel-caption d-md-block">
-                    <h5 class="home-title">MAINTENANCE INFORMATIQUE</h5>
-                    <p class="home-description">Entretien - Réparation - Assistance informatique ...</p>
-                </div>
-            </div>
-
-        </div> --}}
-
 
             <div class="carousel-inner">
 
@@ -117,9 +105,9 @@
 
                         <div class="service-links-group">
                             vous pouvez dès lors
-                            <a href="">commander ce service</a>
+                            <a href="{{ route('devis') }}">commander ce service</a>
                             <a href="">telephoner</a>
-                            <a href="">whatsapp</a>
+                            <a href="https://wa.me/+22892671533?text=Bonjour%2C%20je%20souhaite%20demander%20un%20devis%20pour%20un%20service%20informatique.">whatsapp</a>
                             <a href="">passer par Mail</a>
                         </div>
                     </section>

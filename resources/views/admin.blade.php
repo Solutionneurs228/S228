@@ -30,7 +30,28 @@
         <br>
         <h2>reorganiser les variables de couleurs</h2>
         <h2>formulaire de devis</h2>
+        <br>
         <h2>essaiyer les couleur avec le verts doux comme le bleu doux qui est déja sur les titres</h2>
+        <br>
+        <br>
+            <h3>le footer</h3>
+        <br>
+        <br>
+            <h3>routes sur les liens des services</h3>
+            <li>whatsap</li>
+            <li>tel</li>
+            <li>mail</li>
+            <li></li>
+        <br>
+        <br>
+            <h3>une seul page formations ? avec le model du portfolio modifié</h3>
+        <br>
+        <br>
+            <h3>page infographie</h3>
+        <br>
+        <br>
+            <h3>desing total</h3>
+            <h3>galerie</h3>
 
 
 
