@@ -205,7 +205,7 @@
                                 </div>
                                 <div class="btn-right">
 
-                                    <a href="{{ route('services/infographie') }}" class="btn btn-primary">voir la page</a>
+                                    <a href="" class="btn btn-primary">voir la page</a>
                                 </div>
                             </div>
 
@@ -239,8 +239,7 @@
                     </div>
 
                     <div class="btn-right">
-
-                        <a href="{{ route('services/mir') }}" class="btn btn-primary">voir la page</a>
+                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la page</a>
                     </div>
 
                 </div>
@@ -250,7 +249,7 @@
                     <div>
                         <div class="icone-title">
                             <span class="icon"><i class="fa-solid fa-2x fa-computer"></i></span> <!-- Ordinateur -->
-                            <h5 class="formation-card-title">Informatique Avancée</h5>
+                            <h5 class="formation-card-title">Informatique Bureautique</h5>
                         </div>
                         <p class="card-text">En fonction du niveau de l'apprenant la formation va couvrir les
                             bases et
@@ -258,7 +257,7 @@
                     </div>
                     <div class="btn-right">
 
-                        <a href="{{ route('services/mir') }}" class="btn btn-primary">voir la page</a>
+                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la page</a>
                     </div>
 
                 </div>
@@ -275,7 +274,7 @@
                     </div>
                     <div class="btn-right">
 
-                        <a href="{{ route('services/mir') }}" class="btn btn-primary">voir la page</a>
+                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la page</a>
                     </div>
 
                 </div>
@@ -292,7 +291,7 @@
                     </div>
                     <div class="btn-right">
 
-                        <a href="{{ route('services/mir') }}" class="btn btn-primary">voir la page</a>
+                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la page</a>
                     </div>
 
                 </div>
@@ -310,7 +309,7 @@
                     </div>
                     <div class="btn-right">
 
-                        <a href="{{ route('services/mir') }}" class="btn btn-primary">voir la page</a>
+                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la page</a>
                     </div>
 
                 </div>
@@ -328,7 +327,7 @@
                     </div>
                     <div class="btn-right">
 
-                        <a href="{{ route('services/mir') }}" class="btn btn-primary">voir la page</a>
+                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la page</a>
                     </div>
 
                 </div>

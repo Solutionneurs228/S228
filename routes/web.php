@@ -45,7 +45,7 @@ Route::get('/services/infographie', function () {
 })->name('services/infographie');
 
 Route::get('/contact', function () {
-    return view('welcome');
+    return view('contact');
 })->name('contact');
 Route::post('/contact', [ContactController::class,'store'])->name('contact.store');
 
@@ -57,6 +57,9 @@ Route::post('/devis', [DevisController::class,'store'])->name('devis.store');
 
 
 
+Route::get('/formations/initiation-informatique', function () {
+    return view('formations/formations-initiation-informatique');
+})->name('formations/initiation-informatique');
 
 
 

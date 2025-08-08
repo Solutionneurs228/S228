@@ -20,30 +20,33 @@
                     <a class="dropdown-item" href="{{ route('services/photographie')}}">Photographe & Vidéographie</a>
                     <a class="dropdown-item" href="{{ route('services/webdev')}}">Développement Web & Mobile</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="{{ route('services/infographie')}}">Infographie</a>
+                    {{-- <a class="dropdown-item" href="{{ route('services/infographie')}}">Infographie</a> --}}
                 </div>
             </li>
 
-            <li class="nav-item dropdown">
+            {{-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Nos Formations
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Informatique</a>
+                    <a class="dropdown-item" href="{{ route('formations/initiation-informatique') }}">Informatique</a>
                     <a class="dropdown-item" href="#">Infographie & Photoshop</a>
                     <a class="dropdown-item" href="#">Montage Vidéo</a>
                     <a class="dropdown-item" href="#">Dévéloppement Web</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Autres</a>
                 </div>
-            </li>
+            </li> --}}
 
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('formations/initiation-informatique')}}">Nos Formations</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('about')}}">Qui sommes nous ?</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contactez nous</a>
+                <a class="nav-link" href="{{ route('contact') }}">Contactez nous</a>
             </li>
         </ul>
 

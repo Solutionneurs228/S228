@@ -190,7 +190,7 @@ img {
     display: grid;
     gap: 1rem;
     -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 .boxes .box {
     background: var(--projectCardColor);
@@ -594,6 +594,14 @@ footer{
     padding: 1rem;
 }
 
+
+
+
+
+
+
+
+
 /* ANIMATIONS */
 
 @-webkit-keyframes moveLine {
@@ -674,6 +682,180 @@ footer{
 
 
 
+/* formations */
+.formation-img{
+opacity: 0.5;
+}
+.formation-elt .service-sommaire{
+    /* border: 5px solid green; */
+    width: 70%;
+    margin: 5rem auto;
+}
+.lien-formation{
+    height: 50%;
+    /* padding-top: 5rem; */
+    text-align: center;
+    font-size: x-large;
+}
+.lien-formation a{
+    color: green;
+}
+.lien-formation a:hover{
+    font-style: italic;
+}
+
+
+
+/*
+.formation-elt .boxes {
+    display: -ms-grid;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .formation-elt .boxes .box {
+    padding: 1rem;
+    background: var(--projectCardColor);
+    border-radius: 5px;
+    -webkit-box-shadow: 0 2px 2px #010a149a;
+    box-shadow: 0 2px 2px #010a149a;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .formation-elt .boxes .box .box_btn {
+   display: flex;
+   justify-content: center;
+   border: 1px solid #00eaff;
+   padding: 5px;
+   border-radius: 6px;
+   color: #00eaff;
+  }
+  .formation-elt .boxes .box .box_btn:hover {
+   background-color: #00eaff34;
+  }
+
+  .formation-elt .boxes .box .wrapperLink {
+    display: block;
+    color: var(--primaryColor);
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    float: right;
+    cursor: pointer;
+  }
+
+  .formation-elt .boxes .box .wrapperText {
+
+    padding: 0.5rem;
+  }
+
+  .formation-elt .boxes .box .wrapperText .title {
+    display: block;
+    padding: 10px 0;
+    text-align: right;
+    color: var(--textColor);
+  }
+
+  .formation-elt .boxes .box .wrapperText p {
+    color: var(--secondaryColor);
+    font-weight: 600;
+  }
+
+  .formation-elt .boxes .box .wrapperText .software {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px 0;
+    margin-left: auto;
+  }
+
+  .formation-elt .boxes .box .webContent div .software span {
+    color: var(--paragraphColor);
+    margin: 0 10px;
+    font-weight: 600;
+  }
+
+  .formation-elt .boxes .box .webContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .formation-elt .boxes .box .webContent .webContentTop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .formation-elt .boxes .box .webContent .webContentTop .Indicator {
+    content: "";
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: crimson;
+    background: yellowgreen;
+    margin-left: 1rem;
+    position: relative;
+  }
+
+  .formation-elt .boxes .box .webContent .webContentTop .Indicator::before {
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    border: 2px solid crimson;
+    -webkit-transform: translate(-4.5px, -4.5px);
+    transform: translate(-4.5px, -4.5px);
+    -webkit-animation: indicator 0.5s ease-in-out infinite;
+    animation: indicator 0.5s ease-in-out infinite;
+  }
+
+  .formation-elt .boxes .box .webContent .webContentTop .live {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-left: 0.6rem;
+    color: crimson;
+  }
+
+  .formation-elt .boxes .box .webContent .webContentTop .live span {
+    font-weight: 800;
+  }
+
+  @-webkit-keyframes indicator {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes indicator {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .formation-elt .boxes .box:hover {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  } */
 
 
 
