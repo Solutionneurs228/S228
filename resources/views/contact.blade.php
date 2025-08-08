@@ -1,5 +1,5 @@
 @extends('base')
-{{-- @extends('layouts.app') --}}
+@section('title', 'S228 contact')
 
 @section('Demande de devis')
 @section('meta_description',

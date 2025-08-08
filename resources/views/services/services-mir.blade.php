@@ -1,7 +1,7 @@
 @extends('base')
 
 
-@section('title', 'MTC Maintenance Informatique')
+@section('title', 'S228 Maintenance Informatique')
 <div class="home">
     @section('slide')
 

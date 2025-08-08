@@ -1,7 +1,7 @@
 @extends('base')
 
 
-@section('title', 'about')
+@section('title', 'à propos de S228')
 <div class="home">
     @section('slide')
 
