@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: laravel-app
+    runtime: docker
+    plan: free
+    # repo: https://github.com/tonuser/ton-repo
+    repo: https://github.com/Solutionneurs228/S228
+    region: frankfurt
+    dockerCommand: ""         # on laisse le CMD du Dockerfile
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_URL
+        value: https://laravel-app.onrender.com
+      - key: APP_KEY
+        sync: false           # Render te demandera la valeur à la création
+      - key: DATABASE_URL
+        fromDatabase:
+          name: laravel-db
+          property: connectionStringInternal
+      - key: DB_CONNECTION
+        value: pgsql
+    healthCheckPath: /
+databases:
+  - name: laravel-db
+    plan: free
+    region: frankfurt
