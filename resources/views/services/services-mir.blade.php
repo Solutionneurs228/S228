@@ -197,9 +197,8 @@
                                 <li> ou vous avez des collaborateurs avec qui vous devez coopérer à distance ?</li>
                             </ul>
                             <p>
-                                Là encore nous comprenons d'abord votre travail et nous voyons quel système de informatique
-                                vous
-                                convient.
+                                Là encore nous comprenons d'abord votre travail et nous voyons
+                                quel système de collaboration informatique vous convient.
                             </p>
                         </div>
 
