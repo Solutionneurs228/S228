@@ -10,7 +10,7 @@
             <div class="carousel-inner">
 
                 <div class="carousel-item slide-img active">
-                    <img class="d-block w-100 h-auto " src="../images/mir.jpg" alt="First slide">
+                    <img class="d-block w-100 h-auto " src="../images/formations.webp" alt="First slide">
                     <div class="carousel-caption">
                         <h5 class="home-title">SOLUTIONNEURS228</h5>
                         {{-- <p class="home-description">qui somme nous ?</p> --}}

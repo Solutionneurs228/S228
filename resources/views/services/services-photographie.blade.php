@@ -10,7 +10,7 @@
             <div class="carousel-inner">
 
                 <div class="carousel-item slide-img active">
-                    <img class="d-block w-100 h-auto " src="../images/tof.jpg" alt="First slide">
+                    <img class="d-block w-100 h-auto " src="../images/tof.webp" alt="First slide">
                     <div class="carousel-caption">
                         <h5 class="home-title">Photographe & Vidéographie</h5>
                         <p class="home-description">Agrandissements - reportage et montage vidéo - vidéo pubs ...</p>

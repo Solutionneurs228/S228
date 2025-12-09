@@ -15,7 +15,7 @@
             <div class="carousel-inner">
 
                 <div class="carousel-item slide-img active">
-                    <img class="d-block w-100 h-auto " src="../images/mir.jpg" alt="First slide">
+                    <img class="d-block w-100 h-auto " src="../images/mir.webp" alt="First slide">
 
                     {{-- <div class="carousel-caption d-md-block"> --}}
                     <div class="carousel-caption">
@@ -35,8 +35,8 @@
                 </div>
 
                 <div class="carousel-item slide-img">
-                    <img class="d-block w-100 h-auto" src="../images/tof.jpg" alt="First slide">
-                    {{-- <img class="d-block w-100 h-auto " src="../images/mir.jpg" alt="First slide"> --}}
+                    <img class="d-block w-100 h-auto" src="../images/tof.webp" alt="First slide">
+                    {{-- <img class="d-block w-100 h-auto " src="../images/mir.webp" alt="First slide"> --}}
                     <div class="carousel-caption">
                         <h5 class="home-title">Photographe & Vidéographie</h5>
                         <p class="home-description">Agrandissements - reportage et montage vidéo - vidéo pubs</p>
@@ -47,7 +47,7 @@
                 </div>
 
                 <div class="carousel-item slide-img">
-                    <img class="d-block w-100 h-auto" src="../images/web.jpg" alt="First slide">
+                    <img class="d-block w-100 h-auto" src="../images/web.webp" alt="First slide">
                     <div class="carousel-caption">
                         <h5 class="home-title">Développement Web & Mobile</h5>
                         <p class="home-description">Création de sites webs - applications mobiles</p>
@@ -110,7 +110,7 @@
                         <div class="webContent">
 
                             <div class="contentImg">
-                                <a href="{{ route('services/mir') }}" target="_blank"><img src="../images/mir1.jpg" alt="service de maintenance" class="contentImage"></a>
+                                <a href="{{ route('services/mir') }}" target="_blank"><img src="../images/mir1.webp" alt="service de maintenance" class="contentImage"></a>
                             </div>
 
                             <div class="wrapperText">
@@ -139,7 +139,7 @@
                         <div class="webContent">
 
                             <div class="contentImg">
-                                <a href="{{ route('services/photographie') }}" target="_blank"><img src="../images/photo1.jpg" alt="service de photographie" class="contentImage"></a>
+                                <a href="{{ route('services/photographie') }}" target="_blank"><img src="../images/photo1.webp" alt="service de photographie" class="contentImage"></a>
                             </div>
 
                             <div class="wrapperText">
@@ -165,7 +165,7 @@
                         <div class="webContent">
 
                             <div class="contentImg">
-                                <a href="{{ route('services/webdev') }}" target="_blank"><img src="../images/web1.jpg" alt="service web dev" class="contentImage"></a>
+                                <a href="{{ route('services/webdev') }}" target="_blank"><img src="../images/web1.webp" alt="service web dev" class="contentImage"></a>
                             </div>
 
                             <div class="wrapperText">
@@ -190,7 +190,7 @@
                     <div class="box">
                         <div class="webContent">
                             <div class="contentImg">
-                                <a href="{{ route('services/infographie') }}" target="_blank"><img src="../images/infographie.jpg" alt="service infographie"
+                                <a href="{{ route('services/infographie') }}" target="_blank"><img src="../images/infographie.webp" alt="service infographie"
                                         class="contentImage"></a>
                             </div>
 
