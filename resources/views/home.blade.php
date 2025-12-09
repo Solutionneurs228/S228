@@ -16,7 +16,7 @@
             <div class="carousel-inner">
 
                 <div class="carousel-item slide-img active">
-                    <img class="d-block w-100 h-auto " src="images/mir.JPG" alt="First slide">
+                    <img class="d-block w-100 h-auto " src="../images/mir.JPG" alt="First slide">
 
                     {{-- <div class="carousel-caption d-md-block"> --}}
                     <div class="carousel-caption">
