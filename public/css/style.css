@@ -692,7 +692,7 @@ footer{
 
 /* formations */
 .formation-img{
-opacity: 0.5;
+/* opacity: 0.5; */
 }
 .formation-elt .service-sommaire{
     /* border: 5px solid green; */

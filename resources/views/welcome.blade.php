@@ -16,7 +16,6 @@
 
                 <div class="carousel-item slide-img active">
                     <img class="d-block w-100 h-auto " src="../images/mir.jpg" alt="First slide">
-                    {{-- <img class="d-block w-100 h-auto " src="../images/bureautique.jpg" alt="First slide"> --}}
 
                     {{-- <div class="carousel-caption d-md-block"> --}}
                     <div class="carousel-caption">
@@ -36,7 +35,8 @@
                 </div>
 
                 <div class="carousel-item slide-img">
-                    <img class="d-block w-100 h-auto" src="../images/photo.jpg" alt="First slide">
+                    {{-- <img class="d-block w-100 h-auto" src="../images/photo.jpg" alt="First slide"> --}}
+                    <img class="d-block w-100 h-auto " src="../images/photo.jpg" alt="First slide">
                     <div class="carousel-caption">
                         <h5 class="home-title">Photographe & Vidéographie</h5>
                         <p class="home-description">Agrandissements - reportage et montage vidéo - vidéo pubs</p>
