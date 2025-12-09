@@ -22,14 +22,7 @@
                         <h5 class="home-title">MAINTENANCE INFORMATIQUE</h5>
                         <p class="home-description">Réparation des ordinateurs - Assistance informatique ...</p>
                         <div class="hook-btn-grp">
-                            {{-- <a href="https://wa.me/+22892671533?text=Bonjour%2C%20je%20souhaite%20demander%20un%20devis%20pour%20un%20service%20informatique."
-                                target="_blank" class="btn my-2 my-sm-0 contact-btn">
-                                Notre système de réduction des prix
-                            </a> --}}
                             <a href="{{ route('devis') }}" class="btn my-2 my-sm-0 contact-btn">📩 Demander un devis</a>
-                           {{--  <button class="btn my-2 my-sm-0 contact-btn" type="submit">Notre système de réduction des
-                                prix</button>
-                            <button class="btn my-2 my-sm-0 contact-btn" type="submit">demander un devis</button> --}}
                         </div>
                     </div>
                 </div>

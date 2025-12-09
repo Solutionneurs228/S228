@@ -138,6 +138,7 @@ body {
 }
 .home-description {
     font-size: 1.5rem;
+    color: #ffae00;
 }
 .hook{
     display: flex;
@@ -1022,30 +1023,46 @@ footer{
 
     /* 4 Mobile petit écran (moins de 576px) */
   @media (max-width: 575px) {
-    .big-title{
 
-          color: red;
+        .session {
+        margin: 1rem;
+    }
+          .carousel-caption{
+        bottom: 10px;
       }
       .carousel-indicators {
         bottom: 2rem;
 
     }
+    .hook-btn-grp {
+    margin-top: 1rem;
+}
     .big-title{
-        font-size: 2rem;
+        font-size: 1.8rem;
         margin: 35px 0px;
       }
       .home-title {
-          font-size: 1.1rem;
+          font-size: 0.85rem;
       }
 
       .home-description {
-          font-size: 1rem;
+          font-size: 0.75rem;
           margin-bottom: 0.3rem;
       }
       .formations-boxes {
         grid-template-columns: 1fr;
         -ms-grid-columns: (1fr);
     }
+     .contact-bloc-content{
+        display: block;
+        width: 100%;
+      }
+      .contact-bloc-part {
+    padding: 10px 20px 20px 20px;
+}
+.contact-btn {
+font-size: 0.6rem;
+}
     .footer-container{
         grid-template-columns: 1fr;
         -ms-grid-columns: (1fr);
