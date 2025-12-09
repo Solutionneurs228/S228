@@ -10,7 +10,7 @@
             <div class="carousel-inner">
 
                 <div class="carousel-item slide-img active">
-                    <img class="d-block w-100 h-auto formation-img" src="../images/bureautique.jpg" alt="First slide">
+                    <img class="d-block w-100 h-auto formation-img" src="../images/formations.jpg" alt="First slide">
                     <div class="carousel-caption">
                         <h5 class="home-title">Nos formations ....</h5>
                         <p class="home-description">la plus part de nos formations sont disponibles en ligne</p>
