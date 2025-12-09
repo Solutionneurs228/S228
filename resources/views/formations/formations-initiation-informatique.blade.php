@@ -12,7 +12,7 @@
                 <div class="carousel-item slide-img active">
                     <img class="d-block w-100 h-auto formation-img" src="../images/bureautique.jpg" alt="First slide">
                     <div class="carousel-caption">
-                        <h5 class="home-title">Nos formations</h5>
+                        <h5 class="home-title">Nos formations ....</h5>
                         <p class="home-description">la plus part de nos formations sont disponibles en ligne</p>
                     </div>
                 </div>
@@ -166,7 +166,7 @@
 
 
                     <div class="lien-formation">
-                        pour toute information 
+                        pour toute information
                         <a href="https://wa.me/+22892671533?text=Bonjour%2C%20je%20souhaite%20me%20renseigner%20sur%20une%20formation.">écrivez nous sur whatsapp</a>
                         <p>nous vous répondrons dans un bref delais </p>
 
