@@ -10,7 +10,7 @@
             <div class="carousel-inner">
 
                 <div class="carousel-item slide-img active">
-                    <img class="d-block w-100 h-auto " src="../images/mir.JPG" alt="First slide">
+                    <img class="d-block w-100 h-auto " src="../images/mir.jpg" alt="First slide">
                     <div class="carousel-caption">
                         <h5 class="home-title">MAINTENANCE INFORMATIQUE</h5>
                         <p class="home-description">Réparation des ordinateurs - Assistance informatique ...</p>
