@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="carousel-item slide-img">
-                    <img class="d-block w-100 h-auto" src="../images/mir.jpg" alt="First slide">
+                    <img class="d-block w-100 h-auto" src="../images/tof.jpg" alt="First slide">
                     {{-- <img class="d-block w-100 h-auto " src="../images/mir.jpg" alt="First slide"> --}}
                     <div class="carousel-caption">
                         <h5 class="home-title">Photographe & Vidéographie</h5>
