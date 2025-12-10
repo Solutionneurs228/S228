@@ -163,14 +163,21 @@ body {
     font-weight: bold;
     text-align: center;
 }
+
 .hook-description {
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
+    font-weight: 600;
+    color: #10467d;
+}
+.hook-description2 {
+    margin-top: 2rem;
 }
 .hook-description2 a{
     color: green;
 }
 .hook-content .big-title {
+    /* text-align: justify; */
     margin-bottom: 0.4rem;
 }
 
@@ -190,8 +197,9 @@ img {
     display: -ms-grid;
     display: grid;
     gap: 1rem;
-    -ms-grid-columns: (1fr)[4];
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
     grid-template-columns: repeat(4, 1fr);
+
 }
 .boxes .box {
     background: var(--projectCardColor);
@@ -201,7 +209,11 @@ img {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     overflow: hidden;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
 }
+
 .boxes .box .webContent .wrapperText {
     height: 17rem;
     padding: 1rem 1.3rem 0.5rem 1.3rem;
@@ -214,6 +226,9 @@ img {
 .boxes .box:hover {
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
 }
 .card-title {
     font-weight: bold;
@@ -242,6 +257,57 @@ img {
     font-style: italic;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
+.experiences {
+    width: 100%;
+    margin-left: 0px;
+    background-color: #010010;
+    padding-bottom: 1rem;
+}
+.experiences span {
+    color: var(--green);
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: center;
+    display: block;
+    margin-bottom: 1rem;
+
+}
+.experiences-all{
+    width: 90%;
+    padding: 0rem 2rem;
+      display: -ms-grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin: auto;
+}
+.experience{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    color: var(--BgColor);
+}
+.experience-top{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.experience-icon{
+    margin-right: 1rem;
+}
+.experience-title{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.experience-description{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
 
 
 /* SECTION FORMATION */
@@ -887,7 +953,7 @@ footer{
 @media (max-width: 1199px) {
 
     .boxes {
-        -ms-grid-columns: (1fr)[4];
+        -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: repeat(4, 1fr);
     }
 
@@ -920,7 +986,7 @@ footer{
         height: auto;
     }
     .boxes {
-        -ms-grid-columns: (1fr)[2];
+        -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -1001,6 +1067,9 @@ footer{
           font-size: 1.1rem;
           margin-bottom: 0.2rem;
       }
+          .hook-description {
+    font-size: 1.3rem;
+}
       #carouselExampleIndicators {
           bottom: -2rem;
       }
@@ -1034,6 +1103,9 @@ footer{
         bottom: 2rem;
 
     }
+    .hook-description {
+    font-size: 1rem;
+}
     .hook-btn-grp {
     margin-top: 1rem;
 }

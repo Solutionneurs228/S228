@@ -13,7 +13,7 @@
                     <img class="d-block w-100 h-auto " src="../images/web.webp" alt="First slide">
                     <div class="carousel-caption">
                         <h5 class="home-title">Développement Web & Mobile</h5>
-                        <p class="home-description">Création de sites webs - applications mobiles</p>
+                        <p class="home-description">Création de sites web - applications mobiles</p>
                     </div>
                 </div>
 

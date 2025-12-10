@@ -43,7 +43,7 @@
                     <img class="d-block w-100 h-auto" src="../images/web.webp" alt="First slide">
                     <div class="carousel-caption">
                         <h5 class="home-title">Développement Web & Mobile</h5>
-                        <p class="home-description">Création de sites webs - applications mobiles</p>
+                        <p class="home-description">Création de sites web - applications mobiles</p>
                         <div class="hook-btn-grp">
                             <a href="{{ route('devis') }}" class="btn my-2 my-sm-0 contact-btn">📩 Demander un devis</a>
                         </div>
@@ -88,6 +88,7 @@
             </div>
         </div>
 
+
         <div class="session">
 
             <Br>
@@ -103,7 +104,8 @@
                         <div class="webContent">
 
                             <div class="contentImg">
-                                <a href="{{ route('services/mir') }}" target="_blank"><img src="../images/mir1.webp" alt="service de maintenance" class="contentImage"></a>
+                                <a href="{{ route('services/mir') }}" target="_blank"><img src="../images/mir1.webp"
+                                        alt="service de maintenance" class="contentImage"></a>
                             </div>
 
                             <div class="wrapperText">
@@ -132,7 +134,8 @@
                         <div class="webContent">
 
                             <div class="contentImg">
-                                <a href="{{ route('services/photographie') }}" target="_blank"><img src="../images/photo1.webp" alt="service de photographie" class="contentImage"></a>
+                                <a href="{{ route('services/photographie') }}" target="_blank"><img
+                                        src="../images/photo1.webp" alt="service de photographie" class="contentImage"></a>
                             </div>
 
                             <div class="wrapperText">
@@ -158,7 +161,8 @@
                         <div class="webContent">
 
                             <div class="contentImg">
-                                <a href="{{ route('services/webdev') }}" target="_blank"><img src="../images/web1.webp" alt="service web dev" class="contentImage"></a>
+                                <a href="{{ route('services/webdev') }}" target="_blank"><img src="../images/web1.webp"
+                                        alt="service web dev" class="contentImage"></a>
                             </div>
 
                             <div class="wrapperText">
@@ -183,7 +187,8 @@
                     <div class="box">
                         <div class="webContent">
                             <div class="contentImg">
-                                <a href="{{ route('services/infographie') }}" target="_blank"><img src="../images/infographie.webp" alt="service infographie"
+                                <a href="{{ route('services/infographie') }}" target="_blank"><img
+                                        src="../images/infographie.webp" alt="service infographie"
                                         class="contentImage"></a>
                             </div>
 
@@ -214,6 +219,46 @@
         </div>
         <Br>
 
+
+        <div class="session experiences">
+            {{-- <h1 class="big-title"></h1> --}}
+            <div class="experiences-all">
+
+                <div class="experience">
+                    <div class="experience-top">
+                        <span class="experience-icon"><i class="fa-solid fa-2x fa-handshake"></i>     <!-- ONG & Cabinets --></span>
+                        <div class="experience-title">ONGs et cabinets</div>
+                    </div>
+                    <p class="experience-description">Plus de 5 ONGs et cabinets ont noués partenariat avec nous</p>
+                </div>
+
+                <div class="experience">
+                    <div class="experience-top">
+                        <span class="experience-icon"><i class="fa-solid fa-2x fa-building"></i>      <!-- Entreprises --></span>
+                        <div class="experience-title">Entreprises</div>
+                    </div>
+                    <p class="experience-description">Plusieurs entréprises à travers tout le pays nous solicitent régulièrement</p>
+                </div>
+
+
+
+{{-- <i class="fa-solid fa-2x fa-user"></i>          <!-- Particuliers -->
+<i class="fa-solid fa-2x fa-user-graduate"></i> <!-- Étudiants --> --}}
+
+
+                <div class="experience">
+                    <div class="experience-top">
+                        <span class="experience-icon"><i class="fa-solid fa-2x fa-graduation-cap"></i></span>
+                        <div class="experience-title">Centres de formations proffesionels</div>
+                    </div>
+                    <p class="experience-description">Nous intervenons aussi dans des centres de formations</p>
+                </div>
+
+            </div>
+
+            <span>Ils nous font tous confiance</span>
+        </div>
+
         <div class="session">
             <h1 class="big-title">NOS OFFRES DE FORMATIONS</h1>
 
@@ -233,7 +278,8 @@
                     </div>
 
                     <div class="btn-right">
-                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la page</a>
+                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la
+                            page</a>
                     </div>
 
                 </div>
@@ -251,7 +297,8 @@
                     </div>
                     <div class="btn-right">
 
-                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la page</a>
+                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la
+                            page</a>
                     </div>
 
                 </div>
@@ -268,7 +315,8 @@
                     </div>
                     <div class="btn-right">
 
-                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la page</a>
+                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la
+                            page</a>
                     </div>
 
                 </div>
@@ -285,7 +333,8 @@
                     </div>
                     <div class="btn-right">
 
-                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la page</a>
+                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la
+                            page</a>
                     </div>
 
                 </div>
@@ -303,7 +352,8 @@
                     </div>
                     <div class="btn-right">
 
-                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la page</a>
+                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la
+                            page</a>
                     </div>
 
                 </div>
@@ -321,7 +371,8 @@
                     </div>
                     <div class="btn-right">
 
-                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la page</a>
+                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la
+                            page</a>
                     </div>
 
                 </div>
@@ -350,10 +401,8 @@
                     </div>
                 </div>
                 <div class="contact-bloc-part form">
-                    <form
-                    action="{{ route('contact.store') }}"
-                    method="POST">
-                    @csrf
+                    <form action="{{ route('contact.store') }}" method="POST">
+                        @csrf
 
                         <div class="form-container">
                             <div>
@@ -363,7 +412,8 @@
                                     </div> --}}
 
                                     <div>
-                                        <input type="text" name="name" placeholder="votre nom complet" class="contact-input" required>
+                                        <input type="text" name="name" placeholder="votre nom complet"
+                                            class="contact-input" required>
                                     </div>
                                 </div>
                                 <div class="contact-rows">
@@ -371,7 +421,8 @@
                                         <label for="" class="contact-label">Télephone</label>
                                     </div> --}}
                                     <div>
-                                        <input type="text" name="phone" placeholder="votre télephone" class="contact-input" required>
+                                        <input type="text" name="phone" placeholder="votre télephone"
+                                            class="contact-input" required>
                                     </div>
                                 </div>
                                 <div class="contact-rows">
