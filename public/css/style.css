@@ -259,10 +259,17 @@ img {
 }
 
 .experiences {
-    width: 100%;
+    /*width: 100%;
     margin-left: 0px;
-    background-color: #010010;
+    */border-radius: 10px;
+    background-color: white;
+    color: var(--projectCardColor);
+    box-shadow: 0px;
     padding-bottom: 1rem;
+    -webkit-border-radius: 1;
+    -moz-border-radius: 1;
+    -ms-border-radius: 1;
+    -o-border-radius: 1;
 }
 .experiences span {
     color: var(--green);
@@ -286,7 +293,7 @@ img {
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    color: var(--BgColor);
+    color: var(--projectCardColor);
 }
 .experience-top{
     display: flex;
@@ -426,13 +433,51 @@ margin-bottom: 15rem;
 .btn-reduction:hover {
   transform: scale(1.2);
   /*box-shadow: 0 18px 40px rgba(255, 60, 60, 0.6);
-  */:;
+  */
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   -o-transform: scale(1.2);
 }
 
+
+.parteners {
+    /*width: 100%;
+    margin-left: 0px;
+    */border-radius: 10px;
+    background-color: white;
+    color: var(--projectCardColor);
+    box-shadow: 0px;
+    padding-bottom: 1rem;
+    -webkit-border-radius: 1;
+    -moz-border-radius: 1;
+    -ms-border-radius: 1;
+    -o-border-radius: 1;
+}
+.parteners span {
+    color: var(--green);
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: center;
+    display: block;
+    margin-bottom: 1rem;
+
+}
+.parteners-all{
+    width: 90%;
+    padding: 0rem 2rem;
+      display: -ms-grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin: auto;
+}
+.partener{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    color: var(--projectCardColor);
+}
 
 
 

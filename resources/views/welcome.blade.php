@@ -223,10 +223,10 @@
         <div class="session reduce">
             <div class="btn-reduction">
                 <a href="https://wa.me/+22892671533?text=salut%2C%20je%20souhaite%20m'informer%20sur%20votre%20système%20de%20réduction%20de%20prix."
-                        target="_blank">
-                        Découvrez notre <br>
-                        système de réduction des prix
-                    </a>
+                    target="_blank">
+                    Découvrez notre <br>
+                    système de réduction des prix
+                </a>
             </div>
             <div class="reduce-img">
                 <img src="../images/reduce.png" alt="">
@@ -360,17 +360,30 @@
         </div>
 
 
+        <div class="session parteners">
+            <div class="parteners-all">
+
+                <div class="partener">
+                    <div class="partener-img">
+                        <img src="../images/qualitech.png" alt="partener1">
+                    </div>
+                    <p class="partener-description">Plus de 5 ONGs et cabinets ont noués partenariat avec nous</p>
+                </div>
+
+            </div>
+
+            <span>Ils nous font tous confiance</span>
+        </div>
 
 
-
+        {{--
         <div class="session experiences">
-            {{-- <h1 class="big-title"></h1> --}}
             <div class="experiences-all">
 
                 <div class="experience">
                     <div class="experience-top">
                         <span class="experience-icon"><i class="fa-solid fa-2x fa-handshake"></i>
-                            <!-- ONG & Cabinets --></span>
+                        </span>
                         <div class="experience-title">ONGs et cabinets</div>
                     </div>
                     <p class="experience-description">Plus de 5 ONGs et cabinets ont noués partenariat avec nous</p>
@@ -379,17 +392,13 @@
                 <div class="experience">
                     <div class="experience-top">
                         <span class="experience-icon"><i class="fa-solid fa-2x fa-building"></i>
-                            <!-- Entreprises --></span>
+                        </span>
                         <div class="experience-title">Entreprises</div>
                     </div>
                     <p class="experience-description">Plusieurs entréprises à travers tout le pays nous solicitent
                         régulièrement</p>
                 </div>
 
-
-
-                {{-- <i class="fa-solid fa-2x fa-user"></i>          <!-- Particuliers -->
-                <i class="fa-solid fa-2x fa-user-graduate"></i> <!-- Étudiants --> --}}
 
 
                 <div class="experience">
@@ -404,6 +413,7 @@
 
             <span>Ils nous font tous confiance</span>
         </div>
+        --}}
 
 
 
