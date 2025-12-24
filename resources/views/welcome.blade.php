@@ -77,7 +77,7 @@
                     photographie, reportage, montage vidéo, graphisme et développement web.
                 </p>
                 <p class="hook-description hook-description2">
-                    Sur plus de 90% de nos services nous avons un système de réduction qui peut vous intéresser.
+                    Sur plus de 90% de nos services nous avons un système de réduction qui va vous intéresser.
                     <br>
                     Découvrez ce
                     <a href="https://wa.me/+22892671533?text=salut%2C%20je%20souhaite%20m'informer%20sur%20votre%20système%20de%20réduction%20de%20prix."
@@ -220,43 +220,22 @@
         <Br>
 
 
-        <div class="session experiences">
-            {{-- <h1 class="big-title"></h1> --}}
-            <div class="experiences-all">
-
-                <div class="experience">
-                    <div class="experience-top">
-                        <span class="experience-icon"><i class="fa-solid fa-2x fa-handshake"></i>     <!-- ONG & Cabinets --></span>
-                        <div class="experience-title">ONGs et cabinets</div>
-                    </div>
-                    <p class="experience-description">Plus de 5 ONGs et cabinets ont noués partenariat avec nous</p>
-                </div>
-
-                <div class="experience">
-                    <div class="experience-top">
-                        <span class="experience-icon"><i class="fa-solid fa-2x fa-building"></i>      <!-- Entreprises --></span>
-                        <div class="experience-title">Entreprises</div>
-                    </div>
-                    <p class="experience-description">Plusieurs entréprises à travers tout le pays nous solicitent régulièrement</p>
-                </div>
-
-
-
-{{-- <i class="fa-solid fa-2x fa-user"></i>          <!-- Particuliers -->
-<i class="fa-solid fa-2x fa-user-graduate"></i> <!-- Étudiants --> --}}
-
-
-                <div class="experience">
-                    <div class="experience-top">
-                        <span class="experience-icon"><i class="fa-solid fa-2x fa-graduation-cap"></i></span>
-                        <div class="experience-title">Centres de formations proffesionels</div>
-                    </div>
-                    <p class="experience-description">Nous intervenons aussi dans des centres de formations</p>
-                </div>
+        <div class="session reduce">
+            <div class="btn-reduction">
+                <a href="https://wa.me/+22892671533?text=salut%2C%20je%20souhaite%20m'informer%20sur%20votre%20système%20de%20réduction%20de%20prix."
+                        target="_blank">
+                        Découvrez notre <br>
+                        système de réduction des prix
+                    </a>
+            </div>
+            <div class="reduce-img">
+                <img src="../images/reduce.png" alt="">
+            </div>
+            <div class="reduce-bottom">
 
             </div>
 
-            <span>Ils nous font tous confiance</span>
+            {{-- <p> Sur plus de 90% de nos services nous avons un système de réduction qui va vous intéresser.</p> --}}
         </div>
 
         <div class="session">
@@ -378,6 +357,52 @@
                 </div>
 
             </div>
+        </div>
+
+
+
+
+
+        <div class="session experiences">
+            {{-- <h1 class="big-title"></h1> --}}
+            <div class="experiences-all">
+
+                <div class="experience">
+                    <div class="experience-top">
+                        <span class="experience-icon"><i class="fa-solid fa-2x fa-handshake"></i>
+                            <!-- ONG & Cabinets --></span>
+                        <div class="experience-title">ONGs et cabinets</div>
+                    </div>
+                    <p class="experience-description">Plus de 5 ONGs et cabinets ont noués partenariat avec nous</p>
+                </div>
+
+                <div class="experience">
+                    <div class="experience-top">
+                        <span class="experience-icon"><i class="fa-solid fa-2x fa-building"></i>
+                            <!-- Entreprises --></span>
+                        <div class="experience-title">Entreprises</div>
+                    </div>
+                    <p class="experience-description">Plusieurs entréprises à travers tout le pays nous solicitent
+                        régulièrement</p>
+                </div>
+
+
+
+                {{-- <i class="fa-solid fa-2x fa-user"></i>          <!-- Particuliers -->
+                <i class="fa-solid fa-2x fa-user-graduate"></i> <!-- Étudiants --> --}}
+
+
+                <div class="experience">
+                    <div class="experience-top">
+                        <span class="experience-icon"><i class="fa-solid fa-2x fa-graduation-cap"></i></span>
+                        <div class="experience-title">Centres de formations proffesionels</div>
+                    </div>
+                    <p class="experience-description">Nous intervenons aussi dans des centres de formations</p>
+                </div>
+
+            </div>
+
+            <span>Ils nous font tous confiance</span>
         </div>
 
 
