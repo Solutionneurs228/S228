@@ -442,18 +442,19 @@ margin-bottom: 15rem;
 
 
 .parteners {
-    /*width: 100%;
+    width: 100%;
     margin-left: 0px;
-    */border-radius: 10px;
-    background-color: white;
+    /* border-radius: 10px; */
+    background-color: rgba(132, 139, 238, 0.473);
     color: var(--projectCardColor);
-    box-shadow: 0px;
+    /* box-shadow: 1px 1px 10px rgba(3, 3, 41, 0.541); */
     padding-bottom: 1rem;
-    -webkit-border-radius: 1;
-    -moz-border-radius: 1;
-    -ms-border-radius: 1;
-    -o-border-radius: 1;
+    padding-top: 1rem;
 }
+.parteners .big-title{
+          font-size: 2.2rem;
+          margin: 40px 0px  0px 0px;
+        }
 .parteners span {
     color: var(--green);
     font-size: 1.5rem;
@@ -472,12 +473,105 @@ margin-bottom: 15rem;
     gap: 1rem;
     margin: auto;
 }
+.partener-img img{
+    height: auto;
+    width: 80%;
+    object-fit: contain;
+}
 .partener{
     display: flex;
     flex-direction: column;
     padding: 2rem;
+    justify-content: space-between;
     color: var(--projectCardColor);
 }
+.partener-description{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.partener-description a{
+    font-style: italic;
+}
+
+
+.home-gallery {
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #000;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Icône play vidéo */
+.gallery-item.video .play-icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+/* Effet hover */
+.gallery-item:hover img,
+.gallery-item:hover video {
+  transform: scale(1.05);
+}
+
+.gallery-item img,
+.gallery-item video {
+  transition: transform 0.4s ease;
+}
+
+.gallery-action {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-gallery {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn-gallery:hover {
+  background: #333;
+}
+
+
 
 
 

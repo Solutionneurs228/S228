@@ -361,18 +361,80 @@
 
 
         <div class="session parteners">
+            <h1 class="big-title">Nos partenaires</h1>
             <div class="parteners-all">
+
+                <div class="partener">
+                    <div class="partener-img">
+                        <img src="../images/sostv.png" alt="partener1">
+                    </div>
+                    <p class="partener-description">
+                        1ère chaine de Télé 100% santé en Afrique.
+                        <br>
+                        <a href="https://www.sos-docteur.tv/" target="_blank" rel="noopener noreferrer">visitez la
+                            chaîne</a>
+                    </p>
+                </div>
+
 
                 <div class="partener">
                     <div class="partener-img">
                         <img src="../images/qualitech.png" alt="partener1">
                     </div>
-                    <p class="partener-description">Plus de 5 ONGs et cabinets ont noués partenariat avec nous</p>
+                    <p class="partener-description">photographie, vidéographie, graphique design, sérigraphie, décoration
+                        3D ...</p>
+                </div>
+
+                <div class="partener">
+                    <div class="partener-img">
+                        <img src="../images/aide.png" alt="partener1">
+                    </div>
+                    <p class="partener-description">formation, conseil, audit entréprises, coaching ...</p>
                 </div>
 
             </div>
 
-            <span>Ils nous font tous confiance</span>
+            {{-- <span>Ils nous font tous confiance</span> --}}
+        </div>
+
+
+
+        <div class="session home-gallery">
+            <div class="gallery-header">
+                <h2>Galerie</h2>
+                <p>Un aperçu de nos réalisations récentes</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Image -->
+                <div class="gallery-item">
+                    <img src="../images/eric.webp" alt="Photo événement">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="../images/yovo.webp" alt="Photo événement">
+                </div>
+
+                <!-- Vidéo -->
+                <div class="gallery-item video">
+                    <video muted preload="metadata">
+                        <source src="../videos/moba.mp4" type="video/mp4">
+                    </video>
+                    <span class="play-icon">▶</span>
+                </div>
+
+                <div class="gallery-item video">
+                    <video muted preload="metadata">
+                        <source src="../images/shadai.mp4" type="video/mp4">
+                    </video>
+                    <span class="play-icon">▶</span>
+                </div>
+            </div>
+
+            <div class="gallery-action">
+                <a href="galerie.html" class="btn-gallery">Voir toute la galerie</a>
+            </div>
+
         </div>
 
 
