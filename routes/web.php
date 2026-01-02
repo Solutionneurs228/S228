@@ -23,6 +23,10 @@ Route::get('/admin', function () {
 })->name('admin');
 
 
+// routes/web.php
+Route::get('/galerie', function () {
+    return view('galerie');
+})->name('galerie');
 
 Route::get('/services/mir', function () {
     return view('services/services-mir');

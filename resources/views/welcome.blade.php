@@ -401,7 +401,7 @@
 
         <div class="session home-gallery">
             <div class="gallery-header">
-                <h2>Galerie</h2>
+                <h2 class="big-title">Notre Galerie</h2>
                 <p>Un aperçu de nos réalisations récentes</p>
             </div>
 
@@ -441,7 +441,7 @@
             </div>
 
             <div class="gallery-action">
-                <a href="galerie.html" class="btn-gallery">Voir toute la galerie</a>
+                <a href="{{ route('galerie') }}" class="btn-gallery">Voir toute la galerie</a>
             </div>
 
         </div>
