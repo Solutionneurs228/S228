@@ -619,6 +619,15 @@ margin-bottom: 15rem;
     height: 100%;
     object-fit: cover;
 }
+.gallery-header .big-title{
+    margin-bottom: 0.7rem;
+}
+
+.gallery-header p{
+    font-size: larger;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
 
 /* OVERLAY */
 .overlay {

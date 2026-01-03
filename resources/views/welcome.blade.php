@@ -420,7 +420,7 @@
                     <video controls preload="metadata">
                         <source src="{{ asset('videos/moba.mp4') }}" type="video/mp4">
                     </video>
-                    <span class="play-icon">▶</span>
+                    {{-- <span class="play-icon">▶</span> --}}
                 </div>
                 <!-- Vidéo -->
                 <div class="gallery-item video">
@@ -429,7 +429,7 @@
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <span class="play-icon">▶</span>
+                    {{-- <span class="play-icon">▶</span> --}}
                 </div>
 
                 {{-- <div class="gallery-item video">
