@@ -93,4 +93,60 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+
+    const lightbox = document.getElementById('lightbox');
+    const content = lightbox.querySelector('.lightbox-content');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+
+    function closeLightbox() {
+        content.innerHTML = '';
+        lightbox.classList.remove('active');
+    }
+
+    // Fermeture
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => {
+        if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Clic sur carte
+    document.querySelectorAll('.gallery-card').forEach(card => {
+        card.addEventListener('click', () => {
+
+            const type = card.dataset.type;
+            const src  = card.dataset.src;
+
+            content.innerHTML = '';
+
+            if (type === 'image') {
+                content.innerHTML = `<img src="${src}">`;
+            }
+
+            if (type === 'video') {
+                content.innerHTML = `
+                    <video controls autoplay playsinline>
+                        <source src="${src}">
+                    </video>`;
+            }
+
+            if (type === 'youtube') {
+                content.innerHTML = `
+                    <iframe
+                        src="https://www.youtube.com/embed/${src}?autoplay=1"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen>
+                    </iframe>`;
+            }
+
+            lightbox.classList.add('active');
+        });
+    });
+
+});
+
+
 

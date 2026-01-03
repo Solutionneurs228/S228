@@ -495,6 +495,11 @@ margin-bottom: 15rem;
 }
 
 
+
+
+
+/* ***********************************GALLERIE*************************** */
+
 .home-gallery {
   padding: 60px 20px;
   background: #f9f9f9;
@@ -505,11 +510,7 @@ margin-bottom: 15rem;
   margin-bottom: 30px;
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
+
 
 .gallery-item {
   position: relative;
@@ -517,7 +518,27 @@ margin-bottom: 15rem;
   border-radius: 14px;
   background: #000;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+
+
+
+    /* aspect-ratio: 16 / 9; */
+    cursor: pointer;
+    /* transform: scale(.95); */
+    animation: fadeInUp .6s ease forwards;
 }
+
+/* CARD */
+/* .gallery-card {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #000;
+    cursor: pointer;
+    transform: scale(.95);
+    animation: fadeInUp .6s ease forwards;
+} */
 
 .gallery-item img,
 .gallery-item video {
@@ -526,9 +547,17 @@ margin-bottom: 15rem;
   object-fit: cover;
   display: block;
 }
+/*
+.gallery-card img,
+.gallery-card video,
+.gallery-card iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
 
 /* Icône play vidéo */
-.gallery-item.video .play-icon {
+.play-icon {
   position: absolute;
   inset: 0;
   display: flex;
@@ -541,14 +570,36 @@ margin-bottom: 15rem;
 }
 
 /* Effet hover */
-.gallery-item:hover img,
-.gallery-item:hover video {
+/* .gallery-item:hover img,
+.gallery-item:hover video,
+.gallery-item:hover iframe {
   transform: scale(1.05);
 }
 
 .gallery-item img,
-.gallery-item video {
+.gallery-item video,
+.gallery-item:hover iframe {
   transition: transform 0.4s ease;
+} */
+
+.gallery-item img,
+.gallery-item video,
+.gallery-item iframe {
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img,
+.gallery-item:hover video,
+.gallery-item:hover iframe {
+  transform: scale(1.05);
+}
+
+
+
+
+.gallery-item video,
+.gallery-item iframe {
+  cursor: pointer;
 }
 
 .gallery-action {
@@ -573,52 +624,36 @@ margin-bottom: 15rem;
 
 .btn-gallery:hover {
   background: #333;
+  color: blanchedalmond;
 }
 
-.gallery-section {
-    padding: 3rem 1rem;
-    max-width: 1200px;
-    margin: auto;
-}
+
 
 .gallery-title {
-    font-size: 2rem;
-    text-align: center;
+    /* font-size: 2rem;
+    text-align: center; */
     margin-bottom: .5rem;
 }
 
 .gallery-subtitle {
     text-align: center;
-    color: #666;
+    color: black;
+    font-size: larger;
+    font-weight: 500;
     margin-bottom: 2rem;
 }
 
 /* GRID */
+
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.2rem;
+  padding: 2rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
 }
 
-/* CARD */
-.gallery-card {
-    position: relative;
-    aspect-ratio: 16 / 9;
-    border-radius: 14px;
-    overflow: hidden;
-    background: #000;
-    cursor: pointer;
-    transform: scale(.95);
-    animation: fadeInUp .6s ease forwards;
-}
 
-.gallery-card img,
-.gallery-card video,
-.gallery-card iframe {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
 .gallery-header .big-title{
     margin-bottom: 0.7rem;
 }
@@ -640,7 +675,7 @@ margin-bottom: 15rem;
     transition: .3s;
 }
 
-.gallery-card:hover .overlay {
+.gallery-item:hover .overlay {
     background: rgba(0,0,0,.2);
 }
 
@@ -664,7 +699,7 @@ margin-bottom: 15rem;
 }
 
 /* PLAYING STATE */
-.gallery-card.playing .overlay {
+.gallery-item.playing .overlay {
     opacity: 0;
     pointer-events: none;
 }
@@ -680,6 +715,82 @@ margin-bottom: 15rem;
         transform: translateY(0) scale(1);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+/* LIGHTBOX */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
+}
+
+.lightbox.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* CONTENU */
+.lightbox-content {
+    width: 90%;
+    max-width: 1100px;
+    aspect-ratio: 16 / 9;
+    animation: zoomIn .35s ease;
+}
+
+.lightbox img,
+.lightbox video,
+.lightbox iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* BOUTON FERMER */
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 42px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ANIMATION */
+@keyframes zoomIn {
+    from { transform: scale(.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

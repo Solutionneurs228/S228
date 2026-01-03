@@ -46,6 +46,11 @@
     @yield('content')
 
     @include('footer')
+
+    <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <div class="lightbox-content"></div>
+</div>
 </body>
 
 </html>
