@@ -1,64 +1,331 @@
 @extends('base')
-@section('title', 'S228 Galérie')
 
-@section('Demande de devis')
-@section('meta_description',
-    'Réparation ordinateur, photographie, création de cartes de visite, affiches publicitaires.
-    Demandez votre devis gratuit dès maintenant.')
-
-
-
+@section('title', 'S228 Galerie')
 
 @section('content')
-    <div class="home devis-home">
+<section class="gallery-section">
 
-        <h1 class="big-title gallery-title">S228 galerie</h1>
-        <p class="gallery-subtitle">
-            Photos et vidéos de nos réalisations
-        </p>
+    <h1 class="gallery-main-title">S228 Galerie</h1>
+
+    <!-- ===== THEME ===== -->
+    <div class="gallery-theme">
+        <h2 class="theme-title">Événements & Reportages</h2>
+        <p class="theme-desc">Photos et vidéos officielles</p>
 
         <div class="gallery-grid">
 
-            {{-- IMAGE der --}}
-            <div class="gallery-card gallery-item photo" data-type="image"
-                data-src="{{ asset('images/eric.webp') }}">
-                <img src="{{ asset('images/eric.webp') }}">
+            <!-- IMAGE -->
+            <div class="gallery-item image"
+                 data-title="Inauguration"
+                 data-desc="Ouverture officielle">
+                <img src="{{ asset('images/eric.webp') }}" alt="">
             </div>
 
-
-
-
-
-
-
-            <!-- Image -->
-            <div class="gallery-item">
-                <img src="../images/eric.webp" alt="Photo événement">
-            </div>
-
-            <div class="gallery-item">
-                <img src="../images/yovo.webp" alt="Photo événement">
-            </div>
-
-            <!-- Vidéo -->
-            <div class="gallery-item video">
-                <video controls preload="metadata">
+            <!-- VIDEO LOCALE -->
+            <div class="gallery-item video"
+                 data-title="Discours"
+                 data-desc="Message officiel">
+                <video preload="metadata"
+                       data-duration>
                     <source src="{{ asset('videos/moba.mp4') }}" type="video/mp4">
                 </video>
                 <span class="play-icon">▶</span>
-            </div>
-            <!-- Vidéo -->
-            <div class="gallery-item video">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/hRNwlx2lE9k"
-                    title="S228/la prestation de la chorale Salut des âmes des AD tchannadè lors du mariage de yovo &amp; Immaculée"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <span class="play-icon">▶</span>
+                <span class="duration">00:00</span>
             </div>
 
+            <!-- YOUTUBE -->
+            <div class="gallery-item youtube"
+                 data-title="Présentation S228"
+                 data-desc="Vidéo YouTube"
+                 data-video="https://www.youtube.com/embed/hRNwlx2lE9k"
+                 data-duration="05:32">
+                <img src="https://img.youtube.com/vi/hRNwlx2lE9k/hqdefault.jpg" alt="">
+                <span class="play-icon">▶</span>
+                <span class="duration">05:32</span>
+            </div>
+
+            <!-- IMAGE -->
+            <div class="gallery-item image"
+                 data-title="Inauguration"
+                 data-desc="Ouverture officielle">
+                <img src="{{ asset('images/eric.webp') }}" alt="">
+            </div>
+
+            <!-- VIDEO LOCALE -->
+            <div class="gallery-item video"
+                 data-title="Discours"
+                 data-desc="Message officiel">
+                <video preload="metadata"
+                       data-duration>
+                    <source src="{{ asset('videos/moba.mp4') }}" type="video/mp4">
+                </video>
+                <span class="play-icon">▶</span>
+                <span class="duration">00:00</span>
+            </div>
+
+            <!-- YOUTUBE -->
+            <div class="gallery-item youtube"
+                 data-title="Présentation S228"
+                 data-desc="Vidéo YouTube"
+                 data-video="https://www.youtube.com/embed/hRNwlx2lE9k"
+                 data-duration="05:32">
+                <img src="https://img.youtube.com/vi/hRNwlx2lE9k/hqdefault.jpg" alt="">
+                <span class="play-icon">▶</span>
+                <span class="duration">05:32</span>
+            </div>
+
+            <!-- IMAGE -->
+            <div class="gallery-item image"
+                 data-title="Inauguration"
+                 data-desc="Ouverture officielle">
+                <img src="{{ asset('images/eric.webp') }}" alt="">
+            </div>
+
+            <!-- VIDEO LOCALE -->
+            <div class="gallery-item video"
+                 data-title="Discours"
+                 data-desc="Message officiel">
+                <video preload="metadata"
+                       data-duration>
+                    <source src="{{ asset('videos/moba.mp4') }}" type="video/mp4">
+                </video>
+                <span class="play-icon">▶</span>
+                <span class="duration">00:00</span>
+            </div>
+
+            <!-- YOUTUBE -->
+            <div class="gallery-item youtube"
+                 data-title="Présentation S228"
+                 data-desc="Vidéo YouTube"
+                 data-video="https://www.youtube.com/embed/hRNwlx2lE9k"
+                 data-duration="05:32">
+                <img src="https://img.youtube.com/vi/hRNwlx2lE9k/hqdefault.jpg" alt="">
+                <span class="play-icon">▶</span>
+                <span class="duration">05:32</span>
+            </div>
 
         </div>
-
     </div>
+
+    <!-- ===== THEME ===== -->
+    <div class="gallery-theme">
+        <h2 class="theme-title">Événements & Reportages</h2>
+        <p class="theme-desc">Photos et vidéos officielles</p>
+
+        <div class="gallery-grid">
+
+            <!-- IMAGE -->
+            <div class="gallery-item image"
+                 data-title="Inauguration"
+                 data-desc="Ouverture officielle">
+                <img src="{{ asset('images/eric.webp') }}" alt="">
+            </div>
+
+            <!-- VIDEO LOCALE -->
+            <div class="gallery-item video"
+                 data-title="Discours"
+                 data-desc="Message officiel">
+                <video preload="metadata"
+                       data-duration>
+                    <source src="{{ asset('videos/moba.mp4') }}" type="video/mp4">
+                </video>
+                <span class="play-icon">▶</span>
+                <span class="duration">00:00</span>
+            </div>
+
+            <!-- YOUTUBE -->
+            <div class="gallery-item youtube"
+                 data-title="Présentation S228"
+                 data-desc="Vidéo YouTube"
+                 data-video="https://www.youtube.com/embed/hRNwlx2lE9k"
+                 data-duration="05:32">
+                <img src="https://img.youtube.com/vi/hRNwlx2lE9k/hqdefault.jpg" alt="">
+                <span class="play-icon">▶</span>
+                <span class="duration">05:32</span>
+            </div>
+
+            <!-- IMAGE -->
+            <div class="gallery-item image"
+                 data-title="Inauguration"
+                 data-desc="Ouverture officielle">
+                <img src="{{ asset('images/eric.webp') }}" alt="">
+            </div>
+
+            <!-- VIDEO LOCALE -->
+            <div class="gallery-item video"
+                 data-title="Discours"
+                 data-desc="Message officiel">
+                <video preload="metadata"
+                       data-duration>
+                    <source src="{{ asset('videos/moba.mp4') }}" type="video/mp4">
+                </video>
+                <span class="play-icon">▶</span>
+                <span class="duration">00:00</span>
+            </div>
+
+            <!-- YOUTUBE -->
+            <div class="gallery-item youtube"
+                 data-title="Présentation S228"
+                 data-desc="Vidéo YouTube"
+                 data-video="https://www.youtube.com/embed/hRNwlx2lE9k"
+                 data-duration="05:32">
+                <img src="https://img.youtube.com/vi/hRNwlx2lE9k/hqdefault.jpg" alt="">
+                <span class="play-icon">▶</span>
+                <span class="duration">05:32</span>
+            </div>
+
+            <!-- IMAGE -->
+            <div class="gallery-item image"
+                 data-title="Inauguration"
+                 data-desc="Ouverture officielle">
+                <img src="{{ asset('images/eric.webp') }}" alt="">
+            </div>
+
+            <!-- VIDEO LOCALE -->
+            <div class="gallery-item video"
+                 data-title="Discours"
+                 data-desc="Message officiel">
+                <video preload="metadata"
+                       data-duration>
+                    <source src="{{ asset('videos/moba.mp4') }}" type="video/mp4">
+                </video>
+                <span class="play-icon">▶</span>
+                <span class="duration">00:00</span>
+            </div>
+
+            <!-- YOUTUBE -->
+            <div class="gallery-item youtube"
+                 data-title="Présentation S228"
+                 data-desc="Vidéo YouTube"
+                 data-video="https://www.youtube.com/embed/hRNwlx2lE9k"
+                 data-duration="05:32">
+                <img src="https://img.youtube.com/vi/hRNwlx2lE9k/hqdefault.jpg" alt="">
+                <span class="play-icon">▶</span>
+                <span class="duration">05:32</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ===== THEME ===== -->
+    <div class="gallery-theme">
+        <h2 class="theme-title">Événements & Reportages</h2>
+        <p class="theme-desc">Photos et vidéos officielles</p>
+
+        <div class="gallery-grid">
+
+            <!-- IMAGE -->
+            <div class="gallery-item image"
+                 data-title="Inauguration"
+                 data-desc="Ouverture officielle">
+                <img src="{{ asset('images/eric.webp') }}" alt="">
+            </div>
+
+            <!-- VIDEO LOCALE -->
+            <div class="gallery-item video"
+                 data-title="Discours"
+                 data-desc="Message officiel">
+                <video preload="metadata"
+                       data-duration>
+                    <source src="{{ asset('videos/moba.mp4') }}" type="video/mp4">
+                </video>
+                <span class="play-icon">▶</span>
+                <span class="duration">00:00</span>
+            </div>
+
+            <!-- YOUTUBE -->
+            <div class="gallery-item youtube"
+                 data-title="Présentation S228"
+                 data-desc="Vidéo YouTube"
+                 data-video="https://www.youtube.com/embed/hRNwlx2lE9k"
+                 data-duration="05:32">
+                <img src="https://img.youtube.com/vi/hRNwlx2lE9k/hqdefault.jpg" alt="">
+                <span class="play-icon">▶</span>
+                <span class="duration">05:32</span>
+            </div>
+
+            <!-- IMAGE -->
+            <div class="gallery-item image"
+                 data-title="Inauguration"
+                 data-desc="Ouverture officielle">
+                <img src="{{ asset('images/eric.webp') }}" alt="">
+            </div>
+
+            <!-- VIDEO LOCALE -->
+            <div class="gallery-item video"
+                 data-title="Discours"
+                 data-desc="Message officiel">
+                <video preload="metadata"
+                       data-duration>
+                    <source src="{{ asset('videos/moba.mp4') }}" type="video/mp4">
+                </video>
+                <span class="play-icon">▶</span>
+                <span class="duration">00:00</span>
+            </div>
+
+            <!-- YOUTUBE -->
+            <div class="gallery-item youtube"
+                 data-title="Présentation S228"
+                 data-desc="Vidéo YouTube"
+                 data-video="https://www.youtube.com/embed/hRNwlx2lE9k"
+                 data-duration="05:32">
+                <img src="https://img.youtube.com/vi/hRNwlx2lE9k/hqdefault.jpg" alt="">
+                <span class="play-icon">▶</span>
+                <span class="duration">05:32</span>
+            </div>
+
+            <!-- IMAGE -->
+            <div class="gallery-item image"
+                 data-title="Inauguration"
+                 data-desc="Ouverture officielle">
+                <img src="{{ asset('images/eric.webp') }}" alt="">
+            </div>
+
+            <!-- VIDEO LOCALE -->
+            <div class="gallery-item video"
+                 data-title="Discours"
+                 data-desc="Message officiel">
+                <video preload="metadata"
+                       data-duration>
+                    <source src="{{ asset('videos/moba.mp4') }}" type="video/mp4">
+                </video>
+                <span class="play-icon">▶</span>
+                <span class="duration">00:00</span>
+            </div>
+
+            <!-- YOUTUBE -->
+            <div class="gallery-item youtube"
+                 data-title="Présentation S228"
+                 data-desc="Vidéo YouTube"
+                 data-video="https://www.youtube.com/embed/hRNwlx2lE9k"
+                 data-duration="05:32">
+                <img src="https://img.youtube.com/vi/hRNwlx2lE9k/hqdefault.jpg" alt="">
+                <span class="play-icon">▶</span>
+                <span class="duration">05:32</span>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+
+    <button class="nav prev">&#10094;</button>
+    <button class="nav next">&#10095;</button>
+
+    <div class="counter" id="counter">1 / 1</div>
+
+    <div class="lightbox-inner">
+        <h3 id="lb-title"></h3>
+        <p id="lb-desc"></p>
+        <div class="lightbox-content"></div>
+    </div>
+</div>
+@endsection
+
+@section('scripts')
+<script src="{{ asset('js/gallery.js') }}"></script>
 @endsection

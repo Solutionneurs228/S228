@@ -432,12 +432,7 @@
                     {{-- <span class="play-icon">▶</span> --}}
                 </div>
 
-                {{-- <div class="gallery-item video">
-                    <video preload="metadata">
-                        <source src="../images/shadai.mp4" type="video/mp4">
-                    </video>
-                    <span class="play-icon">▶</span>
-                </div> --}}
+
             </div>
 
             <div class="gallery-action">
