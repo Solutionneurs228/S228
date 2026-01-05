@@ -1,3 +1,6 @@
+
+
+
 const items = Array.from(document.querySelectorAll('.gallery-item'));
 const lightbox = document.getElementById('lightbox');
 const lbContent = document.querySelector('.lightbox-content');
