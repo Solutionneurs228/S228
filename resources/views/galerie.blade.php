@@ -22,6 +22,26 @@
             </div>
 
             <!-- VIDEO LOCALE -->
+
+<div class="gallery-item video">
+                    <video controls preload="metadata">
+                        <source src="{{ asset('videos/moba.mp4') }}" type="video/mp4">
+                    </video>
+                    {{-- <span class="play-icon">▶</span> --}}
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
             <div class="gallery-item video"
                  data-title="Discours"
                  data-desc="Message officiel">
@@ -228,5 +248,6 @@
 @endsection
 
 @section('scripts')
-<script src="{{ asset('js/gallery.js') }}"></script>
+{{-- <script src="{{ asset('js/gallery.js') }}"></script> --}}
+<script src="../js/gallery.js"></script>
 @endsection
