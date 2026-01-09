@@ -248,6 +248,6 @@
 @endsection
 
 @section('scripts')
-{{-- <script src="{{ asset('js/gallery.js') }}"></script> --}}
-<script src="../js/gallery.js"></script>
+<script src="{{ asset('js/gallery.js') }}"></script>
+{{-- <script src="../js/gallery.js"></script> --}}
 @endsection
