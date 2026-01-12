@@ -1,133 +1,106 @@
 console.log('Gallery JS loaded');
 
-const items = Array.from(document.querySelectorAll('.gallery-item'));
-
+const items = document.querySelectorAll('.gallery-item');
 const lightbox = document.getElementById('lightbox');
-const lbContent = document.querySelector('.lightbox-content');
-const lbTitle = document.getElementById('lb-title');
-const lbDesc = document.getElementById('lb-desc');
+const content = document.getElementById('lightboxContent');
 const counter = document.getElementById('counter');
+const lbTitle = document.getElementById('lbTitle');
+const lbDesc = document.getElementById('lbDesc');
 
-const nextBtn = document.querySelector('.next');
-const prevBtn = document.querySelector('.prev');
-const closeBtn = document.querySelector('.close');
+let index = 0;
+let currentMedia = null;
 
-let currentIndex = 0;
-let isOpen = false;
+/* ===== STOP MEDIA PRO ===== */
+function stopMedia() {
+    if (!currentMedia) return;
 
-/* ======================================================
-   OUVERTURE D'UN MEDIA
-====================================================== */
-items.forEach((item, index) => {
-    item.addEventListener('click', () => {
-        currentIndex = index;
-        openItem(item);
-    });
-});
+    if (currentMedia.tagName === 'VIDEO') {
+        currentMedia.pause();
+        currentMedia.src = '';
+        currentMedia.load();
+    }
 
-function openItem(item) {
-    stopAllMedia();
+    if (currentMedia.tagName === 'IFRAME') {
+        currentMedia.src = '';
+    }
 
-    lbContent.innerHTML = '';
+    currentMedia = null;
+}
+
+/* ===== SHOW ITEM ===== */
+function showItem(i) {
+    stopMedia();
+    content.innerHTML = '';
+
+    const item = items[i];
+    const type = item.dataset.type;
+    const src = item.dataset.src;
+
     lbTitle.textContent = item.dataset.title || '';
     lbDesc.textContent = item.dataset.desc || '';
-    counter.textContent = `${currentIndex + 1} / ${items.length}`;
 
-    if (item.classList.contains('image')) {
-        const img = item.querySelector('img').cloneNode();
-        lbContent.appendChild(img);
+    let el;
+
+    if (type === 'image') {
+        el = document.createElement('img');
+        el.src = src;
     }
 
-    if (item.classList.contains('video')) {
-        const video = item.querySelector('video').cloneNode(true);
-        video.controls = true;
-        video.autoplay = true;
-        video.muted = false;
-
-        // ARRÊTER LES AUTRES VIDÉOS QUAND CELLE-CI JOUE
-        video.addEventListener('play', stopAllMedia);
-
-        lbContent.appendChild(video);
+    if (type === 'video') {
+        el = document.createElement('video');
+        el.src = src;
+        el.controls = true;
+        el.autoplay = true;
     }
 
-    if (item.classList.contains('youtube')) {
-        const iframe = document.createElement('iframe');
-        iframe.src = item.dataset.video + '?autoplay=1&rel=0';
-        iframe.allow = 'autoplay; fullscreen';
-        iframe.frameBorder = 0;
-
-        lbContent.appendChild(iframe);
+    if (type === 'youtube') {
+        el = document.createElement('iframe');
+        el.src = `${src}?autoplay=1&rel=0`;
+        el.allow = 'autoplay; encrypted-media';
+        el.allowFullscreen = true;
     }
 
-    lightbox.classList.add('active');
-    isOpen = true;
+    content.appendChild(el);
+    currentMedia = el;
+    counter.textContent = `${i + 1} / ${items.length}`;
 }
 
-/* ======================================================
-   NAVIGATION BOUTONS
-====================================================== */
-nextBtn.addEventListener('click', e => {
-    e.stopPropagation();
-    navigate(1);
+/* ===== EVENTS ===== */
+items.forEach((item, i) => {
+    item.addEventListener('click', () => {
+        index = i;
+        lightbox.classList.add('active');
+        showItem(index);
+    });
 });
 
-prevBtn.addEventListener('click', e => {
-    e.stopPropagation();
-    navigate(-1);
-});
-
-function navigate(step) {
-    currentIndex = (currentIndex + step + items.length) % items.length;
-    openItem(items[currentIndex]);
-}
-
-/* ======================================================
-   CLAVIER (FLÈCHES + ESC)
-====================================================== */
-document.addEventListener('keydown', e => {
-    if (!isOpen) return;
-
-    switch (e.key) {
-        case 'ArrowRight':
-            navigate(1);
-            break;
-        case 'ArrowLeft':
-            navigate(-1);
-            break;
-        case 'Escape':
-            closeLightbox();
-            break;
-    }
-});
-
-/* ======================================================
-   FERMETURE
-====================================================== */
-closeBtn.addEventListener('click', closeLightbox);
-
-lightbox.addEventListener('click', e => {
-    if (e.target === lightbox) closeLightbox();
-});
-
-function closeLightbox() {
-    stopAllMedia();
-    lbContent.innerHTML = '';
+/* ===== CLOSE ===== */
+document.getElementById('close').onclick = () => {
+    stopMedia();
+    content.innerHTML = '';
     lightbox.classList.remove('active');
-    isOpen = false;
-}
+};
 
-/* ======================================================
-   ARRÊT GLOBAL DES MÉDIAS
-====================================================== */
-function stopAllMedia() {
-    // vidéos HTML5
-    document.querySelectorAll('video').forEach(v => {
-        v.pause();
-        v.currentTime = 0;
-    });
+/* ===== NAV ===== */
+document.getElementById('next').onclick = () => {
+    index = (index + 1) % items.length;
+    showItem(index);
+};
 
-    // vidéos YouTube
-    document.querySelectorAll('iframe').forEach(f => {
-        f.src = '';
-    });
-}
+document.getElementById('prev').onclick = () => {
+    index = (index - 1 + items.length) % items.length;
+    showItem(index);
+};
+
+/* ===== KEYBOARD ===== */
+document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('active')) return;
+
+    if (e.key === 'Escape') {
+        stopMedia();
+        lightbox.classList.remove('active');
+    }
+
+    if (e.key === 'ArrowRight') document.getElementById('next').click();
+    if (e.key === 'ArrowLeft') document.getElementById('prev').click();
+});

@@ -424,7 +424,7 @@
                 </div>
                 <!-- Vidéo -->
                 <div class="gallery-item video">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/hRNwlx2lE9k"
+                    <iframe src="https://www.youtube.com/embed/hRNwlx2lE9k"
                         title="S228/la prestation de la chorale Salut des âmes des AD tchannadè lors du mariage de yovo &amp; Immaculée"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
