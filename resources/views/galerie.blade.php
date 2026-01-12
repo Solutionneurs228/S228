@@ -39,6 +39,29 @@
                     <span class="play-icon">▶</span>
                 </div>
 
+                 {{-- IMAGE --}}
+                <div class="gallery-item" data-type="image" data-src="{{ asset('images/eric.webp') }}"
+                    data-title="Ouverture officielle" data-desc="Cérémonie d’ouverture du projet S228">
+                    <img src="{{ asset('images/eric.webp') }}">
+                </div>
+
+                {{-- VIDEO LOCALE --}}
+                <div class="gallery-item" data-type="video" data-src="{{ asset('videos/gedeon.mp4') }}"
+                    data-title="Discours" data-desc="Discours du coordinateur général">
+                    <video controls poster="{{ asset('images/gedeon-preview.png') }}" muted preload="metadata"></video>
+
+                    <span class="play-icon">▶</span>
+                </div>
+
+
+
+                {{-- YOUTUBE --}}
+                <div class="gallery-item" data-type="youtube" data-src="https://www.youtube.com/embed/hRNwlx2lE9k"
+                    data-title="Résumé vidéo" data-desc="Moments forts de l’événement">
+                    <img src="https://img.youtube.com/vi/hRNwlx2lE9k/hqdefault.jpg">
+                    <span class="play-icon">▶</span>
+                </div>
+
             </div>
         </div>
 
