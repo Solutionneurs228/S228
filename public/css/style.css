@@ -478,19 +478,25 @@ margin-bottom: 15rem;
 
 /* CARTE PARTENAIRE */
 .partener {
-    background-color: rgba(255, 255, 255, 0.08);
+    background: radial-gradient(circle at center, #ff99006e 0%, #ffeb3b42 70%);
     border-radius: 14px;
     padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease ;
+    -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease ;
+    -moz-transition: transform 0.3s ease, box-shadow 0.3s ease ;
+    -ms-transition: transform 0.3s ease, box-shadow 0.3s ease ;
+    -o-transition: transform 0.3s ease, box-shadow 0.3s ease ;
 }
 
 /* EFFET HOVER */
 .partener:hover {
     transform: translateY(-6px);
+    /* background-color: rgba(255, 208, 0, 0.2); */
+    background: radial-gradient(circle at center, #ff990065 0%, #ffeb3b5b 40%, #fd9d0c23 80%);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
@@ -1693,10 +1699,10 @@ max-height: 22rem;
 .btn-reduction {
 
   bottom: -20%;
-  left: 21%;
+  left: 15%;
 
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 0.75rem;
+  font-weight: 400;
 
   padding: 12px 27px;
   border-radius: 12px;
@@ -1713,10 +1719,19 @@ max-height: 22rem;
   }
 
 
-    /* 4 Mobile petit écran (moins de 576px) */
+   
+  
+  
+  
+  
+
+
+   /* 4 Mobile petit écran (moins de 576px) */
+
   @media (max-width: 575px) {
 
-        .session {
+  
+         .session {
         margin: 1rem 0rem;
     }
     /* .session.reduce .session.parteners{
@@ -1785,7 +1800,7 @@ max-height: 15rem;
     .btn-reduction {
 
   bottom: -26%;
-  left: -7%;
+  left: 2%;
   font-size: 0.7rem;
   font-weight: 500;
   margin: 0px;
@@ -1799,5 +1814,14 @@ max-height: 15rem;
 
 }
 
+  }
 
+  
+
+
+   /* 5 Mobile petit écran (moins de 576px) */
+  @media (max-width: 385px) {    
+  .btn-reduction {
+  left: -7%;
+}
   }
