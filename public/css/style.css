@@ -1452,6 +1452,52 @@ width: 100%;
   } */
 
 
+/* Style global pour tous les liens */
+a {
+    color: #1a73e8;           /* Bleu visible et standard */
+    text-decoration: none;     /* Retire le soulignement par défaut */
+    cursor: pointer;           /* Change le curseur au survol */
+    transition: all 0.2s ease; /* Animation douce pour hover/focus */
+}
+
+/* Soulignement au survol */
+a:hover,
+a:focus {
+    text-decoration: underline;
+    color: #0c47b7;           /* Bleu plus foncé au survol */
+}
+
+/* Style pour les liens actifs */
+a:active {
+    color: #0a3a94;           /* Couleur plus sombre quand cliqué */
+}
+
+/* Option pour un petit effet "ripple" simple au clic avec box-shadow */
+a:focus-visible {
+    outline: 2px dashed #1a73e8;  /* Pour accessibilité clavier */
+    outline-offset: 2px;
+}
+
+/* Pour les liens dans le corps de texte */
+p a, li a {
+    font-weight: 500;          /* Légèrement plus visible */
+}
+
+/* Variante bouton texte (optionnel) */
+a.button-link {
+    display: inline-block;
+    background-color: #1a73e8;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+a.button-link:hover {
+    background-color: #0c47b7;
+}
 
 /* RESPONSIVE */
 
