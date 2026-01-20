@@ -5,6 +5,10 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DevisController;
 // use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use App\Models\Devis;
+use App\Mail\DevisMail;
+use Illuminate\Support\Facades\Mail;
 
 Route::middleware(['auth', 'verified'])->group(function () {
     // Route::get('/note', [NoteController::class, 'index'])->name('note.index');
@@ -53,11 +57,28 @@ Route::get('/contact', function () {
 })->name('contact');
 Route::post('/contact', [ContactController::class,'store'])->name('contact.store');
 
+
+
 Route::get('/devis', function () {
     return view('devis');
 })->name('devis');
 Route::post('/devis', [DevisController::class,'store'])->name('devis.store');
-// Route::redirect('/', 'home')->name('home');
+// Route::get('/demande-devis', function () {
+//     return view('devis');
+// });
+
+// Route::post('/demande-devis', function (Request $request) {
+
+//     Devis::create([
+//         'name' => $request->name,
+//         'email' => $request->email,
+//         'message' => $request->message,
+//     ]);
+
+//    return redirect('/demande-devis')->with('success', 'Votre demande de devis a été envoyée avec succès.');
+
+// });
+
 
 
 

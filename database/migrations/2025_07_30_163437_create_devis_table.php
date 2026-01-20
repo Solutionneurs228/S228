@@ -23,6 +23,18 @@ return new class extends Migration
         });
     }
 
+//     public function up()
+// {
+//     Schema::create('devis', function (Blueprint $table) {
+//         $table->id();
+//         $table->string('nom');
+//         $table->string('email');
+//         $table->text('message');
+//         $table->timestamps();
+//     });
+// }
+
+
     /*
      * Reverse the migrations.
      */

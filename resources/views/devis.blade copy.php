@@ -16,16 +16,10 @@
                 <h1 class="big-title">Demande de devis</h1>
             </div>
 
-  @if (session('success'))
-                <p class="success-message">
-                    {{ session('success') }}
-                </p>
-            @endif
-
             <form class="" action="{{ route('devis.store') }}" method="POST">
                 @csrf
 
-                                <div class="form devis-form">
+                <div class="form devis-form">
 
                     <div class="form-rows">
                         {{-- <div>
@@ -88,8 +82,37 @@
 
                 </div>
             </form>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
 
+            <h1>Demande de devis</h1>
 
+<form method="POST" action="/demande-devis">
+    @csrf
+
+      <p>
+        <input type="text" name="nom" placeholder="Votre nom">
+    </p>
+
+    <p>
+        <input type="email" name="email" placeholder="Votre email">
+    </p>
+
+    <p>
+        <textarea name="message" placeholder="Votre message"></textarea>
+    </p>
+
+    <button type="submit">Envoyer</button>
+</form>
+
+            @if (session('success'))
+                <p>{{ session('success') }}</p>
+            @endif
         </div>
 
     </div>

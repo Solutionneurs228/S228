@@ -17,3 +17,4 @@ class Devis extends Model
         'message'
     ];
 }
+
