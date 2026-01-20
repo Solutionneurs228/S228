@@ -451,111 +451,131 @@ margin-bottom: 15rem;
   -o-transform: scale(1.2);
 }
 
-
+/* SECTION PARTENAIRES */
 .parteners {
     width: 100%;
-    margin-left: 0px;
-    /* border-radius: 10px; */
-    background-color: rgba(132, 139, 238, 0.473);
+    background-color: rgba(230, 231, 252, 0.47);
     color: var(--projectCardColor);
-    /* box-shadow: 1px 1px 10px rgba(3, 3, 41, 0.541); */
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+    padding-bottom: 6rem;
 }
-.parteners .big-title{
-          font-size: 2.2rem;
-          margin: 40px 0px  0px 0px;
-        }
-.parteners span {
-    color: var(--green);
-    font-size: 1.5rem;
-    font-style: italic;
-    text-align: center;
-    display: block;
-    margin-bottom: 1rem;
 
+/* TITRE */
+.parteners .big-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 3rem;
 }
-.parteners-all{
-    width: 90%;
-    padding: 0rem 2rem;
-      display: -ms-grid;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+
+/* GRILLE RESPONSIVE */
+.parteners-all {
+    width: min(1200px, 90%);
     margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 3rem;
 }
-.partener-img img{
-    height: auto;
-    width: 80%;
-    object-fit: contain;
-}
-.partener{
+
+/* CARTE PARTENAIRE */
+.partener {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
-    justify-content: space-between;
-    color: var(--projectCardColor);
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.partener-description{
-    font-size: 1.2rem;
+
+/* EFFET HOVER */
+.partener:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* CONTENEUR IMAGE */
+.partener-img {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+/* IMAGE */
+.partener-img img {
+    max-height: 100%;
+    max-width: 80%;
+    object-fit: contain;
+}
+
+/* DESCRIPTION */
+.partener-description {
+    font-size: 1.05rem;
     font-weight: 500;
+    line-height: 1.6;
 }
 
-.partener-description a{
+/* LIEN */
+.partener-description a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--green);
     font-style: italic;
+    text-decoration: none;
+}
+
+.partener-description a:hover {
+    text-decoration: underline;
+}
+
+/* TEXTE BAS (optionnel) */
+.parteners span {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--green);
 }
 
 
 
 
+/* GALLERY */
+/* SECTION GALERIE */
 .home-gallery {
-  padding: 60px 20px;
-  background: #f9f9f9;
+    padding: 4rem 1.25rem;
+    background-color: #f9f9f9;
 }
 
+/* EN-TÊTE */
 .gallery-header {
-  text-align: center;
-  margin-bottom: 30px;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
-
-
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 14px;
-  background: #000;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-
-
-
-
-    aspect-ratio: 16 / 9;
-    cursor: pointer;
-    /* transform: scale(.95); */
-    animation: fadeInUp .6s ease forwards;
+.gallery-header .big-title {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
 }
 
-
-.gallery-item img,
-.gallery-item video,
-.gallery-item iframe {
-      width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
+.gallery-header p {
+    font-size: 1.05rem;
+    color: #555;
 }
 
-.gallery-item:hover img,
-.gallery-item:hover video,
-.gallery-item:hover iframe {
-  transform: scale(1.05);
+/* GRILLE RESPONSIVE */
+.gallery-grid {
+    width: min(1200px, 95%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
 }
-
-
-
-/* GRID */
+/* GRID
 
 .gallery-grid {
   padding: 2rem 5rem;
@@ -563,6 +583,68 @@ margin-bottom: 15rem;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
 }
+*/
+
+/* ITEM GALERIE */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: #000;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    aspect-ratio: 16 / 9;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* HOVER CARD */
+.gallery-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* MÉDIAS */
+.gallery-item img,
+.gallery-item video,
+.gallery-item iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border: none;
+    transition: transform 0.4s ease;
+}
+
+ZOOM MÉDIA
+.gallery-item:hover img,
+.gallery-item:hover video,
+.gallery-item:hover iframe {
+    transform: scale(1.06);
+}
+
+/* BOUTON */
+.gallery-action {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.btn-gallery {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    background-color: var(--green);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-gallery:hover {
+    background-color: #2da86b;
+    transform: translateY(-2px);
+}
+
+
 
 
 
@@ -1453,11 +1535,6 @@ margin-bottom: 8rem;
     margin: 3rem 0rem;
 }
 
-/* .session.reduce .session.parteners .session.home-gallery{
-    margin-left: 0rem;
-    margin-right: 0rem;
-    overflow: hidden;
-} */
 .hook{
     min-height: auto;
 
@@ -1505,8 +1582,6 @@ margin-bottom: 8rem;
     }
 
     .footer-container{
-        /* display: flex;
-        justify-content: space-around; */
         display: grid;
         grid-template-columns: repeat(2, auto);
         justify-content: space-around;
@@ -1561,15 +1636,7 @@ max-height: 22rem;
   border-radius: 12px;
 
 }
-        /* .session {
-            margin: 2rem 0rem;
-        } */
 
-        /* .session.reduce .session.parteners{
-    margin-left: 0rem;
-    margin-right: 0rem;
-    overflow: hidden;
-} */
         .formations-boxes {
             grid-template-columns: 1fr 1fr;
             margin-bottom: 5rem;
@@ -1711,7 +1778,8 @@ display: block;
 
     .reduce{
 height: 60%;
-margin: -4rem 0rem 4rem 0rem;
+/* margin: -4rem 0rem 4rem 0rem; */
+margin: 0rem 0rem 10rem 0rem;
 max-height: 15rem;
 }
     .btn-reduction {
