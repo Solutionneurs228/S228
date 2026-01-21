@@ -28,9 +28,9 @@ public function store(Request $request)
     $devis = Devis::create($data);
 
     // 3️⃣ Envoi email (OBJET attendu)
-    Mail::to('solutionneurs228@gmail.com')->send(
-        new DevisMail($devis)
-    );
+    // Mail::to('solutionneurs228@gmail.com')->send(
+    //     new DevisMail($devis)
+    // );
 
     // 4️⃣ Redirection avec message
     return back()->with('success', 'Votre message a bien été envoyé, merci.');
