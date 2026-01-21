@@ -23,6 +23,7 @@
                         <p class="home-description">Réparation des ordinateurs - Assistance informatique ...</p>
                         <div class="hook-btn-grp">
                             <a href="{{ route('devis') }}" class="btn my-2 my-sm-0 contact-btn">📩 Demander un devis</a>
+                            <a href="/health" class="btn my-2 my-sm-0 contact-btn">📩 Demander un devis</a>
                         </div>
                     </div>
                 </div>

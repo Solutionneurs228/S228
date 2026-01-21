@@ -62,7 +62,15 @@ Route::post('/contact', [ContactController::class,'store'])->name('contact.store
 Route::get('/devis', function () {
     return view('devis');
 })->name('devis');
-Route::post('/devis', [DevisController::class,'store'])->name('devis.store');
+// Route::post('/devis', [DevisController::class,'store'])->name('devis.store');
+Route::post('/devis', [DevisController::class, 'store'])->name('devis.store');
+
+
+Route::get('/health', function () {
+    return 'Laravel OK';
+});
+
+
 // Route::get('/demande-devis', function () {
 //     return view('devis');
 // });
