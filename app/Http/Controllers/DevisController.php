@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\models\Devis;
+use App\Models\Devis;
 use Illuminate\Support\Facades\Route;
 use App\Mail\DevisMail;
 use Illuminate\Support\Facades\Mail;
