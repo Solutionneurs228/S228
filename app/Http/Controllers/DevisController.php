@@ -38,10 +38,10 @@ public function store(Request $request)
         'subject' => 'Nouveau devis reçu',
         'sender' => [
             'name' => 'Demande de devis',
-            'email' => env('MAIL_FROM_ADDRESS'),
+            'email' => 'solutionneurs228@gmail.com',
         ],
         'to' => [
-            ['email' => env('MAIL_FROM_ADDRESS')]
+            ['email' => 'solutionneurs228@gmail.com']
         ],
         'htmlContent' => "
             <h2>Nouveau devis</h2>
@@ -53,9 +53,17 @@ public function store(Request $request)
         ",
     ]);
 
-    $apiInstance->sendTransacEmail($email);
 
-    return back()->with('success', 'Votre message a bien été envoyé.');
+     Log::info('Brevo response', [
+        'status' => $response->status(),
+        'body' => $response->body(),
+    ]);
+
+    return response()->json(['success' => true]);
+
+    // $apiInstance->sendTransacEmail($email);
+
+    // return back()->with('success', 'Votre message a bien été envoyé.');
 }
 
 }
