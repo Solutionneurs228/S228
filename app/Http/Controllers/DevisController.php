@@ -2,19 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Devis;
-use Illuminate\Support\Facades\Route;
-use App\Mail\DevisMail;
-use Illuminate\Support\Facades\Mail;
-
-
+use GuzzleHttp\Client;
+use Illuminate\Http\Request;
+use SendinBlue\Client\Api\TransactionalEmailsApi;
+use SendinBlue\Client\Configuration;
+use SendinBlue\Client\Model\SendSmtpEmail;
 
 class DevisController extends Controller
 {
 public function store(Request $request)
 {
-    // 1️⃣ Validation (TABLEAU)
     $data = $request->validate([
         'name'    => 'required|string|max:100',
         'adress'  => 'nullable|string|max:100',
@@ -24,21 +22,40 @@ public function store(Request $request)
         'message' => 'nullable|string|max:1000',
     ]);
 
-    // 2️⃣ Enregistrement en base (OBJET Devis)
+    // Enregistrement BDD
     $devis = Devis::create($data);
 
+    // Configuration Brevo API
+    $config = Configuration::getDefaultConfiguration()
+        ->setApiKey('api-key', env('BREVO_API_KEY'));
 
-    // 3️⃣ Envoi email (OBJET attendu)
-    Mail::to('solutionneurs228@gmail.com')->send(
-        new DevisMail($devis)
+    $apiInstance = new TransactionalEmailsApi(
+        new Client(),
+        $config
     );
 
-    // 4️⃣ Redirection avec message
-    return back()->with('success', 'Votre message a bien été envoyé, merci.');
+    $email = new SendSmtpEmail([
+        'subject' => 'Nouveau devis reçu',
+        'sender' => [
+            'name' => 'Demande de devis',
+            'email' => env('MAIL_FROM_ADDRESS'),
+        ],
+        'to' => [
+            ['email' => env('MAIL_FROM_ADDRESS')]
+        ],
+        'htmlContent' => "
+            <h2>Nouveau devis</h2>
+            <p><b>Nom :</b> {$devis->name}</p>
+            <p><b>Email :</b> {$devis->email}</p>
+            <p><b>Téléphone :</b> {$devis->phone}</p>
+            <p><b>Service :</b> {$devis->service}</p>
+            <p><b>Message :</b><br>{$devis->message}</p>
+        ",
+    ]);
+
+    $apiInstance->sendTransacEmail($email);
+
+    return back()->with('success', 'Votre message a bien été envoyé.');
 }
 
-
-    }
-
-
-
+}
