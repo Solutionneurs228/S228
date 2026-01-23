@@ -1,10 +1,12 @@
 <h2>Nouvelle demande de devis</h2>
 
-<p><strong>Nom :</strong> {{ $devis->name }}</p>
-<p><strong>Email :</strong> {{ $devis->email }}</p>
+<ul>
+    <li><strong>Nom :</strong> {{ $devis->name }}</li>
+    <li><strong>Adresse :</strong> {{ $devis->adress }}</li>
+    <li><strong>Téléphone :</strong> {{ $devis->phone }}</li>
+    <li><strong>Service :</strong> {{ $devis->service }}</li>
+    <li><strong>Email :</strong> {{ $devis->email }}</li>
+</ul>
 
 <p><strong>Message :</strong></p>
-<p>{{ $devis->message }}</p>
-<p><strong>Adresse :</strong> {{ $devis->adress }}</p>
-<p><strong>Téléphone :</strong> {{ $devis->phone }}</p>
-<p><strong>Service désiré :</strong> {{ $devis->service }}</p>
+<p>{!! nl2br(e($devis->message)) !!}</p>

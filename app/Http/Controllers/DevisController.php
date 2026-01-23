@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Devis;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
 class DevisController extends Controller
 {
-    public function store(Request $request)
-    {
-        Log::info('DEBUT store()');
+public function store(Request $request)
+{
+    try {
+        // Validation
         $data = $request->validate([
             'name'    => 'required|string|max:100',
             'adress'  => 'nullable|string|max:100',
@@ -21,49 +22,48 @@ class DevisController extends Controller
             'message' => 'nullable|string|max:1000',
         ]);
 
- Log::info('VALIDATION OK', $data);
+        // Enregistrement BDD
+        $devis = Devis::create($data);
 
-    $devis = Devis::create($data);
+        // Envoi Brevo
+        $response = Http::withHeaders([
+            'api-key' => config('services.brevo.key'),
+            'Accept' => 'application/json',
+            'Content-Type' => 'application/json',
+        ])->post('https://api.brevo.com/v3/smtp/email', [
+            'sender' => [
+                'name' => 'S228',
+                'email' => config('mail.from.address'),
+            ],
+            'to' => [
+                ['email' => 'solutionneurs228@gmail.com'],
+            ],
+            'subject' => 'Nouvelle demande de devis',
+            'htmlContent' => view('emails.devis', compact('devis'))->render(),
+        ]);
 
-    Log::info('DEVIS SAUVE', ['id' => $devis->id]);
+        // Log réponse Brevo (utile en prod)
+        Log::info('Brevo email envoyé', [
+            'status' => $response->status(),
+            'body' => $response->body(),
+        ]);
 
-    // 👇 LOG AVANT BREVO
-    Log::info('AVANT APPEL BREVO');
+        return redirect()->back()->with(
+            'success',
+            'Votre demande a été envoyée avec succès.'
+        );
 
+    } catch (\Throwable $e) {
 
-     $response = Http::withHeaders([
-        'api-key' => env('BREVO_API_KEY'),
-        'Accept' => 'application/json',
-        'Content-Type' => 'application/json',
-    ])->post('https://api.brevo.com/v3/smtp/email', [
-        'sender' => [
-            // 'name' => 'Test',
-            'name' => 'S228',
-            'email' => env('MAIL_FROM_ADDRESS'),
-        ],
-        'to' => [
-            ['email' => 'solutionneurs228@gmail.com'],
-        ],
-        'subject' => 'TEST BREVO',
-        'htmlContent' => '
-        <p>Email test</p>
-        <ul>
-            <li>Nom: ' . htmlspecialchars($devis->name) . '</li>
-            <li>Adresse: ' . htmlspecialchars($devis->adress) . '</li>
-            <li>Téléphone: ' . htmlspecialchars($devis->phone) . '</li>
-            <li>Service: ' . htmlspecialchars($devis->service) . '</li>
-            <li>Email: ' . htmlspecialchars($devis->email) . '</li>
-            <li>Message: ' . nl2br(htmlspecialchars($devis->message)) . '</li>
-        </ul>
+        Log::error('Erreur envoi devis', [
+            'message' => $e->getMessage(),
+        ]);
 
-        ',
-    ]);
+        return redirect()->back()->with(
+            'error',
+            'Une erreur est survenue. Veuillez réessayer plus tard.'
+        );
+    }
+}
 
-    return [
-        'status' => $response->status(),
-        'body' => $response->body(),
-    ];
-
-    // TEMPORAIRE : STOP ICI
-    return response('TEST STOP AVANT BREVO', 200);}
 }
