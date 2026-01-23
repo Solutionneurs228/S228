@@ -11,6 +11,7 @@ class DevisController extends Controller
 {
     public function store(Request $request)
     {
+        Log::info('DEBUT store()');
         $data = $request->validate([
             'name'    => 'required|string|max:100',
             'adress'  => 'nullable|string|max:100',
@@ -20,34 +21,15 @@ class DevisController extends Controller
             'message' => 'nullable|string|max:1000',
         ]);
 
-        $devis = Devis::create($data);
+ Log::info('VALIDATION OK', $data);
 
-        $response = Http::withHeaders([
-            'api-key' => env('BREVO_API_KEY'),
-            'Accept' => 'application/json',
-            'Content-Type' => 'application/json',
-        ])->post('https://api.brevo.com/v3/smtp/email', [
-            'sender' => [
-                'name' => 'Site Web',
-                'email' => 'contact@votredomaine.com',
-            ],
-            'to' => [
-                ['email' => 'solutionneurs228@gmail.com'],
-            ],
-            'subject' => 'Nouveau devis reçu',
-            'htmlContent' => "
-                <h3>Nouveau devis</h3>
-                <p>Nom : {$data['name']}</p>
-                <p>Téléphone : {$data['phone']}</p>
-                <p>Message : {$data['message']}</p>
-            ",
-        ]);
+    $devis = Devis::create($data);
 
-        Log::info('Brevo response', [
-            'status' => $response->status(),
-            'body' => $response->body(),
-        ]);
+    Log::info('DEVIS SAUVE', ['id' => $devis->id]);
 
-        return back()->with('success', 'Demande envoyée avec succès');
-    }
+    // 👇 LOG AVANT BREVO
+    Log::info('AVANT APPEL BREVO');
+
+    // TEMPORAIRE : STOP ICI
+    return response('TEST STOP AVANT BREVO', 200);}
 }
