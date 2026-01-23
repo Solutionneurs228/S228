@@ -2,68 +2,52 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Devis;
-use GuzzleHttp\Client;
 use Illuminate\Http\Request;
-use SendinBlue\Client\Api\TransactionalEmailsApi;
-use SendinBlue\Client\Configuration;
-use SendinBlue\Client\Model\SendSmtpEmail;
+use App\Models\Devis;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 
 class DevisController extends Controller
 {
-public function store(Request $request)
-{
-    $data = $request->validate([
-        'name'    => 'required|string|max:100',
-        'adress'  => 'nullable|string|max:100',
-        'phone'   => 'required|string|max:20',
-        'service' => 'nullable|string|max:100',
-        'email'   => 'nullable|email|max:100',
-        'message' => 'nullable|string|max:1000',
-    ]);
+    public function store(Request $request)
+    {
+        $data = $request->validate([
+            'name'    => 'required|string|max:100',
+            'adress'  => 'nullable|string|max:100',
+            'phone'   => 'required|string|max:20',
+            'service' => 'nullable|string|max:100',
+            'email'   => 'nullable|email|max:100',
+            'message' => 'nullable|string|max:1000',
+        ]);
 
-    // Enregistrement BDD
-    $devis = Devis::create($data);
+        $devis = Devis::create($data);
 
-    // Configuration Brevo API
-    $config = Configuration::getDefaultConfiguration()
-        ->setApiKey('api-key', env('BREVO_API_KEY'));
+        $response = Http::withHeaders([
+            'api-key' => env('BREVO_API_KEY'),
+            'Accept' => 'application/json',
+            'Content-Type' => 'application/json',
+        ])->post('https://api.brevo.com/v3/smtp/email', [
+            'sender' => [
+                'name' => 'Site Web',
+                'email' => 'contact@votredomaine.com',
+            ],
+            'to' => [
+                ['email' => 'solutionneurs228@gmail.com'],
+            ],
+            'subject' => 'Nouveau devis reçu',
+            'htmlContent' => "
+                <h3>Nouveau devis</h3>
+                <p>Nom : {$data['name']}</p>
+                <p>Téléphone : {$data['phone']}</p>
+                <p>Message : {$data['message']}</p>
+            ",
+        ]);
 
-    $apiInstance = new TransactionalEmailsApi(
-        new Client(),
-        $config
-    );
+        Log::info('Brevo response', [
+            'status' => $response->status(),
+            'body' => $response->body(),
+        ]);
 
-    $email = new SendSmtpEmail([
-        'subject' => 'Nouveau devis reçu',
-        'sender' => [
-            'name' => 'Demande de devis',
-            'email' => 'solutionneurs228@gmail.com',
-        ],
-        'to' => [
-            ['email' => 'solutionneurs228@gmail.com']
-        ],
-        'htmlContent' => "
-            <h2>Nouveau devis</h2>
-            <p><b>Nom :</b> {$devis->name}</p>
-            <p><b>Email :</b> {$devis->email}</p>
-            <p><b>Téléphone :</b> {$devis->phone}</p>
-            <p><b>Service :</b> {$devis->service}</p>
-            <p><b>Message :</b><br>{$devis->message}</p>
-        ",
-    ]);
-
-
-     Log::info('Brevo response', [
-        'status' => $response->status(),
-        'body' => $response->body(),
-    ]);
-
-    return response()->json(['success' => true]);
-
-    // $apiInstance->sendTransacEmail($email);
-
-    // return back()->with('success', 'Votre message a bien été envoyé.');
-}
-
+        return back()->with('success', 'Demande envoyée avec succès');
+    }
 }
