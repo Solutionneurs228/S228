@@ -30,21 +30,33 @@ class DevisController extends Controller
     // 👇 LOG AVANT BREVO
     Log::info('AVANT APPEL BREVO');
 
-    
+
      $response = Http::withHeaders([
         'api-key' => env('BREVO_API_KEY'),
         'Accept' => 'application/json',
         'Content-Type' => 'application/json',
     ])->post('https://api.brevo.com/v3/smtp/email', [
         'sender' => [
-            'name' => 'Test',
+            // 'name' => 'Test',
+            'name' => 'S228',
             'email' => env('MAIL_FROM_ADDRESS'),
         ],
         'to' => [
             ['email' => 'solutionneurs228@gmail.com'],
         ],
         'subject' => 'TEST BREVO',
-        'htmlContent' => '<p>Email test</p>',
+        'htmlContent' => '
+        <p>Email test</p>
+        <ul>
+            <li>Nom: ' . htmlspecialchars($devis->name) . '</li>
+            <li>Adresse: ' . htmlspecialchars($devis->adress) . '</li>
+            <li>Téléphone: ' . htmlspecialchars($devis->phone) . '</li>
+            <li>Service: ' . htmlspecialchars($devis->service) . '</li>
+            <li>Email: ' . htmlspecialchars($devis->email) . '</li>
+            <li>Message: ' . nl2br(htmlspecialchars($devis->message)) . '</li>
+        </ul>
+
+        ',
     ]);
 
     return [
