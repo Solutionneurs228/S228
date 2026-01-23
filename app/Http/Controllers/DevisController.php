@@ -30,6 +30,28 @@ class DevisController extends Controller
     // 👇 LOG AVANT BREVO
     Log::info('AVANT APPEL BREVO');
 
+    
+     $response = Http::withHeaders([
+        'api-key' => env('BREVO_API_KEY'),
+        'Accept' => 'application/json',
+        'Content-Type' => 'application/json',
+    ])->post('https://api.brevo.com/v3/smtp/email', [
+        'sender' => [
+            'name' => 'Test',
+            'email' => env('MAIL_FROM_ADDRESS'),
+        ],
+        'to' => [
+            ['email' => 'solutionneurs228@gmail.com'],
+        ],
+        'subject' => 'TEST BREVO',
+        'htmlContent' => '<p>Email test</p>',
+    ]);
+
+    return [
+        'status' => $response->status(),
+        'body' => $response->body(),
+    ];
+
     // TEMPORAIRE : STOP ICI
     return response('TEST STOP AVANT BREVO', 200);}
 }
