@@ -47,10 +47,16 @@ body {
     align-items: baseline;
 }
 
-.section {
+.service-session {
     padding-top: 5rem;
+    display: flex;
 }
-
+.service-session-img-left {
+    /* flex: 1; */
+    /* width: 50%; */
+    padding: 1rem;
+    padding-right: 2rem;
+}
 
 /* NAV */
 .navbar {
@@ -1075,6 +1081,9 @@ i {
 
 /* SERVICES PAGE */
 
+.service-devis-btn {
+    margin-top: 4rem;
+}
 
 .service-sommaire div a {
     color: var(--textColor);
@@ -1084,15 +1093,13 @@ i {
     font-size: 1.2rem;
 }
 
-.service-sommaire div a:hover {
-    color: var(--primaryColor);
-    /* text-decoration: underline; */
-
-}
-
-.service-sommaire div a .sommaireText:hover {
+.service-sommaire div a:hover .sommaireText{
 
     text-decoration: underline;
+        text-decoration-thickness: 2px;
+    text-decoration-color: var(--primaryColor);
+    -webkit-text-decoration-color: var(--primaryColor);
+    -moz-text-decoration-color: var(--primaryColor);
 
 }
 

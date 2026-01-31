@@ -14,6 +14,9 @@
                     <div class="carousel-caption">
                         <h5 class="home-title">Photographe & Vidéographie</h5>
                         <p class="home-description">Agrandissements - reportage et montage vidéo - vidéo pubs ...</p>
+                         <div class="hook-btn-grp service-devis-btn">
+                            <a href="{{ route('devis') }}" class="btn my-2 my-sm-0 contact-btn">📩 Demander un devis</a>
+                        </div>
                     </div>
                 </div>
 

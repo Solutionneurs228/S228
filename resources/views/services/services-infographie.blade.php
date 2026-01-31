@@ -13,6 +13,9 @@
                 <div class="carousel-caption d-md-block">
                     <h5 class="home-title">INFOGRAPHIE</h5>
                     <p class="home-description">Entretien - Réparation - Assistance informatique ...</p>
+                     <div class="hook-btn-grp service-devis-btn">
+                            <a href="{{ route('devis') }}" class="btn my-2 my-sm-0 contact-btn">📩 Demander un devis</a>
+                        </div>
                 </div>
             </div>
 

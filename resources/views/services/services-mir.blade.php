@@ -14,6 +14,9 @@
                     <div class="carousel-caption">
                         <h5 class="home-title">MAINTENANCE INFORMATIQUE</h5>
                         <p class="home-description">Réparation des ordinateurs - Assistance informatique ...</p>
+                        <div class="hook-btn-grp service-devis-btn">
+                            <a href="{{ route('devis') }}" class="btn my-2 my-sm-0 contact-btn">📩 Demander un devis</a>
+                        </div>
                     </div>
                 </div>
 
@@ -71,45 +74,53 @@
 
                     </div>
 
-                    <section class="section" id="reparation">
-                        {{-- <div class="mir-service"> --}}
-                        <div class="sectionTitle">
-                            <span class="titleNumber">01 . </span>
-                            <h4 class="titleText"> Réparation et entretien des ordinateurs
-                                <div class="underline">
-                                    <span></span>
-                                </div>
-                            </h4>
+                    <section class="service-session" id="reparation">
+
+                        <div class="service-session-img-left">
+                            <img src="../images/mir.webp" alt="Réparation et entretien des ordinateurs">
                         </div>
 
-                        <div>
-                            <ul>
-                                <li>votre ordinateur est en panne ?</li>
-                                <li>ou vous ne comprenez plus son fonctionnement ?</li>
-                            </ul>
-                            <p>
-                                Nous vous offrons un service fiable et abordable pour garantir le bon fonctionnement de
-                                vos
-                                ordinateurs
-                                bureau ou portatifs.
-                                Nous passons par des diagnostics rapides pour résoudre efficacement tout problème
-                                matériel
-                                ou
-                                logiciel.
-                                En termes d'entretien, nous assurons des mises à jour régulières, un nettoyage physique
-                                pour
-                                éviter la
-                                surchauffe, et nous mettons en place des solutions de sauvegarde des données.
-                            </p>
+                        <div class="service-session-content-right">
+                            <div class="sectionTitle">
+                                <span class="titleNumber">01 . </span>
+                                <h4 class="titleText"> Réparation et entretien des ordinateurs
+                                    <div class="underline">
+                                        <span></span>
+                                    </div>
+                                </h4>
+                            </div>
+
+                            <div>
+                                <ul>
+                                    <li>votre ordinateur est en panne ?</li>
+                                    <li>ou vous ne comprenez plus son fonctionnement ?</li>
+                                </ul>
+                                <p>
+                                    Nous vous offrons un service fiable et abordable pour garantir le bon fonctionnement de
+                                    vos
+                                    ordinateurs
+                                    bureau ou portatifs.
+                                    Nous passons par des diagnostics rapides pour résoudre efficacement tout problème
+                                    matériel
+                                    ou
+                                    logiciel.
+                                    En termes d'entretien, nous assurons des mises à jour régulières, un nettoyage physique
+                                    pour
+                                    éviter la
+                                    surchauffe, et nous mettons en place des solutions de sauvegarde des données.
+                                </p>
+                            </div>
+
+                            <div class="service-links-group">
+                                vous pouvez dès lors
+                                <a href="{{ route('devis') }}">commander ce service</a>
+                                <a href="tel:+22892671533">telephoner</a>
+                                <a
+                                    href="https://wa.me/+22892671533?text=Bonjour%2C%20je%20souhaite%20demander%20un%20devis%20pour%20un%20service%20informatique.">whatsapp</a>
+                                <a href="mailto:solutionneurs228@gmail.com">passer par Mail</a>
+                            </div>
                         </div>
 
-                        <div class="service-links-group">
-                            vous pouvez dès lors
-                            <a href="{{ route('devis') }}">commander ce service</a>
-                            <a href="tel:+22892671533">telephoner</a>
-                            <a href="https://wa.me/+22892671533?text=Bonjour%2C%20je%20souhaite%20demander%20un%20devis%20pour%20un%20service%20informatique.">whatsapp</a>
-                            <a href="mailto:solutionneurs228@gmail.com">passer par Mail</a>
-                        </div>
                     </section>
 
                     <section class="section" id="assistance1">
@@ -140,7 +151,8 @@
                             vous pouvez dès lors
                             <a href="{{ route('devis') }}">commander ce service</a>
                             <a href="tel:+22892671533">telephoner</a>
-                            <a href="https://wa.me/+22892671533?text=Bonjour%2C%20je%20souhaite%20demander%20un%20devis%20pour%20un%20service%20informatique.">whatsapp</a>
+                            <a
+                                href="https://wa.me/+22892671533?text=Bonjour%2C%20je%20souhaite%20demander%20un%20devis%20pour%20un%20service%20informatique.">whatsapp</a>
                             <a href="mailto:solutionneurs228@gmail.com">passer par Mail</a>
                         </div>
                     </section>
@@ -173,7 +185,8 @@
 
                             <a href="{{ route('devis') }}">commander ce service</a>
                             <a href="tel:+22892671533">telephoner</a>
-                            <a href="https://wa.me/+22892671533?text=Bonjour%2C%20je%20souhaite%20demander%20un%20devis%20pour%20un%20service%20informatique.">whatsapp</a>
+                            <a
+                                href="https://wa.me/+22892671533?text=Bonjour%2C%20je%20souhaite%20demander%20un%20devis%20pour%20un%20service%20informatique.">whatsapp</a>
                             <a href="mailto:solutionneurs228@gmail.com">passer par Mail</a>
                         </div>
 
@@ -208,7 +221,8 @@
 
                             <a href="{{ route('devis') }}">commander ce service</a>
                             <a href="tel:+22892671533">telephoner</a>
-                            <a href="https://wa.me/+22892671533?text=Bonjour%2C%20je%20souhaite%20demander%20un%20devis%20pour%20un%20service%20informatique.">whatsapp</a>
+                            <a
+                                href="https://wa.me/+22892671533?text=Bonjour%2C%20je%20souhaite%20demander%20un%20devis%20pour%20un%20service%20informatique.">whatsapp</a>
                             <a href="mailto:solutionneurs228@gmail.com">passer par Mail</a>
                         </div>
                         <div class="service-links-group">voulez vous voir <a href="">nos formations ?</a></div>
