@@ -239,7 +239,7 @@
             {{-- <p> Sur plus de 90% de nos services nous avons un système de réduction qui va vous intéresser.</p> --}}
         </div>
 
-        <div class="session">
+        <div class="session formations">
             <h1 class="big-title">NOS OFFRES DE FORMATIONS</h1>
 
 

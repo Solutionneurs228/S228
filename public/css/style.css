@@ -134,7 +134,7 @@ body {
 
 
 .session {
-    margin: 7rem 0rem;
+    margin: 4rem 0rem;
     padding: 0rem 2.5rem;
     overflow: hidden;
 }
@@ -353,7 +353,7 @@ img {
     height: 70%;
     margin: 0px;
     overflow: hidden;
-    margin-bottom: 15rem;
+    margin-bottom: 10rem;
 }
 
 .reduce-bottom {
@@ -484,9 +484,9 @@ img {
 /* SECTION PARTENAIRES */
 .parteners {
     width: 100%;
-    background-color: rgba(230, 231, 252, 0.47);
+    /* background-color: rgba(230, 231, 252, 0.47); */
     color: var(--projectCardColor);
-    padding-bottom: 6rem;
+    padding-bottom: 3rem;
 }
 
 /* TITRE */
@@ -584,6 +584,8 @@ img {
 /* SECTION GALERIE */
 .home-gallery {
     padding: 4rem 1.25rem;
+    padding-top: 1rem;
+    margin-top: 1rem;
     background-color: #f9f9f9;
 }
 
@@ -729,10 +731,6 @@ ZOOM MÉDIA .gallery-item:hover img,
     border-radius: 30px;
     font-weight: 600;
     transition: background 0.3s ease;
-    -webkit-transition: background 0.3s ease;
-    -moz-transition: background 0.3s ease;
-    -ms-transition: background 0.3s ease;
-    -o-transition: background 0.3s ease;
 }
 
 .btn-gallery:hover {
@@ -888,6 +886,10 @@ ZOOM MÉDIA .gallery-item:hover img,
 
 
 /* SECTION FORMATION */
+.session.formations {
+
+    margin-top: 0rem;
+}
 
 .formations-boxes {
     display: -ms-grid;
@@ -1620,7 +1622,7 @@ a.button-link:hover {
         max-height: 35rem;
         margin: 0px;
         overflow: hidden;
-        margin-bottom: 8rem;
+        margin-bottom: 5rem;
     }
 
     /* .session.reduce{
