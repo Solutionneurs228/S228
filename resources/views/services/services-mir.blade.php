@@ -74,160 +74,181 @@
 
                     </div>
 
-                    <section class="service-session" id="reparation">
+<!-- SERVICE 01 -->
+<section class="service-session" id="reparation">
+    <div class="service-session-container">
 
-                        <div class="service-session-img-left">
-                            <img src="../images/mir.webp" alt="Réparation et entretien des ordinateurs">
-                        </div>
+        <div class="service-session-media">
+            <img src="../images/mir.webp" alt="Réparation et entretien des ordinateurs">
+        </div>
 
-                        <div class="service-session-content-right">
-                            <div class="sectionTitle">
-                                <span class="titleNumber">01 . </span>
-                                <h4 class="titleText"> Réparation et entretien des ordinateurs
-                                    <div class="underline">
-                                        <span></span>
-                                    </div>
-                                </h4>
-                            </div>
+        <div class="service-session-content">
+            <div class="sectionTitle">
+                <span class="titleNumber">01.</span>
+                <h4 class="titleText">
+                    Réparation et entretien des ordinateurs
+                    <div class="underline"><span></span></div>
+                </h4>
+            </div>
 
-                            <div>
-                                <ul>
-                                    <li>votre ordinateur est en panne ?</li>
-                                    <li>ou vous ne comprenez plus son fonctionnement ?</li>
-                                </ul>
-                                <p>
-                                    Nous vous offrons un service fiable et abordable pour garantir le bon fonctionnement de
-                                    vos
-                                    ordinateurs
-                                    bureau ou portatifs.
-                                    Nous passons par des diagnostics rapides pour résoudre efficacement tout problème
-                                    matériel
-                                    ou
-                                    logiciel.
-                                    En termes d'entretien, nous assurons des mises à jour régulières, un nettoyage physique
-                                    pour
-                                    éviter la
-                                    surchauffe, et nous mettons en place des solutions de sauvegarde des données.
-                                </p>
-                            </div>
+            <div class="service-session-description">
+                <ul>
+                    <li>Votre ordinateur est en panne ?</li>
+                    <li>Ou vous ne comprenez plus son fonctionnement ?</li>
+                </ul>
+                <p>
+                    Nous vous offrons un service fiable et abordable pour garantir le bon fonctionnement
+                    de vos ordinateurs bureau ou portables. Diagnostics rapides, réparations efficaces,
+                    mises à jour, nettoyage physique et sauvegarde des données.
+                </p>
+            </div>
 
-                            <div class="service-links-group">
-                                vous pouvez dès lors
-                                <a href="{{ route('devis') }}">commander ce service</a>
-                                <a href="tel:+22892671533">telephoner</a>
-                                <a
-                                    href="https://wa.me/+22892671533?text=Bonjour%2C%20je%20souhaite%20demander%20un%20devis%20pour%20un%20service%20informatique.">whatsapp</a>
-                                <a href="mailto:solutionneurs228@gmail.com">passer par Mail</a>
-                            </div>
-                        </div>
+            <div class="service-links-group">
+                <span>Vous pouvez dès lors :</span>
+                <a href="{{ route('devis') }}">Commander ce service</a>
+                <a href="tel:+22892671533">Téléphoner</a>
+                <a href="https://wa.me/22892671533?text=Bonjour%2C%20je%20souhaite%20demander%20un%20devis%20pour%20un%20service%20informatique.">
+                    WhatsApp
+                </a>
+                <a href="mailto:solutionneurs228@gmail.com">Par mail</a>
+            </div>
+        </div>
 
-                    </section>
-
-                    <section class="section" id="assistance1">
-                        <div class="sectionTitle">
-                            <span class="titleNumber">02 . </span>
-                            <h4 class="titleText">
-                                Assistance de l'achat à l'utilisation de vos ordinateurs
-                                <div class="underline">
-                                    <span></span>
-                                </div>
-                            </h4>
-                        </div>
-
-                        <div>
-                            <ul>
-                                <li>Vous voulez mettre en place votre parc informatique ?</li>
-                                <li>ou juste qu'il vous faut un (des) ordinateur(s) pour votre travail ?</li>
-                            </ul>
-                            <p>
-                                nous somme bien indiqués pour voir quel(s) ordinateur(s) il vous faut (bureaux ou portatif),
-                                de
-                                quelles performences minimales, en fontion de votre travail quels sont les logiciels à y
-                                installer ...
-                            </p>
-                        </div>
-
-                        <div class="service-links-group">
-                            vous pouvez dès lors
-                            <a href="{{ route('devis') }}">commander ce service</a>
-                            <a href="tel:+22892671533">telephoner</a>
-                            <a
-                                href="https://wa.me/+22892671533?text=Bonjour%2C%20je%20souhaite%20demander%20un%20devis%20pour%20un%20service%20informatique.">whatsapp</a>
-                            <a href="mailto:solutionneurs228@gmail.com">passer par Mail</a>
-                        </div>
-                    </section>
-
-                    <section class="section" id="assistance2">
-                        <div class="sectionTitle">
-                            <span class="titleNumber">03 . </span>
-                            <h4 class="titleText">
-                                Assistance dans l'organisation de votre travail côté informatique
-                                <div class="underline">
-                                    <span></span>
-                                </div>
-                            </h4>
-                        </div>
-
-                        <div>
-                            <ul>
-                                <li>vous voulez informatiser votre travail (entreprise ou particulier) ?</li>
-                                <li>ou votre est déjà informatisé mais il vous faut la meilleur façon de tirer profit de
-                                    l'informatique ?</li>
-                            </ul>
-                            <p>
-                                Nous comprenons d'abord votre travail et en suite nous nous occupons du reste.
-                            </p>
-                        </div>
+    </div>
+</section>
 
 
-                        <div class="service-links-group">
-                            vous pouvez dès lors
+<!-- SERVICE 02 -->
+<section class="service-session" id="assistance1">
+    <div class="service-session-container reverse">
 
-                            <a href="{{ route('devis') }}">commander ce service</a>
-                            <a href="tel:+22892671533">telephoner</a>
-                            <a
-                                href="https://wa.me/+22892671533?text=Bonjour%2C%20je%20souhaite%20demander%20un%20devis%20pour%20un%20service%20informatique.">whatsapp</a>
-                            <a href="mailto:solutionneurs228@gmail.com">passer par Mail</a>
-                        </div>
+        <div class="service-session-media">
+            <img src="../images/mir.webp" alt="Assistance informatique">
+        </div>
 
-                    </section>
+        <div class="service-session-content">
+            <div class="sectionTitle">
+                <span class="titleNumber">02.</span>
+                <h4 class="titleText">
+                    Assistance de l’achat à l’utilisation de vos ordinateurs
+                    <div class="underline"><span></span></div>
+                </h4>
+            </div>
 
-                    <section class="section" id="travailEnEquipe">
-                        <div class="sectionTitle">
-                            <span class="titleNumber">04 . </span>
-                            <h4 class="titleText">
-                                initiation dans le travail en équipe, à distance avec un bon système de collaboration
-                                informatique
-                                <div class="underline">
-                                    <span></span>
-                                </div>
-                            </h4>
-                        </div>
+            <div class="service-session-description">
+                <ul>
+                    <li>Vous voulez mettre en place votre parc informatique ?</li>
+                    <li>Vous avez besoin d’ordinateurs adaptés à votre travail ?</li>
+                </ul>
+                <p>
+                    Nous vous aidons à choisir les ordinateurs adaptés (bureau ou portable),
+                    définir les performances minimales et installer les logiciels nécessaires.
+                </p>
+            </div>
 
-                        <div>
-                            <ul>
-                                <li>votre entreprise a un nombre d'ordinateurs dont le travail est complémentaire ?</li>
-                                <li> ou vous avez des collaborateurs avec qui vous devez coopérer à distance ?</li>
-                            </ul>
-                            <p>
-                                Là encore nous comprenons d'abord votre travail et nous voyons
-                                quel système de collaboration informatique vous convient.
-                            </p>
-                        </div>
+            <div class="service-links-group">
+                <span>Vous pouvez dès lors :</span>
+                <a href="{{ route('devis') }}">Commander ce service</a>
+                <a href="tel:+22892671533">Téléphoner</a>
+                <a href="https://wa.me/22892671533">WhatsApp</a>
+                <a href="mailto:solutionneurs228@gmail.com">Par mail</a>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 
-                        <div class="service-links-group">
-                            vous pouvez dès lors
+<!-- SERVICE 03 -->
+<section class="service-session" id="assistance2">
+    <div class="service-session-container">
 
-                            <a href="{{ route('devis') }}">commander ce service</a>
-                            <a href="tel:+22892671533">telephoner</a>
-                            <a
-                                href="https://wa.me/+22892671533?text=Bonjour%2C%20je%20souhaite%20demander%20un%20devis%20pour%20un%20service%20informatique.">whatsapp</a>
-                            <a href="mailto:solutionneurs228@gmail.com">passer par Mail</a>
-                        </div>
-                        <div class="service-links-group">voulez vous voir <a href="">nos formations ?</a></div>
-                        <div class="slogan">Notre slogan : un bon travail en un temps record !!!</div>
-                    </section>
+        <div class="service-session-media">
+            <img src="../images/mir.webp" alt="Organisation informatique du travail">
+        </div>
+
+        <div class="service-session-content">
+            <div class="sectionTitle">
+                <span class="titleNumber">03.</span>
+                <h4 class="titleText">
+                    Organisation de votre travail côté informatique
+                    <div class="underline"><span></span></div>
+                </h4>
+            </div>
+
+            <div class="service-session-description">
+                <ul>
+                    <li>Vous voulez informatiser votre travail ?</li>
+                    <li>Ou mieux exploiter l’informatique existante ?</li>
+                </ul>
+                <p>
+                    Nous analysons votre activité et mettons en place les outils informatiques
+                    adaptés pour améliorer votre productivité.
+                </p>
+            </div>
+
+            <div class="service-links-group">
+                <span>Vous pouvez dès lors :</span>
+                <a href="{{ route('devis') }}">Commander ce service</a>
+                <a href="tel:+22892671533">Téléphoner</a>
+                <a href="https://wa.me/22892671533">WhatsApp</a>
+                <a href="mailto:solutionneurs228@gmail.com">Par mail</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- SERVICE 04 -->
+<section class="service-session" id="travailEnEquipe">
+    <div class="service-session-container reverse">
+
+        <div class="service-session-media">
+            <img src="../images/mir.webp" alt="Travail en équipe à distance">
+        </div>
+
+        <div class="service-session-content">
+            <div class="sectionTitle">
+                <span class="titleNumber">04.</span>
+                <h4 class="titleText">
+                    Initiation au travail en équipe à distance
+                    <div class="underline"><span></span></div>
+                </h4>
+            </div>
+
+            <div class="service-session-description">
+                <ul>
+                    <li>Votre travail est complémentaire entre plusieurs ordinateurs ?</li>
+                    <li>Vous collaborez à distance ?</li>
+                </ul>
+                <p>
+                    Nous vous aidons à mettre en place un système de collaboration
+                    informatique efficace et adapté à vos besoins.
+                </p>
+            </div>
+
+            <div class="service-links-group">
+                <span>Vous pouvez dès lors :</span>
+                <a href="{{ route('devis') }}">Commander ce service</a>
+                <a href="tel:+22892671533">Téléphoner</a>
+                <a href="https://wa.me/22892671533">WhatsApp</a>
+                <a href="mailto:solutionneurs228@gmail.com">Par mail</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="service-extra">
+        <div class="service-links-group">
+            Voulez-vous voir <a href="#">nos formations ?</a>
+        </div>
+        <div class="slogan">
+            Notre slogan : <strong>un bon travail en un temps record !</strong>
+        </div>
+    </div>
+</section>
+
 
 
                 </div>

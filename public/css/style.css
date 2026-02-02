@@ -47,16 +47,6 @@ body {
     align-items: baseline;
 }
 
-.service-session {
-    padding-top: 5rem;
-    display: flex;
-}
-.service-session-img-left {
-    /* flex: 1; */
-    /* width: 50%; */
-    padding: 1rem;
-    padding-right: 2rem;
-}
 
 /* NAV */
 .navbar {
@@ -1058,28 +1048,108 @@ i {
 
 
 
+/* =======================
+   SERVICES
+======================= */
 
-
-
-.sommaireText {
-    font-size: 1em;
+.service-session {
+    margin: 5rem 0 2rem;
 }
 
-.titleText {
-    color: green;
-    display: inline;
-    font-size: 1.5rem;
-    font-weight: 400;
+.service-session-container {
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
+}
+
+/* inversion image / texte */
+.service-session-container.reverse {
+    flex-direction: row-reverse;
+}
+
+/* IMAGE */
+.service-session-media {
+    flex: 0 0 25rem;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.service-session-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* CONTENU */
+.service-session-content {
+    flex: 1;
+}
+
+/* TITRES */
+.sectionTitle {
+    margin-bottom: 1.5rem;
 }
 
 .titleNumber {
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 600;
+    color: green;
+    margin-right: 0.5rem;
 }
 
+.titleText {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: green;
+}
 
+/* TEXTE */
+.service-session-description {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
 
-/* SERVICES PAGE */
+.service-session-description ul {
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* LIENS */
+.service-links-group {
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.service-links-group a {
+    margin-right: 1rem;
+    text-decoration: underline;
+}
+.service-links-group a:hover {
+color: var(--primaryHover);
+font-style: italic;
+}
+
+/* EXTRA */
+.service-extra {
+    margin-top: 2rem;
+}
+
+.slogan {
+    margin-top: 1rem;
+    font-weight: 600;
+    margin: auto;
+}
+
+.service-sommaire div{
+margin-bottom: 0.3rem;
+}
+
+.sommaireText {
+    font-size: 1em;
+}
 
 .service-devis-btn {
     margin-top: 4rem;
@@ -1093,43 +1163,30 @@ i {
     font-size: 1.2rem;
 }
 
-.service-sommaire div a:hover .sommaireText{
+.service-sommaire div a .sommaireText {
 
     text-decoration: underline;
-        text-decoration-thickness: 2px;
+    text-decoration-thickness: 2px;
     text-decoration-color: var(--primaryColor);
     -webkit-text-decoration-color: var(--primaryColor);
     -moz-text-decoration-color: var(--primaryColor);
+    color: blue;
 
 }
 
-.service-links-group a,
-.links {
-    margin-left: 15px;
-    color: var(--primaryColor);
-    font-weight: 500;
-}
+.service-sommaire div a:hover .sommaireText {
 
-.service-links-group a,
-.links:hover {
-    margin-left: 15px;
-    color: var(--primaryHover);
-    font-style: italic;
+    color: var(--primaryHover)
 }
 
 
-.titleNumber {
-    color: var(--primaryColor);
-    margin: 0 0.6rem;
-    font-weight: 600;
-}
 
-.slogan {
+/* .slogan {
     margin-top: 1.2rem;
     color: var(--vert);
     text-align: center;
     font-style: italic;
-}
+} */
 
 /* DEVIS */
 
@@ -1659,253 +1716,276 @@ a.button-link:hover {
 
 
 
-    /* 1 Tablette large (entre 992px et 1199px) */
-    @media (max-width: 1199px) {
+/* 1 Tablette large (entre 992px et 1199px) */
+@media (max-width: 1199px) {
 
-        .boxes {
-            -ms-grid-columns: 1fr 1fr 1fr 1fr;
-            grid-template-columns: repeat(4, 1fr);
-        }
-
-
-        #carouselExampleIndicators {
-            bottom: 0rem;
-        }
-
-        .nav-home-img,
-        .carousel,
-        .carousel-item {
-            height: 100%;
-        }
-
-        .carousel-item img {
-            object-fit: cover;
-            /* remplit le slide */
-            object-position: center;
-        }
-
-        .carousel-indicators {
-            bottom: 12rem;
-
-        }
-
-        .session {
-            margin: 3rem 0rem;
-        }
-
-        .hook {
-            min-height: auto;
-
-        }
+    .boxes {
+        -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
+    }
 
 
-        .reduce {
-            width: 100%;
-            height: 70%;
-            margin: 0px;
-            overflow: hidden;
-            max-height: 30rem;
-            margin-bottom: 8rem;
-        }
+    #carouselExampleIndicators {
+        bottom: 0rem;
+    }
 
+    .nav-home-img,
+    .carousel,
+    .carousel-item {
+        height: 100%;
+    }
 
-        .btn-reduction {
+    .carousel-item img {
+        object-fit: cover;
+        /* remplit le slide */
+        object-position: center;
+    }
 
-            bottom: -35%;
-            left: 23%;
+    .carousel-indicators {
+        bottom: 12rem;
 
-            font-size: 1.4rem;
-            font-weight: 600;
+    }
 
-            padding: 12px 27px;
-            border-radius: 12px;
+    .session {
+        margin: 3rem 0rem;
+    }
 
-        }
-
-        .devis-form {
-            width: 62%;
-
-        }
+    .hook {
+        min-height: auto;
 
     }
 
 
-
-
-
-    /* 2 Tablette portrait (entre 768px et 991px) */
-    @media (max-width: 991px) {
-
-        .nav-home-img {
-            height: auto;
-        }
-
-        .boxes {
-            -ms-grid-columns: 1fr 1fr 1fr 1fr;
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(2, auto);
-            justify-content: space-around;
-
-        }
-
-        .footer-col {
-            width: fit-content;
-        }
-
-        .big-title {
-            font-size: 2.1rem;
-            margin: 0px 0px 40px 0px;
-        }
-
-        .hook-content {
-            width: 80%;
-        }
-
-        .hook-content .big-title {
-            margin-top: 4rem;
-        }
-
-        .hook-description {
-            font-size: 1.1rem;
-        }
-
-        .home-title {
-            font-size: 2rem;
-        }
-
-        .home-description {
-            font-size: 1.3rem;
-            margin-bottom: 0.3rem;
-        }
-
-        #carouselExampleIndicators {
-            bottom: -2rem;
-        }
-
-        .carousel-indicators {
-            bottom: 10rem;
-
-        }
-
-        .reduce {
-            height: 65%;
-            margin-bottom: 8rem;
-            max-height: 22rem;
-        }
-
-        .btn-reduction {
-
-            bottom: -25%;
-            left: 21%;
-
-            font-size: 1.1rem;
-            font-weight: 600;
-
-            padding: 12px 27px;
-            border-radius: 12px;
-
-        }
-
-        .formations-boxes {
-            grid-template-columns: 1fr 1fr;
-            margin-bottom: 5rem;
-        }
-
-        .adress {
-            font-size: 15px;
-        }
-
-        .devis-form {
-            width: 75%;
-
-        }
+    .reduce {
+        width: 100%;
+        height: 70%;
+        margin: 0px;
+        overflow: hidden;
+        max-height: 30rem;
+        margin-bottom: 8rem;
     }
 
 
+    .btn-reduction {
 
+        bottom: -35%;
+        left: 23%;
 
-    /* 3 Mobile paysage (entre 576px et 767px) */
-    @media (max-width: 767px) {
-        .session {
-            margin: 1rem 0rem;
-        }
+        font-size: 1.4rem;
+        font-weight: 600;
 
-        .hook-content {
-            width: 90%;
-        }
+        padding: 12px 27px;
+        border-radius: 12px;
 
-        .hook-content .big-title {
-            margin-top: 2rem;
-        }
-
-        .btn {
-            font-size: 15px;
-        }
-
-        .big-title {
-            font-size: 2rem;
-            margin: 35px 0px;
-        }
-
-        .home-title {
-            font-size: 1.5rem;
-            margin-bottom: 0px;
-        }
-
-        .home-description {
-            font-size: 1.1rem;
-            margin-bottom: 0.2rem;
-        }
-
-        .hook-description {
-            font-size: 1.3rem;
-        }
-
-        #carouselExampleIndicators {
-            bottom: -2rem;
-        }
-
-        .carousel-indicators {
-            bottom: 5rem;
-
-        }
-
-        .carousel-caption .hook-btn-grp {
-            margin-top: 0.6rem;
-        }
-
-        .btn-reduction {
-
-            bottom: -20%;
-            left: 15%;
-
-            font-size: 0.75rem;
-            font-weight: 400;
-
-            padding: 12px 27px;
-            border-radius: 12px;
-
-        }
-
-        .contact-bloc-content {
-            display: block;
-            width: 90%;
-        }
-
-        .adress .adress-group div {
-            text-align: left;
-        }
-
-        .devis-form {
-            width: 88%;
-
-        }
     }
 
+    .devis-form {
+        width: 62%;
+
+    }
+
+}
+
+
+
+
+
+/* 2 Tablette portrait (entre 768px et 991px) */
+@media (max-width: 991px) {
+
+    .nav-home-img {
+        height: auto;
+    }
+
+    .boxes {
+        -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-around;
+
+    }
+
+    .footer-col {
+        width: fit-content;
+    }
+
+    .big-title {
+        font-size: 2.1rem;
+        margin: 0px 0px 40px 0px;
+    }
+
+    .hook-content {
+        width: 80%;
+    }
+
+    .hook-content .big-title {
+        margin-top: 4rem;
+    }
+
+    .hook-description {
+        font-size: 1.1rem;
+    }
+
+    .home-title {
+        font-size: 2rem;
+    }
+
+    .home-description {
+        font-size: 1.3rem;
+        margin-bottom: 0.3rem;
+    }
+
+    #carouselExampleIndicators {
+        bottom: -2rem;
+    }
+
+    .carousel-indicators {
+        bottom: 10rem;
+
+    }
+
+    .reduce {
+        height: 65%;
+        margin-bottom: 8rem;
+        max-height: 22rem;
+    }
+
+    .btn-reduction {
+
+        bottom: -25%;
+        left: 21%;
+
+        font-size: 1.1rem;
+        font-weight: 600;
+
+        padding: 12px 27px;
+        border-radius: 12px;
+
+    }
+
+    .formations-boxes {
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 5rem;
+    }
+
+    .adress {
+        font-size: 15px;
+    }
+
+    .devis-form {
+        width: 75%;
+
+    }
+}
+
+
+
+
+/* 3 Mobile paysage (entre 576px et 767px) */
+@media (max-width: 767px) {
+    .session {
+        margin: 1rem 0rem;
+    }
+
+    .hook-content {
+        width: 90%;
+    }
+
+    .hook-content .big-title {
+        margin-top: 2rem;
+    }
+
+    .btn {
+        font-size: 15px;
+    }
+
+    .big-title {
+        font-size: 2rem;
+        margin: 35px 0px;
+    }
+
+    .home-title {
+        font-size: 1.5rem;
+        margin-bottom: 0px;
+    }
+
+    .home-description {
+        font-size: 1.1rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .hook-description {
+        font-size: 1.3rem;
+    }
+
+    #carouselExampleIndicators {
+        bottom: -2rem;
+    }
+
+    .carousel-indicators {
+        bottom: 5rem;
+
+    }
+
+    .carousel-caption .hook-btn-grp {
+        margin-top: 0.6rem;
+    }
+
+    .btn-reduction {
+
+        bottom: -20%;
+        left: 15%;
+
+        font-size: 0.75rem;
+        font-weight: 400;
+
+        padding: 12px 27px;
+        border-radius: 12px;
+
+    }
+
+    .contact-bloc-content {
+        display: block;
+        width: 90%;
+    }
+
+    .adress .adress-group div {
+        text-align: left;
+    }
+
+    .devis-form {
+        width: 88%;
+
+    }
+
+    .service-session-container,
+    .service-session-container.reverse {
+        flex-direction: column;
+    }
+
+    .service-session-media {
+        width: 100%;
+        flex: none;
+        max-height: 220px;
+    }
+
+    .service-session-media img {
+        height: 220px;
+    }
+
+    .titleText {
+        font-size: 1.25rem;
+    }
+
+    .service-links-group a {
+        display: inline-block;
+        margin: 0.4rem 0.6rem 0 0;
+    }
+}
 
 
 
@@ -1914,119 +1994,121 @@ a.button-link:hover {
 
 
 
-    /* 4 Mobile petit écran (moins de 576px) */
 
-    @media (max-width: 575px) {
+/* 4 Mobile petit écran (moins de 576px) */
+
+@media (max-width: 575px) {
 
 
-        .session {
-            margin: 1rem 0rem;
-        }
+    .session {
+        margin: 1rem 0rem;
+    }
 
-        /* .session.reduce .session.parteners{
+    /* .session.reduce .session.parteners{
     margin-left: 0rem;
     margin-right: 0rem;
     overflow: hidden;
 } */
-        .carousel-caption {
-            bottom: 10px;
-        }
+    .carousel-caption {
+        bottom: 10px;
+    }
 
-        .carousel-indicators {
-            bottom: 2rem;
-
-        }
-
-        .hook-description {
-            font-size: 1rem;
-        }
-
-        .hook-btn-grp {
-            margin-top: 1rem;
-        }
-
-        .big-title {
-            font-size: 1.8rem;
-            margin: 35px 0px;
-        }
-
-        .home-title {
-            font-size: 0.85rem;
-        }
-
-        .home-description {
-            font-size: 0.75rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .formations-boxes {
-            grid-template-columns: 1fr;
-            -ms-grid-columns: (1fr);
-        }
-
-        .contact-bloc-content {
-            display: block;
-            width: 100%;
-        }
-
-        .contact-bloc-part {
-            padding: 10px 20px 20px 20px;
-        }
-
-        .contact-btn {
-            font-size: 0.6rem;
-        }
-
-        .footer-container {
-            grid-template-columns: 1fr;
-            -ms-grid-columns: (1fr);
-            justify-content: center;
-
-        }
-
-        .boxes {
-            display: block;
-        }
-
-        .box {
-            margin-bottom: 2rem;
-        }
-
-        .reduce {
-            height: 60%;
-            /* margin: -4rem 0rem 4rem 0rem; */
-            margin: 0rem 0rem 10rem 0rem;
-            max-height: 15rem;
-        }
-
-        .btn-reduction {
-
-            bottom: -26%;
-            left: 2%;
-            font-size: 0.7rem;
-            font-weight: 500;
-            margin: 0px;
-            padding: 10px 20px;
-
-        }
-
-        .reduce-img {
-            right: 1%;
-            margin-top: 0px;
-        }
-        .devis-form {
-            width: 100%;
-
-        }
+    .carousel-indicators {
+        bottom: 2rem;
 
     }
 
-
-
-
-    /* 5 Mobile petit écran (moins de 576px) */
-    @media (max-width: 385px) {
-        .btn-reduction {
-            left: -7%;
-        }
+    .hook-description {
+        font-size: 1rem;
     }
+
+    .hook-btn-grp {
+        margin-top: 1rem;
+    }
+
+    .big-title {
+        font-size: 1.8rem;
+        margin: 35px 0px;
+    }
+
+    .home-title {
+        font-size: 0.85rem;
+    }
+
+    .home-description {
+        font-size: 0.75rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .formations-boxes {
+        grid-template-columns: 1fr;
+        -ms-grid-columns: (1fr);
+    }
+
+    .contact-bloc-content {
+        display: block;
+        width: 100%;
+    }
+
+    .contact-bloc-part {
+        padding: 10px 20px 20px 20px;
+    }
+
+    .contact-btn {
+        font-size: 0.6rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        -ms-grid-columns: (1fr);
+        justify-content: center;
+
+    }
+
+    .boxes {
+        display: block;
+    }
+
+    .box {
+        margin-bottom: 2rem;
+    }
+
+    .reduce {
+        height: 60%;
+        /* margin: -4rem 0rem 4rem 0rem; */
+        margin: 0rem 0rem 10rem 0rem;
+        max-height: 15rem;
+    }
+
+    .btn-reduction {
+
+        bottom: -26%;
+        left: 2%;
+        font-size: 0.7rem;
+        font-weight: 500;
+        margin: 0px;
+        padding: 10px 20px;
+
+    }
+
+    .reduce-img {
+        right: 1%;
+        margin-top: 0px;
+    }
+
+    .devis-form {
+        width: 100%;
+
+    }
+
+}
+
+
+
+
+/* 5 Mobile petit écran (moins de 576px) */
+@media (max-width: 385px) {
+    .btn-reduction {
+        left: -7%;
+    }
+}
