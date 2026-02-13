@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 
 
@@ -47,6 +48,19 @@
 </div>
 
 @yield('scripts')
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <a href="https://wa.me/+22892671533?text=Bonjour%20je%20vous%20contact%20depuis%20votre%20site%20web%20et%20je%20souhaite%20avoir%20plus%20d'informations%20sur%20...%20"
+   class="whatsapp-float"
+   target="_blank">
+   <i class="fa-brands fa-whatsapp"></i>
+</a>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+</script>
 
 </body>
 

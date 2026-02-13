@@ -45,7 +45,7 @@
                         </div>
 
                         <div>
-                            <a href="#reportageVidéo">
+                            <a href="#reportageVideo">
                                 <span class="titleNumber">02 . </span>
                                 <span class="sommaireText">Reportage et montage vidéo</span>
                             </a>
@@ -60,116 +60,147 @@
 
                     </div>
 
-                    <section class="section" id="toutePhotographie">
+<!-- SERVICE 01 : PHOTOGRAPHIE -->
+<section class="service-session" id="toutePhotographie">
+    <div class="service-session-container">
 
-                        <div class="sectionTitle">
-                            <span class="titleNumber">01 . </span>
-                            <h4 class="titleText">
-                                Photographie et Agrandissement
-                                <div class="underline">
-                                    <span></span>
-                                </div>
-                            </h4>
-                        </div>
+        <div class="service-session-media">
+            <img src="../images/photo1.webp" alt="Photographie et agrandissement">
+        </div>
 
-                        <div>
-                            <ul>
-                                <li>voulez-vous des prises de vues ?</li>
-                                <li>ou un album pour ranger anciennes et nouvelles photo ?</li>
-                                <li>ou plutôt des Agrandissements de photos dans de beaux cadres ?</li>
-                                <li>avez-vous des photos que vous souhaiter tirer ?</li>
-                                <li>voulez-vous une séance de photo-shooting ?</li>
-                                <li>avez-vous besoins de bonnes photos pour la publicité de vos produits ?</li>
-                            </ul>
-                             Vous êtes tout simplement à la bonne adresse ;
-                             n'hésitez donc pas de vous confier à nous pour une imagerie de rêve
-                        </div>
+        <div class="service-session-content">
+            <div class="sectionTitle">
+                <span class="titleNumber">01.</span>
+                <h4 class="titleText">
+                    Photographie et agrandissement
+                    <div class="underline"><span></span></div>
+                </h4>
+            </div>
 
-                        <div class="service-links-group">
+            <div class="service-session-description">
+                <ul>
+                    <li>Besoin de prises de vues professionnelles ?</li>
+                    <li>Un album pour vos anciennes et nouvelles photos ?</li>
+                    <li>Des agrandissements dans de beaux cadres ?</li>
+                    <li>Des photos à tirer ou restaurer ?</li>
+                    <li>Une séance de photo-shooting ?</li>
+                    <li>Des photos publicitaires pour vos produits ?</li>
+                </ul>
 
-                            vous pouvez dès lors
-                            <a href="">commander ce service</a>
-                            <a href="">téléphoner</a>
-                            <a href="">whatsapp</a>
-                            <a href="">passer par Mail</a>
-                            <div>voulez vous voir <a href="">notre galerie photo ?</a></div>
-                        </div>
-                    </section>
+                <p>
+                    Vous êtes tout simplement à la bonne adresse.
+                    Confiez-nous vos projets pour une imagerie de rêve.
+                </p>
+            </div>
 
-                    <section class="section" id="reportageVidéo">
-                        {{-- <div class="mir-service"> --}}
-                        <div class="sectionTitle">
-                            <span class="titleNumber">02 . </span>
-                            <h4 class="titleText">
-                                Reportage et montage vidéo
-                                <div class="underline">
-                                    <span></span>
-                                </div>
-                            </h4>
-                        </div>
+            <div class="service-links-group">
+                <span>Vous pouvez dès lors :</span>
+                <a href="">Commander ce service</a>
+                <a href="">Téléphoner</a>
+                <a href="">WhatsApp</a>
+                <a href="">Par mail</a>
+                <div>Voir <a href="">notre galerie photo</a></div>
+            </div>
+        </div>
 
-                        <div>
-                            <ul>
-                                <li>Nos équipes professionnelles sont disponibles pour la couverture entière de vos événement
-                                comme mariage, Aniversaire, Baptême, réunion, conférence, Match, funérailles ...</li>
-                                <li>Pour votre événement nous assurons la prise de vues, le tournage, le montage vidéo,
-                                un ou des albums photos.</li>
-                                <li>Nous somme aussi disposés à collaborer avec tout autre proffesionel du metier.
-                                Par exemple pour des couvertures dans notre rayon d'action.</li>
-                                <li>Nous collaborons aussi avec des agences de communication
-                                qui peuvent nous envoyer travailler avec leurs journaliste.</li>
-                                <li>
-                                     Nous somme situés à kara (au nord du Togo) mais nous travaillons
-                                     dans toutes les régions du pays et même dans les pays voisins.
-                                </li>
-                            </ul>
-                            N'hésitez donc pas à nous confier vos projets événementiels.
-                        </div>
+    </div>
+</section>
 
-                        <div class="service-links-group">
-                            vous pouvez dès lors
-                            <a href="">commander ce service</a>
-                            <a href="">telephoner</a>
-                            <a href="">whatsapp</a>
-                            <a href="">passer par Mail</a>
-                        </div>
-                    </section>
-                    </section>
 
-                    <section class="section" id="pub">
-                        <div class="sectionTitle">
-                            <span class="titleNumber">03 . </span>
-                            <h4 class="titleText">
-                                Vidéos & animations publicitaire
-                                <div class="underline">
-                                    <span></span>
-                                </div>
-                            </h4>
-                        </div>
+<!-- SERVICE 02 : REPORTAGE VIDÉO -->
+<section class="service-session" id="reportageVideo">
+    <div class="service-session-container reverse">
 
-                        <div>
-                            <ul>
-                                <li>Nous oppérons également dans les vidéos de publicité ou de sensibilisation</li>
-                                <li>vous ête une entréprise ou un particulier et vous voulez tourner une vidéo pour la publicité
-                                soit de vos produit soit de vos services ? comptez sur notre expertise !!!</li>
-                                <li>vous ête une entréprise ou un particulier, ONG, un service public ou social ;
-                                vous avez une sensibilisation, un projet à promouvoir ou une idée à véhiculer ?
-                                </li>
-                            </ul>
-                            Nous allons transformer vos idées en de belles images animées !!!
-                        </div>
+        <div class="service-session-media">
+            <img src="../images/eric.webp" alt="Reportage et montage vidéo">
+        </div>
 
-                        <div class="service-links-group">
-                            vous pouvez dès lors
-                            <a href="">commander ce service</a>
-                            <a href="">telephoner</a>
-                            <a href="">whatsapp</a>
-                            <a href="">passer par Mail</a>
-                        </div>
+        <div class="service-session-content">
+            <div class="sectionTitle">
+                <span class="titleNumber">02.</span>
+                <h4 class="titleText">
+                    Reportage et montage vidéo
+                    <div class="underline"><span></span></div>
+                </h4>
+            </div>
 
-                        <div class="service-links-group">voulez vous voir <a href="">nos formations ?</a></div>
-                        <div class="slogan">Notre slogan : un bon travail en un temps record !!!</div>
-                    </section>
+            <div class="service-session-description">
+                <ul>
+                    <li>Couverture complète de vos événements (mariage, anniversaire, conférence, match, funérailles…)</li>
+                    <li>Prise de vues, tournage, montage vidéo et albums photos</li>
+                    <li>Collaboration avec d’autres professionnels du métier</li>
+                    <li>Travail avec agences de communication et journalistes</li>
+                    <li>Interventions dans tout le Togo et pays voisins</li>
+                </ul>
+
+                <p>
+                    Confiez-nous vos projets événementiels, nous les rendrons mémorables.
+                </p>
+            </div>
+
+            <div class="service-links-group">
+                <span>Vous pouvez dès lors :</span>
+                <a href="">Commander ce service</a>
+                <a href="">Téléphoner</a>
+                <a href="">WhatsApp</a>
+                <a href="">Par mail</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- SERVICE 03 : PUBLICITÉ -->
+<section class="service-session" id="pub">
+    <div class="service-session-container">
+
+        <div class="service-session-media">
+            <img src="../images/photo.webp" alt="Vidéos et animations publicitaires">
+        </div>
+
+        <div class="service-session-content">
+            <div class="sectionTitle">
+                <span class="titleNumber">03.</span>
+                <h4 class="titleText">
+                    Vidéos & animations publicitaires
+                    <div class="underline"><span></span></div>
+                </h4>
+            </div>
+
+            <div class="service-session-description">
+                <ul>
+                    <li>Vidéos de publicité ou de sensibilisation</li>
+                    <li>Promotion de produits ou de services</li>
+                    <li>ONG, entreprises, services publics ou projets sociaux</li>
+                </ul>
+
+                <p>
+                    Nous transformons vos idées en images animées percutantes.
+                </p>
+            </div>
+
+            <div class="service-links-group">
+                <span>Vous pouvez dès lors :</span>
+                <a href="">Commander ce service</a>
+                <a href="">Téléphoner</a>
+                <a href="">WhatsApp</a>
+                <a href="">Par mail</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="service-extra">
+        <div class="service-links-group">
+            Voulez-vous voir <a href="">nos formations</a> ?
+        </div>
+        <div class="slogan">
+            Notre slogan : <strong>un bon travail en un temps record !</strong>
+        </div>
+    </div>
+</section>
+
 
                 </div>
             </div>

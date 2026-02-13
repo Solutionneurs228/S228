@@ -14,7 +14,7 @@
                     <div class="carousel-caption">
                         <h5 class="home-title">Développement Web & Mobile</h5>
                         <p class="home-description">Création de sites web - applications mobiles</p>
-                         <div class="hook-btn-grp service-devis-btn">
+                        <div class="hook-btn-grp service-devis-btn">
                             <a href="{{ route('devis') }}" class="btn my-2 my-sm-0 contact-btn">📩 Demander un devis</a>
                         </div>
                     </div>
@@ -58,112 +58,160 @@
 
                     </div>
 
-                    <section class="section" id="reparation">
-                        {{-- <div class="mir-service"> --}}
-                        <div class="sectionTitle">
-                            <span class="titleNumber">01 . </span>
-                            <h4 class="titleText"> Création de sites web
-                                <div class="underline">
-                                    <span></span>
+                    <!-- SERVICE 01 : SITE WEB -->
+                    <section class="service-session" id="creationSiteWeb">
+                        <div class="service-session-container">
+
+                            <div class="service-session-media">
+                                <img src="../images/web1.webp" alt="Création de sites web">
+                            </div>
+
+                            <div class="service-session-content">
+                                <div class="sectionTitle">
+                                    <span class="titleNumber">01.</span>
+                                    <h4 class="titleText">
+                                        Création de sites web
+                                        <div class="underline"><span></span></div>
+                                    </h4>
                                 </div>
-                            </h4>
-                        </div>
 
-                        <div>
-                            <ul>
-                                <li>Que vous soyez une entreprise ; petite ou grande, un comerçant ou un particuler,
-                                vous avez besoins d'un site web pour exposer vos activités et/ou vos produits à la vue du monde entier.</li>
-                                <li>Vous ête plutôt dans l'E-comerce ; Ne voyez-vous pas à quel point il vous est indispensable d'avoir un site web
-                                où l'on peut visiter votre boutique en ligne et y éffectuer des commandes directement et d'une manière proffessionelle ?</li>
-                            </ul>
-                            <p>
-                                Nous somme bien indiqués pour vous créer un <b>site web sur mesure</b>.
-                                Nous prénons soins de comprendre vos besoins, vos préférences, les fonctionnalités que vous desirez.
-                                avant de passer à la conception.
+                                <div class="service-session-description">
+                                    <ul>
+                                        <li>
+                                            Entreprise, commerçant ou particulier, un site web est indispensable
+                                            pour exposer vos activités et vos produits au monde entier.
+                                        </li>
+                                        <li>
+                                            En e-commerce, un site web professionnel vous permet de présenter
+                                            votre boutique et de recevoir des commandes en ligne.
+                                        </li>
+                                    </ul>
 
-                            </p>
-                        </div>
+                                    <p>
+                                        Nous concevons des <strong>sites web sur mesure</strong>.
+                                        Nous prenons le temps de comprendre vos besoins, vos préférences
+                                        et les fonctionnalités souhaitées avant toute conception.
+                                    </p>
+                                </div>
 
-                        <div class="service-links-group">
-                            vous pouvez dès lors
-                            <a href="">commander ce service</a>
-                            <a href="">telephoner</a>
-                            <a href="">whatsapp</a>
-                            <a href="">passer par Mail</a>
+                                <div class="service-links-group">
+                                    <span>Vous pouvez dès lors :</span>
+                                    <a href="">Commander ce service</a>
+                                    <a href="">Téléphoner</a>
+                                    <a href="">WhatsApp</a>
+                                    <a href="">Par mail</a>
+                                </div>
+                            </div>
+
                         </div>
                     </section>
 
-                    <section class="section" id="assistance1">
-                        <div class="sectionTitle">
-                            <span class="titleNumber">02 . </span>
-                            <h4 class="titleText">
-                               Création d'Applications mobiles
-                                <div class="underline">
-                                    <span></span>
+
+                    <!-- SERVICE 02 : APPLICATION MOBILE -->
+                    <section class="service-session" id="creationAppMobile">
+                        <div class="service-session-container reverse">
+
+                            <div class="service-session-media">
+                                <img src="../images/web.webp" alt="Création d'applications mobiles">
+                            </div>
+
+                            <div class="service-session-content">
+                                <div class="sectionTitle">
+                                    <span class="titleNumber">02.</span>
+                                    <h4 class="titleText">
+                                        Création d’applications mobiles
+                                        <div class="underline"><span></span></div>
+                                    </h4>
                                 </div>
-                            </h4>
-                        </div>
 
-                        <div>
-                            <p>
-                                Vous avez plutôt besoins d'une Application mobile à installer sur androïd, iphone ou autre appareil mobile ?
-                                <br>
-                                Nous prenons soins de vous la livrer selon vos bésoins, vos préférences avec les fonctionnalités que vous voulez.
-                                <br>
+                                <div class="service-session-description">
+                                    <p>
+                                        Vous avez besoin d’une application mobile à installer sur Android,
+                                        iPhone ou autres appareils mobiles ?
+                                    </p>
+                                    <p>
+                                        Nous développons votre application selon vos besoins,
+                                        vos préférences et les fonctionnalités souhaitées,
+                                        avec une expérience utilisateur professionnelle.
+                                    </p>
+                                </div>
 
-                            </p>
-                        </div>
+                                <div class="service-links-group">
+                                    <span>Vous pouvez dès lors :</span>
+                                    <a href="">Commander ce service</a>
+                                    <a href="">Téléphoner</a>
+                                    <a href="">WhatsApp</a>
+                                    <a href="">Par mail</a>
+                                </div>
+                            </div>
 
-                        <div class="service-links-group">
-                            vous pouvez dès lors
-                            <a href="">commander ce service</a>
-
-                            <a href="">telephoner</a>
-                            <a href="">whatsapp</a>
-                            <a href="">passer par Mail</a>
                         </div>
                     </section>
 
-                    <section class="section" id="assistance2">
-                        <div class="sectionTitle">
-                            <span class="titleNumber">03 . </span>
-                            <h4 class="titleText">
-                                Site web CV (portfolio)
-                                <div class="underline">
-                                    <span></span>
+
+                    <!-- SERVICE 03 : SITE CV / PORTFOLIO -->
+                    <section class="service-session" id="portfolioWeb">
+                        <div class="service-session-container">
+
+                            <div class="service-session-media">
+                                <img src="../images/web1.webp" alt="Site web CV portfolio">
+                            </div>
+
+                            <div class="service-session-content">
+                                <div class="sectionTitle">
+                                    <span class="titleNumber">03.</span>
+                                    <h4 class="titleText">
+                                        Site web CV (Portfolio)
+                                        <div class="underline"><span></span></div>
+                                    </h4>
                                 </div>
-                            </h4>
+
+                                <div class="service-session-description">
+                                    <p>
+                                        Savez-vous que votre CV peut être présenté comme un site web ?
+                                    </p>
+
+                                    <ul>
+                                        <li>
+                                            Présentez vos compétences avec textes, photos, vidéos et illustrations.
+                                        </li>
+                                        <li>
+                                            Offrez à votre employeur une expérience unique et professionnelle.
+                                        </li>
+                                        <li>
+                                            Un site CV crée un impact fort sur la prise de décision.
+                                        </li>
+                                        <li>
+                                            Les CV classiques paraîtront fades à côté du vôtre.
+                                        </li>
+                                    </ul>
+
+                                    <p>
+                                        Ça vous tente de <a class="links" href="">voir le mien ?</a>
+                                    </p>
+                                </div>
+
+                                <div class="service-links-group">
+                                    <span>Vous pouvez dès lors :</span>
+                                    <a href="">Commander ce service</a>
+                                    <a href="">Téléphoner</a>
+                                    <a href="">WhatsApp</a>
+                                    <a href="">Par mail</a>
+                                </div>
+                            </div>
+
                         </div>
 
-                        <div>
-
-                            <p>savez vous que vous pouvez organiser votre CV comme un site web ?</p>
-                            <ul>
-                                <li>Ceci vous permet d'y mettre toutes les informations séduisante avec, des photos, vidéos si nécéssaires et
-                                toutes autres illustrations.</li>
-                                <li>Pensez à comment votre employeur sera exité d'aller visiter un site web CV ; une 1ère</li>
-                                <li> pensez à quel impact célà fera sur sa décision</li>
-                                <li>nous pouvons vous assurer que les autres CV n'aurons aucun goût à ses yeux.</li>
-                            </ul>
-                            <p>
-                                ça vous tente de <a class="links" href="">voir le mien ?</a>
-                            </p>
+                        <div class="service-extra">
+                            <div class="service-links-group">
+                                Voulez-vous voir <a href="">nos formations</a> ?
+                            </div>
+                            <div class="slogan">
+                                Notre slogan : <strong>un bon travail en un temps record !</strong>
+                            </div>
                         </div>
-
-
-                        <div class="service-links-group">
-                            vous pouvez dès lors
-
-                            <a href="">commander ce service</a>
-                            <a href="">telephoner</a>
-                            <a href="">whatsapp</a>
-                            <a href="">passer par Mail</a>
-                        </div>
-
-                        <div class="service-links-group">voulez vous voir <a href="">nos formations ?</a></div>
-                        <div class="slogan">Notre slogan : un bon travail en un temps record !!!</div>
-
                     </section>
+
 
                 </div>
 

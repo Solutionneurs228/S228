@@ -10,7 +10,7 @@
             <div class="carousel-inner">
 
                 <div class="carousel-item slide-img active">
-                    <img class="d-block w-100 h-auto formation-img" src="../images/formations.jpg" alt="First slide">
+                    <img class="d-block w-100 h-auto formation-img" src="../images/formations.webp" alt="First slide">
                     <div class="carousel-caption">
                         <h5 class="home-title">Nos formations ....</h5>
                         <p class="home-description">la plus part de nos formations sont disponibles en ligne</p>
@@ -31,9 +31,9 @@
                 <div class="elt formation-elt">
                     <div class="elt-title">
                         {{-- <h1 class="big-title">voici certaines de nos formations</h1> --}}
-                       <br>
-                       <br>
-                       <br>
+                        <br>
+                        <br>
+                        <br>
                         <p class="hook-description">
                             Ce sont là quelques formations que nous proposons
                             <br>
@@ -41,50 +41,236 @@
                             en fonction de vos disponibilités
                         </p>
                     </div>
-                    <div class="service-sommaire">
-                        <div>
-                            <a href="#initiation">
-                                <span class="titleNumber">01 . </span>
-                                <span class="sommaireText">Initiation à l'informatique</span>
-                            </a>
-                        </div>
-
-                        <div>
-                            <a href="#bureautique">
-                                <span class="titleNumber">02 . </span>
-                                <span class="sommaireText">Informatique Bureautique</span>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#dev">
-                                <span class="titleNumber">03 . </span>
-                                <span class="sommaireText">Développement web</span>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#montage">
-                                <span class="titleNumber">04 . </span>
-                                <span class="sommaireText">Montage vidéo</span>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#formationinfographie">
-                                <span class="titleNumber">05 . </span>
-                                <span class="sommaireText">Infographie</span>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#formationphotoshop">
-                                <span class="titleNumber">06 . </span>
-                                <span class="sommaireText">Photoshop</span>
-                            </a>
-                        </div>
 
 
 
 
+<div class="col-md-4 mb-4" data-aos="fade-up">
 
-                    </div>
+    <div class="formation-card h-100 p-4 bg-white rounded-4 shadow-sm">
+
+        <div class="icon-wrapper mb-3">
+            <i class="fa-solid fa-computer fa-2x"></i>
+        </div>
+
+        <h5 class="fw-bold mb-3">Initiation à l'informatique</h5>
+
+        <p class="text-muted">
+            Les connaissances de base en informatique, familiarisation avec
+            l'ordinateur, étude du clavier et de la souris...
+        </p>
+
+        <div class="mt-auto">
+            <a href="{{ route('formations/initiation-informatique') }}"
+               class="btn btn-primary w-100 rounded-pill">
+               Voir la formation
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+                    <section class="py-5 bg-light">
+                        <div class="container">
+                            <div class="text-center mb-5">
+                                <h2 class="fw-bold">Pourquoi choisir nos formations ?</h2>
+                                <p class="text-muted">Un accompagnement professionnel orienté résultats concrets.</p>
+                            </div>
+
+                            <div class="row g-4">
+
+                                <div class="col-md-4 text-center">
+                                    <div class="p-4 shadow-sm h-100 rounded-4 bg-white">
+                                        <i class="fa-solid fa-user-graduate fa-2x text-primary mb-3"></i>
+                                        <h5 class="fw-bold">Formateurs expérimentés</h5>
+                                        <p class="text-muted">Des professionnels du terrain avec une pédagogie adaptée à
+                                            chaque niveau.</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 text-center">
+                                    <div class="p-4 shadow-sm h-100 rounded-4 bg-white">
+                                        <i class="fa-solid fa-laptop-code fa-2x text-primary mb-3"></i>
+                                        <h5 class="fw-bold">100% Pratique</h5>
+                                        <p class="text-muted">Travaux dirigés, projets réels et accompagnement personnalisé.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 text-center">
+                                    <div class="p-4 shadow-sm h-100 rounded-4 bg-white">
+                                        <i class="fa-solid fa-certificate fa-2x text-primary mb-3"></i>
+                                        <h5 class="fw-bold">Attestation reconnue</h5>
+                                        <p class="text-muted">Certificat délivré en fin de formation pour valoriser votre
+                                            CV.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section class="py-5 text-white" style="background: linear-gradient(135deg,#0d6efd,#6610f2);">
+                        <div class="container text-center">
+                            <div class="row">
+
+                                <div class="col-md-3">
+                                    <h2 class="fw-bold">+150</h2>
+                                    <p>Étudiants formés</p>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <h2 class="fw-bold">+20</h2>
+                                    <p>Sessions organisées</p>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <h2 class="fw-bold">95%</h2>
+                                    <p>Taux de satisfaction</p>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <h2 class="fw-bold">+5</h2>
+                                    <p>Domaines d’expertise</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section class="py-5">
+                        <div class="container">
+                            <div class="text-center mb-5">
+                                <h2 class="fw-bold">Comment s'inscrire ?</h2>
+                            </div>
+
+                            <div class="row text-center g-4">
+
+                                <div class="col-md-3">
+                                    <div class="p-4">
+                                        <span class="badge bg-primary rounded-circle p-3 mb-3">1</span>
+                                        <h6>Choisissez une formation</h6>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="p-4">
+                                        <span class="badge bg-primary rounded-circle p-3 mb-3">2</span>
+                                        <h6>Remplissez le formulaire</h6>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="p-4">
+                                        <span class="badge bg-primary rounded-circle p-3 mb-3">3</span>
+                                        <h6>Validation & confirmation</h6>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="p-4">
+                                        <span class="badge bg-primary rounded-circle p-3 mb-3">4</span>
+                                        <h6>Démarrage de la formation</h6>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section class="py-5 bg-light">
+                        <div class="container">
+                            <div class="text-center mb-5">
+                                <h2 class="fw-bold">Ils nous font confiance</h2>
+                            </div>
+
+                            <div class="row g-4">
+
+                                <div class="col-md-4">
+                                    <div class="p-4 bg-white shadow-sm rounded-4 h-100">
+                                        <p class="text-muted">"Grâce à la formation Développement Web, j'ai créé mon premier
+                                            site professionnel."</p>
+                                        <strong>- Ahmed B.</strong>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="p-4 bg-white shadow-sm rounded-4 h-100">
+                                        <p class="text-muted">"Formation très pratique et bien expliquée. Je recommande !"
+                                        </p>
+                                        <strong>- Sarah M.</strong>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="p-4 bg-white shadow-sm rounded-4 h-100">
+                                        <p class="text-muted">"Excellent accompagnement du début à la fin."</p>
+                                        <strong>- Karim L.</strong>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section class="py-5 bg-light">
+                        <div class="container">
+                            <div class="text-center mb-5">
+                                <h2 class="fw-bold">Ils nous font confiance</h2>
+                            </div>
+
+                            <div class="row g-4">
+
+                                <div class="col-md-4">
+                                    <div class="p-4 bg-white shadow-sm rounded-4 h-100">
+                                        <p class="text-muted">"Grâce à la formation Développement Web, j'ai créé mon premier
+                                            site professionnel."</p>
+                                        <strong>- Ahmed B.</strong>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="p-4 bg-white shadow-sm rounded-4 h-100">
+                                        <p class="text-muted">"Formation très pratique et bien expliquée. Je recommande !"
+                                        </p>
+                                        <strong>- Sarah M.</strong>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="p-4 bg-white shadow-sm rounded-4 h-100">
+                                        <p class="text-muted">"Excellent accompagnement du début à la fin."</p>
+                                        <strong>- Karim L.</strong>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section class="py-5 text-white text-center"
+                        style="background: linear-gradient(135deg,#6610f2,#0d6efd);">
+                        <div class="container">
+                            <h2 class="fw-bold mb-3">Prêt à développer vos compétences ?</h2>
+                            <p class="mb-4">Inscrivez-vous maintenant et démarrez votre parcours professionnel.</p>
+                            <a href="{{ route('contact') }}" class="btn btn-light btn-lg px-4">
+                                S'inscrire maintenant
+                            </a>
+                        </div>
+                    </section>
+
+
+
+
+
+
+
 
 
                     <div class="home devis-home">
@@ -93,70 +279,73 @@
                                 <h1 class="big-title">Demande d'inscription </h1>
                             </div>
 
-                            <form class=""
-                            action="{{ route('devis.store') }}"
-                            method="POST">
-                            @csrf
+                            <form class="" action="{{ route('devis.store') }}" method="POST">
+                                @csrf
 
                                 <div class="form devis-form">
 
-                                        <div class="form-rows">
-                                            {{-- <div>
+                                    <div class="form-rows">
+                                        {{-- <div>
                                                             <label for="" class="contact-label">Nom Complet</label>
                                                         </div> --}}
 
-                                            <div>
-                                                <input type="text" name="name" placeholder="votre nom complet" class="contact-input">
-                                            </div>
+                                        <div>
+                                            <input type="text" name="name" placeholder="votre nom complet"
+                                                class="contact-input">
                                         </div>
-                                        <div class="form-rows">
-                                            {{-- <div>
+                                    </div>
+                                    <div class="form-rows">
+                                        {{-- <div>
                                                             <label for="" class="contact-label">Nom Complet</label>
                                                         </div> --}}
 
-                                            <div>
-                                                <input type="text" name="adress" placeholder="votre ville et pays ex : Lomé-Togo" class="contact-input">
-                                            </div>
+                                        <div>
+                                            <input type="text" name="adress"
+                                                placeholder="votre ville et pays ex : Lomé-Togo" class="contact-input">
                                         </div>
-                                        <div class="form-rows">
-                                            {{-- <div>
+                                    </div>
+                                    <div class="form-rows">
+                                        {{-- <div>
                                                             <label for="" class="contact-label">Télephone</label>
                                                         </div> --}}
-                                            <div>
-                                                <input type="text" name="phone" placeholder="votre N° de télephone" class="contact-input">
-                                            </div>
+                                        <div>
+                                            <input type="text" name="phone" placeholder="votre N° de télephone"
+                                                class="contact-input">
                                         </div>
-                                        <div class="form-rows">
-                                            {{-- <div>
+                                    </div>
+                                    <div class="form-rows">
+                                        {{-- <div>
                                                             <label for="" class="contact-label">service désiré</label>
                                                         </div> --}}
-                                            <div>
-                                                <input type="text" name="service" placeholder="laquelle de nos formations désirez-vous"
-                                                    class="contact-input">
-                                            </div>
+                                        <div>
+                                            <input type="text" name="service"
+                                                placeholder="laquelle de nos formations désirez-vous"
+                                                class="contact-input">
                                         </div>
-                                        <div class="form-rows">
-                                            {{-- <div>
+                                    </div>
+                                    <div class="form-rows">
+                                        {{-- <div>
                                                             <label for="" class="contact-label">E-mail</label>
                                                         </div> --}}
-                                            <div>
-                                                <input type="email" name="email" placeholder="votre adresse E-mail" class="contact-input">
-                                            </div>
+                                        <div>
+                                            <input type="email" name="email" placeholder="votre adresse E-mail"
+                                                class="contact-input">
                                         </div>
-                                        <div class="form-rows">
-                                            {{-- <div>
+                                    </div>
+                                    <div class="form-rows">
+                                        {{-- <div>
                                                         <label for="message" class="contact-label">Votre Message</label>
                                                     </div> --}}
 
-                                           <div>
+                                        <div>
                                             <textarea name="message" id="" placeholder="Décrivez votre besoins ici" cols="30" rows="3"
-                                            class="contact-input"></textarea>
-                                           </div>
+                                                class="contact-input"></textarea>
                                         </div>
-                                        <p>Nous vous contacterons le plus tôt possible (en moins de 24H)</p>
-                                        <div class="contact-btn-div form-rows">
-                                            <button class="btn my-2 my-sm-0 contact-btn" type="submit">Soumettre</button>
-                                        </div>
+                                    </div>
+                                    <p>Nous vous contacterons le plus tôt possible (en moins de 24H)</p>
+                                    <div class="contact-btn-div form-rows">
+                                        <button class="btn my-2 my-sm-0 contact-btn" type="submit">Soumettre</button>
+                                    </div>
 
                                 </div>
                             </form>
@@ -167,7 +356,9 @@
 
                     <div class="lien-formation">
                         pour toute information
-                        <a href="https://wa.me/+22892671533?text=Bonjour%2C%20je%20souhaite%20me%20renseigner%20sur%20une%20formation.">écrivez nous sur whatsapp</a>
+                        <a
+                            href="https://wa.me/+22892671533?text=Bonjour%2C%20je%20souhaite%20me%20renseigner%20sur%20une%20formation.">écrivez
+                            nous sur whatsapp</a>
                         <p>nous vous répondrons dans un bref delais </p>
 
                     </div>
@@ -777,4 +968,6 @@
         </div>
 
     @endsection
+
+
 </div>
