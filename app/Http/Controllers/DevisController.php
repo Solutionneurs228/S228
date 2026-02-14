@@ -9,6 +9,13 @@ use Illuminate\Support\Facades\Log;
 
 class DevisController extends Controller
 {
+
+public function index() {
+    return view('devis');
+}
+
+
+
 public function store(Request $request)
 {
     try {

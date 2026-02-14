@@ -16,11 +16,11 @@
       <div class="footer-col">
         <h3 class="footer-title">S228 Services</h3>
         <ul class="footer-ul">
-            <li><a class="" href="{{ route('services/mir')}}">Maintenance Informatique</a></li>
-            <li><a class="" href="{{ route('services/photographie')}}">Photographe & Vidéographie</a></li>
-            <li><a class="" href="{{ route('services/webdev')}}">Développement Web & Mobile</a></li>
-            <li><a class="" href="{{ route('services/infographie')}}">Infographie</a></li>
-            <li><a class="" href="{{ route('services/infographie')}}">autres</a></li>
+            <li><a class="" href="{{ route('services.maintenance') }}">Maintenance Informatique</a></li>
+            <li><a class="" href="{{ route('services.photographie') }}">Photographe & Vidéographie</a></li>
+            <li><a class="" href="{{ route('services.webdev') }}">Développement Web & Mobile</a></li>
+            <li><a class="" href="{{ route('services.infographie') }}">Infographie</a></li>
+            <li><a class="" href="#">autres</a></li>
         </ul>
       </div>
 
@@ -28,11 +28,11 @@
       <div class="footer-col">
         <h3 class="footer-title">S228 Formations</h3>
         <ul class="footer-ul">
-            <li><a class="" href="{{ route('services/mir')}}">Informatique</a></li>
-            <li><a class="" href="{{ route('services/photographie')}}">Infographie & Photoshop</a></li>
-            <li><a class="" href="{{ route('services/webdev')}}">Montage Vidéo</a></li>
-            <li><a class="" href="{{ route('services/infographie')}}">Dévéloppement Web</a></li>
-            <li><a class="" href="{{ route('services/infographie')}}">autres</a></li>
+            <li><a class="" href="{{ route('formation') }}">Informatique</a></li>
+            <li><a class="" href="{{ route('formation') }}">Infographie & Photoshop</a></li>
+            <li><a class="" href="{{ route('formation') }}">Montage Vidéo</a></li>
+            <li><a class="" href="{{ route('formation')}}">Dévéloppement Web</a></li>
+            <li><a class="" href="{{ route('formation')}}">autres</a></li>
         </ul>
       </div>
 

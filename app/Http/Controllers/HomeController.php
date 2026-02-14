@@ -21,4 +21,9 @@ class HomeController extends Controller
     {
         return view('galerie');
     }
+
+    public function formation()
+    {
+        return view('formation');
+    }
 }

@@ -2,30 +2,29 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use Illuminate\Http\Request;
-use App\models\Contact;
 
 class ContactController extends Controller
 {
-    public function store(Request $request) {
-// validations
-$validated = $request->validate([
-    'name' => 'required|string|max:100',
-    'phone' => 'nullable|string|max:20',
+    public function index()
+    {
+        return view('contact');
+    }
 
-    // dans le formulaire de contact il peut ne pas avoir service
-    // 'service' => 'nullable|string|max:100',
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
+            'name' => 'required|string|max:100',
+            'phone' => 'nullable|string|max:20',
+            'email' => 'required|email|max:100',
+            'message' => 'required|string|max:1000',
+        ]);
 
-    'email' => 'required|email|max:100',
-    'message' => 'required|string|max:1000',
+        Contact::create($validated);
 
-    // 'service' => 'required|in:mir,photo,webdev,autre',
-
-]);
-// enregistrement dans la BDD
-Contact::create($validated);
-
-// Redirection avec massage
-return back()->with('success', 'Merci votre, message a bien été envoyé');
-
-    }}
+        return redirect()
+            ->route('contact')
+            ->with('success', 'Merci, votre message a bien été envoyé.');
+    }
+}

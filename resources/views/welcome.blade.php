@@ -1,68 +1,12 @@
-@extends('base')
+@extends('layouts.base')
 
 @section('title', 'S228')
 
 <div class="home">
 
-    @section('slide')
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-
-            <div class="carousel-inner">
-
-                <div class="carousel-item slide-img active">
-                    <img class="d-block w-100 h-auto " src="../images/mir.webp" alt="First slide">
-
-
-                    <div class="carousel-caption">
-                        <h5 class="home-title">MAINTENANCE INFORMATIQUE</h5>
-                        <p class="home-description">Réparation des ordinateurs - Assistance informatique ...</p>
-                        <div class="hook-btn-grp">
-                            <a href="{{ route('devis') }}" class="btn my-2 my-sm-0 contact-btn">📩 Demander un devis</a>
-                            <a href="/test-brevo" class="btn my-2 my-sm-0 contact-btn">📩 Demander un devis</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item slide-img">
-                    <img class="d-block w-100 h-auto" src="../images/tof.webp" alt="First slide">
-
-                    <div class="carousel-caption">
-                        <h5 class="home-title">Photographe & Vidéographie</h5>
-                        <p class="home-description">Agrandissements - reportage et montage vidéo - vidéo pubs</p>
-                        <div class="hook-btn-grp">
-                            <a href="{{ route('devis') }}" class="btn my-2 my-sm-0 contact-btn">📩 Demander un devis</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item slide-img">
-                    <img class="d-block w-100 h-auto" src="../images/web.webp" alt="First slide">
-                    <div class="carousel-caption">
-                        <h5 class="home-title">Développement Web & Mobile</h5>
-                        <p class="home-description">Création de sites web - applications mobiles</p>
-                        <div class="hook-btn-grp">
-                            <a href="{{ route('devis') }}" class="btn my-2 my-sm-0 contact-btn">📩 Demander un devis</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    @endsection
+@section('slide')
+    @include('partials.slider')
+@endsection
 
 
     @section('content')
@@ -105,7 +49,7 @@
                         <div class="webContent">
 
                             <div class="contentImg">
-                                <a href="{{ route('services/mir') }}" target="_blank"><img src="../images/mir1.webp"
+                                <a href="{{ route('services.maintenance') }}" target="_blank"><img src="../images/mir1.webp"
                                         alt="service de maintenance" class="contentImage"></a>
                             </div>
 
@@ -122,7 +66,7 @@
 
                                 <div class="btn-right">
 
-                                    <a href="{{ route('services/mir') }}" class="btn btn-primary">voir la page</a>
+                                    <a href="{{ route('services.maintenance') }}" class="btn btn-primary">voir la page</a>
                                 </div>
                             </div>
 
@@ -135,7 +79,7 @@
                         <div class="webContent">
 
                             <div class="contentImg">
-                                <a href="{{ route('services/photographie') }}" target="_blank"><img
+                                <a href="{{ route('services.photographie') }}" target="_blank"><img
                                         src="../images/photo1.webp" alt="service de photographie" class="contentImage"></a>
                             </div>
 
@@ -150,7 +94,7 @@
                                 </div>
                                 <div class="btn-right">
 
-                                    <a href="{{ route('services/photographie') }}" class="btn btn-primary">voir la page</a>
+                                    <a href="{{ route('services.photographie') }}" class="btn btn-primary">voir la page</a>
                                 </div>
                             </div>
 
@@ -162,7 +106,7 @@
                         <div class="webContent">
 
                             <div class="contentImg">
-                                <a href="{{ route('services/webdev') }}" target="_blank"><img src="../images/web1.webp"
+                                <a href="{{ route('services.webdev') }}" target="_blank"><img src="../images/web1.webp"
                                         alt="service web dev" class="contentImage"></a>
                             </div>
 
@@ -177,7 +121,7 @@
                                 </div>
                                 <div class="btn-right">
 
-                                    <a href="{{ route('services/webdev') }}" class="btn btn-primary">voir la page</a>
+                                    <a href="{{ route('services.webdev') }}" class="btn btn-primary">voir la page</a>
                                 </div>
                             </div>
 
@@ -188,7 +132,7 @@
                     <div class="box">
                         <div class="webContent">
                             <div class="contentImg">
-                                <a href="{{ route('services/infographie') }}" target="_blank"><img
+                                <a href="{{ route('services.infographie') }}" target="_blank"><img
                                         src="../images/infographie.webp" alt="service infographie"
                                         class="contentImage"></a>
                             </div>
@@ -258,7 +202,7 @@
                     </div>
 
                     <div class="btn-right">
-                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la
+                        <a href="{{ route('formation') }}" class="btn btn-primary">voir la
                             page</a>
                     </div>
 
@@ -277,7 +221,7 @@
                     </div>
                     <div class="btn-right">
 
-                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la
+                        <a href="{{ route('formation') }}" class="btn btn-primary">voir la
                             page</a>
                     </div>
 
@@ -295,7 +239,7 @@
                     </div>
                     <div class="btn-right">
 
-                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la
+                        <a href="{{ route('formation') }}" class="btn btn-primary">voir la
                             page</a>
                     </div>
 
@@ -313,7 +257,7 @@
                     </div>
                     <div class="btn-right">
 
-                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la
+                        <a href="{{ route('formation') }}" class="btn btn-primary">voir la
                             page</a>
                     </div>
 
@@ -332,7 +276,7 @@
                     </div>
                     <div class="btn-right">
 
-                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la
+                        <a href="{{ route('formation') }}" class="btn btn-primary">voir la
                             page</a>
                     </div>
 
@@ -351,7 +295,7 @@
                     </div>
                     <div class="btn-right">
 
-                        <a href="{{ route('formations/initiation-informatique') }}" class="btn btn-primary">voir la
+                        <a href="{{ route('formation') }}" class="btn btn-primary">voir la
                             page</a>
                     </div>
 
@@ -430,7 +374,6 @@
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    {{-- <span class="play-icon">▶</span> --}}
                 </div>
 
 
@@ -442,45 +385,6 @@
 
         </div>
 
-
-        {{--
-        <div class="session experiences">
-            <div class="experiences-all">
-
-                <div class="experience">
-                    <div class="experience-top">
-                        <span class="experience-icon"><i class="fa-solid fa-2x fa-handshake"></i>
-                        </span>
-                        <div class="experience-title">ONGs et cabinets</div>
-                    </div>
-                    <p class="experience-description">Plus de 5 ONGs et cabinets ont noués partenariat avec nous</p>
-                </div>
-
-                <div class="experience">
-                    <div class="experience-top">
-                        <span class="experience-icon"><i class="fa-solid fa-2x fa-building"></i>
-                        </span>
-                        <div class="experience-title">Entreprises</div>
-                    </div>
-                    <p class="experience-description">Plusieurs entréprises à travers tout le pays nous solicitent
-                        régulièrement</p>
-                </div>
-
-
-
-                <div class="experience">
-                    <div class="experience-top">
-                        <span class="experience-icon"><i class="fa-solid fa-2x fa-graduation-cap"></i></span>
-                        <div class="experience-title">Centres de formations proffesionels</div>
-                    </div>
-                    <p class="experience-description">Nous intervenons aussi dans des centres de formations</p>
-                </div>
-
-            </div>
-
-            <span>Ils nous font tous confiance</span>
-        </div>
-        --}}
 
 
 
@@ -509,9 +413,6 @@
                         <div class="form-container">
                             <div>
                                 <div class="contact-rows">
-                                    {{-- <div>
-                                        <label for="" class="contact-label">Nom Complet</label>
-                                    </div> --}}
 
                                     <div>
                                         <input type="text" name="name" placeholder="votre nom complet"
@@ -519,9 +420,6 @@
                                     </div>
                                 </div>
                                 <div class="contact-rows">
-                                    {{-- <div>
-                                        <label for="" class="contact-label">Télephone</label>
-                                    </div> --}}
                                     <div>
                                         <input type="text" name="phone" placeholder="votre télephone"
                                             class="contact-input" required>
@@ -551,7 +449,7 @@
             </div>
 
 
-            <a href="{{ route('admin') }}">page admin</a>
+            {{-- <a href="{{ route('admin') }}">page admin</a> --}}
         </div>
 
 
