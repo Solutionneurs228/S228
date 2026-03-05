@@ -1,7 +1,7 @@
-@extends('base')
+@extends('layouts.base')
 
 
-@section('title', 'MTC Initation Informatique')
+@section('title', 'S228 Initation Informatique')
 
 <div class="home">
     @section('slide')
@@ -61,7 +61,7 @@
         </p>
 
         <div class="mt-auto">
-            <a href="{{ route('formations/initiation-informatique') }}"
+            <a href="{{ route('formation') }}"
                class="btn btn-primary w-100 rounded-pill">
                Voir la formation
             </a>

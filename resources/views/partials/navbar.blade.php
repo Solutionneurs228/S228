@@ -1,108 +1,73 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm
-fixed-top
-">
-    <div class="container">
-        {{-- Logo
-        <a class="navbar-brand logo" href="{{ route('home') }}">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo MTC" height="50">
-        </a>
---}}
-        <a class="navbar-brand logo" href="{{ route('home') }}">
-            <img src="{{ asset('images/logo.png') }}"
-                 alt="Logo S228"
-                 class="logo img-fluid">
-        </a>
+    <!-- ==================== HEADER / NAVIGATION ==================== -->
+    <!-- Sticky header with glass effect on scroll -->
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                        S
+                    </div>
+                    <span class="font-bold text-2xl text-gray-900 tracking-tight">
+                        Solutionneurs<span class="text-brand-600">228</span>
+                    </span>
+                </div>
 
-        {{-- Bouton burger --}}
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarMain"
-                aria-controls="navbarMain"
-                aria-expanded="false"
-                aria-label="Ouvrir le menu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        {{-- Menu principal --}}
-        <div class="collapse navbar-collapse" id="navbarMain">
-
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                {{-- Services --}}
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {{ request()->routeIs('services.*') ? 'active' : '' }}"
-                       href="#"
-                       id="servicesDropdown"
-                       role="button"
-                       data-bs-toggle="dropdown"
-                       aria-expanded="false">
-                        Nos Services
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-700 hover:text-brand-600 font-medium transition-colors relative group">
+                        Accueil
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-600 transition-all group-hover:w-full"></span>
                     </a>
-
-                    <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                        <li><a class="dropdown-item" href="{{ route('services.maintenance') }}">Maintenance Informatique</a></li>
-                        <li><a class="dropdown-item" href="{{ route('services.photographie') }}">Photographie & Vidéographie</a></li>
-                        <li><a class="dropdown-item" href="{{ route('services.webdev') }}">Développement Web & Mobile</a></li>
-                        <li><a class="dropdown-item" href="{{ route('services.infographie') }}">Infographie</a></li>
-                    </ul>
-                </li>
-
-                {{-- Formations --}}
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('formation') ? 'active' : '' }}"
-                       href="{{ route('formation') }}">
-                        Nos Formations
+                    <a href="#services" class="text-gray-700 hover:text-brand-600 font-medium transition-colors relative group">
+                        Services
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-600 transition-all group-hover:w-full"></span>
                     </a>
-                </li>
-
-                {{-- Galerie (ajout propre) --}}
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('galerie') ? 'active' : '' }}"
-                       href="{{ route('galerie') }}">
-                        Galerie
+                    <a href="#about" class="text-gray-700 hover:text-brand-600 font-medium transition-colors relative group">
+                        À Propos
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-600 transition-all group-hover:w-full"></span>
                     </a>
-                </li>
-
-                {{-- À propos --}}
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('about') ? 'active' : '' }}"
-                       href="{{ route('about') }}">
-                        Qui sommes-nous ?
+                    <a href="#contact" class="text-gray-700 hover:text-brand-600 font-medium transition-colors relative group">
+                        Contact
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-600 transition-all group-hover:w-full"></span>
                     </a>
-                </li>
+                </nav>
 
-                {{-- Contact --}}
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}"
-                       href="{{ route('contact') }}">
-                        Contactez-nous
+                <!-- CTA Button Desktop -->
+                <div class="hidden md:block">
+                    <a href="#contact" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-2">
+                        <i class="fas fa-paper-plane text-sm"></i>
+                        Demander un Devis
                     </a>
-                </li>
+                </div>
 
-                {{-- Devis --}}
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('devis') ? 'active' : '' }}"
-                       href="{{ route('devis') }}">
-                        Devis
-                    </a>
-                </li>
-
-            </ul>
-
-            {{-- Recherche --}}
-            <form class="d-flex ms-lg-3" role="search">
-                <label for="navbarSearch" class="visually-hidden">Rechercher</label>
-                <input id="navbarSearch"
-                       class="form-control me-2"
-                       type="search"
-                       placeholder="Rechercher">
-                <button class="btn btn-outline-success" type="submit">
-                    Recherche
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-brand-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
                 </button>
-            </form>
-
+            </div>
         </div>
-    </div>
-</nav>
 
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-80 h-full bg-white shadow-2xl z-50 md:hidden flex flex-col">
+            <div class="p-6 flex justify-between items-center border-b">
+                <span class="font-bold text-xl text-gray-900">Menu</span>
+                <button id="close-menu-btn" class="text-gray-500 hover:text-red-500">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <nav class="flex-1 flex flex-col p-6 space-y-4">
+                <a href="#home" class="text-lg font-medium text-gray-700 hover:text-brand-600 py-2 border-b border-gray-100">Accueil</a>
+                <a href="#services" class="text-lg font-medium text-gray-700 hover:text-brand-600 py-2 border-b border-gray-100">Services</a>
+                <a href="#about" class="text-lg font-medium text-gray-700 hover:text-brand-600 py-2 border-b border-gray-100">À Propos</a>
+                <a href="#contact" class="text-lg font-medium text-gray-700 hover:text-brand-600 py-2 border-b border-gray-100">Contact</a>
+                <a href="#contact" class="mt-4 bg-brand-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-brand-700 transition-colors">
+                    Demander un Devis
+                </a>
+            </nav>
+        </div>
+        
+        <!-- Overlay for mobile menu -->
+        <div id="menu-overlay" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden backdrop-blur-sm"></div>
+    </header>

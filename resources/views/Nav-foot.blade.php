@@ -20,7 +20,6 @@
                     <a class="dropdown-item" href="{{ route('services/photographie')}}">Photographe & Vidéographie</a>
                     <a class="dropdown-item" href="{{ route('services/webdev')}}">Développement Web & Mobile</a>
                     <div class="dropdown-divider"></div>
-                    {{-- <a class="dropdown-item" href="{{ route('services/infographie')}}">Infographie</a> --}}
                 </div>
             </li>
 

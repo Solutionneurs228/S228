@@ -1,4 +1,4 @@
-@extends('base')
+@extends('layouts.base')
 @section('title', 'S228 Devis')
 
 @section('Demande de devis')

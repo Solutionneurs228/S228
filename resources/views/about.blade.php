@@ -1,4 +1,4 @@
-@extends('base')
+@extends('layouts.base')
 
 
 @section('title', 'à propos de S228')

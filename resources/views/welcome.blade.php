@@ -1,459 +1,406 @@
 @extends('layouts.base')
 
-@section('title', 'S228')
-
-<div class="home">
-
 @section('slide')
     @include('partials.slider')
 @endsection
 
+@section('title', 'S228')
 
-    @section('content')
 
+@section('content')
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div class="session hook">
-            <div class="hook-content">
-                <h1 class="big-title">Solutionneurs228</h1>
-                <h3 class="hook-tag">un bon travail en un temps reccord !</h3>
-                <p class="hook-description">
-                    Bienvenue chez SOLUTIONNEURS228,
-                    votre partenaire de confiance pour des services de maintenance informatique,
-                    photographie, reportage, montage vidéo, graphisme et développement web.
-                </p>
-                <p class="hook-description hook-description2">
-                    Sur plus de 90% de nos services nous avons un système de réduction qui va vous intéresser.
-                    <br>
-                    Découvrez ce
-                    <a href="https://wa.me/+22892671533?text=salut%2C%20je%20souhaite%20m'informer%20sur%20votre%20système%20de%20réduction%20de%20prix."
-                        target="_blank">
-                        💬 système de réduction des prix
-                    </a>
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Nos Expertises</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">
+                    Solutions Complètes pour Votre <span class="gradient-text">Réussite Digitale</span>
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Des services sur mesure alliant technologie, créativité et professionnalisme pour répondre à tous vos
+                    besoins.
                 </p>
             </div>
-        </div>
 
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <div class="session">
-
-            <Br>
-
-
-            <h1 class="big-title">NOS SERVICES</h1>
-
-            <div class="session-content">
-                <!-- FRONTEND BOXES---------------------------------------------------- -->
-                <div class="boxes">
-                    <div class="box">
-
-                        <div class="webContent">
-
-                            <div class="contentImg">
-                                <a href="{{ route('services.maintenance') }}" target="_blank"><img src="../images/mir1.webp"
-                                        alt="service de maintenance" class="contentImage"></a>
-                            </div>
-
-                            <div class="wrapperText">
-                                <div>
-                                    <h5 class="card-title">
-                                        Maintenance informatique
-                                    </h5>
-                                    <p class="card-text">
-                                        Entretien et réparation des ordinateurs,
-                                        Installation de logiciels, Assistance informatique …
-                                    </p>
-                                </div>
-
-                                <div class="btn-right">
-
-                                    <a href="{{ route('services.maintenance') }}" class="btn btn-primary">voir la page</a>
-                                </div>
-                            </div>
-
-                        </div>
-
+                <!-- Service 1: IT Maintenance -->
+                <div class="service-card bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-brand-200 group">
+                    <div
+                        class="w-16 h-16 bg-brand-100 rounded-2xl flex items-center justify-center text-brand-600 text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300">
+                        <i class="fas fa-tools"></i>
                     </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Maintenance Informatique</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Intervention sur site et à distance, réparation matérielle, optimisation système et prévention des
+                        pannes pour garantir la continuité de votre activité.
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group/link">
+                        En savoir plus
+                        <i
+                            class="fas fa-arrow-right ml-2 transform group-hover/link:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
 
-                    <div class="box">
-
-                        <div class="webContent">
-
-                            <div class="contentImg">
-                                <a href="{{ route('services.photographie') }}" target="_blank"><img
-                                        src="../images/photo1.webp" alt="service de photographie" class="contentImage"></a>
-                            </div>
-
-                            <div class="wrapperText">
-                                <div>
-                                    <h5 class="card-title">
-                                        Photographie & Vidéographie
-                                    </h5>
-                                    <p class="card-text">Prise de vues, Photos shooting, Agrandissement de photos,
-                                        Reportages photo & vidéo ...
-                                    </p>
-                                </div>
-                                <div class="btn-right">
-
-                                    <a href="{{ route('services.photographie') }}" class="btn btn-primary">voir la page</a>
-                                </div>
-                            </div>
-
-                        </div>
-
+                <!-- Service 2: Remote Support -->
+                <div class="service-card bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-brand-200 group">
+                    <div
+                        class="w-16 h-16 bg-brand-100 rounded-2xl flex items-center justify-center text-brand-600 text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300">
+                        <i class="fas fa-headset"></i>
                     </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Support à Distance</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Assistance technique rapide et sécurisée via connexion à distance. Résolution de problèmes
+                        logiciels, configuration et dépannage urgent 24/7.
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group/link">
+                        En savoir plus
+                        <i
+                            class="fas fa-arrow-right ml-2 transform group-hover/link:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
 
-                    <div class="box">
-                        <div class="webContent">
-
-                            <div class="contentImg">
-                                <a href="{{ route('services.webdev') }}" target="_blank"><img src="../images/web1.webp"
-                                        alt="service web dev" class="contentImage"></a>
-                            </div>
-
-                            <div class="wrapperText">
-                                <div>
-                                    <h5 class="card-title">
-                                        Développement Web
-                                    </h5>
-                                    <p class="card-text">
-                                        Création de sites web et applications mobile sur mesure
-                                    </p>
-                                </div>
-                                <div class="btn-right">
-
-                                    <a href="{{ route('services.webdev') }}" class="btn btn-primary">voir la page</a>
-                                </div>
-                            </div>
-
-                        </div>
-
+                <!-- Service 3: Training -->
+                <div class="service-card bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-brand-200 group">
+                    <div
+                        class="w-16 h-16 bg-brand-100 rounded-2xl flex items-center justify-center text-brand-600 text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300">
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Formation & Coaching</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Programmes de formation personnalisés en bureautique, programmation, design et nouvelles
+                        technologies pour renforcer les compétences de vos équipes.
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group/link">
+                        En savoir plus
+                        <i
+                            class="fas fa-arrow-right ml-2 transform group-hover/link:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
 
-                    <div class="box">
-                        <div class="webContent">
-                            <div class="contentImg">
-                                <a href="{{ route('services.infographie') }}" target="_blank"><img
-                                        src="../images/infographie.webp" alt="service infographie"
-                                        class="contentImage"></a>
-                            </div>
-
-                            <div class="wrapperText">
-                                <div>
-                                    <h5 class="card-title">
-                                        Infographie
-                                    </h5>
-                                    <p class="card-text">
-                                        Création de cartes de visites, d'invitations, logos, badges, affiches
-                                        pubs, bâches, autocollants ...
-                                    </p>
-                                </div>
-                                <div class="btn-right">
-
-                                    <a href="" class="btn btn-primary">voir la page</a>
-                                </div>
-                            </div>
-
-                        </div>
-
+                <!-- Service 4: Web Development -->
+                <div class="service-card bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-brand-200 group">
+                    <div
+                        class="w-16 h-16 bg-brand-100 rounded-2xl flex items-center justify-center text-brand-600 text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300">
+                        <i class="fas fa-laptop-code"></i>
                     </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Développement Web</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Création de sites vitrines, e-commerce et applications web sur mesure. Design responsive, SEO
+                        optimisé et technologies modernes (Laravel, React, Vue).
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group/link">
+                        En savoir plus
+                        <i
+                            class="fas fa-arrow-right ml-2 transform group-hover/link:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5: Graphic Design -->
+                <div class="service-card bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-brand-200 group">
+                    <div
+                        class="w-16 h-16 bg-brand-100 rounded-2xl flex items-center justify-center text-brand-600 text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Design Graphique</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Identité visuelle complète : logos, chartes graphiques, supports print (flyers, affiches) et digital
+                        (bannières, posts réseaux sociaux).
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group/link">
+                        En savoir plus
+                        <i
+                            class="fas fa-arrow-right ml-2 transform group-hover/link:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Service 6: Photo/Video -->
+                <div class="service-card bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-brand-200 group">
+                    <div
+                        class="w-16 h-16 bg-brand-100 rounded-2xl flex items-center justify-center text-brand-600 text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Photo & Vidéo</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Production audiovisuelle professionnelle : shooting corporate, couverture événementielle, montage
+                        vidéo et création de contenu pour vos réseaux sociaux.
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group/link">
+                        En savoir plus
+                        <i
+                            class="fas fa-arrow-right ml-2 transform group-hover/link:translate-x-1 transition-transform"></i>
+                    </a>
                 </div>
 
             </div>
-
-
         </div>
-        <Br>
+    </section>
 
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="py-20 bg-gray-50 relative overflow-hidden">
+        <!-- Background Decoration -->
+        <div
+            class="absolute top-0 right-0 w-96 h-96 bg-brand-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float">
+        </div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float"
+            style="animation-delay: 1.5s;"></div>
 
-        <div class="session reduce">
-            <div class="btn-reduction">
-                <a href="https://wa.me/+22892671533?text=salut%2C%20je%20souhaite%20m'informer%20sur%20votre%20système%20de%20réduction%20de%20prix."
-                    target="_blank">
-                    Découvrez notre <br>
-                    système de réduction des prix
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Image Side -->
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-brand-600 rounded-2xl transform rotate-3 opacity-10"></div>
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Équipe Solutionneurs228" class="relative rounded-2xl shadow-2xl w-full object-cover h-[500px]">
+
+                    <!-- Stats Card -->
+                    <div
+                        class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl border border-gray-100 hidden md:block">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center text-brand-600">
+                                <i class="fas fa-users text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-bold text-gray-900">150+</p>
+                                <p class="text-sm text-gray-600">Clients Satisfaits</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Side -->
+                <div>
+                    <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">À Propos de Nous</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">
+                        Votre Partenaire Technologique de Confiance au <span class="gradient-text">Togo</span>
+                    </h2>
+
+                    <div class="space-y-4 text-gray-600 text-lg leading-relaxed">
+                        <p>
+                            Fondée avec la vision de démocratiser l'accès aux technologies modernes,
+                            <strong>Solutionneurs228</strong> s'est imposée comme un acteur majeur du paysage digital
+                            togolais.
+                        </p>
+                        <p>
+                            Notre mission est simple : accompagner entreprises et particuliers dans leur transformation
+                            digitale en proposant des solutions IT, web et média adaptées à leurs besoins spécifiques et à
+                            leur budget.
+                        </p>
+                        <p>
+                            Forts d'une équipe pluridisciplinaire d'experts passionnés, nous combinons expertise technique
+                            et créativité pour livrer des projets d'excellence. De la maintenance informatique à la création
+                            de sites web, en passant par la production audiovisuelle, nous sommes votre interlocuteur
+                            unique.
+                        </p>
+                    </div>
+
+                    <!-- Values -->
+                    <div class="grid grid-cols-2 gap-6 mt-8">
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center text-brand-600 flex-shrink-0">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Excellence</h4>
+                                <p class="text-sm text-gray-600">Qualité irréprochable dans chaque projet</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center text-brand-600 flex-shrink-0">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Réactivité</h4>
+                                <p class="text-sm text-gray-600">Intervention rapide et efficace</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center text-brand-600 flex-shrink-0">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Proximité</h4>
+                                <p class="text-sm text-gray-600">Accompagnement personnalisé</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center text-brand-600 flex-shrink-0">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Innovation</h4>
+                                <p class="text-sm text-gray-600">Solutions à la pointe de la technologie</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="#contact"
+                            class="inline-flex items-center bg-brand-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-brand-700 transition-all transform hover:scale-105 shadow-lg">
+                            Travailler avec Nous
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS SECTION ==================== -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Témoignages</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+                    Ce que Disent nos <span class="gradient-text">Clients</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 relative">
+                    <div
+                        class="absolute -top-4 left-8 w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center text-white">
+                        <i class="fas fa-quote-left text-sm"></i>
+                    </div>
+                    <div class="flex text-brand-500 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "Service impeccable ! L'équipe a su redonner vie à notre parc informatique en moins de 48h.
+                        Professionnalisme et réactivité au rendez-vous."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold">
+                            KM
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Kossi M.</h4>
+                            <p class="text-sm text-gray-500">Directeur, AfriTech Solutions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 relative">
+                    <div
+                        class="absolute -top-4 left-8 w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center text-white">
+                        <i class="fas fa-quote-left text-sm"></i>
+                    </div>
+                    <div class="flex text-brand-500 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "Notre nouveau site web dépasse toutes nos attentes. Design moderne, navigation fluide et surtout,
+                        une équipe à l'écoute de nos besoins."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold">
+                            AB
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Abla B.</h4>
+                            <p class="text-sm text-gray-500">Fondatrice, Élégance Mode</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 relative">
+                    <div
+                        class="absolute -top-4 left-8 w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center text-white">
+                        <i class="fas fa-quote-left text-sm"></i>
+                    </div>
+                    <div class="flex text-brand-500 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "La couverture photo/vidéo de notre événement corporate était parfaite. Qualité professionnelle et
+                        livraison rapide des fichiers. Highly recommended!"
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold">
+                            PT
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Paul T.</h4>
+                            <p class="text-sm text-gray-500">Responsable Com, EcoBank</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA SECTION ==================== -->
+    <section class="py-20 bg-brand-900 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
+                Prêt à Transformer Votre Business ?
+            </h2>
+            <p class="text-brand-100 text-lg mb-8 max-w-2xl mx-auto">
+                Contactez-nous dès aujourd'hui pour discuter de votre projet et obtenir un devis personnalisé gratuitement.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact"
+                    class="bg-white text-brand-900 px-8 py-4 rounded-full font-bold hover:bg-brand-50 transition-all transform hover:scale-105 shadow-xl">
+                    Demander un Devis Gratuit
+                </a>
+                <a href="tel:+22890000000"
+                    class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-all flex items-center justify-center gap-2">
+                    <i class="fas fa-phone"></i>
+                    +228 90 00 00 00
                 </a>
             </div>
-            <div class="reduce-img">
-                <img src="../images/reduce.png" alt="">
-            </div>
-            <div class="reduce-bottom">
-
-            </div>
-
-            {{-- <p> Sur plus de 90% de nos services nous avons un système de réduction qui va vous intéresser.</p> --}}
         </div>
+    </section>
 
-        <div class="session formations">
-            <h1 class="big-title">NOS OFFRES DE FORMATIONS</h1>
+@endsection
 
 
 
-            <div class="formations-boxes">
 
-                <div class="box">
 
-                    <div>
-                        <div class="icone-title">
-                            <span class="icon"><i class="fa-solid fa-2x fa-computer"></i></span> <!-- Ordinateur -->
-                            <h5 class="formation-card-title">Initiation à l'informatique</h5>
-                        </div>
-                        <p class="card-text">Les connaissances de base en informatique, familiarisation avec
-                            l'ordinateur, étude du clavier et de la souris... </p>
-                    </div>
 
-                    <div class="btn-right">
-                        <a href="{{ route('formation') }}" class="btn btn-primary">voir la
-                            page</a>
-                    </div>
 
-                </div>
 
-                <div class="box">
 
-                    <div>
-                        <div class="icone-title">
-                            <span class="icon"><i class="fa-solid fa-2x fa-computer"></i></span> <!-- Ordinateur -->
-                            <h5 class="formation-card-title">Informatique Bureautique</h5>
-                        </div>
-                        <p class="card-text">En fonction du niveau de l'apprenant la formation va couvrir les
-                            bases et
-                            les profondeurs de chaque étude pour lui assurer une bonne maitrise à l'issu ...</p>
-                    </div>
-                    <div class="btn-right">
 
-                        <a href="{{ route('formation') }}" class="btn btn-primary">voir la
-                            page</a>
-                    </div>
 
-                </div>
 
-                <div class="box">
 
-                    <div>
-                        <div class="icone-title">
-                            <span class="icon"><i class="fa-solid fa-2x fa-computer"></i></span> <!-- Ordinateur -->
-                            <h5 class="formation-card-title">Développement Web</h5>
-                        </div>
 
-                        <p class="card-text">Création de sites web et applications mobile sur mesure ...</p>
-                    </div>
-                    <div class="btn-right">
 
-                        <a href="{{ route('formation') }}" class="btn btn-primary">voir la
-                            page</a>
-                    </div>
 
-                </div>
 
-                <div class="box">
-
-                    <div>
-                        <div class="icone-title">
-                            <span class="icon"><i class="fa-solid fa-2x fa-computer"></i></span> <!-- Ordinateur -->
-                            <h5 class="formation-card-title">Montage Vidéo</h5>
-                        </div>
-
-                        <p class="card-text">Techniques de montage vidéo en fonction du type d'événement...</p>
-                    </div>
-                    <div class="btn-right">
-
-                        <a href="{{ route('formation') }}" class="btn btn-primary">voir la
-                            page</a>
-                    </div>
-
-                </div>
-
-                <div class="box">
-
-                    <div>
-                        <div class="icone-title">
-                            <span class="icon"><i class="fa-solid fa-2x fa-computer"></i></span> <!-- Ordinateur -->
-                            <h5 class="formation-card-title">Infographie</h5>
-                        </div>
-
-                        <p class="card-text">Création de cartes de visites, d'invitations,
-                            logos, bages, affiches pubs ...</p>
-                    </div>
-                    <div class="btn-right">
-
-                        <a href="{{ route('formation') }}" class="btn btn-primary">voir la
-                            page</a>
-                    </div>
-
-                </div>
-
-                <div class="box">
-
-                    <div>
-                        <div class="icone-title">
-                            <span class="icon"><i class="fa-solid fa-2x fa-computer"></i></span> <!-- Ordinateur -->
-                            <h5 class="formation-card-title">Photoshop</h5>
-                        </div>
-
-                        <p class="card-text">Maitrise des bases et des outils les plus importants de Photoshop,
-                            étude des différents types de conceptions possibles avec Photoshop...</p>
-                    </div>
-                    <div class="btn-right">
-
-                        <a href="{{ route('formation') }}" class="btn btn-primary">voir la
-                            page</a>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-
-
-        <div class="session parteners">
-            <h1 class="big-title">Nos partenaires</h1>
-            <div class="parteners-all">
-
-                <div class="partener">
-                    <div class="partener-img">
-                        <img src="../images/sostv.png" alt="partener1">
-                    </div>
-                    <p class="partener-description">
-                        1ère chaine de Télé 100% santé en Afrique.
-                        <br>
-                        <a href="https://www.sos-docteur.tv/" target="_blank" rel="noopener noreferrer">visitez la
-                            chaîne</a>
-                    </p>
-                </div>
-
-
-                <div class="partener">
-                    <div class="partener-img">
-                        <img src="../images/qualitech.png" alt="partener1">
-                    </div>
-                    <p class="partener-description">photographie, vidéographie, graphique design, sérigraphie, décoration
-                        3D ...</p>
-                </div>
-
-                <div class="partener">
-                    <div class="partener-img">
-                        <img src="../images/aide.png" alt="partener1">
-                    </div>
-                    <p class="partener-description">formation, conseil, audit entréprises, coaching ...</p>
-                </div>
-
-            </div>
-
-            {{-- <span>Ils nous font tous confiance</span> --}}
-        </div>
-
-
-
-        <div class="session home-gallery">
-            <div class="gallery-header">
-                <h2 class="big-title">Notre Galerie</h2>
-                <p>Un aperçu de nos réalisations récentes</p>
-            </div>
-
-            <div class="gallery-grid">
-                <!-- Image -->
-                <div class="gallery-item">
-                    <img src="../images/eric.webp" alt="Photo événement">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="../images/yovo.webp" alt="Photo événement">
-                </div>
-
-                <!-- Vidéo -->
-                <div class="gallery-item video">
-                    <video controls preload="metadata">
-                        <source src="{{ asset('videos/moba.mp4') }}" type="video/mp4">
-                    </video>
-                    {{-- <span class="play-icon">▶</span> --}}
-                </div>
-                <!-- Vidéo -->
-                <div class="gallery-item video">
-                    <iframe src="https://www.youtube.com/embed/hRNwlx2lE9k"
-                        title="S228/la prestation de la chorale Salut des âmes des AD tchannadè lors du mariage de yovo &amp; Immaculée"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-
-
-            </div>
-
-            <div class="gallery-action">
-                <a href="{{ route('galerie') }}" class="btn-gallery">Voir toute la galerie</a>
-            </div>
-
-        </div>
-
-
-
-
-        <div class="session">
-            <h1 class="big-title">Laissez nous un message</h1>
-
-            <div class="contact-bloc-content">
-                <div class="contact-bloc-part adress">
-                    <div class="adress-group">
-                        <div><strong>Tel :</strong></div>
-                        <div><i>+228 92 67 15 33</i></div>
-                        <div><i>+228 97 57 49 46</i></div>
-
-                    </div>
-                    <div class="adress-group">
-                        <div> <strong>Email : </strong></div>
-                        <div><i>aessotchossim@gmail.com</i></div>
-                        <div><i>mtcdigit@gmail.com</i></div>
-
-                    </div>
-                </div>
-                <div class="contact-bloc-part form">
-                    <form action="{{ route('contact.store') }}" method="POST">
-                        @csrf
-
-                        <div class="form-container">
-                            <div>
-                                <div class="contact-rows">
-
-                                    <div>
-                                        <input type="text" name="name" placeholder="votre nom complet"
-                                            class="contact-input" required>
-                                    </div>
-                                </div>
-                                <div class="contact-rows">
-                                    <div>
-                                        <input type="text" name="phone" placeholder="votre télephone"
-                                            class="contact-input" required>
-                                    </div>
-                                </div>
-                                <div class="contact-rows">
-                                    {{-- <div>
-                                        <label for="" class="contact-label">E-mail</label>
-                                    </div> --}}
-                                    <div>
-                                        <input type="email" name="email" placeholder="votre adresse E-mail"
-                                            class="contact-input" required>
-                                    </div>
-                                </div>
-                                {{-- <div>
-                                    <label for="message" class="contact-label">Votre Message</label>
-                                </div> --}}
-                                <textarea name="message" id="" placeholder="Saisissez votre massage ici" cols="30" rows="3"
-                                    class="contact-input" required></textarea>
-                                <div class="contact-btn-div">
-                                    <button class="btn my-2 my-sm-0 contact-btn" type="submit">Soumettre</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-
-            {{-- <a href="{{ route('admin') }}">page admin</a> --}}
-        </div>
-
-
-
-
-    @endsection
-</div>
