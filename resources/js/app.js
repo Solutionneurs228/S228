@@ -1,18 +1,36 @@
-// app.js
+// ==========================================
+// IMPORTS
+// ==========================================
 
-import './bootstrap';
+// Font Awesome
 import '@fortawesome/fontawesome-free/css/all.min.css';
+
+// Alpine.js
 import Alpine from 'alpinejs';
-import 'bootstrap';
+
+// Votre CSS Tailwind
+import '../css/style.css';
+
+// ==========================================
+// ALPINE.JS
+// ==========================================
 
 window.Alpine = Alpine;
 Alpine.start();
 
 // ==========================================
+// APP INITIALIZATION
+// ==========================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Solutionneurs228 app loaded');
+});
+
+// ==========================================
 // MOBILE MENU
 // ==========================================
+
 document.addEventListener('DOMContentLoaded', function() {
-    
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const closeMenuBtn = document.getElementById('close-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -22,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (mobileMenu) mobileMenu.classList.add('open');
         if (mobileOverlay) mobileOverlay.classList.add('visible');
         document.body.style.overflow = 'hidden';
-        
+
         if (mobileMenuBtn) {
             const icon = mobileMenuBtn.querySelector('i');
             if (icon) {
@@ -36,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (mobileMenu) mobileMenu.classList.remove('open');
         if (mobileOverlay) mobileOverlay.classList.remove('visible');
         document.body.style.overflow = '';
-        
+
         if (mobileMenuBtn) {
             const icon = mobileMenuBtn.querySelector('i');
             if (icon) {
@@ -82,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==========================================
     // MOBILE DROPDOWN
     // ==========================================
-    
+
     const mobileDropdownBtn = document.getElementById('mobile-dropdown-btn');
     const mobileDropdownContent = document.getElementById('mobile-dropdown-content');
     const mobileDropdownIcon = document.getElementById('mobile-dropdown-icon');
@@ -91,9 +109,9 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileDropdownBtn.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            
+
             const isOpen = mobileDropdownContent.classList.contains('open');
-            
+
             if (isOpen) {
                 mobileDropdownContent.classList.remove('open');
                 mobileDropdownContent.classList.add('hidden');
@@ -101,7 +119,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 mobileDropdownBtn.classList.remove('active');
             } else {
                 mobileDropdownContent.classList.remove('hidden');
-                // Petit délai pour permettre la transition
                 setTimeout(() => {
                     mobileDropdownContent.classList.add('open');
                 }, 10);
@@ -114,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==========================================
     // HERO SLIDER
     // ==========================================
-    
+
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.slider-dot');
     const prevBtn = document.getElementById('prev-slide');
@@ -189,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==========================================
     // NAVBAR SCROLL
     // ==========================================
-    
+
     const navbar = document.getElementById('navbar');
     if (navbar) {
         window.addEventListener('scroll', () => {
@@ -204,12 +221,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==========================================
     // SMOOTH SCROLL
     // ==========================================
-    
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
             if (href === '#') return;
-            
+
             const target = document.querySelector(href);
             if (target) {
                 e.preventDefault();
@@ -224,11 +241,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==========================================
     // TOUCHE ECHAP
     // ==========================================
-    
+
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             closeMobileMenu();
-            
+
             if (mobileDropdownContent && mobileDropdownContent.classList.contains('open')) {
                 mobileDropdownContent.classList.remove('open');
                 mobileDropdownContent.classList.add('hidden');

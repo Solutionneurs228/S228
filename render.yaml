@@ -28,8 +28,6 @@ services:
         sync: false
 
 
-
-
 # services:
 #   - type: web
 #     name: laravel-app

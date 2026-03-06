@@ -1,45 +1,61 @@
 # ==========================================
-# ÉTAPE 1 : Build des assets avec Node
+# ÉTAPE 1 : Build Node
 # ==========================================
 FROM node:20-alpine AS node-builder
 
 WORKDIR /app
 
-# Copier seulement les fichiers package* d'abord (cache Docker optimisé)
+# Copier les dépendances
 COPY package*.json ./
 RUN npm ci
 
-# Copier le reste et builder
+# Copier le projet
 COPY . .
-RUN npm run build || (echo "BUILD FAILED" && exit 1)
 
-# DEBUG : Vérifier si le build a fonctionné
-RUN ls -la /app/public/ && echo "=== CONTENU DE PUBLIC/BUILD ===" && ls -la /app/public/build/ || echo "ERREUR: build/ N'EXISTE PAS"
+# Vérifier les fichiers critiques
+RUN echo "=== Vérification fichiers sources ===" && \
+    ls -la vite.config.js && \
+    ls -la tailwind.config.js && \
+    ls -la postcss.config.js && \
+    ls -la resources/css/style.css && \
+    ls -la resources/js/app.js
+
+# Build
+RUN npm run build
+
+# Vérification stricte
+RUN echo "=== Vérification build ===" && \
+    ls -la public/build/ && \
+    test -f public/build/manifest.json && \
+    echo "✅ manifest.json existe" || \
+    (echo "❌ manifest.json MANQUANT" && exit 1)
+
 # ==========================================
-# ÉTAPE 2 : Image PHP finale
+# ÉTAPE 2 : PHP
 # ==========================================
 FROM php:8.2-fpm-bullseye
 
-# Installer dépendances système
 RUN apt-get update && apt-get install -y \
     git unzip libpq-dev libonig-dev libzip-dev libxml2-dev \
-    nginx \
     && docker-php-ext-install pdo pdo_pgsql zip mbstring \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Copier Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
 
-# Copier le code Laravel
+# Copier le projet
 COPY . .
 
-# Copier SEULEMENT le build Vite depuis l'étape 1 (très important !)
+# Copier le build Node (CRUCIAL!)
 COPY --from=node-builder /app/public/build ./public/build
 
-# Installer dépendances PHP + optimisations
+# Vérification finale
+RUN echo "=== Vérification finale ===" && \
+    ls -la public/build/ && \
+    cat public/build/manifest.json
+
+# Installer PHP + optimisations
 RUN composer install --no-dev --optimize-autoloader --no-interaction \
     && php artisan storage:link \
     && php artisan config:cache \
@@ -48,8 +64,5 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction \
     && mkdir -p bootstrap/cache \
     && chmod -R 775 storage bootstrap/cache public/build
 
-# Exposer le port Render
 EXPOSE 8000
-
-# Lancer le serveur PHP
 CMD ["php", "-S", "0.0.0.0:8000", "-t", "public"]
