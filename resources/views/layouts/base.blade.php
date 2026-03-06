@@ -7,11 +7,14 @@
      <meta name="description" content="Solutionneurs228 - Votre partenaire IT, Web et Média au Togo. Maintenance informatique, développement web, design graphique et production audiovisuelle.">
     <title>Solutionneurs228 | Solutions IT, Web & Média</title>
 
+  
+
      <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">    
+    {{-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"> --}}
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     

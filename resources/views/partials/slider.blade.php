@@ -7,17 +7,17 @@
         <div id="hero-slider" class="relative w-full h-full">
             
             <!-- Slide 1: IT Support -->
-            <div class="slide active" style="background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.9)), url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+            <div class="slide active" style="background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.9)), url('../images/mir.webp') center/cover;">
                 <div class="absolute inset-0 flex items-center justify-center px-4">
                     <div class="text-center text-white max-w-4xl mx-auto animate-slide-up">
                         <div class="inline-block px-4 py-1 bg-brand-500/30 rounded-full text-sm font-semibold mb-6 border border-brand-400/30 backdrop-blur-sm">
-                            <i class="fas fa-headset mr-2"></i>Support Technique 24/7
+                            <i class="fas fa-headset mr-2"></i>Solutions IT 24/7
                         </div>
                         <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                            Solutions IT <span class="text-brand-300">Professionnelles</span>
+                            Maintenance informatique & <span class="text-brand-300">Réseaux</span>
                         </h1>
                         <p class="text-lg md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto font-light">
-                            Maintenance informatique, support à distance et formation pour optimiser votre infrastructure technologique.
+                           Support Technique, Réparation des ordinateurs - Assistance informatique ...
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center">
                             <a href="#services" class="bg-white text-brand-900 px-8 py-4 rounded-full font-bold hover:bg-brand-50 transition-all transform hover:scale-105 shadow-xl">
@@ -64,10 +64,10 @@
                             <i class="fas fa-camera mr-2"></i>Production Audiovisuelle
                         </div>
                         <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                            Photo & Vidéo <span class="text-brand-300">Professionnelles</span>
+                            Photographe &  <span class="text-brand-300">Vidéographie</span>
                         </h1>
                         <p class="text-lg md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto font-light">
-                            Couverture événementielle, shooting corporate et montage vidéo pour immortaliser vos moments clés.
+                            Couverture événementielle, shooting corporate, montage vidéo, vidéà pubs...
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center">
                             <a href="#services" class="bg-white text-brand-900 px-8 py-4 rounded-full font-bold hover:bg-brand-50 transition-all transform hover:scale-105 shadow-xl">

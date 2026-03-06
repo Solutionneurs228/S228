@@ -18,6 +18,24 @@ window.addEventListener('scroll', function () {
     }
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // Mobile Menu Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const closeMenuBtn = document.getElementById('close-menu-btn');
@@ -146,3 +164,6 @@ window.addEventListener('scroll', function () {
         el.style.animationDelay = `${index * 0.1}s`;
         observer.observe(el);
     });
+
+
+    

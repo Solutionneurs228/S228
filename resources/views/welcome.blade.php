@@ -35,10 +35,10 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Maintenance Informatique</h3>
                     <p class="text-gray-600 mb-6 leading-relaxed">
-                        Intervention sur site et à distance, réparation matérielle, optimisation système et prévention des
-                        pannes pour garantir la continuité de votre activité.
+                        Entretien et réparation des ordinateurs,
+                                        Installation de logiciels, Assistance informatique …
                     </p>
-                    <a href="#"
+                    <a href="{{ route('services.maintenance') }}"
                         class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group/link">
                         En savoir plus
                         <i
@@ -73,10 +73,9 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Formation & Coaching</h3>
                     <p class="text-gray-600 mb-6 leading-relaxed">
-                        Programmes de formation personnalisés en bureautique, programmation, design et nouvelles
-                        technologies pour renforcer les compétences de vos équipes.
+                       La plupart de nos formations sont disponibles en ligne. Flexibles et adaptables, elles peuvent être programmées selon vos disponibilités afin de renforcer les compétences de vos équipes.
                     </p>
-                    <a href="#"
+                    <a href="{{ route('formation') }}"
                         class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group/link">
                         En savoir plus
                         <i
@@ -92,8 +91,8 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Développement Web</h3>
                     <p class="text-gray-600 mb-6 leading-relaxed">
-                        Création de sites vitrines, e-commerce et applications web sur mesure. Design responsive, SEO
-                        optimisé et technologies modernes (Laravel, React, Vue).
+                        Création de sites vitrines, e-commerce, portefolios et applications web sur mesure. Design responsive, SEO
+                        optimisé.
                     </p>
                     <a href="#"
                         class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group/link">
@@ -111,8 +110,7 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Design Graphique</h3>
                     <p class="text-gray-600 mb-6 leading-relaxed">
-                        Identité visuelle complète : logos, chartes graphiques, supports print (flyers, affiches) et digital
-                        (bannières, posts réseaux sociaux).
+                        Conception de supports de communication visuelle : cartes de visite, invitations, logos, badges, flyers, affiches publicitaires, bâches et autocollants...
                     </p>
                     <a href="#"
                         class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group/link">
@@ -286,17 +284,18 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <p class="text-gray-600 mb-6 italic">
-                        "Service impeccable ! L'équipe a su redonner vie à notre parc informatique en moins de 48h.
-                        Professionnalisme et réactivité au rendez-vous."
+                        "Sinon le travail a été propre." 
+                        <br/>  
+                        (contexte : livraison d'une vidéo d'inauguration et caravane en moins de 24h)
                     </p>
                     <div class="flex items-center gap-4">
                         <div
                             class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold">
-                            KM
+                            GA
                         </div>
                         <div>
-                            <h4 class="font-bold text-gray-900">Kossi M.</h4>
-                            <p class="text-sm text-gray-500">Directeur, AfriTech Solutions</p>
+                            <h4 class="font-bold text-gray-900">Gafarou A.</h4>
+                            <p class="text-sm text-gray-500">Chargé de Mission / Poste Togo</p>
                         </div>
                     </div>
                 </div>
@@ -315,17 +314,17 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <p class="text-gray-600 mb-6 italic">
-                        "Notre nouveau site web dépasse toutes nos attentes. Design moderne, navigation fluide et surtout,
-                        une équipe à l'écoute de nos besoins."
+                        "Depuis votre assistance, nous avons constaté une nette amélioration de la performance de nos agents et même les clients en témoignent."
+                        
                     </p>
                     <div class="flex items-center gap-4">
                         <div
                             class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold">
-                            AB
+                            EB
                         </div>
                         <div>
-                            <h4 class="font-bold text-gray-900">Abla B.</h4>
-                            <p class="text-sm text-gray-500">Fondatrice, Élégance Mode</p>
+                            <h4 class="font-bold text-gray-900">Esther B.</h4>
+                            <p class="text-sm text-gray-500">DG microfinance / Kara</p>
                         </div>
                     </div>
                 </div>
@@ -344,17 +343,16 @@
                         <i class="fas fa-star-half-alt"></i>
                     </div>
                     <p class="text-gray-600 mb-6 italic">
-                        "La couverture photo/vidéo de notre événement corporate était parfaite. Qualité professionnelle et
-                        livraison rapide des fichiers. Highly recommended!"
+                        "Les photos et vidéos de notre mariage étaient incroyables ! Nous n'avons absolument pas eu tort de compter sur vous. Félicitations à toute l'équipe ! "
                     </p>
                     <div class="flex items-center gap-4">
                         <div
                             class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold">
-                            PT
+                            SK
                         </div>
                         <div>
-                            <h4 class="font-bold text-gray-900">Paul T.</h4>
-                            <p class="text-sm text-gray-500">Responsable Com, EcoBank</p>
+                            <h4 class="font-bold text-gray-900">Serges K.</h4>
+                            <p class="text-sm text-gray-500">Journaliste / Dapaond</p>
                         </div>
                     </div>
                 </div>

@@ -5,30 +5,38 @@
             <div class="flex justify-between items-center h-20">
                 
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <div class="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg">
-                        S
-                    </div>
-                    <span class="font-bold text-2xl text-gray-900 tracking-tight">
-                        Solutionneurs<span class="text-brand-600">228</span>
-                    </span>
-                </div>
+                
+<a href="/" class="flex-shrink-0 flex items-center gap-1.5 cursor-pointer">
+    
+    <img src="/images/logo-1.png" 
+         alt="Solutionneurs228 Logo"
+         class="w-10 h-10 object-contain">
+
+    <span class="font-bold text-2xl text-gray-900 tracking-tight">
+        Solutionneurs<span class="text-brand-600">228</span>
+    </span>
+
+</a>
 
                 <!-- Desktop Menu -->
                 <nav class="hidden md:flex space-x-8 items-center">
-                    <a href="#home" class="text-gray-700 hover:text-brand-600 font-medium transition-colors relative group">
+                    <a href="/#home" class="text-gray-700 hover:text-brand-600 font-medium transition-colors relative group">
                         Accueil
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-600 transition-all group-hover:w-full"></span>
                     </a>
-                    <a href="#services" class="text-gray-700 hover:text-brand-600 font-medium transition-colors relative group">
+                    <a href="/#services" class="text-gray-700 hover:text-brand-600 font-medium transition-colors relative group">
                         Services
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-600 transition-all group-hover:w-full"></span>
                     </a>
-                    <a href="#about" class="text-gray-700 hover:text-brand-600 font-medium transition-colors relative group">
+                    <a href="{{ route('galerie')}}" class="text-gray-700 hover:text-brand-600 font-medium transition-colors relative group">
+                        gallerie
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-600 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="/#about" class="text-gray-700 hover:text-brand-600 font-medium transition-colors relative group">
                         À Propos
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-600 transition-all group-hover:w-full"></span>
                     </a>
-                    <a href="#contact" class="text-gray-700 hover:text-brand-600 font-medium transition-colors relative group">
+                    <a href="/#contact" class="text-gray-700 hover:text-brand-600 font-medium transition-colors relative group">
                         Contact
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-600 transition-all group-hover:w-full"></span>
                     </a>
@@ -36,7 +44,7 @@
 
                 <!-- CTA Button Desktop -->
                 <div class="hidden md:block">
-                    <a href="#contact" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-2">
+                    <a href="/#contact" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-2">
                         <i class="fas fa-paper-plane text-sm"></i>
                         Demander un Devis
                     </a>
