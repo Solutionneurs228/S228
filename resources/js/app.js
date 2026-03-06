@@ -12,7 +12,6 @@ import Alpine from 'alpinejs';
 import '../css/style.css';
 
 console.log("App loaded");
-alert("App loaded");
 // ==========================================
 // ALPINE.JS
 // ==========================================
