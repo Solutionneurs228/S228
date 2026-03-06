@@ -59,7 +59,7 @@
                                 </div>
                             </a>
 
-                            <a href="/#graphic-design" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition-colors">
+                            <a href="{{ route('services.infographie')}}" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition-colors">
                                 <div class="w-8 h-8 rounded-lg bg-pink-100 text-pink-600 flex items-center justify-center flex-shrink-0">
                                     <i class="fas fa-palette text-sm"></i>
                                 </div>
@@ -144,11 +144,11 @@
                         <div class="w-8 h-8 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center"><i class="fas fa-code text-sm"></i></div>
                         <span>Développement Web</span>
                     </a>
-                    <a href="/#graphic-design" class="flex items-center gap-3 text-gray-600 hover:text-brand-600 hover:bg-brand-50 px-3 py-2 rounded-lg text-base">
+                    <a href="{{ route('services.infographie')}}" class="flex items-center gap-3 text-gray-600 hover:text-brand-600 hover:bg-brand-50 px-3 py-2 rounded-lg text-base">
                         <div class="w-8 h-8 rounded-lg bg-pink-100 text-pink-600 flex items-center justify-center"><i class="fas fa-palette text-sm"></i></div>
                         <span>Graphic Design</span>
                     </a>
-                    <a href="/#photo-video" class="flex items-center gap-3 text-gray-600 hover:text-brand-600 hover:bg-brand-50 px-3 py-2 rounded-lg text-base">
+                    <a href="{{ route('services.photographie')}}" class="flex items-center gap-3 text-gray-600 hover:text-brand-600 hover:bg-brand-50 px-3 py-2 rounded-lg text-base">
                         <div class="w-8 h-8 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center"><i class="fas fa-camera text-sm"></i></div>
                         <span>Photo & Video</span>
                     </a>
