@@ -256,3 +256,104 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+
+  // Switch entre les formulaires
+        function switchForm(type) {
+            // Update buttons
+            document.querySelectorAll('.toggle-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Update forms
+            document.querySelectorAll('.form-wrapper').forEach(form => {
+                form.classList.remove('active');
+            });
+            document.getElementById(type + '-form').classList.add('active');
+        }
+
+        // Gestion des checkboxes stylisées
+        function toggleCheckbox(element) {
+            const checkbox = element.querySelector('input[type="checkbox"]');
+            checkbox.checked = !checkbox.checked;
+            element.classList.toggle('checked', checkbox.checked);
+        }
+
+        // Gestion des radios stylisés
+        function selectRadio(element) {
+            const radio = element.querySelector('input[type="radio"]');
+            const name = radio.name;
+
+            // Uncheck all radios with same name
+            document.querySelectorAll(`input[name="${name}"]`).forEach(r => {
+                r.checked = false;
+                r.closest('.radio-item').classList.remove('checked');
+            });
+
+            // Check clicked one
+            radio.checked = true;
+            element.classList.add('checked');
+        }
+
+        // Simulation d'envoi de formulaire
+        function handleSubmit(event, type) {
+            event.preventDefault();
+
+            const submitBtn = document.getElementById(type + '-submit');
+            const successMsg = document.getElementById(type + '-success');
+
+            // Loading state
+            submitBtn.classList.add('loading');
+            submitBtn.textContent = type === 'contact' ? 'Envoi en cours...' : 'Traitement de votre demande...';
+
+            // Simulation d'envoi (remplacer par vraie requête AJAX)
+            setTimeout(() => {
+                submitBtn.classList.remove('loading');
+                submitBtn.textContent = type === 'contact' ? 'Envoyer le message' : 'Demander mon devis gratuit';
+
+                // Show success message
+                successMsg.classList.add('show');
+
+                // Reset form
+                event.target.reset();
+
+                // Reset custom checkboxes/radios
+                document.querySelectorAll('.checkbox-item, .radio-item').forEach(item => {
+                    item.classList.remove('checked');
+                });
+
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    successMsg.classList.remove('show');
+                }, 5000);
+
+                // Scroll to success message
+                successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+            }, 2000);
+        }
+
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observer les éléments
+        document.querySelectorAll('.form-card, .info-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });

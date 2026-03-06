@@ -20,10 +20,10 @@
                         <span>Services</span>
                         <i class="fas fa-chevron-down text-xs transition-transform duration-200 group-hover:rotate-180"></i>
                     </button>
-                    
+
                     <!-- Dropdown Menu -->
                     <div class="absolute top-full left-0 mt-2 w-72 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50 overflow-hidden">
-                        
+
                         <div class="px-4 py-2 bg-gray-50 border-b border-gray-100">
                             <p class="text-xs font-semibold text-gray-500 uppercase">Nos Expertises</p>
                         </div>
@@ -90,13 +90,13 @@
                 </div>
 
                 <a href="{{ route('galerie') }}" class="nav-link text-gray-700 hover:text-brand-600 font-medium py-2">Galerie</a>
-                <a href="/#about" class="nav-link text-gray-700 hover:text-brand-600 font-medium py-2">À Propos</a>
-                <a href="/#contact" class="nav-link text-gray-700 hover:text-brand-600 font-medium py-2">Contact</a>
+                <a href="{{ route('about') }}" class="nav-link text-gray-700 hover:text-brand-600 font-medium py-2">À Propos</a>
+                <a href="{{ route('contact') }}" class="nav-link text-gray-700 hover:text-brand-600 font-medium py-2">Contact</a>
             </nav>
 
             <!-- CTA Desktop -->
             <div class="hidden md:block">
-                <a href="/#contact" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-full font-semibold transition-all hover:scale-105 shadow-lg flex items-center gap-2">
+                <a href="{{ route('contact') }}" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-full font-semibold transition-all hover:scale-105 shadow-lg flex items-center gap-2">
                     <i class="fas fa-paper-plane text-sm"></i>
                     Devis
                 </a>
@@ -111,7 +111,7 @@
 
     <!-- MOBILE MENU -->
     <div id="mobile-menu" class="fixed inset-y-0 right-0 w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50 flex flex-col">
-        
+
         <!-- Header -->
         <div class="p-6 flex justify-between items-center border-b flex-shrink-0">
             <span class="font-bold text-xl text-gray-900">Menu</span>
@@ -130,7 +130,7 @@
                     <span>Services</span>
                     <i id="mobile-dropdown-icon" class="fas fa-chevron-down text-sm transition-transform duration-200"></i>
                 </button>
-                
+
                 <div id="mobile-dropdown-content" class="hidden pl-4 mt-1 space-y-1">
                     <a href="{{ route('services.maintenance')}}" class="flex items-center gap-3 text-gray-600 hover:text-brand-600 hover:bg-brand-50 px-3 py-2 rounded-lg text-base">
                         <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center"><i class="fas fa-tools text-sm"></i></div>
@@ -159,10 +159,10 @@
             </div>
 
             <a href="{{ route('galerie') }}" class="block text-lg font-medium text-gray-700 hover:text-brand-600 hover:bg-gray-50 px-3 py-3 rounded-lg transition-colors">Galerie</a>
-            <a href="/#about" class="block text-lg font-medium text-gray-700 hover:text-brand-600 hover:bg-gray-50 px-3 py-3 rounded-lg transition-colors">À Propos</a>
-            <a href="/#contact" class="block text-lg font-medium text-gray-700 hover:text-brand-600 hover:bg-gray-50 px-3 py-3 rounded-lg transition-colors">Contact</a>
-            
-            <a href="/#contact" class="block mt-4 bg-brand-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-brand-700 transition-colors">
+            <a href="{{ route('about') }}" class="block text-lg font-medium text-gray-700 hover:text-brand-600 hover:bg-gray-50 px-3 py-3 rounded-lg transition-colors">À Propos</a>
+            <a href="{{ route('contact') }}" class="block text-lg font-medium text-gray-700 hover:text-brand-600 hover:bg-gray-50 px-3 py-3 rounded-lg transition-colors">Contact</a>
+
+            <a href="{{ route('devis') }}" class="block mt-4 bg-brand-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-brand-700 transition-colors">
                 Demander un Devis
             </a>
         </nav>
