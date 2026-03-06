@@ -27,6 +27,9 @@ services:
       - key: DB_PASSWORD
         sync: false
 
+
+
+
 # services:
 #   - type: web
 #     name: laravel-app
