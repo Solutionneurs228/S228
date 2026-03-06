@@ -1,3 +1,5 @@
+{{-- welcome.blade.php --}}
+
 @extends('layouts.base')
 
 @section('slide')

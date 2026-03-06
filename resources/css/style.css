@@ -1,249 +1,180 @@
+/* ============================================
+   STYLE.CSS - SOLUTIONNEURS228
+   ============================================ */
 
-@import "bootstrap/dist/css/bootstrap.min.css";
-
-/* :root {
-    --logoColor: #0181bd;
-    --vert: green;
-    --jaune: yellow;
-    --primaryColor: #00eaff;
-    --primaryHover: hsl(185, 92%, 41%);
-    --secondaryColor: rgb(150, 162, 188);
-    --paragraphColor: rgb(127, 127, 175);
-    --BgColor: #031a30;
-    --formColor: rgb(2, 15, 29);
-    --projectCardColor: #072340;
-    --textColor: #dae4fb;
-    --headerHeight: 3rem;
-  }
-
-
-
-
-  THEME CLAIRE
-
-:root {
-    --logoColor: #0181bd;
-    --IconColor: #014d70;
-    --vert: green;
-    --jaune: #FF9800;
-    --primaryColor: green;
-    --primaryHover: green;
-    --secondaryColor: rgb(150, 162, 188);
-    --paragraphColor: rgb(127, 127, 175);
-    --textColor: #031a30;
-    --formColor: rgb(2, 15, 29);
-    --projectCardColor: #0c2642;
-    --BgColor: #f3f4f3;
-    --headerHeight: 3rem;
+/* Reset et base */
+html {
+    scroll-behavior: smooth;
 }
-*/
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
+}
 
+/* ============================================
+   NAVIGATION
+   ============================================ */
 
-/* :root {
+.nav-link {
+    position: relative;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #2563eb;
+    transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
 
-       STRUCTURE PRINCIPALE
+/* ============================================
+   MOBILE MENU
+   ============================================ */
 
-    --primaryColor: #142850;       
-    --primaryHover: #0F1F3A;
+#mobile-menu.open {
+    transform: translateX(0);
+    height: 80vh;
+}
 
-    --accentColor: #00A86B;  
-    --accentHover: #008C59;
+#mobile-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
 
-    --ctaColor: #FFC107;         
-    --ctaHover: #E0A800;
+/* ============================================
+   MOBILE DROPDOWN
+   ============================================ */
 
+#mobile-dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
 
-        TEXTE 
+#mobile-dropdown-content.open {
+    max-height: 500px;
+    opacity: 1;
+    display: block;
+}
 
-    --textColor: #1F2933;
-    --paragraphColor: #6B7C93;
+#mobile-dropdown-icon.rotate {
+    transform: rotate(180deg);
+}
 
-    BACKGROUNDS
+#mobile-dropdown-btn.active {
+    color: #2563eb;
+    background: #eff6ff;
+}
 
-    --BgColor: #F5F7FA;
-    --sectionAltBg: #E9EEF3;
-    --darkSectionBg: #142850;
+/* ============================================
+   HERO SLIDER
+   ============================================ */
 
-       UI ELEMENTS
-    --cardBg: #FFFFFF;
-    --cardShadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-    --formBg: #0F1F3A;
+.slide {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.slide.active {
+    opacity: 1;
+}
 
-    --headerHeight: 4rem;
-} */
+/* ============================================
+   SERVICE CARDS
+   ============================================ */
 
+.service-card {
+    transition: all 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
 
+/* ============================================
+   GALLERY
+   ============================================ */
 
+.gallery-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+}
 
+.masonry-grid {
+    column-count: 1;
+    column-gap: 1.5rem;
+}
+@media (min-width: 640px) {
+    .masonry-grid { column-count: 2; }
+}
+@media (min-width: 1024px) {
+    .masonry-grid { column-count: 3; }
+}
 
-/* Global Styles */
+.gallery-overlay {
+    background: linear-gradient(to top, rgba(30, 58, 138, 0.95) 0%, rgba(30, 58, 138, 0.7) 50%, transparent 100%);
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+.gallery-image {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+/* ============================================
+   LIGHTBOX
+   ============================================ */
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f5f9;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #3b82f6;
-            border-radius: 5px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #2563eb;
-        }
+.lightbox {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+.lightbox-content {
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out;
+}
+.lightbox.active .lightbox-content {
+    transform: scale(1);
+}
 
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
+/* ============================================
+   UTILITAIRES
+   ============================================ */
 
-        /* Hero Slider Transitions */
-        .slide {
-            opacity: 0;
-            transition: opacity 0.8s ease-in-out;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        .slide.active {
-            opacity: 1;
-        }
-
-        /* Glass Effect */
-        .glass {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-        }
-
-        /* Service Card Hover */
-        .service-card {
-            transition: all 0.3s ease;
-        }
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        /* Gradient Text */
-        .gradient-text {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* Mobile Menu Animation */
-        .mobile-menu {
-            transform: translateX(100%);
-            transition: transform 0.3s ease-in-out;
-        }
-        .mobile-menu.open {
-            transform: translateX(0);
-        }
-
-
-
-        /* Custom Gallery Styles */
-        .gallery-item {
-            break-inside: avoid;
-            margin-bottom: 1.5rem;
-        }
-        
-        /* Masonry Layout Support */
-        .masonry-grid {
-            column-count: 1;
-            column-gap: 1.5rem;
-        }
-        
-        @media (min-width: 640px) {
-            .masonry-grid {
-                column-count: 2;
-            }
-        }
-        
-        @media (min-width: 1024px) {
-            .masonry-grid {
-                column-count: 3;
-            }
-        }
-
-        /* Hover Effects */
-        .gallery-overlay {
-            background: linear-gradient(to top, rgba(30, 58, 138, 0.95) 0%, rgba(30, 58, 138, 0.7) 50%, transparent 100%);
-            transform: translateY(100%);
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .gallery-item:hover .gallery-overlay {
-            transform: translateY(0);
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-        
-        .gallery-image {
-            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* Lightbox Styles */
-        .lightbox {
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease-in-out;
-        }
-        
-        .lightbox.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .lightbox-content {
-            transform: scale(0.9);
-            transition: transform 0.3s ease-in-out;
-        }
-        
-        .lightbox.active .lightbox-content {
-            transform: scale(1);
-        }
-
-        /* Filter Button Active State */
-        .filter-btn.active {
-            background-color: #2563eb;
-            color: white;
-            border-color: #2563eb;
-        }
-
-        /* Loading Animation */
-        @keyframes shimmer {
-            0% { background-position: -1000px 0; }
-            100% { background-position: 1000px 0; }
-        }
-        
-        .loading-shimmer {
-            animation: shimmer 2s infinite linear;
-            background: linear-gradient(to right, #f6f7f8 4%, #edeef1 25%, #f6f7f8 36%);
-            background-size: 1000px 100%;
-        }
-
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Category Badge Animation */
-        .category-badge {
-            transform: translateY(-10px);
-            opacity: 0;
-            transition: all 0.3s ease 0.1s;
-        }
-        
-        .gallery-item:hover .category-badge {
-            transform: translateY(0);
-            opacity: 1;
-        }
+.gradient-text {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

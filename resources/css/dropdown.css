@@ -1,0 +1,159 @@
+/* ============================================
+   DROPDOWN MENU STYLES - Solutionneurs228
+   ============================================ */
+
+/* ----------------------------------------
+   DESKTOP DROPDOWN (Hover-based)
+   ---------------------------------------- */
+@media (min-width: 768px) {
+    
+    /* Container pour le hover */
+    .dropdown-container {
+        position: relative;
+    }
+    
+    /* Le menu caché par défaut */
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: 0.5rem;
+        min-width: 280px;
+        background: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        border: 1px solid #f3f4f6;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px) scale(0.95);
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: none;
+        z-index: 50;
+        overflow: hidden;
+    }
+    
+    /* Affichage au hover */
+    .dropdown-container:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0) scale(1);
+        pointer-events: auto;
+    }
+    
+    /* Rotation du chevron */
+    .dropdown-container:hover .dropdown-chevron {
+        transform: rotate(180deg);
+    }
+    
+    /* Maintien du hover state sur le trigger */
+    .dropdown-container:hover .dropdown-trigger {
+        color: #2563eb;
+    }
+}
+
+/* ----------------------------------------
+   DROPDOWN ITEMS STYLES (Desktop & Mobile)
+   ---------------------------------------- */
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: #374151;
+    transition: all 0.2s ease;
+    position: relative;
+    text-decoration: none;
+}
+
+.dropdown-item:hover {
+    color: #2563eb;
+    background: #eff6ff;
+}
+
+/* Barre latérale bleue au hover */
+.dropdown-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #2563eb;
+    transform: scaleY(0);
+    transition: transform 0.2s ease;
+}
+
+.dropdown-item:hover::before {
+    transform: scaleY(1);
+}
+
+/* Icône dans les items */
+.dropdown-icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Titre et description */
+.dropdown-title {
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: block;
+}
+
+.dropdown-desc {
+    font-size: 0.75rem;
+    color: #6b7280;
+    display: block;
+    margin-top: 0.125rem;
+}
+
+/* ----------------------------------------
+   TRANSITIONS
+   ---------------------------------------- */
+.dropdown-chevron {
+    transition: transform 0.2s ease;
+}
+
+.dropdown-trigger {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* ----------------------------------------
+   MOBILE SPECIFIC - Dropdown dans le menu mobile
+   ---------------------------------------- */
+#mobile-dropdown-menu {
+    /* Par défaut caché avec la classe .hidden de Tailwind */
+    /* On définit juste les transitions quand on enlève .hidden */
+    transition: all 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+#mobile-dropdown-menu:not(.hidden) {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Rotation du chevron quand ouvert */
+#mobile-dropdown-chevron.rotate-180 {
+    transform: rotate(180deg);
+}
+
+/* Style actif du trigger */
+#mobile-dropdown-trigger.text-brand-600 {
+    color: #2563eb;
+    background: #eff6ff;
+}
