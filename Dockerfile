@@ -11,9 +11,10 @@ RUN npm ci
 
 # Copier le reste et builder
 COPY . .
-RUN npm run build
+RUN npm run build || (echo "BUILD FAILED" && exit 1)
 
-
+# DEBUG : Vérifier si le build a fonctionné
+RUN ls -la /app/public/ && echo "=== CONTENU DE PUBLIC/BUILD ===" && ls -la /app/public/build/ || echo "ERREUR: build/ N'EXISTE PAS"
 # ==========================================
 # ÉTAPE 2 : Image PHP finale
 # ==========================================

@@ -15,5 +15,10 @@ export default defineConfig({
             refresh: true, // hot reload
         }),
     ],
-});
 
+    // IMPORTANT : Vérifier que le build va bien dans public/build
+    build: {
+        outDir: 'public/build',  // Par défaut avec laravel-vite-plugin
+        emptyOutDir: true,
+    },
+});
