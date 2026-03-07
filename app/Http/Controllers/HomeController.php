@@ -26,4 +26,9 @@ class HomeController extends Controller
     {
         return view('formation');
     }
+   
+    public function portfolio()
+    {
+        return view('portfolio');
+    }
 }

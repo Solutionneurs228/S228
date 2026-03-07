@@ -18,6 +18,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/about', 'about')->name('about');
     Route::get('/galerie', 'galerie')->name('galerie');
     Route::get('/formation', 'formation')->name('formation');
+    Route::get('/portfolio', 'portfolio')->name('formation');
 });
 
 /*
