@@ -362,6 +362,219 @@
         </div>
     </section>
 
+
+        <!-- ==================== ACTUALITÉS SECTION ==================== -->
+    <section id="actualites" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-4">
+                <div>
+                    <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Actualités</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+                        Dernières <span class="gradient-text">Nouvelles</span>
+                    </h2>
+                </div>
+                <a href="#" class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group">
+                    Voir toutes les actualités
+                    <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-brand-600 to-blue-600 flex items-center justify-center">
+                            <i class="fas fa-rocket text-6xl text-white/30"></i>
+                        </div>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white/90 backdrop-blur text-brand-600 text-xs font-bold px-3 py-1 rounded-full">
+                                Innovation
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 15 Mars 2024</span>
+                            <span>•</span>
+                            <span>5 min de lecture</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-600 transition-colors">
+                            Lancement de notre nouveau service de cloud computing
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Solutionneurs228 déploie une infrastructure cloud sécurisée pour les PME togolaises. Stockage, sauvegarde et collaboration à distance.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-brand-600 font-semibold text-sm hover:text-brand-800 transition-colors">
+                            Lire la suite
+                            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
+                            <i class="fas fa-trophy text-6xl text-white/30"></i>
+                        </div>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white/90 backdrop-blur text-purple-600 text-xs font-bold px-3 py-1 rounded-full">
+                                Récompense
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 28 Février 2024</span>
+                            <span>•</span>
+                            <span>3 min de lecture</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-600 transition-colors">
+                            Prix de l'excellence digitale 2024
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Nous avons reçu le prix de l'excellence pour notre contribution à la transformation numérique des entreprises au Togo.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-brand-600 font-semibold text-sm hover:text-brand-800 transition-colors">
+                            Lire la suite
+                            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-green-600 to-teal-600 flex items-center justify-center">
+                            <i class="fas fa-users text-6xl text-white/30"></i>
+                        </div>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white/90 backdrop-blur text-green-600 text-xs font-bold px-3 py-1 rounded-full">
+                                Événement
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 10 Février 2024</span>
+                            <span>•</span>
+                            <span>4 min de lecture</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-600 transition-colors">
+                            Atelier gratuit : Sécurité informatique pour entreprises
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Inscrivez-vous à notre prochain atelier sur la cybersécurité. Places limitées à 20 participants.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-brand-600 font-semibold text-sm hover:text-brand-800 transition-colors">
+                            Lire la suite
+                            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GALERIE SECTION ==================== -->
+    <section id="galerie" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Galerie</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">
+                    Nos <span class="gradient-text">Réalisations</span> en Images
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Aperçu de nos projets photo, vidéo et événements. Découvrez l'excellence de notre travail visuel.
+                </p>
+            </div>
+
+            <!-- Grille de photos -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                <!-- Photo 1 -->
+                <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-brand-600/20 to-blue-600/20 group-hover:scale-110 transition-transform duration-500"></div>
+                    <div class="absolute inset-0 flex items-center justify-center bg-gray-200">
+                        <i class="fas fa-camera text-4xl text-gray-400"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <span class="text-white font-semibold text-sm">Shooting Corporate</span>
+                    </div>
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer md:col-span-2 md:row-span-2">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 group-hover:scale-110 transition-transform duration-500"></div>
+                    <div class="absolute inset-0 flex items-center justify-center bg-gray-200">
+                        <i class="fas fa-video text-6xl text-gray-400"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <span class="text-white font-semibold">Production Vidéo</span>
+                            <p class="text-white/80 text-sm">Spot publicitaire Togo Émergent</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-green-600/20 to-teal-600/20 group-hover:scale-110 transition-transform duration-500"></div>
+                    <div class="absolute inset-0 flex items-center justify-center bg-gray-200">
+                        <i class="fas fa-laptop-code text-4xl text-gray-400"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <span class="text-white font-semibold text-sm">Développement Web</span>
+                    </div>
+                </div>
+
+                <!-- Photo 4 -->
+                <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-orange-600/20 to-red-600/20 group-hover:scale-110 transition-transform duration-500"></div>
+                    <div class="absolute inset-0 flex items-center justify-center bg-gray-200">
+                        <i class="fas fa-palette text-4xl text-gray-400"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <span class="text-white font-semibold text-sm">Design Graphique</span>
+                    </div>
+                </div>
+
+                <!-- Photo 5 -->
+                <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-yellow-600/20 to-orange-600/20 group-hover:scale-110 transition-transform duration-500"></div>
+                    <div class="absolute inset-0 flex items-center justify-center bg-gray-200">
+                        <i class="fas fa-tools text-4xl text-gray-400"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <span class="text-white font-semibold text-sm">Maintenance IT</span>
+                    </div>
+                </div>
+
+                <!-- Photo 6 -->
+                <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-pink-600/20 to-rose-600/20 group-hover:scale-110 transition-transform duration-500"></div>
+                    <div class="absolute inset-0 flex items-center justify-center bg-gray-200">
+                        <i class="fas fa-graduation-cap text-4xl text-gray-400"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <span class="text-white font-semibold text-sm">Formation</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bouton vers galerie complète -->
+            <div class="text-center">
+                <a href="{{ route('galerie') }}" class="inline-flex items-center gap-3 bg-brand-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-brand-700 transition-all transform hover:scale-105 shadow-lg group">
+                    <i class="fas fa-images text-xl"></i>
+                    <span>Voir toute la galerie</span>
+                    <i class="fas fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <p class="text-gray-500 text-sm mt-4">
+                    Plus de 50 projets réalisés • Photos haute résolution • Avant/Après
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- ==================== CTA SECTION ==================== -->
     <section class="py-20 bg-brand-900 relative overflow-hidden">
         <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
