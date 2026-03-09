@@ -12,7 +12,7 @@
 
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex items-center space-x-6">
-                <a href="/#home" class="nav-link text-gray-700 hover:text-brand-600 font-medium py-2">Accueil</a>
+                <a href="{{ route('formation')}}" class="nav-link text-gray-700 hover:text-brand-600 font-medium py-2">Nos formations</a>
 
                 <!-- DROPDOWN SERVICES - DESKTOP -->
                 <div class="relative group" id="desktop-services-dropdown">
@@ -69,23 +69,23 @@
                                 </div>
                             </a>
 
-                            <a href="/#photo-video" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition-colors">
+                            <a href="{{ route('services.assistance') }}" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-brand-600 hover:bg-brand-50 transition-colors">
                                 <div class="w-8 h-8 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center flex-shrink-0">
                                     <i class="fas fa-camera text-sm"></i>
                                 </div>
                                 <div>
-                                    <span class="block font-medium text-sm">Photo & Vidéo</span>
-                                    <span class="block text-xs text-gray-500">Production audiovisuelle</span>
+                                    <span class="block font-medium text-sm">Assistance informatique</span>
+                                    <span class="block text-xs text-gray-500">... à distance</span>
                                 </div>
                             </a>
                         </div>
 
-                        <div class="px-4 py-2 bg-gray-50 border-t border-gray-100">
+                        {{-- <div class="px-4 py-2 bg-gray-50 border-t border-gray-100">
                             <a href="/#services" class="flex items-center justify-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700">
                                 Voir tous les services
                                 <i class="fas fa-arrow-right text-xs"></i>
                             </a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
 
@@ -148,13 +148,13 @@
                         <div class="w-8 h-8 rounded-lg bg-pink-100 text-pink-600 flex items-center justify-center"><i class="fas fa-palette text-sm"></i></div>
                         <span>Graphic Design</span>
                     </a>
-                    <a href="{{ route('services.photographie')}}" class="flex items-center gap-3 text-gray-600 hover:text-brand-600 hover:bg-brand-50 px-3 py-2 rounded-lg text-base">
+                    <a href="{{ route('services.assistance')}}" class="flex items-center gap-3 text-gray-600 hover:text-brand-600 hover:bg-brand-50 px-3 py-2 rounded-lg text-base">
                         <div class="w-8 h-8 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center"><i class="fas fa-camera text-sm"></i></div>
-                        <span>Photo & Video</span>
+                        <span>Assistance Informatique</span>
                     </a>
-                    <a href="/#services" class="flex items-center justify-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700 py-2 mt-2 border-t border-gray-200">
+                    {{-- <a href="/#services" class="flex items-center justify-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700 py-2 mt-2 border-t border-gray-200">
                         Voir tous les services <i class="fas fa-arrow-right text-xs"></i>
-                    </a>
+                    </a> --}}
                 </div>
             </div>
 

@@ -18,7 +18,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/about', 'about')->name('about');
     Route::get('/galerie', 'galerie')->name('galerie');
     Route::get('/formation', 'formation')->name('formation');
-    Route::get('/portfolio', 'portfolio')->name('formation');
+    Route::get('/portfolio', 'portfolio')->name('portfolio');
 });
 
 /*
@@ -34,6 +34,7 @@ Route::prefix('services')
         Route::get('/photographie', 'photographie')->name('services.photographie');
         Route::get('/webdev', 'webdev')->name('services.webdev');
         Route::get('/infographie', 'infographie')->name('services.infographie');
+        Route::get('/assistance', 'assistance')->name('services.assistance');
     });
 
 /*

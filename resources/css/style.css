@@ -1,9 +1,11 @@
+/* Font Awesome import */
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Font Awesome import */
-@import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 /* Vos styles personnalisés */
 @layer components {
@@ -47,7 +49,7 @@
             line-height: 1.6;
         }
 
-        
+
 html {
     scroll-behavior: smooth;
 }
@@ -129,20 +131,27 @@ html {
 }
 
 /* ============================================
-   HERO SLIDER
+   HERO SLIDER - CORRIGÉ
    ============================================ */
 
 .slide {
     opacity: 0;
-    transition: opacity 0.8s ease-in-out;
+    visibility: hidden; /* ← AJOUTÉ : retire l'élément de l'interaction */
+    pointer-events: none; /* ← AJOUTÉ : désactive tous les clics sur slide inactive */
+    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out; /* ← AJOUTÉ transition visibility */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 1; /* ← AJOUTÉ : base layer */
 }
+
 .slide.active {
     opacity: 1;
+    visibility: visible; /* ← AJOUTÉ : rend visible et interactif */
+    pointer-events: auto; /* ← AJOUTÉ : réactive les clics */
+    z-index: 10; /* ← AJOUTÉ : passe au-dessus des autres */
 }
 
 /* ============================================

@@ -17,11 +17,11 @@
                         Support Technique, Réparation des ordinateurs - Assistance informatique ...
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="#services" class="bg-white text-brand-900 px-8 py-4 rounded-full font-bold hover:bg-brand-50 transition-all transform hover:scale-105 shadow-xl">
-                            Découvrir nos Services
+                        <a href="{{ route('services.maintenance') }}" class="bg-white text-brand-900 px-8 py-4 rounded-full font-bold hover:bg-brand-50 transition-all transform hover:scale-105 shadow-xl">
+                            Voir le service
                         </a>
-                        <a href="#contact" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-all">
-                            Nous Contacter
+                        <a href="{{ route('services.assistance') }}" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-all">
+                            besoins d'assistance ?
                         </a>
                     </div>
                 </div>
@@ -42,10 +42,10 @@
                         Sites web modernes, applications sur mesure et identité visuelle pour propulser votre marque.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="#services" class="bg-white text-brand-900 px-8 py-4 rounded-full font-bold hover:bg-brand-50 transition-all transform hover:scale-105 shadow-xl">
+                        <a href="{{ route('portfolio') }}" class="bg-white text-brand-900 px-8 py-4 rounded-full font-bold hover:bg-brand-50 transition-all transform hover:scale-105 shadow-xl">
                             Voir nos Réalisations
                         </a>
-                        <a href="#contact" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-all">
+                        <a href="{{ route('contact') }}" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-all">
                             Demander un Devis
                         </a>
                     </div>
@@ -67,11 +67,11 @@
                         Couverture événementielle, shooting corporate, montage vidéo, vidéo pubs...
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="#services" class="bg-white text-brand-900 px-8 py-4 rounded-full font-bold hover:bg-brand-50 transition-all transform hover:scale-105 shadow-xl">
-                            Explorer nos Services
+                        <a href="{{ route('services.photographie') }}" class="bg-white text-brand-900 px-8 py-4 rounded-full font-bold hover:bg-brand-50 transition-all transform hover:scale-105 shadow-xl">
+                            page complète
                         </a>
-                        <a href="#contact" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-all">
-                            Réserver une Séance
+                        <a href="{{ route('galerie') }}" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-all">
+                            visiter la galerie
                         </a>
                     </div>
                 </div>
