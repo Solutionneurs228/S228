@@ -12,7 +12,7 @@
 
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex items-center space-x-6">
-                <a href="{{ route('formation')}}" class="nav-link text-gray-700 hover:text-brand-600 font-medium py-2">Nos formations</a>
+                <a href="{{ route('courses.index') }}" class="nav-link text-gray-700 hover:text-brand-600 font-medium py-2">Nos formations</a>
 
                 <!-- DROPDOWN SERVICES - DESKTOP -->
                 <div class="relative group" id="desktop-services-dropdown">

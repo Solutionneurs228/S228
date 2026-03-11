@@ -1,0 +1,49 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
+class Question extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'quiz_id', 'question_text', 'type', 'options',
+        'correct_answer', 'explanation', 'points', 'order'
+    ];
+
+    protected $casts = [
+        'options' => 'array',
+    ];
+
+    public function quiz(): BelongsTo
+    {
+        return $this->belongsTo(Quiz::class);
+    }
+
+    public function isCorrect($answer): bool
+    {
+        switch ($this->type) {
+            case 'single_choice':
+            case 'true_false':
+                return $answer == $this->correct_answer;
+                
+            case 'multiple_choice':
+                $correct = is_array($this->correct_answer) ? $this->correct_answer : [$this->correct_answer];
+                $given = is_array($answer) ? $answer : [$answer];
+                sort($correct);
+                sort($given);
+                return $correct == $given;
+                
+            case 'text':
+                // Réponse texte: comparaison insensible à la casse et aux espaces
+                return strtolower(trim($answer)) === strtolower(trim($this->correct_answer));
+                
+            default:
+                return false;
+        }
+    }
+}

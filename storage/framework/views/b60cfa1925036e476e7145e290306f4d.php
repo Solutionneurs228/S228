@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solutionneurs228 - Votre partenaire IT, Web et Média au Togo.">
+    <title><?php echo $__env->yieldContent('title', 'Solutionneurs228'); ?> | Solutions IT, Web & Média</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Vite -->
+    <?php echo app('Illuminate\Foundation\Vite')('resources/css/style.css'); ?>
+    
+    <?php echo $__env->yieldPushContent('styles'); ?>
+</head>
+
+<body class="font-sans text-gray-800 bg-gray-50 antialiased pt-20">
+
+    <?php echo $__env->make('partials.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    
+
+    <?php echo $__env->yieldContent('slide'); ?>
+
+    <main>
+        <?php echo $__env->yieldContent('content'); ?>
+    </main>
+
+    <?php echo $__env->make('partials.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/22892671533" class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white text-2xl shadow-lg hover:scale-110 transition-transform z-50" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+
+<?php echo app('Illuminate\Foundation\Vite')('resources/js/app.js'); ?>
+    <?php echo $__env->yieldPushContent('scripts'); ?>
+</body>
+</html>
+
+<?php /**PATH C:\1SSD\ProjetWeb\S228\resources\views/layouts/base.blade.php ENDPATH**/ ?>

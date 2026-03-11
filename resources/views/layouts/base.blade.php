@@ -12,12 +12,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Vite -->
-    @vite(['resources/css/style.css', 'resources/js/app.js'])
+    @vite('resources/css/style.css')
+    
+    @stack('styles')
 </head>
 
 <body class="font-sans text-gray-800 bg-gray-50 antialiased pt-20">
 
     @include('partials.navbar')
+    
 
     @yield('slide')
 
@@ -32,7 +35,9 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    @yield('scripts')
+
+@vite('resources/js/app.js')
+    @stack('scripts')
 </body>
 </html>
 

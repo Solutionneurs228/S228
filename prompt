@@ -1,0 +1,69 @@
+
+COMMANDES DE DÉPLOIEMENT
+# 1. Installation
+composer install
+npm install && npm run build
+
+# 2. Base de données
+php artisan migrate
+php artisan db:seed --class=CourseSeeder
+
+# 3. Vérification
+php artisan courses:verify
+
+# 4. Cache de production
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+
+# 5. Storage
+php artisan storage:link
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ici c'est le lien de mon site sur render
+https://s228-2.onrender.com/
+
+un prompte kimi pour :
+
+une page des formations (catalogue) 
+* Infographie, graphique design, création de logo, flyers ...
+* photographie, vidéographie, montage vidéo, vidéo pub
+* Informatique bureautique, ...
+* développement web et mobile...
+* cyber sécurité ...
+* photoshop
+* installation de système d'exploitation et logiciels
+la page formation est une catalogue avec des liens vers la page complete et complexe de chaque formation. 
+
+pour chaque formation : 
+* formation en ligne sur le site web
+* contenue de formation pratique, complète, pro et expert
+* avec tous les ressources nécéssaire à la formation (vidéo youtube, outils nécéssaires ...)
+* subdivisé pour rendre facile le workflow
+* estimation du temps nécessaire ...
+* affiche en temps réél l'evolution, le parcours restant ...
+* l'acces à chaque page de formation doit etre très sécurisé et conditionné par la validation de l'admin (propose moi un processus parlequel le client va passer pour acces à la formation)
+je suis sur laravel, j'utilise un layout au nom de layouts.base.php chaque page doit avoir son css et js dans des fichiers separés du blade.php 
+! très impotrant : 
+* la formation doit être de très bonne qualité 
+* câpable de faire des professionels 
+* contenus et methodes de formation modèrnes 
+* avec des controles efficaces pour aller d'un niveau à un autre.
+
+je veux aussi que ça soit subdivisé en étapes puis que kimi n'arrive pas à aller jusqu'à la fin quand il veut tout executer en une seule etape
+
+s'il manque quelque chose il faut proposer

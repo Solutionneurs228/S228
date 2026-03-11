@@ -2,8 +2,9 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Support\ServiceProvider;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -11,7 +12,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        // Enregistrement du ProgressService en singleton
+        $this->app->singleton(\App\Services\ProgressService::class);
     }
 
     /**
@@ -19,9 +21,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-    if (app()->environment('production')) {
-        URL::forceScheme('https');
-    
-}
+        // Force HTTPS en production
+        if (app()->environment('production')) {
+            URL::forceScheme('https');
+        }
+
+        // Configuration des dates locales (optionnel)
+        \Carbon\Carbon::setLocale(config('app.locale'));
+
+        // Pagination Bootstrap (si vous utilisez Bootstrap)
+        // \Illuminate\Pagination\Paginator::useBootstrap();
     }
 }

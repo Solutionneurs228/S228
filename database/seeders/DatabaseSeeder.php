@@ -23,5 +23,11 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('pass123.'),
         ]);
         Note::factory(100)->create();
+
+         $this->call([
+        UserSeeder::class,      // Si vous avez des utilisateurs de test
+        CourseSeeder::class,    // Les 7 formations complètes
+    ]);
     }
+
 }
