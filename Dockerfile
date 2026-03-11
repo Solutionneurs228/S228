@@ -1,27 +1,35 @@
 FROM php:8.2-apache
 
-# installer dépendances
+# Installer les dépendances système + PostgreSQL
 RUN apt-get update && apt-get install -y \
     git \
     unzip \
     curl \
     nodejs \
-    npm
+    npm \
+    libpq-dev \                    # ← AJOUTÉ : dépendance PostgreSQL
+    && rm -rf /var/lib/apt/lists/*
 
-# installer composer
+# Installer les extensions PHP (ajout PostgreSQL)
+RUN docker-php-ext-install \
+    pdo \
+    pdo_pgsql \                    # ← AJOUTÉ : driver PostgreSQL
+    pgsql                          # ← AJOUTÉ : extension PostgreSQL
+
+# Installer Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
 
 COPY . .
 
-# installer dépendances PHP
+# Installer les dépendances PHP
 RUN composer install --no-dev --optimize-autoloader
 
-# installer dépendances JS
+# Installer les dépendances JS
 RUN npm install
 
-# build Vite
+# Build Vite
 RUN npm run build
 
 # Apache doit pointer vers /public
@@ -34,10 +42,10 @@ RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' \
     /etc/apache2/apache2.conf \
     /etc/apache2/conf-available/*.conf
 
-# activer mod_rewrite (important pour Laravel)
+# Activer mod_rewrite (important pour Laravel)
 RUN a2enmod rewrite
 
-# permissions Laravel
+# Permissions Laravel
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
 EXPOSE 80
