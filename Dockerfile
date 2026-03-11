@@ -7,14 +7,11 @@ RUN apt-get update && apt-get install -y \
     curl \
     nodejs \
     npm \
-    libpq-dev \                    # ← AJOUTÉ : dépendance PostgreSQL
+    libpq-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Installer les extensions PHP (ajout PostgreSQL)
-RUN docker-php-ext-install \
-    pdo \
-    pdo_pgsql \                    # ← AJOUTÉ : driver PostgreSQL
-    pgsql                          # ← AJOUTÉ : extension PostgreSQL
+RUN docker-php-ext-install pdo pdo_pgsql pgsql
 
 # Installer Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
