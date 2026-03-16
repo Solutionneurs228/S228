@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Vite -->
+    <!-- Vite -->        
+    @stack('styles')
     @vite(['resources/css/style.css', 'resources/js/app.js'])
 </head>
 
@@ -32,7 +33,7 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    @yield('scripts')
+    @stack('scripts')
 </body>
 </html>
 

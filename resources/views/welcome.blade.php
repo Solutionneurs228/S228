@@ -10,6 +10,7 @@
 
 
 @section('content')
+
     <!-- ==================== SERVICES SECTION ==================== -->
     <section id="services" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,7 +39,7 @@
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Maintenance Informatique</h3>
                     <p class="text-gray-600 mb-6 leading-relaxed">
                         Entretien et réparation des ordinateurs,
-                                        Installation de logiciels, Assistance informatique …
+                        Installation de logiciels, Assistance informatique …
                     </p>
                     <a href="{{ route('services.maintenance') }}"
                         class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group/link">
@@ -59,7 +60,7 @@
                         Assistance technique rapide et sécurisée via connexion à distance. Résolution de problèmes
                         logiciels, configuration et dépannage urgent 24/7.
                     </p>
-                    <a href="#"
+                    <a href="{{ route('services.assistance') }}"
                         class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group/link">
                         En savoir plus
                         <i
@@ -75,7 +76,8 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Formation & Coaching</h3>
                     <p class="text-gray-600 mb-6 leading-relaxed">
-                       La plupart de nos formations sont disponibles en ligne. Flexibles et adaptables, elles peuvent être programmées selon vos disponibilités afin de renforcer les compétences de vos équipes.
+                        La plupart de nos formations sont disponibles en ligne. Flexibles et adaptables, elles peuvent être
+                        programmées selon vos disponibilités afin de renforcer les compétences de vos équipes.
                     </p>
                     <a href="{{ route('formation') }}"
                         class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group/link">
@@ -93,10 +95,11 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Développement Web</h3>
                     <p class="text-gray-600 mb-6 leading-relaxed">
-                        Création de sites vitrines, e-commerce, portefolios et applications web sur mesure. Design responsive, SEO
+                        Création de sites vitrines, e-commerce, portefolios et applications web sur mesure. Design
+                        responsive, SEO
                         optimisé.
                     </p>
-                    <a href="#"
+                    <a href="{{ route('services.webdev') }}"
                         class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group/link">
                         En savoir plus
                         <i
@@ -112,9 +115,10 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Design Graphique</h3>
                     <p class="text-gray-600 mb-6 leading-relaxed">
-                        Conception de supports de communication visuelle : cartes de visite, invitations, logos, badges, flyers, affiches publicitaires, bâches et autocollants...
+                        Conception de supports de communication visuelle : cartes de visite, invitations, logos, badges,
+                        flyers, affiches publicitaires, bâches et autocollants...
                     </p>
-                    <a href="#"
+                    <a href="{{ route('services.infographie') }}"
                         class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group/link">
                         En savoir plus
                         <i
@@ -133,7 +137,7 @@
                         Production audiovisuelle professionnelle : shooting corporate, couverture événementielle, montage
                         vidéo et création de contenu pour vos réseaux sociaux.
                     </p>
-                    <a href="#"
+                    <a href="{{ route('services.photographie') }}"
                         class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group/link">
                         En savoir plus
                         <i
@@ -188,7 +192,8 @@
 
                     <div class="space-y-4 text-gray-600 text-lg leading-relaxed">
                         <p>
-                            Fondée avec la vision de démocratiser l'accès aux technologies modernes,
+                            Fondée avec la vision de créer des solutions réelles et de démocratiser l'accès aux technologies
+                            modernes,
                             <strong>Solutionneurs228</strong> s'est imposée comme un acteur majeur du paysage digital
                             togolais.
                         </p>
@@ -200,8 +205,9 @@
                         <p>
                             Forts d'une équipe pluridisciplinaire d'experts passionnés, nous combinons expertise technique
                             et créativité pour livrer des projets d'excellence. De la maintenance informatique à la création
-                            de sites web, en passant par la production audiovisuelle, nous sommes votre interlocuteur
-                            unique.
+                            de sites web, en passant par la production audiovisuelle, nous constituons pour vous un
+                            interlocuteur
+                            idéal.
                         </p>
                     </div>
 
@@ -250,16 +256,21 @@
                     </div>
 
                     <div class="mt-8">
-                        <a href="#contact"
+                        <a href="{{ route('contact') }}"
                             class="inline-flex items-center bg-brand-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-brand-700 transition-all transform hover:scale-105 shadow-lg">
                             Travailler avec Nous
                             <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
                 </div>
+
             </div>
+
         </div>
+
     </section>
+
+
 
     <!-- ==================== TESTIMONIALS SECTION ==================== -->
     <section class="py-20 bg-white">
@@ -286,8 +297,8 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <p class="text-gray-600 mb-6 italic">
-                        "Sinon le travail a été propre." 
-                        <br/>  
+                        "Sinon le travail a été propre."
+                        <br />
                         (contexte : livraison d'une vidéo d'inauguration et caravane en moins de 24h)
                     </p>
                     <div class="flex items-center gap-4">
@@ -316,8 +327,9 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <p class="text-gray-600 mb-6 italic">
-                        "Depuis votre assistance, nous avons constaté une nette amélioration de la performance de nos agents et même les clients en témoignent."
-                        
+                        "Depuis votre assistance, nous avons constaté une nette amélioration de la performance de nos agents
+                        et même les clients en témoignent."
+
                     </p>
                     <div class="flex items-center gap-4">
                         <div
@@ -345,7 +357,8 @@
                         <i class="fas fa-star-half-alt"></i>
                     </div>
                     <p class="text-gray-600 mb-6 italic">
-                        "Les photos et vidéos de notre mariage étaient incroyables ! Nous n'avons absolument pas eu tort de compter sur vous. Félicitations à toute l'équipe ! "
+                        "Les photos et vidéos de notre mariage étaient incroyables ! Nous n'avons absolument pas eu tort de
+                        compter sur vous. Félicitations à toute l'équipe ! "
                     </p>
                     <div class="flex items-center gap-4">
                         <div
@@ -363,7 +376,7 @@
     </section>
 
 
-        <!-- ==================== ACTUALITÉS SECTION ==================== -->
+    <!-- ==================== ACTUALITÉS SECTION ==================== -->
     <section id="actualites" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-4">
@@ -373,7 +386,8 @@
                         Dernières <span class="gradient-text">Nouvelles</span>
                     </h2>
                 </div>
-                <a href="#" class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group">
+                <a href="#actualites"
+                    class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group">
                     Voir toutes les actualités
                     <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                 </a>
@@ -381,13 +395,16 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Article 1 -->
-                <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
+                <article
+                    class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
                     <div class="relative h-48 overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-brand-600 to-blue-600 flex items-center justify-center">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-brand-600 to-blue-600 flex items-center justify-center">
                             <i class="fas fa-rocket text-6xl text-white/30"></i>
                         </div>
                         <div class="absolute top-4 left-4">
-                            <span class="bg-white/90 backdrop-blur text-brand-600 text-xs font-bold px-3 py-1 rounded-full">
+                            <span
+                                class="bg-white/90 backdrop-blur text-brand-600 text-xs font-bold px-3 py-1 rounded-full">
                                 Innovation
                             </span>
                         </div>
@@ -402,23 +419,29 @@
                             Lancement de notre nouveau service de cloud computing
                         </h3>
                         <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            Solutionneurs228 déploie une infrastructure cloud sécurisée pour les PME togolaises. Stockage, sauvegarde et collaboration à distance.
+                            Solutionneurs228 déploie une infrastructure cloud sécurisée pour les PME togolaises. Stockage,
+                            sauvegarde et collaboration à distance.
                         </p>
-                        <a href="#" class="inline-flex items-center text-brand-600 font-semibold text-sm hover:text-brand-800 transition-colors">
+                        <a href=""
+                            class="inline-flex items-center text-brand-600 font-semibold text-sm hover:text-brand-800 transition-colors">
                             Lire la suite
-                            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            <i
+                                class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
                 </article>
 
                 <!-- Article 2 -->
-                <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
+                <article
+                    class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
                     <div class="relative h-48 overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
                             <i class="fas fa-trophy text-6xl text-white/30"></i>
                         </div>
                         <div class="absolute top-4 left-4">
-                            <span class="bg-white/90 backdrop-blur text-purple-600 text-xs font-bold px-3 py-1 rounded-full">
+                            <span
+                                class="bg-white/90 backdrop-blur text-purple-600 text-xs font-bold px-3 py-1 rounded-full">
                                 Récompense
                             </span>
                         </div>
@@ -433,23 +456,29 @@
                             Prix de l'excellence digitale 2024
                         </h3>
                         <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            Nous avons reçu le prix de l'excellence pour notre contribution à la transformation numérique des entreprises au Togo.
+                            Nous avons reçu le prix de l'excellence pour notre contribution à la transformation numérique
+                            des entreprises au Togo.
                         </p>
-                        <a href="#" class="inline-flex items-center text-brand-600 font-semibold text-sm hover:text-brand-800 transition-colors">
+                        <a href=""
+                            class="inline-flex items-center text-brand-600 font-semibold text-sm hover:text-brand-800 transition-colors">
                             Lire la suite
-                            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            <i
+                                class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
                 </article>
 
                 <!-- Article 3 -->
-                <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
+                <article
+                    class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
                     <div class="relative h-48 overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-green-600 to-teal-600 flex items-center justify-center">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-green-600 to-teal-600 flex items-center justify-center">
                             <i class="fas fa-users text-6xl text-white/30"></i>
                         </div>
                         <div class="absolute top-4 left-4">
-                            <span class="bg-white/90 backdrop-blur text-green-600 text-xs font-bold px-3 py-1 rounded-full">
+                            <span
+                                class="bg-white/90 backdrop-blur text-green-600 text-xs font-bold px-3 py-1 rounded-full">
                                 Événement
                             </span>
                         </div>
@@ -466,9 +495,11 @@
                         <p class="text-gray-600 text-sm leading-relaxed mb-4">
                             Inscrivez-vous à notre prochain atelier sur la cybersécurité. Places limitées à 20 participants.
                         </p>
-                        <a href="#" class="inline-flex items-center text-brand-600 font-semibold text-sm hover:text-brand-800 transition-colors">
+                        <a href=""
+                            class="inline-flex items-center text-brand-600 font-semibold text-sm hover:text-brand-800 transition-colors">
                             Lire la suite
-                            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            <i
+                                class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
                 </article>
@@ -493,22 +524,29 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
                 <!-- Photo 1 -->
                 <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
-                    <div class="absolute inset-0 bg-gradient-to-br from-brand-600/20 to-blue-600/20 group-hover:scale-110 transition-transform duration-500"></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-brand-600/20 to-blue-600/20 group-hover:scale-110 transition-transform duration-500">
+                    </div>
                     <div class="absolute inset-0 flex items-center justify-center bg-gray-200">
                         <i class="fas fa-camera text-4xl text-gray-400"></i>
                     </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <span class="text-white font-semibold text-sm">Shooting Corporate</span>
                     </div>
                 </div>
 
                 <!-- Photo 2 -->
-                <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer md:col-span-2 md:row-span-2">
-                    <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 group-hover:scale-110 transition-transform duration-500"></div>
+                <div
+                    class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer md:col-span-2 md:row-span-2">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 group-hover:scale-110 transition-transform duration-500">
+                    </div>
                     <div class="absolute inset-0 flex items-center justify-center bg-gray-200">
                         <i class="fas fa-video text-6xl text-gray-400"></i>
                     </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                         <div>
                             <span class="text-white font-semibold">Production Vidéo</span>
                             <p class="text-white/80 text-sm">Spot publicitaire Togo Émergent</p>
@@ -518,44 +556,56 @@
 
                 <!-- Photo 3 -->
                 <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
-                    <div class="absolute inset-0 bg-gradient-to-br from-green-600/20 to-teal-600/20 group-hover:scale-110 transition-transform duration-500"></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-green-600/20 to-teal-600/20 group-hover:scale-110 transition-transform duration-500">
+                    </div>
                     <div class="absolute inset-0 flex items-center justify-center bg-gray-200">
                         <i class="fas fa-laptop-code text-4xl text-gray-400"></i>
                     </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <span class="text-white font-semibold text-sm">Développement Web</span>
                     </div>
                 </div>
 
                 <!-- Photo 4 -->
                 <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
-                    <div class="absolute inset-0 bg-gradient-to-br from-orange-600/20 to-red-600/20 group-hover:scale-110 transition-transform duration-500"></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-orange-600/20 to-red-600/20 group-hover:scale-110 transition-transform duration-500">
+                    </div>
                     <div class="absolute inset-0 flex items-center justify-center bg-gray-200">
                         <i class="fas fa-palette text-4xl text-gray-400"></i>
                     </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <span class="text-white font-semibold text-sm">Design Graphique</span>
                     </div>
                 </div>
 
                 <!-- Photo 5 -->
                 <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
-                    <div class="absolute inset-0 bg-gradient-to-br from-yellow-600/20 to-orange-600/20 group-hover:scale-110 transition-transform duration-500"></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-yellow-600/20 to-orange-600/20 group-hover:scale-110 transition-transform duration-500">
+                    </div>
                     <div class="absolute inset-0 flex items-center justify-center bg-gray-200">
                         <i class="fas fa-tools text-4xl text-gray-400"></i>
                     </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <span class="text-white font-semibold text-sm">Maintenance IT</span>
                     </div>
                 </div>
 
                 <!-- Photo 6 -->
                 <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
-                    <div class="absolute inset-0 bg-gradient-to-br from-pink-600/20 to-rose-600/20 group-hover:scale-110 transition-transform duration-500"></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-pink-600/20 to-rose-600/20 group-hover:scale-110 transition-transform duration-500">
+                    </div>
                     <div class="absolute inset-0 flex items-center justify-center bg-gray-200">
                         <i class="fas fa-graduation-cap text-4xl text-gray-400"></i>
                     </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <span class="text-white font-semibold text-sm">Formation</span>
                     </div>
                 </div>
@@ -563,7 +613,8 @@
 
             <!-- Bouton vers galerie complète -->
             <div class="text-center">
-                <a href="{{ route('galerie') }}" class="inline-flex items-center gap-3 bg-brand-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-brand-700 transition-all transform hover:scale-105 shadow-lg group">
+                <a href="{{ route('galerie') }}"
+                    class="inline-flex items-center gap-3 bg-brand-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-brand-700 transition-all transform hover:scale-105 shadow-lg group">
                     <i class="fas fa-images text-xl"></i>
                     <span>Voir toute la galerie</span>
                     <i class="fas fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
@@ -586,34 +637,19 @@
                 Contactez-nous dès aujourd'hui pour discuter de votre projet et obtenir un devis personnalisé gratuitement.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact"
+                <a href="{{ route('contact') }}"
                     class="bg-white text-brand-900 px-8 py-4 rounded-full font-bold hover:bg-brand-50 transition-all transform hover:scale-105 shadow-xl">
                     Demander un Devis Gratuit
                 </a>
-                <a href="tel:+22890000000"
+                <a href="tel:+22892671533"
                     class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-all flex items-center justify-center gap-2">
                     <i class="fas fa-phone"></i>
-                    +228 90 00 00 00
+                    +228 92 67 15 33
                 </a>
             </div>
         </div>
     </section>
 
+    
+
 @endsection
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

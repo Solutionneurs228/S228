@@ -6,6 +6,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DevisController;
 use App\Http\Controllers\NoteController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CatalogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,6 +61,7 @@ Route::controller(DevisController::class)->group(function () {
     Route::get('/devis', 'index')->name('devis');
     Route::post('/devis', 'store')->name('devis.store');
 });
+
 
 /*
 |--------------------------------------------------------------------------

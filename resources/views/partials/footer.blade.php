@@ -27,15 +27,15 @@
                     </a>
                     <a href="#"
                         class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand-600 transition-colors">
-                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-tiktok"></i>
                     </a>
                     <a href="#"
                         class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand-600 transition-colors">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="#"
+                    <a href="https://wa.me/22892671533"
                         class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand-600 transition-colors">
-                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
             </div>
@@ -48,11 +48,11 @@
                     </li>
                     <li><a href="#services" class="text-gray-400 hover:text-brand-500 transition-colors">Nos
                             Services</a></li>
-                    <li><a href="#about" class="text-gray-400 hover:text-brand-500 transition-colors">À Propos</a>
+                    <li><a href="{{  route('about') }}" class="text-gray-400 hover:text-brand-500 transition-colors">À Propos</a>
                     </li>
-                    <li><a href="#" class="text-gray-400 hover:text-brand-500 transition-colors">Portfolio</a>
+                    <li><a href="{{ route('portfolio') }}" class="text-gray-400 hover:text-brand-500 transition-colors">Portfolio</a>
                     </li>
-                    <li><a href="#" class="text-gray-400 hover:text-brand-500 transition-colors">Blog</a></li>
+                    <li><a href="" class="text-gray-400 hover:text-brand-500 transition-colors">Blog</a></li>
                 </ul>
             </div>
 
@@ -60,15 +60,15 @@
             <div>
                 <h3 class="text-lg font-bold mb-6 text-white">Nos Services</h3>
                 <ul class="space-y-3">
-                    <li><a href="#" class="text-gray-400 hover:text-brand-500 transition-colors">Maintenance
+                    <li><a href="{{ route('services.maintenance') }}" class="text-gray-400 hover:text-brand-500 transition-colors">Maintenance
                             IT</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-brand-500 transition-colors">Support à
+                    <li><a href="{{ route('services.assistance') }}" class="text-gray-400 hover:text-brand-500 transition-colors">Support à
                             Distance</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-brand-500 transition-colors">Développement
+                    <li><a href="{{ route('services.webdev') }}" class="text-gray-400 hover:text-brand-500 transition-colors">Développement
                             Web</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-brand-500 transition-colors">Design
+                    <li><a href="{{ route('services.infographie') }}" class="text-gray-400 hover:text-brand-500 transition-colors">Design
                             Graphique</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-brand-500 transition-colors">Photo &
+                    <li><a href="{{ route('services.photographie') }}" class="text-gray-400 hover:text-brand-500 transition-colors">Photo &
                             Vidéo</a></li>
                 </ul>
             </div>
@@ -79,19 +79,19 @@
                 <ul class="space-y-4">
                     <li class="flex items-start gap-3">
                         <i class="fas fa-map-marker-alt text-brand-500 mt-1"></i>
-                        <span class="text-gray-400">123 Rue des Technologie, Lomé, Togo</span>
+                        <span class="text-gray-400">quartier Tchannadè, Kara, Togo</span>
                     </li>
                     <li class="flex items-center gap-3">
                         <i class="fas fa-phone text-brand-500"></i>
-                        <span class="text-gray-400">+228 90 00 00 00</span>
+                        <span class="text-gray-400">+228 92 67 15 33</span>
                     </li>
                     <li class="flex items-center gap-3">
                         <i class="fas fa-envelope text-brand-500"></i>
-                        <span class="text-gray-400">contact@solutionneurs228.tg</span>
+                        <span class="text-gray-400">solutionneurs228@gmail.com</span>
                     </li>
                     <li class="flex items-center gap-3">
                         <i class="fas fa-clock text-brand-500"></i>
-                        <span class="text-gray-400">Lun - Ven: 8h00 - 18h00</span>
+                        <span class="text-gray-400">Lun - Sam: 6h00 - 19h30</span>
                     </li>
                 </ul>
             </div>
@@ -103,9 +103,9 @@
                 © 2024 Solutionneurs228. Tous droits réservés.
             </p>
             <div class="flex space-x-6 text-sm">
-                <a href="#" class="text-gray-500 hover:text-white transition-colors">Politique de
+                <a href="" class="text-gray-500 hover:text-white transition-colors">Politique de
                     Confidentialité</a>
-                <a href="#" class="text-gray-500 hover:text-white transition-colors">Conditions
+                <a href="" class="text-gray-500 hover:text-white transition-colors">Conditions
                     d'Utilisation</a>
             </div>
         </div>

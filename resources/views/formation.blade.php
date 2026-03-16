@@ -1,973 +1,237 @@
 @extends('layouts.base')
 
+@section('title', 'Nos Formations Professionnelles')
 
-@section('title', 'S228 Initation Informatique')
+@push('styles')
+    {{-- <link rel="stylesheet" href="{{ asset('css/formation.css') }}"> --}}
+    @vite(['resources/css/formation.css'])
+@endpush
 
-<div class="home">
-    @section('slide')
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+@section('content')
+@php
+// Données des formations (statique, pas de BDD)
+$formations = [
+    [
+        'titre' => 'Développement Web Full Stack',
+        'description' => 'Maîtrisez HTML, CSS, JavaScript, PHP et Laravel. Créez des applications web complètes de A à Z avec les meilleures pratiques du métier.',
+        'duree' => '6 mois',
+        'niveau' => 'debutant',
+        'formateur' => 'Kossi ADJOVI',
+        'prix' => 150000,
+        'ancien_prix' => 200000,
+        'image' => null,
+        'prerequis' => 'Aucun',
+        'certification' => 'Certificat de développeur web',
+        'points' => ['HTML5/CSS3', 'JavaScript', 'PHP/Laravel', 'MySQL', 'Déploiement']
+    ],
+    [
+        'titre' => 'Marketing Digital & Réseaux Sociaux',
+        'description' => 'Apprenez à créer des stratégies marketing efficaces, gérer des campagnes publicitaires et analyser vos performances sur tous les réseaux sociaux.',
+        'duree' => '3 mois',
+        'niveau' => 'intermediaire',
+        'formateur' => 'Afiwa KOMLAN',
+        'prix' => 80000,
+        'ancien_prix' => null,
+        'image' => null,
+        'prerequis' => 'Connaissances base informatique',
+        'certification' => 'Certificat marketing digital',
+        'points' => ['Facebook Ads', 'Google Ads', 'SEO/SEA', 'Analytics', 'Content marketing']
+    ],
+    [
+        'titre' => 'Design Graphique & UI/UX',
+        'description' => 'Devenez designer professionnel. Maîtrisez Photoshop, Illustrator, Figma et créez des interfaces utilisateur modernes et attractives.',
+        'duree' => '4 mois',
+        'niveau' => 'debutant',
+        'formateur' => 'Kodjo AMEWOU',
+        'prix' => 120000,
+        'ancien_prix' => 150000,
+        'image' => null,
+        'prerequis' => 'Aucun',
+        'certification' => 'Certificat designer UI/UX',
+        'points' => ['Photoshop', 'Illustrator', 'Figma', 'Prototypage', 'Design system']
+    ],
+    [
+        'titre' => 'Bureautique Avancée',
+        'description' => 'Perfectionnez-vous sur Word, Excel, PowerPoint et Outlook. Automatisez vos tâches et gagnez en productivité au quotidien.',
+        'duree' => '2 mois',
+        'niveau' => 'debutant',
+        'formateur' => 'Mawuli AGBE',
+        'prix' => 50000,
+        'ancien_prix' => null,
+        'image' => null,
+        'prerequis' => 'Aucun',
+        'certification' => 'Attestation de formation',
+        'points' => ['Word avancé', 'Excel (formules, tableaux)', 'PowerPoint', 'Outlook', 'OneDrive']
+    ],
+    [
+        'titre' => 'Gestion de Projet & Agile',
+        'description' => 'Apprenez les méthodes agiles (Scrum, Kanban) et les outils de gestion de projet pour mener vos équipes vers la réussite.',
+        'duree' => '3 mois',
+        'niveau' => 'avance',
+        'formateur' => 'Komlan SENOU',
+        'prix' => 180000,
+        'ancien_prix' => 220000,
+        'image' => null,
+        'prerequis' => 'Expérience professionnelle',
+        'certification' => 'Certificat Scrum Master',
+        'points' => ['Scrum', 'Kanban', 'Jira/Trello', 'Gestion d\'équipe', 'Rapports KPI']
+    ],
+    [
+        'titre' => 'Cybersécurité Fondamentale',
+        'description' => 'Protégez vos données et celles de votre entreprise. Apprenez les bases de la sécurité informatique, le hacking éthique et la protection réseau.',
+        'duree' => '4 mois',
+        'niveau' => 'intermediaire',
+        'formateur' => 'Koffi ATCHADE',
+        'prix' => 200000,
+        'ancien_prix' => null,
+        'image' => null,
+        'prerequis' => 'Connaissances réseau de base',
+        'certification' => 'Certificat cybersécurité',
+        'points' => ['Sécurité réseau', 'Cryptographie', 'Hacking éthique', 'Forensics', 'ISO 27001']
+    ],
+];
+@endphp
 
-            <div class="carousel-inner">
+<div class="catalogue-container">
+    <!-- En-tête -->
+    <header class="catalogue-header">
+        <h1>Nos Formations Professionnelles</h1>
+        <p>Des programmes complets pour booster votre carrière. Contactez-nous directement sur WhatsApp pour vous inscrire ou obtenir plus d'informations.</p>
+        
+        <a href="https://wa.me/22892671533" target="_blank" class="btn-whatsapp-main">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            Contact WhatsApp : +228 92 67 15 33
+        </a>
+    </header>
 
-                <div class="carousel-item slide-img active">
-                    <img class="d-block w-100 h-auto formation-img" src="../images/formations.webp" alt="First slide">
-                    <div class="carousel-caption">
-                        <h5 class="home-title">Nos formations ....</h5>
-                        <p class="home-description">la plus part de nos formations sont disponibles en ligne</p>
-                    </div>
-                </div>
-
-
-
-            </div>
-
-        </div>
-    @endsection
-
-    @section('content')
-        <div class="big-container">
-
-            <div class="container">
-                <div class="elt formation-elt">
-                    <div class="elt-title">
-                        {{-- <h1 class="big-title">voici certaines de nos formations</h1> --}}
-                        <br>
-                        <br>
-                        <br>
-                        <p class="hook-description">
-                            Ce sont là quelques formations que nous proposons
-                            <br>
-                            Elle sont très flexible et peuvent être programmées
-                            en fonction de vos disponibilités
-                        </p>
-                    </div>
-
-
-
-
-<div class="col-md-4 mb-4" data-aos="fade-up">
-
-    <div class="formation-card h-100 p-4 bg-white rounded-4 shadow-sm">
-
-        <div class="icon-wrapper mb-3">
-            <i class="fa-solid fa-computer fa-2x"></i>
-        </div>
-
-        <h5 class="fw-bold mb-3">Initiation à l'informatique</h5>
-
-        <p class="text-muted">
-            Les connaissances de base en informatique, familiarisation avec
-            l'ordinateur, étude du clavier et de la souris...
-        </p>
-
-        <div class="mt-auto">
-            <a href="{{ route('formation') }}"
-               class="btn btn-primary w-100 rounded-pill">
-               Voir la formation
-            </a>
-        </div>
-
+    <!-- Filtres -->
+    <div class="filtres-container">
+        <button class="filtre-btn active" data-filtre="tous">Toutes</button>
+        <button class="filtre-btn" data-filtre="debutant">Débutant</button>
+        <button class="filtre-btn" data-filtre="intermediaire">Intermédiaire</button>
+        <button class="filtre-btn" data-filtre="avance">Avancé</button>
     </div>
 
-</div>
-
-                    <section class="py-5 bg-light">
-                        <div class="container">
-                            <div class="text-center mb-5">
-                                <h2 class="fw-bold">Pourquoi choisir nos formations ?</h2>
-                                <p class="text-muted">Un accompagnement professionnel orienté résultats concrets.</p>
-                            </div>
-
-                            <div class="row g-4">
-
-                                <div class="col-md-4 text-center">
-                                    <div class="p-4 shadow-sm h-100 rounded-4 bg-white">
-                                        <i class="fa-solid fa-user-graduate fa-2x text-primary mb-3"></i>
-                                        <h5 class="fw-bold">Formateurs expérimentés</h5>
-                                        <p class="text-muted">Des professionnels du terrain avec une pédagogie adaptée à
-                                            chaque niveau.</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4 text-center">
-                                    <div class="p-4 shadow-sm h-100 rounded-4 bg-white">
-                                        <i class="fa-solid fa-laptop-code fa-2x text-primary mb-3"></i>
-                                        <h5 class="fw-bold">100% Pratique</h5>
-                                        <p class="text-muted">Travaux dirigés, projets réels et accompagnement personnalisé.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4 text-center">
-                                    <div class="p-4 shadow-sm h-100 rounded-4 bg-white">
-                                        <i class="fa-solid fa-certificate fa-2x text-primary mb-3"></i>
-                                        <h5 class="fw-bold">Attestation reconnue</h5>
-                                        <p class="text-muted">Certificat délivré en fin de formation pour valoriser votre
-                                            CV.</p>
-                                    </div>
-                                </div>
-
-                            </div>
+    <!-- Grille formations -->
+    <div class="formations-grid">
+        @forelse($formations as $formation)
+            <article class="formation-card" data-niveau="{{ $formation['niveau'] }}">
+                <!-- Image -->
+                <div class="formation-image">
+                    @if($formation['image'])
+                        <img src="{{ asset($formation['image']) }}" alt="{{ $formation['titre'] }}">
+                    @else
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
                         </div>
-                    </section>
-
-
-                    <section class="py-5 text-white" style="background: linear-gradient(135deg,#0d6efd,#6610f2);">
-                        <div class="container text-center">
-                            <div class="row">
-
-                                <div class="col-md-3">
-                                    <h2 class="fw-bold">+150</h2>
-                                    <p>Étudiants formés</p>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <h2 class="fw-bold">+20</h2>
-                                    <p>Sessions organisées</p>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <h2 class="fw-bold">95%</h2>
-                                    <p>Taux de satisfaction</p>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <h2 class="fw-bold">+5</h2>
-                                    <p>Domaines d’expertise</p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </section>
-
-
-                    <section class="py-5">
-                        <div class="container">
-                            <div class="text-center mb-5">
-                                <h2 class="fw-bold">Comment s'inscrire ?</h2>
-                            </div>
-
-                            <div class="row text-center g-4">
-
-                                <div class="col-md-3">
-                                    <div class="p-4">
-                                        <span class="badge bg-primary rounded-circle p-3 mb-3">1</span>
-                                        <h6>Choisissez une formation</h6>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <div class="p-4">
-                                        <span class="badge bg-primary rounded-circle p-3 mb-3">2</span>
-                                        <h6>Remplissez le formulaire</h6>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <div class="p-4">
-                                        <span class="badge bg-primary rounded-circle p-3 mb-3">3</span>
-                                        <h6>Validation & confirmation</h6>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <div class="p-4">
-                                        <span class="badge bg-primary rounded-circle p-3 mb-3">4</span>
-                                        <h6>Démarrage de la formation</h6>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </section>
-
-
-                    <section class="py-5 bg-light">
-                        <div class="container">
-                            <div class="text-center mb-5">
-                                <h2 class="fw-bold">Ils nous font confiance</h2>
-                            </div>
-
-                            <div class="row g-4">
-
-                                <div class="col-md-4">
-                                    <div class="p-4 bg-white shadow-sm rounded-4 h-100">
-                                        <p class="text-muted">"Grâce à la formation Développement Web, j'ai créé mon premier
-                                            site professionnel."</p>
-                                        <strong>- Ahmed B.</strong>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="p-4 bg-white shadow-sm rounded-4 h-100">
-                                        <p class="text-muted">"Formation très pratique et bien expliquée. Je recommande !"
-                                        </p>
-                                        <strong>- Sarah M.</strong>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="p-4 bg-white shadow-sm rounded-4 h-100">
-                                        <p class="text-muted">"Excellent accompagnement du début à la fin."</p>
-                                        <strong>- Karim L.</strong>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </section>
-
-
-                    <section class="py-5 bg-light">
-                        <div class="container">
-                            <div class="text-center mb-5">
-                                <h2 class="fw-bold">Ils nous font confiance</h2>
-                            </div>
-
-                            <div class="row g-4">
-
-                                <div class="col-md-4">
-                                    <div class="p-4 bg-white shadow-sm rounded-4 h-100">
-                                        <p class="text-muted">"Grâce à la formation Développement Web, j'ai créé mon premier
-                                            site professionnel."</p>
-                                        <strong>- Ahmed B.</strong>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="p-4 bg-white shadow-sm rounded-4 h-100">
-                                        <p class="text-muted">"Formation très pratique et bien expliquée. Je recommande !"
-                                        </p>
-                                        <strong>- Sarah M.</strong>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="p-4 bg-white shadow-sm rounded-4 h-100">
-                                        <p class="text-muted">"Excellent accompagnement du début à la fin."</p>
-                                        <strong>- Karim L.</strong>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </section>
-
-
-                    <section class="py-5 text-white text-center"
-                        style="background: linear-gradient(135deg,#6610f2,#0d6efd);">
-                        <div class="container">
-                            <h2 class="fw-bold mb-3">Prêt à développer vos compétences ?</h2>
-                            <p class="mb-4">Inscrivez-vous maintenant et démarrez votre parcours professionnel.</p>
-                            <a href="{{ route('contact') }}" class="btn btn-light btn-lg px-4">
-                                S'inscrire maintenant
-                            </a>
-                        </div>
-                    </section>
-
-
-
-
-
-
-
-
-
-                    <div class="home devis-home">
-                        <div class="session devis-form-container">
-                            <div class="elt-title">
-                                <h1 class="big-title">Demande d'inscription </h1>
-                            </div>
-
-                            <form class="" action="{{ route('devis.store') }}" method="POST">
-                                @csrf
-
-                                <div class="form devis-form">
-
-                                    <div class="form-rows">
-                                        {{-- <div>
-                                                            <label for="" class="contact-label">Nom Complet</label>
-                                                        </div> --}}
-
-                                        <div>
-                                            <input type="text" name="name" placeholder="votre nom complet"
-                                                class="contact-input">
-                                        </div>
-                                    </div>
-                                    <div class="form-rows">
-                                        {{-- <div>
-                                                            <label for="" class="contact-label">Nom Complet</label>
-                                                        </div> --}}
-
-                                        <div>
-                                            <input type="text" name="adress"
-                                                placeholder="votre ville et pays ex : Lomé-Togo" class="contact-input">
-                                        </div>
-                                    </div>
-                                    <div class="form-rows">
-                                        {{-- <div>
-                                                            <label for="" class="contact-label">Télephone</label>
-                                                        </div> --}}
-                                        <div>
-                                            <input type="text" name="phone" placeholder="votre N° de télephone"
-                                                class="contact-input">
-                                        </div>
-                                    </div>
-                                    <div class="form-rows">
-                                        {{-- <div>
-                                                            <label for="" class="contact-label">service désiré</label>
-                                                        </div> --}}
-                                        <div>
-                                            <input type="text" name="service"
-                                                placeholder="laquelle de nos formations désirez-vous"
-                                                class="contact-input">
-                                        </div>
-                                    </div>
-                                    <div class="form-rows">
-                                        {{-- <div>
-                                                            <label for="" class="contact-label">E-mail</label>
-                                                        </div> --}}
-                                        <div>
-                                            <input type="email" name="email" placeholder="votre adresse E-mail"
-                                                class="contact-input">
-                                        </div>
-                                    </div>
-                                    <div class="form-rows">
-                                        {{-- <div>
-                                                        <label for="message" class="contact-label">Votre Message</label>
-                                                    </div> --}}
-
-                                        <div>
-                                            <textarea name="message" id="" placeholder="Décrivez votre besoins ici" cols="30" rows="3"
-                                                class="contact-input"></textarea>
-                                        </div>
-                                    </div>
-                                    <p>Nous vous contacterons le plus tôt possible (en moins de 24H)</p>
-                                    <div class="contact-btn-div form-rows">
-                                        <button class="btn my-2 my-sm-0 contact-btn" type="submit">Soumettre</button>
-                                    </div>
-
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
-
-
-                    <div class="lien-formation">
-                        pour toute information
-                        <a
-                            href="https://wa.me/+22892671533?text=Bonjour%2C%20je%20souhaite%20me%20renseigner%20sur%20une%20formation.">écrivez
-                            nous sur whatsapp</a>
-                        <p>nous vous répondrons dans un bref delais </p>
-
-                    </div>
-
-
-
-
-                    {{-- <div class="boxes ">
-
-                        <div class="box">
-                            <div class="webContent">
-
-                                <div>
-                                    <div class="webContentTop">
-                                        <div>
-                                            <a
-                                                href=""
-                                                class="wrapperLink Indicator"
-                                                target="_blank"></a>
-                                        </div>
-                                        <a
-                                            href=""
-                                            class="live"
-                                            target="_blank"><span>Disponible en
-                                                ligne</span></a>
-                                        <a
-                                            href=""
-                                            class="wrapperLink" target="_blank">
-                                            <iconify-icon
-                                                icon="mdi:github"></iconify-icon>
-                                            <!-- <i class="uil uil-github-alt"></i> -->
-                                        </a>
-                                    </div>
-
-                                    <div class="contentImg">
-                                        <a
-                                            href=""
-                                            target="_blank"><img
-                                                src="docs/initiation.jpg"
-                                                class="contentImage"></a>
-                                    </div>
-
-                                    <div class="wrapperText">
-
-                                        <h2 class="title">
-                                            Initiation à l'Informatique
-                                        </h2>
-                                        <p>
-                                            Premier contact avec l'outils
-                                            informatique, les connaissance de
-                                            base
-                                            dans l'utilisation de l'ordinateur.
-                                            <br>
-                                            <br>
-                                            modules : WINDOWS, WORD, EXCEL,
-                                            POWERPOINT & INTERNET
-                                        </p>
-
-                                    </div>
-
-                                </div>
-
-                                <div>
-                                    <div class="software">
-                                        <span>2 semaine</span>
-                                        <span>2H/jr</span>
-                                    </div>
-                                    <br>
-                                    <div class="box_btn">
-                                        <a
-                                            href="https://wa.me/+22892671533?text=Salut MTC je vous contact au sujet de l'Initiation à l'informatique"
-                                            target="_blank"
-                                            style="text-decoration: none; color: #00eaff;">
-                                            s'informer et/ou s'inscrire
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="box">
-                            <div class="webContent">
-
-                                <div>
-                                    <div class="webContentTop">
-                                        <div>
-
-                                            <a
-                                                href=""
-                                                class="wrapperLink Indicator"
-                                                target="_blank"></a>
-                                        </div>
-                                        <a
-                                            href=""
-                                            class="live"
-                                            target="_blank"><span>Disponible en
-                                                ligne</span></a>
-                                        <a
-                                            href=""
-                                            class="wrapperLink" target="_blank">
-                                            <iconify-icon
-                                                icon="mdi:github"></iconify-icon>
-                                            <!-- <i class="uil uil-github-alt"></i> -->
-                                        </a>
-                                    </div>
-
-                                    <div class="contentImg">
-                                        <a
-                                            href=""
-                                            target="_blank"><img
-                                                src="docs/bureautique.jpg"
-                                                class="contentImage"></a>
-                                    </div>
-
-                                    <div class="wrapperText">
-
-                                        <h2 class="title">
-                                            Informatique Bureautique
-                                        </h2>
-                                        <p>Il s'agit ici d'une étude plus ou
-                                            moins
-                                            profonde de l'outils informatique,
-                                            de la
-                                            quête d'une bonne maitrise de
-                                            l'ordinateur et son utilisation.
-                                            <br>
-                                            <br>
-                                            Modules : WINDOWS, WORD, EXCEL,
-                                            POWERPOINT, INTERNET
-                                        </p>
-
-                                    </div>
-
-                                </div>
-
-                                <div>
-                                    <div class="software">
-                                        <span>3 mois</span>
-                                        <span>2H/jr</span>
-                                    </div>
-                                    <br>
-                                    <div class="box_btn">
-                                        <a
-                                            href="https://wa.me/+22892671533?text=Salut MTC je vous contact au sujet de l'Initiation à l'informatique"
-                                            target="_blank"
-                                            style="text-decoration: none; color: #00eaff;">
-                                            s'informer et/ou s'inscrire
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="box">
-                            <div class="webContent">
-
-                                <div>
-                                    <div class="webContentTop">
-                                        <div>
-
-                                            <a
-                                                href=""
-                                                class="wrapperLink Indicator"
-                                                target="_blank"></a>
-                                        </div>
-                                        <a
-                                            href=""
-                                            class="live"
-                                            target="_blank"><span>Disponible en
-                                                ligne</span></a>
-                                        <a
-                                            href=""
-                                            class="wrapperLink" target="_blank">
-                                            <iconify-icon
-                                                icon="mdi:github"></iconify-icon>
-                                            <!-- <i class="uil uil-github-alt"></i> -->
-                                        </a>
-                                    </div>
-
-                                    <div class="contentImg">
-                                        <a
-                                            href=""
-                                            target="_blank"><img
-                                                src="docs/montage.jpg"
-                                                class="contentImage"></a>
-                                    </div>
-
-                                    <div class="wrapperText">
-
-                                        <h2 class="title">
-                                            Montage Vidéo
-                                        </h2>
-                                        <p>Maitrise des techniques de montage
-                                            vidéo
-                                            professionnel,
-                                            <br>
-                                            <br>
-                                            Pratique sur un projet réel.
-                                        </p>
-
-                                    </div>
-
-                                </div>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <div>
-                                    <div class="software">
-                                        <span>2 semaines</span>
-                                        <span>2H/jr</span>
-                                    </div>
-                                    <br>
-                                    <div class="box_btn">
-                                        <a
-                                            href="https://wa.me/+22892671533?text=Salut MTC je vous contact au sujet de l'Initiation à l'informatique"
-                                            target="_blank"
-                                            style="text-decoration: none; color: #00eaff;">
-                                            s'informer et/ou s'inscrire
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="box">
-                            <div class="webContent">
-
-                                <div>
-                                    <div class="webContentTop">
-                                        <div>
-
-                                            <a
-                                                href=""
-                                                class="wrapperLink Indicator"
-                                                target="_blank"></a>
-                                        </div>
-                                        <a
-                                            href=""
-                                            class="live"
-                                            target="_blank"><span>Disponible en
-                                                ligne</span></a>
-                                        <a
-                                            href=""
-                                            class="wrapperLink" target="_blank">
-                                            <iconify-icon
-                                                icon="mdi:github"></iconify-icon>
-                                            <!-- <i class="uil uil-github-alt"></i> -->
-                                        </a>
-                                    </div>
-
-                                    <div class="contentImg">
-                                        <a
-                                            href=""
-                                            target="_blank"><img
-                                                src="docs/webdev.jpg"
-                                                class="contentImage"></a>
-                                    </div>
-
-                                    <div class="wrapperText">
-
-                                        <h2 class="title">
-                                            Développement Web
-                                        </h2>
-                                        <p>Le développement web est très vaste mais
-                                            cette formation vous donne des bases
-                                            solides et très solides pour appréhender
-                                            ce domaine.
-                                            <br>
-                                            <br>
-                                            Un projet de fin de formation va vous
-                                            permettre de répratiquer et vous assurer
-                                            que vous avez maitrisé.
-                                        </p>
-
-                                    </div>
-
-                                </div>
-                                <br>
-                                <br>
-                                <div>
-                                    <div class="software">
-                                        <span>3 mois</span>
-                                        <span>2H/jr</span>
-                                    </div>
-                                    <br>
-                                    <div class="box_btn">
-                                        <a
-                                            href="https://wa.me/+22892671533?text=Salut MTC je vous contact au sujet de l'Initiation à l'informatique"
-                                            target="_blank"
-                                            style="text-decoration: none; color: #00eaff;">
-                                            s'informer et/ou s'inscrire
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="box">
-                            <div class="webContent">
-
-                                <div>
-                                    <div class="webContentTop">
-                                        <div>
-
-                                            <a
-                                                href=""
-                                                class="wrapperLink Indicator"
-                                                target="_blank"></a>
-                                        </div>
-                                        <a
-                                            href=""
-                                            class="live"
-                                            target="_blank"><span>Disponible en
-                                                ligne</span></a>
-                                        <a
-                                            href=""
-                                            class="wrapperLink" target="_blank">
-                                            <iconify-icon
-                                                icon="mdi:github"></iconify-icon>
-                                            <!-- <i class="uil uil-github-alt"></i> -->
-                                        </a>
-                                    </div>
-
-                                    <div class="contentImg">
-                                        <a
-                                            href=""
-                                            target="_blank"><img
-                                                src="docs/installation.jpg"
-                                                class="contentImage"></a>
-                                    </div>
-
-                                    <div class="wrapperText">
-
-                                        <h2 class="title">
-                                            installation de systèmes d'exploitation
-                                            & logiciels
-                                        </h2>
-                                        <p> il s'agit d'une formation très pratique
-                                            et abordable en installation de systèmes
-                                            d'exploitation (Windows 7, 8, 10, 11) et
-                                            logiciels.
-                                            <br>
-                                            <br>
-                                            la formation vous fourni aussi les
-                                            moyens de télécharger les logiciels.
-                                        </p>
-
-                                    </div>
-
-                                </div>
-                                <br>
-                                <br>
-                                <div>
-                                    <div class="software">
-                                        <span>2 semaines</span>
-                                        <span>2H/jr</span>
-                                    </div>
-                                    <br>
-                                    <div class="box_btn">
-                                        <a
-                                            href="https://wa.me/+22892671533?text=Salut MTC je vous contact au sujet de l'Initiation à l'informatique"
-                                            target="_blank"
-                                            style="text-decoration: none; color: #00eaff;">
-                                            s'informer et/ou s'inscrire
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="box">
-                            <div class="webContent">
-
-                                <div>
-                                    <div class="webContentTop">
-                                        <div>
-
-                                            <a
-                                                href=""
-                                                class="wrapperLink Indicator"
-                                                target="_blank"></a>
-                                        </div>
-                                        <a
-                                            href=""
-                                            class="live"
-                                            target="_blank"><span>Disponible en
-                                                ligne</span></a>
-                                        <a
-                                            href=""
-                                            class="wrapperLink" target="_blank">
-                                            <iconify-icon
-                                                icon="mdi:github"></iconify-icon>
-                                            <!-- <i class="uil uil-github-alt"></i> -->
-                                        </a>
-                                    </div>
-
-                                    <div class="contentImg">
-                                        <a
-                                            href=""
-                                            target="_blank"><img
-                                                src="docs/autre.jpg"
-                                                class="contentImage"></a>
-                                    </div>
-
-                                    <div class="wrapperText">
-
-                                        <h2 class="title">
-                                            Autres
-                                        </h2>
-                                        <p>
-                                            Nous proposons des services d'assistance
-                                            dans l'utilisation de vos ordinateurs et
-                                            nous sommes bien disposés pour vous
-                                            aider à tirer le meilleur profit de
-                                            l'informatique quelque soit votre
-                                            domaine d'activité
-                                            <br>
-                                            <br>
-                                            quelque soit votre besoin ; s'il
-                                            concerne l'ordinateur, son utilisation
-                                            ou l'informatique n'hésitez pas à nous
-                                            faire recour
-                                        </p>
-
-                                    </div>
-
-                                </div>
-                                <br>
-                                <br>
-                                <div>
-                                    <div class="box_btn">
-                                        <a
-                                            href="https://wa.me/+22892671533?text=Salut MTC je vous contact au sujet de l'Initiation à l'informatique"
-                                            target="_blank"
-                                            style="text-decoration: none; color: #00eaff;">
-                                            Discutons-en !!!
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                    </div> --}}
-
-                    {{-- <section class="section" id="initiation">
-                        <div class="sectionTitle">
-                            <span class="titleNumber">01 . </span>
-                            <h4 class="titleText"> Réparation et entretien des ordinateurs
-                                <div class="underline">
-                                    <span></span>
-                                </div>
-                            </h4>
-                        </div>
-
-                        <div>
-
-                            <p>
-                                Nous vous offrons un service fiable et abordable pour garantir le bon fonctionnement de
-                                vos
-                                ordinateurs
-                                bureau ou portatifs.
-                                Nous passons par des diagnostics rapides pour résoudre efficacement tout problème
-                                matériel
-                                ou
-                                logiciel.
-                                En termes d'entretien, nous assurons des mises à jour régulières, un nettoyage physique
-                                pour
-                                éviter la
-                                surchauffe, et nous mettons en place des solutions de sauvegarde des données.
-                            </p>
-                        </div>
-
-                        <div class="service-links-group">
-                            vous pouvez dès lors
-                            <a href="{{ route('devis') }}">commander ce service</a>
-                            <a href="tel:+22892671533">telephoner</a>
-                            <a href="https://wa.me/+22892671533?text=Bonjour%2C%20je%20souhaite%20demander%20un%20devis%20pour%20un%20service%20informatique.">whatsapp</a>
-                            <a href="mailto:solutionneurs228@gmail.com">passer par Mail</a>
-                        </div>
-                    </section>
-
-                    <section class="section" id="assistance1">
-                        <div class="sectionTitle">
-                            <span class="titleNumber">02 . </span>
-                            <h4 class="titleText">
-                                Assistance de l'achat à l'utilisation de vos ordinateurs
-                                <div class="underline">
-                                    <span></span>
-                                </div>
-                            </h4>
-                        </div>
-
-                        <div>
-                            <ul>
-                                <li>Vous voulez mettre en place votre parc informatique ?</li>
-                                <li>ou juste qu'il vous faut un (des) ordinateur(s) pour votre travail ?</li>
-                            </ul>
-                            <p>
-                                nous somme bien indiqués pour voir quel(s) ordinateur(s) il vous faut (bureaux ou portatif),
-                                de
-                                quelles performences minimales, en fontion de votre travail quels sont les logiciels à y
-                                installer ...
-                            </p>
-                        </div>
-
-                        <div class="service-links-group">
-                            vous pouvez dès lors
-                            <a href="{{ route('devis') }}">commander ce service</a>
-                            <a href="tel:+22892671533">telephoner</a>
-                            <a href="https://wa.me/+22892671533?text=Bonjour%2C%20je%20souhaite%20demander%20un%20devis%20pour%20un%20service%20informatique.">whatsapp</a>
-                            <a href="mailto:solutionneurs228@gmail.com">passer par Mail</a>
-                        </div>
-                    </section>
-
-                    <section class="section" id="assistance2">
-                        <div class="sectionTitle">
-                            <span class="titleNumber">03 . </span>
-                            <h4 class="titleText">
-                                Assistance dans l'organisation de votre travail côté informatique
-                                <div class="underline">
-                                    <span></span>
-                                </div>
-                            </h4>
-                        </div>
-
-                        <div>
-                            <ul>
-                                <li>vous voulez informatiser votre travail (entreprise ou particulier) ?</li>
-                                <li>ou votre est déjà informatisé mais il vous faut la meilleur façon de tirer profit de
-                                    l'informatique ?</li>
-                            </ul>
-                            <p>
-                                Nous comprenons d'abord votre travail et en suite nous nous occupons du reste.
-                            </p>
-                        </div>
-
-
-                        <div class="service-links-group">
-                            vous pouvez dès lors
-
-                            <a href="{{ route('devis') }}">commander ce service</a>
-                            <a href="tel:+22892671533">telephoner</a>
-                            <a href="https://wa.me/+22892671533?text=Bonjour%2C%20je%20souhaite%20demander%20un%20devis%20pour%20un%20service%20informatique.">whatsapp</a>
-                            <a href="mailto:solutionneurs228@gmail.com">passer par Mail</a>
-                        </div>
-
-                    </section>
-
-                    <section class="section" id="travailEnEquipe">
-                        <div class="sectionTitle">
-                            <span class="titleNumber">04 . </span>
-                            <h4 class="titleText">
-                                initiation dans le travail en équipe, à distance avec un bon système de collaboration
-                                informatique
-                                <div class="underline">
-                                    <span></span>
-                                </div>
-                            </h4>
-                        </div>
-
-                        <div>
-                            <ul>
-                                <li>votre entreprise a un nombre d'ordinateurs dont le travail est complémentaire ?</li>
-                                <li> ou vous avez des collaborateurs avec qui vous devez coopérer à distance ?</li>
-                            </ul>
-                            <p>
-                                Là encore nous comprenons d'abord votre travail et nous voyons quel système de informatique
-                                vous
-                                convient.
-                            </p>
-                        </div>
-
-
-                        <div class="service-links-group">
-                            vous pouvez dès lors
-
-                            <a href="{{ route('devis') }}">commander ce service</a>
-                            <a href="tel:+22892671533">telephoner</a>
-                            <a href="https://wa.me/+22892671533?text=Bonjour%2C%20je%20souhaite%20demander%20un%20devis%20pour%20un%20service%20informatique.">whatsapp</a>
-                            <a href="mailto:solutionneurs228@gmail.com">passer par Mail</a>
-                        </div>
-                        <div class="service-links-group">voulez vous voir <a href="">nos formations ?</a></div>
-                        <div class="slogan">Notre slogan : un bon travail en un temps record !!!</div>
-                    </section> --}}
-
-
+                    @endif
+                    <span class="niveau-badge">{{ $formation['niveau'] }}</span>
                 </div>
 
+                <!-- Contenu -->
+                <div class="formation-contenu">
+                    <h2>{{ $formation['titre'] }}</h2>
+                    
+                    <p class="formation-description">{{ $formation['description'] }}</p>
+                    
+                    <!-- Points clés -->
+                    <div class="points-cles">
+                        @foreach($formation['points'] as $point)
+                            <span class="point-tag">{{ $point }}</span>
+                        @endforeach
+                    </div>
+                    
+                    <!-- Détails -->
+                    <div class="formation-details">
+                        <div class="detail-item">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                            <span><strong>Durée :</strong> {{ $formation['duree'] }}</span>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                            <span><strong>Formateur :</strong> {{ $formation['formateur'] }}</span>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor">
+                                <path d="M9 11l3 3L22 4"/>
+                                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+                            </svg>
+                            <span><strong>Prérequis :</strong> {{ $formation['prerequis'] }}</span>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor">
+                                <circle cx="12" cy="8" r="7"/>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                            </svg>
+                            <span><strong>Certification :</strong> {{ $formation['certification'] }}</span>
+                        </div>
+                    </div>
 
+                    <!-- Prix -->
+                    <div class="formation-prix">
+                        <span class="prix">{{ number_format($formation['prix'], 0, ',', ' ') }} FCFA</span>
+                        @if($formation['ancien_prix'])
+                            <span class="ancien-prix">{{ number_format($formation['ancien_prix'], 0, ',', ' ') }} FCFA</span>
+                            <span class="reduction">-{{ round((1 - $formation['prix']/$formation['ancien_prix']) * 100) }}%</span>
+                        @endif
+                    </div>
 
-
+                    <!-- Actions WhatsApp -->
+                    <div class="formation-actions">
+                        <a href="https://wa.me/22892671533?text=Bonjour, je veux m'inscrire à la formation : {{ urlencode($formation['titre']) }} ({{ number_format($formation['prix'], 0, ',', ' ') }} FCFA)" 
+                           target="_blank" 
+                           class="btn-inscrire">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                            S'inscrire
+                        </a>
+                        
+                        <a href="https://wa.me/22892671533?text=Bonjour, j'ai des questions sur la formation : {{ urlencode($formation['titre']) }}" 
+                           target="_blank" 
+                           class="btn-renseigner">
+                            Renseignements
+                        </a>
+                    </div>
+                </div>
+            </article>
+        @empty
+            <div class="aucune-formation">
+                <svg viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M8 12h8M12 8v8"/>
+                </svg>
+                <p>Aucune formation disponible pour le moment.</p>
             </div>
+        @endforelse
+    </div>
 
-        </div>
-
-    @endsection
-
-
+    <!-- Contact fixe -->
+    <div class="contact-fixe">
+        <a href="https://wa.me/22892671533" target="_blank">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            <span>+228 92 67 15 33</span>
+        </a>
+    </div>
 </div>
+@endsection
+
+@push('scripts')
+    {{-- <script src="{{ asset('js/formation.js') }}"></script> --}}
+    @vite(['resources/js/formation.js'])
+@endpush

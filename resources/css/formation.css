@@ -1,0 +1,399 @@
+/* Catalogue Formations - Statique */
+
+:root {
+    --primaire: #25d366;
+    --primaire-hover: #128c7e;
+    --secondaire: #4f46e5;
+    --fond: #f8fafc;
+    --carte: #ffffff;
+    --texte: #1e293b;
+    --texte-leger: #64748b;
+    --bordure: #e2e8f0;
+    --ombre: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --ombre-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --rayon: 16px;
+}
+
+.catalogue-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--fond);
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Header */
+.catalogue-header {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, var(--secondaire) 0%, #7c3aed 100%);
+    border-radius: var(--rayon);
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.catalogue-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.catalogue-header p {
+    font-size: 1.125rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+.btn-whatsapp-main {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: var(--primaire);
+    color: white;
+    text-decoration: none;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    transition: all 0.3s;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp-main:hover {
+    background: var(--primaire-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+}
+
+/* Filtres */
+.filtres-container {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+}
+
+.filtre-btn {
+    padding: 0.625rem 1.5rem;
+    border: 2px solid var(--bordure);
+    background: white;
+    border-radius: 9999px;
+    font-weight: 500;
+    color: var(--texte-leger);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.9375rem;
+}
+
+.filtre-btn:hover {
+    border-color: var(--secondaire);
+    color: var(--secondaire);
+}
+
+.filtre-btn.active {
+    background: var(--secondaire);
+    border-color: var(--secondaire);
+    color: white;
+}
+
+/* Grille */
+.formations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+/* Carte */
+.formation-card {
+    background: var(--carte);
+    border-radius: var(--rayon);
+    overflow: hidden;
+    box-shadow: var(--ombre);
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.formation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--ombre-hover);
+}
+
+/* Image */
+.formation-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.formation-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.formation-card:hover .formation-image img {
+    transform: scale(1.1);
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondaire);
+}
+
+.image-placeholder svg {
+    width: 80px;
+    height: 80px;
+    opacity: 0.5;
+}
+
+.niveau-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 9999px;
+    backdrop-filter: blur(4px);
+}
+
+/* Contenu */
+.formation-contenu {
+    padding: 1.75rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.formation-contenu h2 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--texte);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.formation-description {
+    color: var(--texte-leger);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* Points clés */
+.points-cles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.point-tag {
+    padding: 0.375rem 0.875rem;
+    background: #e0e7ff;
+    color: var(--secondaire);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    border-radius: 9999px;
+}
+
+/* Détails */
+.formation-details {
+    background: var(--fond);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.875rem;
+    font-size: 0.9375rem;
+    color: var(--texte);
+}
+
+.detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.detail-item svg {
+    color: var(--secondaire);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Prix */
+.formation-prix {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--fond);
+    flex-wrap: wrap;
+}
+
+.prix {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--secondaire);
+}
+
+.ancien-prix {
+    font-size: 1.125rem;
+    color: var(--texte-leger);
+    text-decoration: line-through;
+}
+
+.reduction {
+    padding: 0.25rem 0.75rem;
+    background: #fee2e2;
+    color: #dc2626;
+    font-size: 0.875rem;
+    font-weight: 700;
+    border-radius: 9999px;
+}
+
+/* Actions */
+.formation-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: auto;
+}
+
+.btn-inscrire,
+.btn-renseigner {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.875rem;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.2s;
+    font-size: 0.9375rem;
+}
+
+.btn-inscrire {
+    background: var(--primaire);
+    color: white;
+}
+
+.btn-inscrire:hover {
+    background: var(--primaire-hover);
+    transform: translateY(-2px);
+}
+
+.btn-renseigner {
+    background: var(--fond);
+    color: var(--texte);
+    border: 2px solid var(--bordure);
+}
+
+.btn-renseigner:hover {
+    border-color: var(--secondaire);
+    color: var(--secondaire);
+    background: white;
+}
+
+/* Aucune formation */
+.aucune-formation {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem;
+    color: var(--texte-leger);
+}
+
+.aucune-formation svg {
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+/* Contact fixe */
+.contact-fixe {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 100;
+}
+
+.contact-fixe a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    background: var(--primaire);
+    color: white;
+    text-decoration: none;
+    border-radius: 9999px;
+    font-weight: 600;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s;
+}
+
+.contact-fixe a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(37, 211, 102, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .catalogue-container {
+        padding: 1rem;
+    }
+    
+    .catalogue-header {
+        padding: 2rem 1rem;
+    }
+    
+    .catalogue-header h1 {
+        font-size: 1.875rem;
+    }
+    
+    .btn-whatsapp-main {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .formations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .formation-actions {
+        flex-direction: column;
+    }
+    
+    .contact-fixe {
+        bottom: 1rem;
+        right: 1rem;
+    }
+    
+    .contact-fixe span {
+        display: none;
+    }
+    
+    .contact-fixe a {
+        padding: 1rem;
+        border-radius: 50%;
+    }
+}
