@@ -1,7 +1,7 @@
 FROM php:8.2-apache
 
 # ==========================================
-# 1. INSTALLER DÉPENDANCES SYSTÈME
+# 1. DÉPENDANCES SYSTÈME
 # ==========================================
 RUN apt-get update && apt-get install -y \
     git \
@@ -12,39 +12,47 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
     nodejs \
     npm \
-    && rm -rf /var/lib/apt/lists/*  # Nettoyage !
+    && rm -rf /var/lib/apt/lists/*
 
 # ==========================================
-# 2. INSTALLER EXTENSIONS PHP (CRUCIAL !)
+# 2. EXTENSIONS PHP (CRUCIAL)
 # ==========================================
-RUN docker-php-ext-install \
-    pdo \
-    pdo_mysql \
-    zip \
-    mbstring
+RUN docker-php-ext-install pdo pdo_mysql zip mbstring
 
 # ==========================================
-# 3. INSTALLER COMPOSER
+# 3. COMPOSER
 # ==========================================
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# ==========================================
-# 4. CONFIGURER WORKDIR
-# ==========================================
 WORKDIR /var/www/html
 
 # ==========================================
-# 5. COPIER LE CODE (sans vendor/)
+# 4. COPIER UNIQUEMENT package.json ET composer.json D'ABORD
+# ==========================================
+COPY package*.json ./
+COPY composer*.json ./
+
+# ==========================================
+# 5. INSTALLER DÉPENDANCES (avant le code source)
+# ==========================================
+RUN npm ci                    # npm ci plus rapide/stable que npm install
+RUN composer install --no-dev --optimize-autoloader --no-interaction
+
+# ==========================================
+# 6. COPIER LE CODE SOURCE (après dépendances)
 # ==========================================
 COPY . .
 
 # ==========================================
-# 6. INSTALLER DEPENDANCES JS (au build)
+# 7. BUILD VITE (maintenant que tout est là)
 # ==========================================
-RUN npm install && npm run build
+RUN npm run build
+
+# Vérification que le build a fonctionné
+RUN ls -la public/build/ && cat public/build/manifest.json | head -20
 
 # ==========================================
-# 7. CONFIGURER APACHE POUR LARAVEL
+# 8. CONFIG APACHE
 # ==========================================
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
 
@@ -55,14 +63,14 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' \
     && a2enmod rewrite
 
 # ==========================================
-# 8. PERMISSIONS LARAVEL
+# 9. PERMISSIONS
 # ==========================================
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 775 /var/www/html/storage \
     && chmod -R 775 /var/www/html/bootstrap/cache
 
 # ==========================================
-# 9. ENTRYPOINT (CRUCIAL !)
+# 10. ENTRYPOINT
 # ==========================================
 COPY .docker/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh

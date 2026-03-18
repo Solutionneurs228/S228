@@ -68,9 +68,7 @@ Route::controller(DevisController::class)->group(function () {
 | Authenticated Routes
 |--------------------------------------------------------------------------
 */
-Route::get('/db-test', function () {
-    return 'OK';
-});
+
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('note', NoteController::class);
 });

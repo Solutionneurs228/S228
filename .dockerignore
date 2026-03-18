@@ -1,6 +1,7 @@
 
 
 
+
 node_modules
 /vendor
 .env
@@ -16,3 +17,11 @@ yarn-error.log
 .idea
 .vscode
 
+/public/build
+.env
+.env.backup
+/storage/logs
+/storage/framework/cache
+/storage/framework/sessions
+.git
+.gitignore
