@@ -17,7 +17,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Filesystem Disks
+    | Filesystem Disks 
     |--------------------------------------------------------------------------
     |
     | Below you may configure as many filesystem disks as necessary, and you
