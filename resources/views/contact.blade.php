@@ -62,7 +62,7 @@
 
                                 <div class="input-group">
                                     <label for="phone" class="required">Téléphone</label>
-                                    <input type="tel" id="contact-phone" name="phone" required
+                                    <input type="tel" id="phone" name="phone" required
                                         placeholder="+228 XX XX XX XX">
                                 </div>
 
@@ -83,7 +83,7 @@
 
                                 <div class="input-group">
                                     <label for="message" class="required">Message</label>
-                                    <textarea id="contact-message" name="message" placeholder="Décrivez votre demande en détail..."></textarea>
+                                    <textarea id="message" name="message" placeholder="Décrivez votre demande en détail..."></textarea>
                                 </div>
 
                                 <button type="submit" class="submit-btn" id="contact-submit">

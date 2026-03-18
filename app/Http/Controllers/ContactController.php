@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 
 class ContactController extends Controller
 {
@@ -13,18 +15,57 @@ class ContactController extends Controller
     }
 
     public function store(Request $request)
-    {
-        $validated = $request->validate([
-            'name' => 'required|string|max:100',
-            'phone' => 'nullable|string|max:20',
-            'email' => 'required|email|max:100',
-            'message' => 'required|string|max:1000',
+{
+    try {
+        // Validation
+        $data = $request->validate([
+            'name'    => 'required|string|max:100',
+            'phone'   => 'required|string|max:20',
+            'email'   => 'nullable|email|max:100',
+            'message' => 'nullable|string|max:1000',
         ]);
 
-        Contact::create($validated);
+        // Enregistrement BDD
+        $contact = Contact::create($data);
 
-        return redirect()
-            ->route('contact')
-            ->with('success', 'Merci, votre message a bien été envoyé.');
+        // Envoi Brevo
+        $response = Http::withHeaders([
+            'api-key' => config('services.brevo.key'),
+            'Accept' => 'application/json',
+            'Content-Type' => 'application/json',
+        ])->post('https://api.brevo.com/v3/smtp/email', [
+            'sender' => [
+                'name' => 'S228',
+                'email' => config('mail.from.address'),
+            ],
+            'to' => [
+                ['email' => 'solutionneurs228@gmail.com'],
+            ],
+            'subject' => 'Nouveau message de contact',
+            'htmlContent' => view('emails.contact', compact('contact'))->render(),
+        ]);
+
+        // Log réponse Brevo (utile en prod)
+        Log::info('Brevo email envoyé', [
+            'status' => $response->status(),
+            'body' => $response->body(),
+        ]);
+
+        return redirect()->back()->with(
+            'success',
+            'Votre message a été envoyé avec succès.'
+        );
+
+    } catch (\Throwable $e) {
+
+        Log::error('Erreur envoi message', [
+            'message' => $e->getMessage(),
+        ]);
+
+        return redirect()->back()->with(
+            'error',
+            'Une erreur est survenue. Veuillez réessayer plus tard.'
+        );
     }
+}
 }

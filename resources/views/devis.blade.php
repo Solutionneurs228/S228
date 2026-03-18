@@ -67,14 +67,14 @@
 
                                 <div class="input-group">
                                     <label for="service" class="">Service</label>
-                                    <select id="contact-subject" name="subject">
+                                    <select id="service" name="service">
                                         <option value="">sélectionnez un service</option>
-                                        <option value="info">Maintenance Informatique</option>
-                                        <option value="support">Assistance Technique</option>
-                                        <option value="support">phographie - vidéographie</option>
-                                        <option value="support">Développement de sites web</option>
-                                        <option value="support">Graphique design</option>
-                                        <option value="support">Formation</option>
+                                        <option value="Maintenance Informatique">Maintenance Informatique</option>
+                                        <option value="Assistance Technique">Assistance Technique</option>
+                                        <option value="Photographie - Vidéographie">Photographie - Vidéographie</option>
+                                        <option value="Développement de sites web">Développement de sites web</option>
+                                        <option value="Graphique design">Graphique design</option>
+                                        <option value="Formation">Formation</option>
                                         <option value="partenariat">Partenariat</option>
                                         <option value="autre">Autre</option>
                                     </select>
