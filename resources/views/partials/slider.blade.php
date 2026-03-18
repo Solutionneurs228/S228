@@ -45,7 +45,7 @@
                         <a href="{{ route('portfolio') }}" class="bg-white text-brand-900 px-8 py-4 rounded-full font-bold hover:bg-brand-50 transition-all transform hover:scale-105 shadow-xl">
                             Voir nos Réalisations
                         </a>
-                        <a href="{{ route('contact') }}" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-all">
+                        <a href="{{ route('devis') }}" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-all">
                             Demander un Devis
                         </a>
                     </div>

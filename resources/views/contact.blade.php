@@ -1,10 +1,9 @@
 @extends('layouts.base')
 @section('title', 'S228 contact')
 
-@section('Demande de devis')
+@section('contactez-nous')
 @section('meta_description',
-    'Réparation ordinateur, photographie, création de cartes de visite, affiches publicitaires.
-    Demandez votre devis gratuit dès maintenant.')
+    'Infos de contact de Solutionneurs228 : téléphone, email, adresse. Contactez-nous pour vos besoins en IT, développement web, audiovisuel et plus encore au Togo.')
 
 
 
@@ -21,9 +20,9 @@
             <!-- Toggle Buttons -->
             <div class="form-toggle">
                 <a href="https://wa.me/22892671533" class="toggle-btn active" target="_blank">
-                     <i class="fab fa-whatsapp"></i>
-                     Message WhatsApp 
-                    </a>
+                    <i class="fab fa-whatsapp"></i>
+                    Message WhatsApp
+                </a>
                 <a href="tel:+22892671533" class="toggle-btn" target="_blank">
                     <i class="fas fa-phone"></i>
                     Appel Téléphonique
@@ -42,38 +41,49 @@
                                 ✅ Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.
                             </div>
 
-                            <form onsubmit="handleSubmit(event, 'contact')">
+                            <form action="{{ route('contact.store') }}" method="POST">
+                                @csrf
                                 <div class="input-group">
-                                    <label for="contact-name" class="required">Nom complet</label>
-                                    <input type="text" id="contact-name" name="name" required
+                                    <label for="name" class="required">Nom complet</label>
+                                    <input type="text" id="name" name="name" required
                                         placeholder="Votre nom et prénom">
                                 </div>
 
+                                {{-- <div class="input-group">
+                                    <label for="adress" class="">Adresse</label>
+                                    <input type="text" id="adress" name="adress"
+                                        placeholder="Votre quartier et ville">
+                                </div> --}}
+
                                 <div class="input-group">
-                                    <label for="contact-email" class="required">Email</label>
-                                    <input type="email" id="contact-email" name="email" required
-                                        placeholder="votre@email.com">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="votre@email.com">
                                 </div>
 
                                 <div class="input-group">
-                                    <label for="contact-phone">Téléphone</label>
-                                    <input type="tel" id="contact-phone" name="phone" placeholder="+228 XX XX XX XX">
+                                    <label for="phone" class="required">Téléphone</label>
+                                    <input type="tel" id="contact-phone" name="phone" required
+                                        placeholder="+228 XX XX XX XX">
                                 </div>
 
-                                <div class="input-group">
-                                    <label for="contact-subject" class="required">Sujet</label>
-                                    <select id="contact-subject" name="subject" required>
-                                        <option value="">Sélectionnez un sujet</option>
-                                        <option value="info">Demande d'information</option>
-                                        <option value="support">Support technique</option>
+                                {{-- <div class="input-group">
+                                    <label for="service" class="">Service</label>
+                                    <select id="contact-subject" name="subject">
+                                        <option value="">sélectionnez un service</option>
+                                        <option value="info">Maintenance Informatique</option>
+                                        <option value="support">Assistance Technique</option>
+                                        <option value="support">phographie - vidéographie</option>
+                                        <option value="support">Développement de sites web</option>
+                                        <option value="support">Graphique design</option>
+                                        <option value="support">Formation</option>
                                         <option value="partenariat">Partenariat</option>
                                         <option value="autre">Autre</option>
                                     </select>
-                                </div>
+                                </div> --}}
 
                                 <div class="input-group">
-                                    <label for="contact-message" class="required">Message</label>
-                                    <textarea id="contact-message" name="message" required placeholder="Décrivez votre demande en détail..."></textarea>
+                                    <label for="message" class="required">Message</label>
+                                    <textarea id="contact-message" name="message" placeholder="Décrivez votre demande en détail..."></textarea>
                                 </div>
 
                                 <button type="submit" class="submit-btn" id="contact-submit">
@@ -113,7 +123,8 @@
                                 <div class="contact-details">
                                     <h4>Email</h4>
                                     <p><a href="mailto:solutionneurs228@gmail.com">solutionneurs228@gmail.com</a><br>
-                                        <span style="font-size: 0.8rem; color: var(--text-muted);">Réponse en moins de 24h</span>
+                                        <span style="font-size: 0.8rem; color: var(--text-muted);">Réponse en moins de
+                                            24h</span>
                                     </p>
                                 </div>
                             </div>
@@ -131,7 +142,8 @@
                                 <div class="contact-details">
                                     <h4>Adresse</h4>
                                     <p>Kara, Togo<br>
-                                        <span style="font-size: 0.8rem; color: var(--text-muted);">Quartier Tchannadè</span>
+                                        <span style="font-size: 0.8rem; color: var(--text-muted);">Quartier
+                                            Tchannadè</span>
                                     </p>
                                 </div>
                             </div>
@@ -160,7 +172,7 @@
                                     <a href="#" class="social-icon" title="Instagram">
                                         <svg fill="currentColor" viewBox="0 0 24 24">
                                             <path
-                                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                                                d="M21 8.5a7.49 7.49 0 0 1-4.5-1.5v7.25a5.75 5.75 0 1 1-5-5.7v2.6a3.2 3.2 0 1 0 2.3 3.1V2h2.6a4.9 4.9 0 0 0 4.6 4.6v1.9z" />
                                         </svg>
                                     </a>
                                 </div>
@@ -170,7 +182,7 @@
                 </div>
 
                 <!-- Formulaire de Devis Détaillé -->
-                <div id="devis-form" class="form-wrapper">
+                {{-- <div id="devis-form" class="form-wrapper">
                     <div class="form-grid">
                         <div class="form-card">
                             <h3 class="form-title">Demande de devis personnalisé</h3>
@@ -356,7 +368,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     @endsection

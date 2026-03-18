@@ -1,4 +1,4 @@
-@extends('base')
+@extends('layouts.base')
 @section('title', 'S228 Devis')
 
 @section('Demande de devis')
@@ -15,6 +15,12 @@
             <div class="elt-title">
                 <h1 class="big-title">Demande de devis</h1>
             </div>
+
+            @if (session('success'))
+                <p class="success-message">
+                    {{ session('success') }}
+                </p>
+            @endif
 
             <form class="" action="{{ route('devis.store') }}" method="POST">
                 @csrf
@@ -82,37 +88,8 @@
 
                 </div>
             </form>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
 
-            <h1>Demande de devis</h1>
 
-<form method="POST" action="/demande-devis">
-    @csrf
-
-      <p>
-        <input type="text" name="nom" placeholder="Votre nom">
-    </p>
-
-    <p>
-        <input type="email" name="email" placeholder="Votre email">
-    </p>
-
-    <p>
-        <textarea name="message" placeholder="Votre message"></textarea>
-    </p>
-
-    <button type="submit">Envoyer</button>
-</form>
-
-            @if (session('success'))
-                <p>{{ session('success') }}</p>
-            @endif
         </div>
 
     </div>

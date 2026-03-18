@@ -96,7 +96,7 @@
 
             <!-- CTA Desktop -->
             <div class="hidden md:block">
-                <a href="{{ route('contact') }}" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-full font-semibold transition-all hover:scale-105 shadow-lg flex items-center gap-2">
+                <a href="{{ route('devis') }}" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-full font-semibold transition-all hover:scale-105 shadow-lg flex items-center gap-2">
                     <i class="fas fa-paper-plane text-sm"></i>
                     Devis
                 </a>
