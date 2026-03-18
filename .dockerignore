@@ -25,3 +25,7 @@ yarn-error.log
 /storage/framework/sessions
 .git
 .gitignore
+
+.docker/
+Dockerfile
+.dockerignore
