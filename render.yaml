@@ -3,7 +3,7 @@ services:
     name: mon-projet-laravel
     env: docker
     plan: free
-    branch: develop
+    branch: old-version
     autoDeploy: true
     envVars:
       - key: APP_ENV
