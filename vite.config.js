@@ -6,7 +6,15 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/css/style.css',
-                'resources/js/app.js'
+                'resources/css/assistance.css',
+                'resources/css/formation.css',
+                'resources/css/gallery.css',
+                'resources/css/portfolio.css',
+                'resources/js/app.js',
+                'resources/js/assistance.js',
+                'resources/js/formation.js',
+                'resources/js/gallery.js',
+                'resources/js/portfolio.js',
             ],
             refresh: true,
         }),

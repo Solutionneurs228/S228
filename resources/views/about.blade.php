@@ -10,21 +10,21 @@
     <div class="absolute inset-0 opacity-10">
         <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.2\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
     </div>
-    
+
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-brand-200 text-sm font-medium mb-6 border border-white/20">
             <i class="fas fa-star"></i>
             <span>Votre Partenaire de Confiance</span>
         </div>
-        
+
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
             À Propos de <span class="text-brand-300">Solutionneurs228</span>
         </h1>
-        
+
         <p class="text-xl text-brand-100 mb-8 max-w-3xl mx-auto">
             Depuis 2020, nous accompagnons entreprises et particuliers au Togo dans leur transformation digitale. IT, Web, Design & Média : une équipe, quatre expertises.
         </p>
-        
+
         <!-- Stats -->
         <div class="flex flex-wrap justify-center gap-8 md:gap-16 text-white">
             <div class="text-center">
@@ -45,7 +45,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Bottom wave -->
     <div class="absolute bottom-0 left-0 right-0">
         <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,11 +61,11 @@
 <section class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
-            
+
             <!-- Timeline -->
             <div class="relative">
                 <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-brand-200"></div>
-                
+
                 <div class="space-y-8">
                     <div class="relative flex items-start gap-6">
                         <div class="relative z-10 w-16 h-16 bg-brand-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg flex-shrink-0">
@@ -78,7 +78,7 @@
                             </p>
                         </div>
                     </div>
-                    
+
                     <div class="relative flex items-start gap-6">
                         <div class="relative z-10 w-16 h-16 bg-brand-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg flex-shrink-0">
                             2021
@@ -90,7 +90,7 @@
                             </p>
                         </div>
                     </div>
-                    
+
                     <div class="relative flex items-start gap-6">
                         <div class="relative z-10 w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg flex-shrink-0">
                             2022
@@ -102,7 +102,7 @@
                             </p>
                         </div>
                     </div>
-                    
+
                     <div class="relative flex items-start gap-6">
                         <div class="relative z-10 w-16 h-16 bg-pink-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg flex-shrink-0">
                             2024
@@ -123,15 +123,15 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">
                     D'un Rêve à une <span class="text-brand-600">Réalité</span>
                 </h2>
-                
+
                 <p class="text-gray-600 text-lg mb-6 leading-relaxed">
                     Solutionneurs228 est né d'une vision simple : rendre accessible aux Togolais des services technologiques professionnels, autrefois réservés aux grandes entreprises.
                 </p>
-                
+
                 <p class="text-gray-600 mb-6 leading-relaxed">
                     En 2020, notre fondateur ouvrait un petit atelier avec une caméra et un kit de réparation informatique. Aujourd'hui, nous sommes une équipe de 6 passionnés, experts en maintenance IT, développement web, design graphique et production audiovisuelle.
                 </p>
-                
+
                 <p class="text-gray-600 mb-8 leading-relaxed">
                     De la réparation d'ordinateurs à la création d'applications mobiles, en passant par le shooting photo de mariage ou la conception de logo : nous avons évolué tout en gardant notre promesse initiale — <strong>un bon travail en un temps record</strong>.
                 </p>
@@ -154,7 +154,7 @@
 <!-- ==================== NOS MISSIONS ==================== -->
 <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div class="text-center max-w-3xl mx-auto mb-16">
             <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Notre Raison d'Être</span>
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">
@@ -166,7 +166,7 @@
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
-            
+
             <!-- Mission 1 -->
             <div class="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all border border-gray-100">
                 <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 text-2xl mb-6">
@@ -220,9 +220,9 @@
     <div class="absolute inset-0 opacity-10">
         <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.2\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
     </div>
-    
+
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div class="text-center max-w-3xl mx-auto mb-16">
             <span class="text-brand-300 font-semibold tracking-wider uppercase text-sm">Ce qui nous Guide</span>
             <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">
@@ -234,7 +234,7 @@
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-            
+
             <!-- Valeur 1 -->
             <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
                 <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-3xl mx-auto mb-6">
@@ -281,7 +281,7 @@
 <!-- ==================== NOS EXPERTISES ==================== -->
 <section class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div class="text-center max-w-3xl mx-auto mb-16">
             <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Ce que nous Faisons</span>
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">
@@ -293,7 +293,7 @@
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
+
             <!-- IT -->
             <a href="{{ route('services.maintenance') }}" class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all border border-gray-100 hover:border-brand-200">
                 <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-2xl mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
@@ -315,7 +315,7 @@
             </a>
 
             <!-- Design -->
-            <a href="{{ route('services.design') }}" class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all border border-gray-100 hover:border-brand-200">
+            <a href="{{ route('services.infographie') }}" class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all border border-gray-100 hover:border-brand-200">
                 <div class="w-16 h-16 bg-pink-100 rounded-2xl flex items-center justify-center text-pink-600 text-2xl mb-4 group-hover:bg-pink-600 group-hover:text-white transition-colors">
                     <i class="fas fa-palette"></i>
                 </div>
@@ -325,7 +325,7 @@
             </a>
 
             <!-- Photo/Video -->
-            <a href="{{ route('services.photo-video') }}" class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all border border-gray-100 hover:border-brand-200">
+            <a href="{{ route('services.photographie') }}" class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all border border-gray-100 hover:border-brand-200">
                 <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-600 text-2xl mb-4 group-hover:bg-orange-600 group-hover:text-white transition-colors">
                     <i class="fas fa-camera"></i>
                 </div>
@@ -341,7 +341,7 @@
 <!-- ==================== ÉQUIPE ==================== -->
 <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div class="text-center max-w-3xl mx-auto mb-16">
             <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Qui sommes-nous</span>
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">
@@ -353,7 +353,7 @@
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
+
             <!-- Fondateur -->
             <div class="bg-gray-50 rounded-2xl p-6 text-center border border-gray-100">
                 <div class="w-24 h-24 bg-brand-200 rounded-full mx-auto mb-4 flex items-center justify-center text-brand-700 text-3xl font-bold">
@@ -421,7 +421,7 @@
 <!-- ==================== TÉMOIGNAGES ==================== -->
 <section class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div class="text-center max-w-3xl mx-auto mb-16">
             <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Ils nous Font Confiance</span>
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">
@@ -430,7 +430,7 @@
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-            
+
             <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 relative">
                 <div class="absolute -top-4 left-8 w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center text-white">
                     <i class="fas fa-quote-left text-sm"></i>
@@ -501,7 +501,7 @@
         <p class="text-brand-100 text-lg mb-8 max-w-2xl mx-auto">
             Que vous ayez un projet concret ou juste une idée, discutons-en. Le premier café est offert !
         </p>
-        
+
         <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a href="https://wa.me/22892671533" class="inline-flex items-center justify-center gap-2 bg-white text-brand-600 px-8 py-4 rounded-full font-bold hover:bg-brand-50 transition-all transform hover:scale-105 shadow-xl" target="_blank">
                 <i class="fab fa-whatsapp text-xl"></i>
@@ -512,7 +512,7 @@
                 +228 92 67 15 33
             </a>
         </div>
-        
+
         <p class="text-sm text-brand-200">
             <i class="fas fa-map-marker-alt mr-1"></i> Lomé, Togo | <i class="fas fa-envelope mr-1"></i> contact@solutionneurs228.tg
         </p>
