@@ -31,4 +31,19 @@ class HomeController extends Controller
     {
         return view('portfolio');
     }
+   
+    public function blog()
+    {
+        return view('blog');
+    }
+   
+    public function temoignages()
+    {
+        return view('temoignages');
+    }
+   
+    public function admin()
+    {
+        return view('admin');
+    }
 }

@@ -55,10 +55,11 @@
                         class="w-16 h-16 bg-brand-100 rounded-2xl flex items-center justify-center text-brand-600 text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300">
                         <i class="fas fa-headset"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Support à Distance</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Assistance Informatique</h3>
                     <p class="text-gray-600 mb-6 leading-relaxed">
-                        Assistance technique rapide et sécurisée via connexion à distance. Résolution de problèmes
-                        logiciels, configuration et dépannage urgent 24/7.
+                        Assistance dans l'organisation de votre travail côté informatique,
+                        Initiation dans le travail en équipe, à distance avec un bon système de collaboration informatique
+                        ...
                     </p>
                     <a href="{{ route('services.assistance') }}"
                         class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group/link">
@@ -132,7 +133,7 @@
                         class="w-16 h-16 bg-brand-100 rounded-2xl flex items-center justify-center text-brand-600 text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300">
                         <i class="fas fa-video"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Photo & Vidéo</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Photographie & Vidéographie</h3>
                     <p class="text-gray-600 mb-6 leading-relaxed">
                         Production audiovisuelle professionnelle : shooting corporate, couverture événementielle, montage
                         vidéo et création de contenu pour vos réseaux sociaux.
@@ -189,6 +190,7 @@
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">
                         Votre Partenaire Technologique de Confiance au <span class="gradient-text">Togo</span>
                     </h2>
+
 
                     <div class="space-y-4 text-gray-600 text-lg leading-relaxed">
                         <p>
@@ -273,107 +275,82 @@
 
 
     <!-- ==================== TESTIMONIALS SECTION ==================== -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Témoignages</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
-                    Ce que Disent nos <span class="gradient-text">Clients</span>
-                </h2>
+<!-- Section Témoignages avec bouton "Voir plus" -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Témoignages</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+                Ce que Disent nos <span class="gradient-text">Clients</span>
+            </h2>
+        </div>
+
+        <!-- Grille des témoignages (3 visibles) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12" id="testimonials-grid">
+            <!-- Testimonial 1 -->
+            <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 relative hover:shadow-lg transition-shadow duration-300">
+                <div class="absolute -top-4 left-8 w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center text-white">
+                    <i class="fas fa-quote-left text-sm"></i>
+                </div>
+                <div class="flex text-brand-500 mb-4">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-600 mb-6 italic">"Sinon le travail a été propre."<br/>(contexte : livraison d'une vidéo d'inauguration et caravane en moins de 24h)</p>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold">GA</div>
+                    <div>
+                        <h4 class="font-bold text-gray-900">Gafarou A.</h4>
+                        <p class="text-sm text-gray-500">Chargé de Mission / Poste Togo</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 relative">
-                    <div
-                        class="absolute -top-4 left-8 w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center text-white">
-                        <i class="fas fa-quote-left text-sm"></i>
-                    </div>
-                    <div class="flex text-brand-500 mb-4">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 mb-6 italic">
-                        "Sinon le travail a été propre."
-                        <br />
-                        (contexte : livraison d'une vidéo d'inauguration et caravane en moins de 24h)
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div
-                            class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold">
-                            GA
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-gray-900">Gafarou A.</h4>
-                            <p class="text-sm text-gray-500">Chargé de Mission / Poste Togo</p>
-                        </div>
+            <!-- Testimonial 2 -->
+            <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 relative hover:shadow-lg transition-shadow duration-300">
+                <div class="absolute -top-4 left-8 w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center text-white">
+                    <i class="fas fa-quote-left text-sm"></i>
+                </div>
+                <div class="flex text-brand-500 mb-4">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-600 mb-6 italic">"Depuis votre assistance, nous avons constaté une nette amélioration de la performance de nos agents et même les clients en témoignent."</p>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold">EB</div>
+                    <div>
+                        <h4 class="font-bold text-gray-900">Esther B.</h4>
+                        <p class="text-sm text-gray-500">DG microfinance / Kara</p>
                     </div>
                 </div>
+            </div>
 
-                <!-- Testimonial 2 -->
-                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 relative">
-                    <div
-                        class="absolute -top-4 left-8 w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center text-white">
-                        <i class="fas fa-quote-left text-sm"></i>
-                    </div>
-                    <div class="flex text-brand-500 mb-4">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 mb-6 italic">
-                        "Depuis votre assistance, nous avons constaté une nette amélioration de la performance de nos agents
-                        et même les clients en témoignent."
-
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div
-                            class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold">
-                            EB
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-gray-900">Esther B.</h4>
-                            <p class="text-sm text-gray-500">DG microfinance / Kara</p>
-                        </div>
-                    </div>
+            <!-- Testimonial 3 -->
+            <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 relative hover:shadow-lg transition-shadow duration-300">
+                <div class="absolute -top-4 left-8 w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center text-white">
+                    <i class="fas fa-quote-left text-sm"></i>
                 </div>
-
-                <!-- Testimonial 3 -->
-                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 relative">
-                    <div
-                        class="absolute -top-4 left-8 w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center text-white">
-                        <i class="fas fa-quote-left text-sm"></i>
-                    </div>
-                    <div class="flex text-brand-500 mb-4">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <p class="text-gray-600 mb-6 italic">
-                        "Les photos et vidéos de notre mariage étaient incroyables ! Nous n'avons absolument pas eu tort de
-                        compter sur vous. Félicitations à toute l'équipe ! "
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div
-                            class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold">
-                            SK
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-gray-900">Serges K.</h4>
-                            <p class="text-sm text-gray-500">Journaliste / Dapaond</p>
-                        </div>
+                <div class="flex text-brand-500 mb-4">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text-gray-600 mb-6 italic">"Les photos et vidéos de notre mariage étaient incroyables ! Nous n'avons absolument pas eu tort de compter sur vous."</p>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold">SK</div>
+                    <div>
+                        <h4 class="font-bold text-gray-900">Serges K.</h4>
+                        <p class="text-sm text-gray-500">Journaliste / Dapaong</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- Bouton Voir Plus -->
+        <div class="text-center">
+            <a href="{{ route('temoignages') }}" class="inline-flex items-center gap-2 px-8 py-4 bg-brand-600 text-white rounded-full font-semibold hover:bg-brand-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                Voir tous les témoignages
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
 
 
     <!-- ==================== ACTUALITÉS SECTION ==================== -->
@@ -386,7 +363,7 @@
                         Dernières <span class="gradient-text">Nouvelles</span>
                     </h2>
                 </div>
-                <a href="#actualites"
+                <a href="{{ route('blog') }}"
                     class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-800 transition-colors group">
                     Voir toutes les actualités
                     <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
@@ -650,6 +627,6 @@
         </div>
     </section>
 
-    
+
 
 @endsection

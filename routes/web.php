@@ -20,6 +20,9 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/galerie', 'galerie')->name('galerie');
     Route::get('/formation', 'formation')->name('formation');
     Route::get('/portfolio', 'portfolio')->name('portfolio');
+    Route::get('/blog', 'blog')->name('blog');
+    Route::get('/temoignages', 'temoignages')->name('temoignages');
+    Route::get('/admin', 'admin')->name('admin');
 });
 
 /*

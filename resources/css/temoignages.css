@@ -1,0 +1,11 @@
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .text-brand-600 { color: #2563eb; }
+        .bg-brand-600 { background-color: #2563eb; }
+        .bg-brand-50 { background-color: #eff6ff; }
+        .text-brand-500 { color: #3b82f6; }
+        .hover\:bg-brand-700:hover { background-color: #1d4ed8; }
+        .focus\:ring-brand-500:focus { --tw-ring-color: #3b82f6; }
