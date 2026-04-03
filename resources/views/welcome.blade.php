@@ -498,95 +498,70 @@
             </div>
 
             <!-- Grille de photos -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-                <!-- Photo 1 -->
-                <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-br from-brand-600/20 to-blue-600/20 group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="absolute inset-0 flex items-center justify-center bg-gray-200">
-                        <i class="fas fa-camera text-4xl text-gray-400"></i>
-                    </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                        <span class="text-white font-semibold text-sm">Shooting Corporate</span>
-                    </div>
-                </div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+    <!-- Photo 1 - Shooting Corporate -->
+    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
+        <img src="{{ asset('images/shoot1.webp') }}" 
+             alt="Shooting Corporate" 
+             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-semibold text-sm">Shooting Corporate</span>
+        </div>
+    </div>
 
-                <!-- Photo 2 -->
-                <div
-                    class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer md:col-span-2 md:row-span-2">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="absolute inset-0 flex items-center justify-center bg-gray-200">
-                        <i class="fas fa-video text-6xl text-gray-400"></i>
-                    </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                        <div>
-                            <span class="text-white font-semibold">Production Vidéo</span>
-                            <p class="text-white/80 text-sm">Spot publicitaire Togo Émergent</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Photo 3 -->
-                <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-br from-green-600/20 to-teal-600/20 group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="absolute inset-0 flex items-center justify-center bg-gray-200">
-                        <i class="fas fa-laptop-code text-4xl text-gray-400"></i>
-                    </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                        <span class="text-white font-semibold text-sm">Développement Web</span>
-                    </div>
-                </div>
-
-                <!-- Photo 4 -->
-                <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-br from-orange-600/20 to-red-600/20 group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="absolute inset-0 flex items-center justify-center bg-gray-200">
-                        <i class="fas fa-palette text-4xl text-gray-400"></i>
-                    </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                        <span class="text-white font-semibold text-sm">Design Graphique</span>
-                    </div>
-                </div>
-
-                <!-- Photo 5 -->
-                <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-br from-yellow-600/20 to-orange-600/20 group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="absolute inset-0 flex items-center justify-center bg-gray-200">
-                        <i class="fas fa-tools text-4xl text-gray-400"></i>
-                    </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                        <span class="text-white font-semibold text-sm">Maintenance IT</span>
-                    </div>
-                </div>
-
-                <!-- Photo 6 -->
-                <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-br from-pink-600/20 to-rose-600/20 group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="absolute inset-0 flex items-center justify-center bg-gray-200">
-                        <i class="fas fa-graduation-cap text-4xl text-gray-400"></i>
-                    </div>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                        <span class="text-white font-semibold text-sm">Formation</span>
-                    </div>
-                </div>
+    <!-- Photo 2 - Production Vidéo (grande) -->
+    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer md:col-span-2 md:row-span-2">
+        <img src="{{ asset('images/eric.webp') }}" 
+             alt="Production Vidéo" 
+             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <div>
+                <span class="text-white font-semibold">Production Vidéo</span>
+                <p class="text-white/80 text-sm">Spot publicitaire Togo Émergent</p>
             </div>
+        </div>
+    </div>
+
+    <!-- Photo 3 - Développement Web -->
+    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
+        <img src="{{ asset('images/gil0.webp') }}" 
+             alt="Développement Web" 
+             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-semibold text-sm">Développement Web</span>
+        </div>
+    </div>
+
+    <!-- Photo 4 - Design Graphique -->
+    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
+        <img src="{{ asset('images/mariage1.webp') }}" 
+             alt="Design Graphique" 
+             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-semibold text-sm">Design Graphique</span>
+        </div>
+    </div>
+
+    <!-- Photo 5 - Maintenance IT -->
+    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
+        <img src="{{ asset('images/mariage2.webp') }}" 
+             alt="Maintenance IT" 
+             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-semibold text-sm">Maintenance IT</span>
+        </div>
+    </div>
+
+    <!-- Photo 6 - Formation -->
+    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
+        <img src="{{ asset('images/equipe0.webp') }}" 
+             alt="Formation" 
+             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <span class="text-white font-semibold text-sm">Formation</span>
+        </div>
+    </div>
+</div>
 
             <!-- Bouton vers galerie complète -->
             <div class="text-center">
