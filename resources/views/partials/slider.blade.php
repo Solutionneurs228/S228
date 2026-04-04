@@ -4,7 +4,32 @@
     <div id="hero-slider" class="relative w-full h-full">
         
         <!-- Slide 1 -->
-        <div class="slide active" style="background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.9)), url('../images/mir.webp') center/cover;">
+        <div class="slide active" style="background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.9)), url('../images/gil0.webp') center/cover;">
+            <div class="absolute inset-0 flex items-center justify-center px-4">
+                <div class="text-center text-white max-w-4xl mx-auto">
+                    <div class="inline-block px-4 py-1 bg-brand-500/30 rounded-full text-sm font-semibold mb-6 border border-brand-400/30 backdrop-blur-sm">
+                        <i class="fas fa-headset mr-2"></i>Solutions IT 24/7
+                    </div>
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                        SOLUTIONNEURS<span class="text-brand-600">228</span>
+                    </h1>
+                    <p class="text-lg md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto font-light">
+                        un bon travail en un temps reccord !
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="{{ route('contact') }}" class="bg-white text-brand-900 px-8 py-4 rounded-full font-bold hover:bg-brand-50 transition-all transform hover:scale-105 shadow-xl">
+                            contactez-nous
+                        </a>
+                        <a href="{{ route('devis') }}" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-all">
+                            demandez un devis
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="slide" style="background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.9)), url('../images/mir.webp') center/cover;">
             <div class="absolute inset-0 flex items-center justify-center px-4">
                 <div class="text-center text-white max-w-4xl mx-auto">
                     <div class="inline-block px-4 py-1 bg-brand-500/30 rounded-full text-sm font-semibold mb-6 border border-brand-400/30 backdrop-blur-sm">
@@ -28,7 +53,7 @@
             </div>
         </div>
 
-        <!-- Slide 2 -->
+        <!-- Slide 3 -->
         <div class="slide" style="background: linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 58, 138, 0.9)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
             <div class="absolute inset-0 flex items-center justify-center px-4">
                 <div class="text-center text-white max-w-4xl mx-auto">
@@ -53,7 +78,7 @@
             </div>
         </div>
 
-        <!-- Slide 3 -->
+        <!-- Slide 4 -->
         <div class="slide" style="background: linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 58, 138, 0.9)), url('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
             <div class="absolute inset-0 flex items-center justify-center px-4">
                 <div class="text-center text-white max-w-4xl mx-auto">
@@ -93,6 +118,7 @@
         <button class="slider-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all active" data-slide="0"></button>
         <button class="slider-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all" data-slide="1"></button>
         <button class="slider-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all" data-slide="2"></button>
+        <button class="slider-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all" data-slide="3"></button>
     </div>
 
     <!-- Scroll Down -->

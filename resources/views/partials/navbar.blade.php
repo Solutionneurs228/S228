@@ -4,9 +4,10 @@
 
             <!-- Logo -->
             <a href="/" class="flex items-center gap-2">
-                <img src="/images/logo-1.png" alt="Solutionneurs228" class="w-10 h-10 object-contain">
+                <img src="/images/logo-1.png" alt="S228" class="w-10 h-10 object-contain">
                 <span class="font-bold text-2xl text-gray-900">
-                    Solutionneurs<span class="text-brand-600">228</span>
+                    S<span class="text-brand-600">228</span>
+                    <small class="home-hint">← Accueil</small>
                 </span>
             </a>
 

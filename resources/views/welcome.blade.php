@@ -562,13 +562,13 @@
 
                     <!-- Photo 4 - évenementiel -->
                     <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer gallery-item"
-                        data-index="3" data-src="{{ asset('images/mariage1.webp') }}" data-title="Mariage d'alfred et cherita"
-                        data-desc="Eglise des AD Dongoyo à Kara">
-                        <img src="{{ asset('images/mariage1.webp') }}" alt="Mariage d'alfred et cherita"
+                        data-index="3" data-src="{{ asset('images/mariage3.webp') }}" data-title="cérémonie de dote"
+                        data-desc="cérémonie de dote d'Alfred chez chérita - village de tchitchao dans la kozah">
+                        <img src="{{ asset('images/mariage3.webp') }}" alt="cérémonie de dote"
                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <span class="text-white font-semibold text-sm">Mariage d'alfred et cherita</span>
+                            <span class="text-white font-semibold text-sm">cérémonie de dote</span>
                         </div>
                     </div>
 
@@ -617,6 +617,18 @@
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                             <span class="text-white font-semibold text-sm">Caravane</span>
+                        </div>
+                    </div>
+                   
+                    <!-- Photo 9 - mariage -->
+                    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer gallery-item"
+                        data-index="8" data-src="{{ asset('images/mariage6.webp') }}" data-title="mariage de yovo et immaculée"
+                        data-desc="Eglise des AD tchannadè à kara - Oct 2025">
+                        <img src="{{ asset('images/mariage6.webp') }}" alt="mariage de yovo et immaculée"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span class="text-white font-semibold text-sm">mariage de yovo et immaculée</span>
                         </div>
                     </div>
 

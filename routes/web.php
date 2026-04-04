@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DevisController;
+use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\NoteController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CatalogController;
@@ -63,6 +64,16 @@ Route::controller(ContactController::class)->group(function () {
 Route::controller(DevisController::class)->group(function () {
     Route::get('/devis', 'index')->name('devis');
     Route::post('/devis', 'store')->name('devis.store');
+});
+
+/*
+|--------------------------------------------------------------------------
+| Inscription
+|--------------------------------------------------------------------------
+*/
+Route::controller(InscriptionController::class)->group(function () {
+    Route::get('/inscription', 'index')->name('inscription');
+    Route::post('/inscription', 'store')->name('inscription.store');
 });
 
 

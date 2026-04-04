@@ -12,37 +12,39 @@
 // Données des formations (statique, pas de BDD)
 $formations = [
     [
-        'titre' => 'Développement Web Full Stack',
-        'description' => 'Maîtrisez HTML, CSS, JavaScript, PHP et Laravel. Créez des applications web complètes de A à Z avec les meilleures pratiques du métier.',
-        'duree' => '6 mois',
+        'titre' => 'Initiation à l\'informatique',
+        'description' => 'Connaissances de base en informatique',
+        'duree' => '3 semaines',
         'niveau' => 'debutant',
-        'formateur' => 'Kossi ADJOVI',
-        'prix' => 150000,
-        'ancien_prix' => 200000,
-        'image' => null,
-        'prerequis' => 'Aucun',
-        'certification' => 'Certificat de développeur web',
-        'points' => ['HTML5/CSS3', 'JavaScript', 'PHP/Laravel', 'MySQL', 'Déploiement']
-    ],
-    [
-        'titre' => 'Marketing Digital & Réseaux Sociaux',
-        'description' => 'Apprenez à créer des stratégies marketing efficaces, gérer des campagnes publicitaires et analyser vos performances sur tous les réseaux sociaux.',
-        'duree' => '3 mois',
-        'niveau' => 'intermediaire',
-        'formateur' => 'Afiwa KOMLAN',
-        'prix' => 80000,
+        'formateur' => 'Gilbert ALOUA',
+        'prix' => 20000,
         'ancien_prix' => null,
         'image' => null,
-        'prerequis' => 'Connaissances base informatique',
-        'certification' => 'Certificat marketing digital',
-        'points' => ['Facebook Ads', 'Google Ads', 'SEO/SEA', 'Analytics', 'Content marketing']
+        'prerequis' => 'Aucun',
+        'certification' => 'Attestation de fin de formation',
+        'points' => ['Windows', 'Word', 'Excel', 'Powerpoint']
     ],
+
+    [
+        'titre' => 'Bureautique Avancée',
+        'description' => 'Perfectionnez-vous sur Word, Excel, PowerPoint... Automatisez vos tâches et gagnez en productivité au quotidien.',
+        'duree' => '2 mois',
+        'niveau' => 'debutant',
+        'formateur' => 'Gilbert ALOUA',
+        'prix' => 50000,
+        'ancien_prix' => null,
+        'image' => null,
+        'prerequis' => 'Aucun',
+        'certification' => 'Attestation de formation',
+        'points' => ['Windows', 'Word avancé', 'Excel avancé', 'PowerPoint avancé', 'Internet']
+    ],
+
     [
         'titre' => 'Design Graphique & UI/UX',
         'description' => 'Devenez designer professionnel. Maîtrisez Photoshop, Illustrator, Figma et créez des interfaces utilisateur modernes et attractives.',
         'duree' => '4 mois',
         'niveau' => 'debutant',
-        'formateur' => 'Kodjo AMEWOU',
+        'formateur' => 'Xieme communication',
         'prix' => 120000,
         'ancien_prix' => 150000,
         'image' => null,
@@ -50,45 +52,78 @@ $formations = [
         'certification' => 'Certificat designer UI/UX',
         'points' => ['Photoshop', 'Illustrator', 'Figma', 'Prototypage', 'Design system']
     ],
+
     [
-        'titre' => 'Bureautique Avancée',
-        'description' => 'Perfectionnez-vous sur Word, Excel, PowerPoint et Outlook. Automatisez vos tâches et gagnez en productivité au quotidien.',
-        'duree' => '2 mois',
+        'titre' => 'Développement Web Full Stack',
+        'description' => 'Maîtrisez HTML, CSS, JavaScript, PHP et Laravel. Créez des applications web complètes de A à Z avec les meilleures pratiques du métier.',
+        'duree' => '6 mois',
         'niveau' => 'debutant',
-        'formateur' => 'Mawuli AGBE',
-        'prix' => 50000,
-        'ancien_prix' => null,
+        'formateur' => 'Gilbert ALOUA',
+        'prix' => 150000,
+        'ancien_prix' => 200000,
         'image' => null,
         'prerequis' => 'Aucun',
-        'certification' => 'Attestation de formation',
-        'points' => ['Word avancé', 'Excel (formules, tableaux)', 'PowerPoint', 'Outlook', 'OneDrive']
+        'certification' => 'Certificat de développeur web',
+        'points' => ['HTML5/CSS3', 'JavaScript', 'PHP/Laravel', 'MySQL', 'Déploiement']
     ],
+
+    [
+        'titre' => 'Marketing Digital & Réseaux Sociaux',
+        'description' => 'Apprenez à créer des stratégies marketing efficaces, gérer des campagnes publicitaires et analyser vos performances sur tous les réseaux sociaux.',
+        'duree' => '3 mois',
+        'niveau' => 'intermediaire',
+        'formateur' => 'Xieme communication',
+        'prix' => 115000,
+        'ancien_prix' => null,
+        'image' => null,
+        'prerequis' => 'Connaissances base informatique',
+        'certification' => 'Certificat marketing digital',
+        'points' => ['Facebook Ads', 'Google Ads', 'SEO/SEA', 'Analytics', 'Content marketing']
+    ],
+
+    [
+        'titre' => 'Photographie & vidéographie',
+        'description' => 'Apprenez les techniques de prise de vues, filmage et montage vidéo',
+        'duree' => '9 mois',
+        'niveau' => 'avance',
+        'formateur' => 'Gilbert ALOUA',
+        'prix' => 200000,
+        'ancien_prix' => 250000,
+        'image' => null,
+        'prerequis' => '',
+        'certification' => 'CAP',
+        'points' => ['prise de vues', 'traitement de photos pro', 'techniques de cadrage pro', 'montage vidéo']
+    ],
+    
+    [
+        'titre' => 'Installation de Systèmes d\'exploitation & logiciels',
+        'description' => 'Apprenez à installer les systèmes d\'exploitation et les logiciels de plusieurs types',
+        'duree' => '9 mois',
+        'niveau' => 'débutant',
+        'formateur' => 'Gilbert ALOUA',
+        'prix' => 200000,
+        'ancien_prix' => 250000,
+        'image' => null,
+        'prerequis' => '',
+        'certification' => 'CAP',
+        'points' => ['Windows 7, 8, 10, 11 ...', 'installation de logiciels', 'activation de logiciels', 'bonus surprise']
+    ],
+    
+
     [
         'titre' => 'Gestion de Projet & Agile',
         'description' => 'Apprenez les méthodes agiles (Scrum, Kanban) et les outils de gestion de projet pour mener vos équipes vers la réussite.',
         'duree' => '3 mois',
         'niveau' => 'avance',
-        'formateur' => 'Komlan SENOU',
+        'formateur' => 'chef DABANA',
         'prix' => 180000,
         'ancien_prix' => 220000,
         'image' => null,
         'prerequis' => 'Expérience professionnelle',
         'certification' => 'Certificat Scrum Master',
         'points' => ['Scrum', 'Kanban', 'Jira/Trello', 'Gestion d\'équipe', 'Rapports KPI']
-    ],
-    [
-        'titre' => 'Cybersécurité Fondamentale',
-        'description' => 'Protégez vos données et celles de votre entreprise. Apprenez les bases de la sécurité informatique, le hacking éthique et la protection réseau.',
-        'duree' => '4 mois',
-        'niveau' => 'intermediaire',
-        'formateur' => 'Koffi ATCHADE',
-        'prix' => 200000,
-        'ancien_prix' => null,
-        'image' => null,
-        'prerequis' => 'Connaissances réseau de base',
-        'certification' => 'Certificat cybersécurité',
-        'points' => ['Sécurité réseau', 'Cryptographie', 'Hacking éthique', 'Forensics', 'ISO 27001']
-    ],
+    ]
+    
 ];
 @endphp
 
@@ -191,7 +226,7 @@ $formations = [
 
                     <!-- Actions WhatsApp -->
                     <div class="formation-actions">
-                        <a href="https://wa.me/22892671533?text=Bonjour, je veux m'inscrire à la formation : {{ urlencode($formation['titre']) }} ({{ number_format($formation['prix'], 0, ',', ' ') }} FCFA)" 
+                        <a href="{{ route('inscription') }}" 
                            target="_blank" 
                            class="btn-inscrire">
                             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
