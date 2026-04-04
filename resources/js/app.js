@@ -357,3 +357,156 @@ document.addEventListener('DOMContentLoaded', function() {
             el.style.transition = 'all 0.6s ease';
             observer.observe(el);
         });
+
+        
+        class Lightbox {
+            constructor() {
+                this.currentIndex = 0;
+                this.items = [];
+                this.lightbox = document.getElementById('lightbox');
+                this.img = document.getElementById('lightbox-img');
+                this.title = document.getElementById('lightbox-title');
+                this.desc = document.getElementById('lightbox-desc');
+                this.currentEl = document.getElementById('current-index');
+                
+                this.touchStartX = 0;
+                this.touchEndX = 0;
+                this.swipeThreshold = 50;
+                
+                this.init();
+            }
+
+            init() {
+                // Collecter les données de la galerie
+                const galleryItems = document.querySelectorAll('.gallery-item');
+                this.items = Array.from(galleryItems).map(item => ({
+                    src: item.dataset.src,
+                    title: item.dataset.title,
+                    desc: item.dataset.desc
+                }));
+
+                document.getElementById('total-count').textContent = this.items.length;
+
+                // Clic sur les images de la grille
+                galleryItems.forEach((item, index) => {
+                    item.addEventListener('click', () => this.open(index));
+                });
+
+                // Boutons navigation
+                document.getElementById('prev-btn').addEventListener('click', () => this.prev());
+                document.getElementById('next-btn').addEventListener('click', () => this.next());
+                document.getElementById('prev-btn-mobile').addEventListener('click', () => this.prev());
+                document.getElementById('next-btn-mobile').addEventListener('click', () => this.next());
+                
+                // Fermer
+                document.getElementById('close-btn').addEventListener('click', () => this.close());
+                this.lightbox.addEventListener('click', (e) => {
+                    if (e.target === this.lightbox) this.close();
+                });
+
+                // Clavier
+                document.addEventListener('keydown', (e) => {
+                    if (!this.lightbox.classList.contains('hidden')) {
+                        if (e.key === 'Escape') this.close();
+                        if (e.key === 'ArrowLeft') this.prev();
+                        if (e.key === 'ArrowRight') this.next();
+                    }
+                });
+
+                // Gestes tactiles (swipe)
+                const container = document.getElementById('image-container');
+                container.addEventListener('touchstart', (e) => this.handleTouchStart(e), {passive: true});
+                container.addEventListener('touchmove', (e) => this.handleTouchMove(e), {passive: true});
+                container.addEventListener('touchend', (e) => this.handleTouchEnd(e), {passive: true});
+            }
+
+            open(index) {
+                this.currentIndex = index;
+                document.body.classList.add('lightbox-open');
+                this.lightbox.classList.remove('hidden');
+                this.lightbox.classList.add('lightbox-enter');
+                this.updateContent();
+            }
+
+            close() {
+                this.lightbox.classList.add('hidden');
+                this.lightbox.classList.remove('lightbox-enter');
+                document.body.classList.remove('lightbox-open');
+            }
+
+            updateContent() {
+                const item = this.items[this.currentIndex];
+                
+                // Animation de transition
+                this.img.classList.add('opacity-0');
+                
+                setTimeout(() => {
+                    this.img.src = item.src;
+                    this.title.textContent = item.title;
+                    this.desc.textContent = item.desc;
+                    this.currentEl.textContent = this.currentIndex + 1;
+                    this.img.classList.remove('opacity-0');
+                    this.img.classList.add('slide-enter');
+                }, 150);
+            }
+
+            next() {
+                this.currentIndex = (this.currentIndex + 1) % this.items.length;
+                this.updateContent();
+                this.showSwipeIndicator('right');
+            }
+
+            prev() {
+                this.currentIndex = (this.currentIndex - 1 + this.items.length) % this.items.length;
+                this.updateContent();
+                this.showSwipeIndicator('left');
+            }
+
+            // Gestion des gestes tactiles
+            handleTouchStart(e) {
+                this.touchStartX = e.changedTouches[0].screenX;
+            }
+
+            handleTouchMove(e) {
+                // Optionnel: feedback visuel pendant le swipe
+                const currentX = e.changedTouches[0].screenX;
+                const diff = this.touchStartX - currentX;
+                
+                // Limiter l'effet de suivi à 30% de la largeur
+                const maxOffset = window.innerWidth * 0.3;
+                const offset = Math.max(-maxOffset, Math.min(maxOffset, -diff * 0.5));
+                
+                this.img.style.transform = `translateX(${-offset}px)`;
+            }
+
+            handleTouchEnd(e) {
+                this.touchEndX = e.changedTouches[0].screenX;
+                this.handleSwipe();
+                
+                // Reset transform
+                this.img.style.transform = '';
+            }
+
+            handleSwipe() {
+                const diff = this.touchStartX - this.touchEndX;
+                
+                if (Math.abs(diff) > this.swipeThreshold) {
+                    if (diff > 0) {
+                        this.next(); // Swipe gauche = suivant
+                    } else {
+                        this.prev(); // Swipe droite = précédent
+                    }
+                }
+            }
+
+            showSwipeIndicator(direction) {
+                const indicator = document.getElementById(`swipe-${direction}-indicator`);
+                indicator.classList.add('show');
+                setTimeout(() => indicator.classList.remove('show'), 300);
+            }
+        }
+
+        // Initialiser quand DOM prêt
+        document.addEventListener('DOMContentLoaded', () => {
+            new Lightbox();
+        });

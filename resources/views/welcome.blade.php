@@ -275,82 +275,101 @@
 
 
     <!-- ==================== TESTIMONIALS SECTION ==================== -->
-<!-- Section Témoignages avec bouton "Voir plus" -->
-<section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Témoignages</span>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
-                Ce que Disent nos <span class="gradient-text">Clients</span>
-            </h2>
-        </div>
+    <!-- Section Témoignages avec bouton "Voir plus" -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Témoignages</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+                    Ce que Disent nos <span class="gradient-text">Clients</span>
+                </h2>
+            </div>
 
-        <!-- Grille des témoignages (3 visibles) -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12" id="testimonials-grid">
-            <!-- Testimonial 1 -->
-            <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 relative hover:shadow-lg transition-shadow duration-300">
-                <div class="absolute -top-4 left-8 w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center text-white">
-                    <i class="fas fa-quote-left text-sm"></i>
+            <!-- Grille des témoignages (3 visibles) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12" id="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div
+                    class="bg-gray-50 p-8 rounded-2xl border border-gray-100 relative hover:shadow-lg transition-shadow duration-300">
+                    <div
+                        class="absolute -top-4 left-8 w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center text-white">
+                        <i class="fas fa-quote-left text-sm"></i>
+                    </div>
+                    <div class="flex text-brand-500 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Sinon le travail a été propre."<br />(contexte : livraison d'une
+                        vidéo d'inauguration et caravane en moins de 24h)</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold">
+                            GA</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Gafarou A.</h4>
+                            <p class="text-sm text-gray-500">Chargé de Mission / Poste Togo</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex text-brand-500 mb-4">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+
+                <!-- Testimonial 2 -->
+                <div
+                    class="bg-gray-50 p-8 rounded-2xl border border-gray-100 relative hover:shadow-lg transition-shadow duration-300">
+                    <div
+                        class="absolute -top-4 left-8 w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center text-white">
+                        <i class="fas fa-quote-left text-sm"></i>
+                    </div>
+                    <div class="flex text-brand-500 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Depuis votre assistance, nous avons constaté une nette
+                        amélioration de la performance de nos agents et même les clients en témoignent."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold">
+                            EB</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Esther B.</h4>
+                            <p class="text-sm text-gray-500">DG microfinance / Kara</p>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-gray-600 mb-6 italic">"Sinon le travail a été propre."<br/>(contexte : livraison d'une vidéo d'inauguration et caravane en moins de 24h)</p>
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold">GA</div>
-                    <div>
-                        <h4 class="font-bold text-gray-900">Gafarou A.</h4>
-                        <p class="text-sm text-gray-500">Chargé de Mission / Poste Togo</p>
+
+                <!-- Testimonial 3 -->
+                <div
+                    class="bg-gray-50 p-8 rounded-2xl border border-gray-100 relative hover:shadow-lg transition-shadow duration-300">
+                    <div
+                        class="absolute -top-4 left-8 w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center text-white">
+                        <i class="fas fa-quote-left text-sm"></i>
+                    </div>
+                    <div class="flex text-brand-500 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Les photos et vidéos de notre mariage étaient incroyables ! Nous
+                        n'avons absolument pas eu tort de compter sur vous."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold">
+                            SK</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Serges K.</h4>
+                            <p class="text-sm text-gray-500">Journaliste / Dapaong</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Testimonial 2 -->
-            <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 relative hover:shadow-lg transition-shadow duration-300">
-                <div class="absolute -top-4 left-8 w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center text-white">
-                    <i class="fas fa-quote-left text-sm"></i>
-                </div>
-                <div class="flex text-brand-500 mb-4">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p class="text-gray-600 mb-6 italic">"Depuis votre assistance, nous avons constaté une nette amélioration de la performance de nos agents et même les clients en témoignent."</p>
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold">EB</div>
-                    <div>
-                        <h4 class="font-bold text-gray-900">Esther B.</h4>
-                        <p class="text-sm text-gray-500">DG microfinance / Kara</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 3 -->
-            <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 relative hover:shadow-lg transition-shadow duration-300">
-                <div class="absolute -top-4 left-8 w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center text-white">
-                    <i class="fas fa-quote-left text-sm"></i>
-                </div>
-                <div class="flex text-brand-500 mb-4">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                </div>
-                <p class="text-gray-600 mb-6 italic">"Les photos et vidéos de notre mariage étaient incroyables ! Nous n'avons absolument pas eu tort de compter sur vous."</p>
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold">SK</div>
-                    <div>
-                        <h4 class="font-bold text-gray-900">Serges K.</h4>
-                        <p class="text-sm text-gray-500">Journaliste / Dapaong</p>
-                    </div>
-                </div>
+            <!-- Bouton Voir Plus -->
+            <div class="text-center">
+                <a href="{{ route('temoignages') }}"
+                    class="inline-flex items-center gap-2 px-8 py-4 bg-brand-600 text-white rounded-full font-semibold hover:bg-brand-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    Voir tous les témoignages
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
-
-        <!-- Bouton Voir Plus -->
-        <div class="text-center">
-            <a href="{{ route('temoignages') }}" class="inline-flex items-center gap-2 px-8 py-4 bg-brand-600 text-white rounded-full font-semibold hover:bg-brand-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                Voir tous les témoignages
-                <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-    </div>
-</section>
+    </section>
 
 
     <!-- ==================== ACTUALITÉS SECTION ==================== -->
@@ -497,71 +516,211 @@
                 </p>
             </div>
 
-            <!-- Grille de photos -->
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-    <!-- Photo 1 - Shooting Corporate -->
-    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
-        <img src="{{ asset('images/shoot1.webp') }}" 
-             alt="Shooting Corporate" 
-             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="text-white font-semibold text-sm">Shooting Corporate</span>
-        </div>
-    </div>
 
-    <!-- Photo 2 - Production Vidéo (grande) -->
-    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer md:col-span-2 md:row-span-2">
-        <img src="{{ asset('images/eric.webp') }}" 
-             alt="Production Vidéo" 
-             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-            <div>
-                <span class="text-white font-semibold">Production Vidéo</span>
-                <p class="text-white/80 text-sm">Spot publicitaire Togo Émergent</p>
+            <!-- Grille de photos originale (adaptée) -->
+            <div class="container mx-auto px-4 py-10">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10" id="gallery-grid">
+
+                    <!-- Photo 1 - Shooting Corporate -->
+                    <!-- Photo 1 - Shooting Corporate -->
+                    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer gallery-item"
+                        data-index="0" data-src="{{ asset('images/shoot1.webp') }}" data-title="Shooting Corporate"
+                        data-desc="Séance photo professionnelle pour entreprise">
+                        <img src="{{ asset('images/shoot1.webp') }}" alt="Shooting Corporate"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span class="text-white font-semibold text-sm">Shooting Corporate</span>
+                        </div>
+                    </div>
+
+                    <!-- Photo 2 - Production Vidéo (grande) -->
+                    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer md:col-span-2 md:row-span-2 gallery-item"
+                        data-index="1" data-src="{{ asset('images/gil0.webp') }}" data-title="Production Vidéo"
+                        data-desc="Spot publicitaire Togo Émergent - Tournage professionnel">
+                        <img src="{{ asset('images/gil0.webp') }}" alt="Production Vidéo"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div>
+                                <span class="text-white font-semibold">Production Vidéo</span>
+                                <p class="text-white/80 text-sm">Spot publicitaire Togo Émergent</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 3 - Développement Web -->
+                    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer gallery-item"
+                        data-index="2" data-src="{{ asset('images/eric.webp') }}" data-title="Développement Web"
+                        data-desc="Création de sites web modernes et responsives">
+                        <img src="{{ asset('images/eric.webp') }}" alt="Développement Web"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span class="text-white font-semibold text-sm">Développement Web</span>
+                        </div>
+                    </div>
+
+                    <!-- Photo 4 - Design Graphique -->
+                    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer gallery-item"
+                        data-index="3" data-src="{{ asset('images/mariage1.webp') }}" data-title="Design Graphique"
+                        data-desc="Conception graphique et identité visuelle">
+                        <img src="{{ asset('images/mariage1.webp') }}" alt="Design Graphique"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span class="text-white font-semibold text-sm">Design Graphique</span>
+                        </div>
+                    </div>
+
+                    <!-- Photo 5 - Maintenance IT -->
+                    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer gallery-item"
+                        data-index="4" data-src="{{ asset('images/mariage2.webp') }}" data-title="Maintenance IT"
+                        data-desc="Support technique et infrastructure réseau">
+                        <img src="{{ asset('images/mariage2.webp') }}" alt="Maintenance IT"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span class="text-white font-semibold text-sm">Maintenance IT</span>
+                        </div>
+                    </div>
+
+                    <!-- Photo 6 - Formation (equipe0.webp) -->
+                    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer gallery-item"
+                        data-index="5" data-src="{{ asset('images/equipe0.webp') }}" data-title="Formation"
+                        data-desc="Sessions de formation et transfert de compétences">
+                        <img src="{{ asset('images/equipe0.webp') }}" alt="Formation"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span class="text-white font-semibold text-sm">Formation</span>
+                        </div>
+                    </div>
+                   
+                    <!-- Photo 7 - Formation (equipe0.webp) -->
+                    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer gallery-item"
+                        data-index="6" data-src="{{ asset('images/sport2.webp') }}" data-title="Formation"
+                        data-desc="Sessions de formation et transfert de compétences">
+                        <img src="{{ asset('images/sport2.webp') }}" alt="Formation"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span class="text-white font-semibold text-sm">Formation</span>
+                        </div>
+                    </div>
+                   
+                    <!-- Photo 8 - Formation (equipe0.webp) -->
+                    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer gallery-item"
+                        data-index="7" data-src="{{ asset('images/gil1.webp') }}" data-title="Formation"
+                        data-desc="Sessions de formation et transfert de compétences">
+                        <img src="{{ asset('images/gil1.webp') }}" alt="Formation"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span class="text-white font-semibold text-sm">Formation</span>
+                        </div>
+                    </div>
+
+
+                </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Photo 3 - Développement Web -->
-    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
-        <img src="{{ asset('images/gil0.webp') }}" 
-             alt="Développement Web" 
-             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="text-white font-semibold text-sm">Développement Web</span>
-        </div>
-    </div>
+            <!-- LIGHTBOX -->
+            <div id="lightbox" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-sm">
 
-    <!-- Photo 4 - Design Graphique -->
-    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
-        <img src="{{ asset('images/mariage1.webp') }}" 
-             alt="Design Graphique" 
-             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="text-white font-semibold text-sm">Design Graphique</span>
-        </div>
-    </div>
+                <!-- Bouton fermer -->
+                <button id="close-btn"
+                    class="absolute top-4 right-4 z-50 p-3 text-white/80 hover:text-white hover:bg-white/10 rounded-full transition-all">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
 
-    <!-- Photo 5 - Maintenance IT -->
-    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
-        <img src="{{ asset('images/mariage2.webp') }}" 
-             alt="Maintenance IT" 
-             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="text-white font-semibold text-sm">Maintenance IT</span>
-        </div>
-    </div>
+                <!-- Compteur -->
+                <div
+                    class="absolute top-4 left-4 z-50 px-4 py-2 bg-white/10 rounded-full text-white/80 text-sm font-medium">
+                    <span id="current-index">1</span> / <span id="total-count">6</span>
+                </div>
 
-    <!-- Photo 6 - Formation -->
-    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
-        <img src="{{ asset('images/equipe0.webp') }}" 
-             alt="Formation" 
-             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="text-white font-semibold text-sm">Formation</span>
-        </div>
-    </div>
-</div>
+                <!-- Zone de swipe (indicateurs) -->
+                <div class="swipe-indicator left" id="swipe-left-indicator">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </div>
+                <div class="swipe-indicator right" id="swipe-right-indicator">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+
+                <!-- Contenu principal -->
+                <div class="lightbox-content absolute inset-0 flex flex-col items-center justify-center p-4 md:p-8">
+
+                    <!-- Image container avec gestes -->
+                    <div id="image-container"
+                        class="relative flex-1 w-full max-w-6xl flex items-center justify-center overflow-hidden">
+                        <img id="lightbox-img" src="" alt=""
+                            class="max-w-full max-h-[70vh] md:max-h-[75vh] object-contain rounded-lg shadow-2xl transition-transform duration-300">
+                    </div>
+
+                    <!-- Navigation flèches (desktop) -->
+                    <button id="prev-btn"
+                        class="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 p-4 text-white/60 hover:text-white hover:bg-white/10 rounded-full transition-all z-40">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <button id="next-btn"
+                        class="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 p-4 text-white/60 hover:text-white hover:bg-white/10 rounded-full transition-all z-40">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <!-- Barre d'infos en bas -->
+                    <div class="w-full max-w-4xl mt-6 p-6 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10">
+                        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+
+                            <!-- Titre et description -->
+                            <div class="text-center md:text-left flex-1">
+                                <h3 id="lightbox-title" class="text-2xl font-bold text-white mb-2"></h3>
+                                <p id="lightbox-desc" class="text-white/70 text-lg"></p>
+                            </div>
+
+                            <!-- Boutons navigation (mobile visible, desktop aussi) -->
+                            <div class="flex items-center gap-3">
+                                <button id="prev-btn-mobile"
+                                    class="md:hidden p-3 bg-white/10 hover:bg-white/20 rounded-full text-white transition-all">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 19l-7-7 7-7"></path>
+                                    </svg>
+                                </button>
+
+                                <button id="next-btn-mobile"
+                                    class="md:hidden p-3 bg-white/10 hover:bg-white/20 rounded-full text-white transition-all">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+
+                                <!-- Info supplémentaire optionnelle -->
+                                <div class="hidden md:block px-4 py-2 bg-white/10 rounded-lg text-white/60 text-sm">
+                                    ← → ou swipe
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
 
             <!-- Bouton vers galerie complète -->
             <div class="text-center">

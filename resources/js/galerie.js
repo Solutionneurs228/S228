@@ -104,3 +104,5 @@ document.addEventListener('keydown', e => {
     if (e.key === 'ArrowRight') document.getElementById('next').click();
     if (e.key === 'ArrowLeft') document.getElementById('prev').click();
 });
+
+
