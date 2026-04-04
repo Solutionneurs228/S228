@@ -522,10 +522,9 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10" id="gallery-grid">
 
                     <!-- Photo 1 - Shooting Corporate -->
-                    <!-- Photo 1 - Shooting Corporate -->
                     <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer gallery-item"
                         data-index="0" data-src="{{ asset('images/shoot1.webp') }}" data-title="Shooting Corporate"
-                        data-desc="Séance photo professionnelle pour entreprise">
+                        data-desc="Séance photo shooting en nature à kara sur le pont kpeleouwaï">
                         <img src="{{ asset('images/shoot1.webp') }}" alt="Shooting Corporate"
                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div
@@ -537,87 +536,87 @@
                     <!-- Photo 2 - Production Vidéo (grande) -->
                     <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer md:col-span-2 md:row-span-2 gallery-item"
                         data-index="1" data-src="{{ asset('images/gil0.webp') }}" data-title="Production Vidéo"
-                        data-desc="Spot publicitaire Togo Émergent - Tournage professionnel">
+                        data-desc="montage vidéo professionnel">
                         <img src="{{ asset('images/gil0.webp') }}" alt="Production Vidéo"
                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                             <div>
                                 <span class="text-white font-semibold">Production Vidéo</span>
-                                <p class="text-white/80 text-sm">Spot publicitaire Togo Émergent</p>
+                                <p class="text-white/80 text-sm">montage vidéo professionnel</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Photo 3 - Développement Web -->
+                    <!-- Photo 3 - Caméraman professionnel -->
                     <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer gallery-item"
-                        data-index="2" data-src="{{ asset('images/eric.webp') }}" data-title="Développement Web"
-                        data-desc="Création de sites web modernes et responsives">
-                        <img src="{{ asset('images/eric.webp') }}" alt="Développement Web"
+                        data-index="2" data-src="{{ asset('images/eric.webp') }}" data-title="Caméraman professionnel"
+                        data-desc="réportage en collaboration avec une chaine de télé">
+                        <img src="{{ asset('images/eric.webp') }}" alt="Caméraman professionnel"
                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <span class="text-white font-semibold text-sm">Développement Web</span>
+                            <span class="text-white font-semibold text-sm">Caméraman professionnel</span>
                         </div>
                     </div>
 
-                    <!-- Photo 4 - Design Graphique -->
+                    <!-- Photo 4 - évenementiel -->
                     <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer gallery-item"
-                        data-index="3" data-src="{{ asset('images/mariage1.webp') }}" data-title="Design Graphique"
-                        data-desc="Conception graphique et identité visuelle">
-                        <img src="{{ asset('images/mariage1.webp') }}" alt="Design Graphique"
+                        data-index="3" data-src="{{ asset('images/mariage1.webp') }}" data-title="Mariage d'alfred et cherita"
+                        data-desc="Eglise des AD Dongoyo à Kara">
+                        <img src="{{ asset('images/mariage1.webp') }}" alt="Mariage d'alfred et cherita"
                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <span class="text-white font-semibold text-sm">Design Graphique</span>
+                            <span class="text-white font-semibold text-sm">Mariage d'alfred et cherita</span>
                         </div>
                     </div>
 
-                    <!-- Photo 5 - Maintenance IT -->
+                    <!-- Photo 5 - évenementiel -->
                     <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer gallery-item"
-                        data-index="4" data-src="{{ asset('images/mariage2.webp') }}" data-title="Maintenance IT"
-                        data-desc="Support technique et infrastructure réseau">
-                        <img src="{{ asset('images/mariage2.webp') }}" alt="Maintenance IT"
+                        data-index="4" data-src="{{ asset('images/mariage2.webp') }}" data-title="Mariage d'alfred et cherita"
+                        data-desc="Eglise des AD Dongoyo kara">
+                        <img src="{{ asset('images/mariage2.webp') }}" alt="Mariage d'alfred et cherita"
                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <span class="text-white font-semibold text-sm">Maintenance IT</span>
+                            <span class="text-white font-semibold text-sm">Mariage d'alfred et cherita</span>
                         </div>
                     </div>
 
-                    <!-- Photo 6 - Formation (equipe0.webp) -->
+                    <!-- Photo 6 - équipe -->
                     <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer gallery-item"
-                        data-index="5" data-src="{{ asset('images/equipe0.webp') }}" data-title="Formation"
-                        data-desc="Sessions de formation et transfert de compétences">
+                        data-index="5" data-src="{{ asset('images/equipe0.webp') }}" data-title="équipe S228"
+                        data-desc="Notre équipe sur une activité sportive - Août 2024">
                         <img src="{{ asset('images/equipe0.webp') }}" alt="Formation"
                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <span class="text-white font-semibold text-sm">Formation</span>
+                            <span class="text-white font-semibold text-sm">équipe S228</span>
                         </div>
                     </div>
                    
-                    <!-- Photo 7 - Formation (equipe0.webp) -->
+                    <!-- Photo 7 - sport -->
                     <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer gallery-item"
-                        data-index="6" data-src="{{ asset('images/sport2.webp') }}" data-title="Formation"
-                        data-desc="Sessions de formation et transfert de compétences">
-                        <img src="{{ asset('images/sport2.webp') }}" alt="Formation"
+                        data-index="6" data-src="{{ asset('images/sport2.webp') }}" data-title="Sport"
+                        data-desc="couverture d'une activité sportive reservé aux jeunes et adolescents dans la binah à kara">
+                        <img src="{{ asset('images/sport2.webp') }}" alt="sport"
                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <span class="text-white font-semibold text-sm">Formation</span>
+                            <span class="text-white font-semibold text-sm">sport</span>
                         </div>
                     </div>
                    
-                    <!-- Photo 8 - Formation (equipe0.webp) -->
+                    <!-- Photo 8 - caravane -->
                     <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer gallery-item"
-                        data-index="7" data-src="{{ asset('images/gil1.webp') }}" data-title="Formation"
-                        data-desc="Sessions de formation et transfert de compétences">
-                        <img src="{{ asset('images/gil1.webp') }}" alt="Formation"
+                        data-index="7" data-src="{{ asset('images/gil1.webp') }}" data-title="caravane"
+                        data-desc="caravane des enfants et jeunes des CDE de la binah - Août 2024">
+                        <img src="{{ asset('images/gil1.webp') }}" alt="caravane"
                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <span class="text-white font-semibold text-sm">Formation</span>
+                            <span class="text-white font-semibold text-sm">Caravane</span>
                         </div>
                     </div>
 
