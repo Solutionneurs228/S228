@@ -8,7 +8,7 @@
     <!-- ==================== GALLERY SECTION ==================== -->
     <section id="gallery" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
+
             <!-- Section Header -->
             <div class="text-center mb-12">
                 <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm mb-2 block">Portfolio</span>
@@ -41,12 +41,12 @@
 
             <!-- Gallery Grid -->
             <div class="masonry-grid" id="gallery-grid">
-                
+
                 <!-- Gallery Item 1: IT Maintenance -->
                 <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer" data-category="it" onclick="openLightbox(0)">
                     <div class="aspect-[4/3] overflow-hidden bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a782?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Maintenance Serveur" 
+                        <img src="{{ asset('images/perle.webp') }}"
+                             alt="Maintenance Serveur"
                              class="gallery-image w-full h-full object-cover">
                     </div>
                     <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-6 text-white">
@@ -65,8 +65,8 @@
                 <!-- Gallery Item 2: Web Development -->
                 <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer" data-category="web" onclick="openLightbox(1)">
                     <div class="aspect-[3/4] overflow-hidden bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Site E-commerce" 
+                        <img src="{{ asset('images/mariage0.webp') }}"
+                             alt="Site E-commerce"
                              class="gallery-image w-full h-full object-cover">
                     </div>
                     <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-6 text-white">
@@ -85,8 +85,8 @@
                 <!-- Gallery Item 3: Graphic Design -->
                 <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer" data-category="design" onclick="openLightbox(2)">
                     <div class="aspect-square overflow-hidden bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Charte Graphique" 
+                        <img src="{{ asset('images/mariage6.webp') }}"
+                             alt="Charte Graphique"
                              class="gallery-image w-full h-full object-cover">
                     </div>
                     <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-6 text-white">
@@ -105,8 +105,8 @@
                 <!-- Gallery Item 4: Photography -->
                 <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer" data-category="media" onclick="openLightbox(3)">
                     <div class="aspect-[4/5] overflow-hidden bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Shooting Corporate" 
+                        <img src="{{ asset('images/mariage1.webp') }}"
+                             alt="Shooting Corporate"
                              class="gallery-image w-full h-full object-cover">
                     </div>
                     <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-6 text-white">
@@ -125,8 +125,8 @@
                 <!-- Gallery Item 5: Video Production -->
                 <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer" data-category="media" onclick="openLightbox(4)">
                     <div class="aspect-video overflow-hidden bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Production Vidéo" 
+                        <img src="{{ asset('images/mariage2.webp') }}"
+                             alt="Production Vidéo"
                              class="gallery-image w-full h-full object-cover">
                     </div>
                     <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-6 text-white">
@@ -145,8 +145,8 @@
                 <!-- Gallery Item 6: IT Support -->
                 <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer" data-category="it" onclick="openLightbox(5)">
                     <div class="aspect-[4/3] overflow-hidden bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Support Technique" 
+                        <img src="{{ asset('images/mariage7.webp') }}"
+                             alt="Support Technique"
                              class="gallery-image w-full h-full object-cover">
                     </div>
                     <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-6 text-white">
@@ -165,8 +165,8 @@
                 <!-- Gallery Item 7: Web App -->
                 <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer" data-category="web" onclick="openLightbox(6)">
                     <div class="aspect-[3/4] overflow-hidden bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Application Web" 
+                        <img src="{{ asset('images/mariage8.webp') }}"
+                             alt="Application Web"
                              class="gallery-image w-full h-full object-cover">
                     </div>
                     <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-6 text-white">
@@ -185,8 +185,8 @@
                 <!-- Gallery Item 8: Branding -->
                 <div class="gallery-item group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer" data-category="design" onclick="openLightbox(7)">
                     <div class="aspect-square overflow-hidden bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Branding" 
+                        <img src="{{ asset('images/sport0.webp') }}"
+                             alt="Branding"
                              class="gallery-image w-full h-full object-cover">
                     </div>
                     <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-6 text-white">
@@ -216,7 +216,7 @@
 
     <!-- ==================== LIGHTBOX MODAL ==================== -->
     <div id="lightbox" class="lightbox fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 backdrop-blur-sm">
-        
+
         <!-- Close Button -->
         <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white/70 hover:text-white text-4xl z-50 w-12 h-12 flex items-center justify-center rounded-full hover:bg-white/10 transition-all">
             <i class="fas fa-times"></i>
@@ -226,18 +226,18 @@
         <button onclick="changeImage(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white text-3xl w-12 h-12 flex items-center justify-center rounded-full hover:bg-white/10 transition-all z-50 hidden md:flex">
             <i class="fas fa-chevron-left"></i>
         </button>
-        
+
         <button onclick="changeImage(1)" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white text-3xl w-12 h-12 flex items-center justify-center rounded-full hover:bg-white/10 transition-all z-50 hidden md:flex">
             <i class="fas fa-chevron-right"></i>
         </button>
 
         <!-- Lightbox Content -->
         <div class="lightbox-content max-w-6xl w-full max-h-[90vh] flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden shadow-2xl">
-            
+
             <!-- Image Container -->
             <div class="relative w-full md:w-2/3 bg-gray-900 flex items-center justify-center overflow-hidden">
                 <img id="lightbox-img" src="" alt="" class="max-h-[50vh] md:max-h-[80vh] w-full object-contain">
-                
+
                 <!-- Mobile Navigation -->
                 <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-4 md:hidden">
                     <button onclick="changeImage(-1)" class="text-white/70 hover:text-white text-2xl w-10 h-10 flex items-center justify-center rounded-full bg-black/30">
@@ -259,7 +259,7 @@
                     <p id="lightbox-description" class="text-gray-600 leading-relaxed mb-6">
                         Project description goes here.
                     </p>
-                    
+
                     <!-- Project Details -->
                     <div class="space-y-3 border-t border-gray-100 pt-4">
                         <div class="flex justify-between text-sm">
@@ -395,7 +395,7 @@
                 // Filter items with animation
                 galleryItems.forEach((item, index) => {
                     const category = item.getAttribute('data-category');
-                    
+
                     if (filter === 'all' || category === filter) {
                         item.style.display = 'block';
                         setTimeout(() => {
@@ -426,7 +426,7 @@
                     'design': 'Design Graphique',
                     'media': ['Photographie', 'Vidéo']
                 };
-                
+
                 filteredData = galleryData.filter(item => {
                     if (currentFilter === 'media') {
                         return categoryMap['media'].includes(item.category);
@@ -442,7 +442,7 @@
             const item = galleryData[index];
             currentImageIndex = filteredData.findIndex(data => data.title === item.title);
             if (currentImageIndex === -1) currentImageIndex = 0;
-            
+
             updateLightboxContent();
             document.getElementById('lightbox').classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -455,7 +455,7 @@
 
         function updateLightboxContent() {
             const data = filteredData[currentImageIndex];
-            
+
             document.getElementById('lightbox-img').src = data.src;
             document.getElementById('lightbox-category').textContent = data.category;
             document.getElementById('lightbox-title').textContent = data.title;
@@ -469,17 +469,17 @@
 
         function changeImage(direction) {
             currentImageIndex += direction;
-            
+
             if (currentImageIndex >= filteredData.length) {
                 currentImageIndex = 0;
             } else if (currentImageIndex < 0) {
                 currentImageIndex = filteredData.length - 1;
             }
-            
+
             // Add fade effect
             const img = document.getElementById('lightbox-img');
             img.style.opacity = '0';
-            
+
             setTimeout(() => {
                 updateLightboxContent();
                 img.style.opacity = '1';
@@ -489,7 +489,7 @@
         // Keyboard Navigation
         document.addEventListener('keydown', (e) => {
             if (!document.getElementById('lightbox').classList.contains('active')) return;
-            
+
             if (e.key === 'Escape') closeLightbox();
             if (e.key === 'ArrowLeft') changeImage(-1);
             if (e.key === 'ArrowRight') changeImage(1);
