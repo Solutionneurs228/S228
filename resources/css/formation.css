@@ -294,23 +294,23 @@
     font-size: 0.9375rem;
 }
 
-.btn-inscrire {
+.btn-renseigner {
     background: var(--primaire);
     color: white;
 }
 
-.btn-inscrire:hover {
+.btn-renseigner:hover {
     background: var(--primaire-hover);
     transform: translateY(-2px);
 }
 
-.btn-renseigner {
+.btn-inscrire {
     background: var(--fond);
     color: var(--texte);
     border: 2px solid var(--bordure);
 }
 
-.btn-renseigner:hover {
+.btn-inscrire:hover {
     border-color: var(--secondaire);
     color: var(--secondaire);
     background: white;

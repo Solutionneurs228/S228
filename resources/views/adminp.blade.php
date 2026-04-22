@@ -18,5 +18,9 @@
     <br>
     rendre le slogan plus visible
     <br>
+    les formations au lieu de niveau, disponible en ligne ou pas
+    <br>
+    animation pub
+    <br>
     @endsection
 

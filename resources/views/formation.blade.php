@@ -27,11 +27,11 @@ $formations = [
 
     [
         'titre' => 'Bureautique Avancée',
-        'description' => 'Perfectionnez-vous sur Word, Excel, PowerPoint... Automatisez vos tâches et gagnez en productivité au quotidien.',
+        'description' => 'Perfectionnez-vous sur Word, Excel, PowerPoint... devenez plus flude, plus rapide sur vos tâches au quotidien ; utiles pour les entréprises.',
         'duree' => '2 mois',
         'niveau' => 'debutant',
         'formateur' => 'Gilbert ALOUA',
-        'prix' => 50000,
+        'prix' => 70000,
         'ancien_prix' => null,
         'image' => null,
         'prerequis' => 'Aucun',
@@ -41,7 +41,7 @@ $formations = [
 
     [
         'titre' => 'Design Graphique & UI/UX',
-        'description' => 'Devenez designer professionnel. Maîtrisez Photoshop, Illustrator, Figma et créez des interfaces utilisateur modernes et attractives.',
+        'description' => 'Transformez votre créativité en véritable compétence professionnelle ! Apprenez à concevoir des interfaces modernes et captivantes, et réalisez des supports visuels impactants : affiches publicitaires, logos, badges, cartes de visite, cartes d\'invitation, flyers et bien plus encore.',
         'duree' => '4 mois',
         'niveau' => 'debutant',
         'formateur' => 'Xieme communication',
@@ -94,21 +94,21 @@ $formations = [
         'certification' => 'CAP',
         'points' => ['prise de vues', 'traitement de photos pro', 'techniques de cadrage pro', 'montage vidéo']
     ],
-    
+
     [
         'titre' => 'Installation de Systèmes d\'exploitation & logiciels',
-        'description' => 'Apprenez à installer les systèmes d\'exploitation et les logiciels de plusieurs types',
+        'description' => 'Apprenez à installer les systèmes d\'exploitation et les logiciels de plusieurs types, un pack d\'outils nécéssaires offert à la fin.',
         'duree' => '9 mois',
         'niveau' => 'débutant',
         'formateur' => 'Gilbert ALOUA',
-        'prix' => 200000,
-        'ancien_prix' => 250000,
+        'prix' => 30000,
+        'ancien_prix' => 50000,
         'image' => null,
         'prerequis' => '',
-        'certification' => 'CAP',
-        'points' => ['Windows 7, 8, 10, 11 ...', 'installation de logiciels', 'activation de logiciels', 'bonus surprise']
+        'certification' => 'Attestation de formation',
+        'points' => ['Windows 7, 8, 10, 11 ...', 'installation de logiciels', 'activation de logiciels', 'pack d\'outils nécéssaires offert', 'bonus surprise']
     ],
-    
+
 
     [
         'titre' => 'Gestion de Projet & Agile',
@@ -122,8 +122,23 @@ $formations = [
         'prerequis' => 'Expérience professionnelle',
         'certification' => 'Certificat Scrum Master',
         'points' => ['Scrum', 'Kanban', 'Jira/Trello', 'Gestion d\'équipe', 'Rapports KPI']
-    ]
-    
+    ],
+
+
+    // [
+    //    'titre' => 'Pack Entreprise',
+    //     'description' => 'Vous êtes une entreprise et vous voulez mieux utiliser l’informatique dans votre activité ? Nous vous aidons à mettre en place des outils simples et efficaces, à améliorer vos logiciels existants et à rendre vos équipes plus rapides sur ordinateur. Nous vous accompagnons aussi dans la mise en place d’un système de collaboration à distance adapté à votre activité, pour mieux travailler ensemble, même à distance. Contactez-nous pour en savoir plus.',
+    //     'duree' => ,
+    //     'niveau' => ,
+    //     'formateur' => ,
+    //     'prix' => ,
+    //     'ancien_prix' => ,
+    //     'image' => null,
+    //     'prerequis' => '-',
+    //     'certification' => '-',
+    //     'points' => ['-']
+    // ],
+
 ];
 @endphp
 
@@ -132,7 +147,7 @@ $formations = [
     <header class="catalogue-header">
         <h1>Nos Formations Professionnelles</h1>
         <p>Des programmes complets pour booster votre carrière. Contactez-nous directement sur WhatsApp pour vous inscrire ou obtenir plus d'informations.</p>
-        
+
         <a href="https://wa.me/22892671533" target="_blank" class="btn-whatsapp-main">
             <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
@@ -170,16 +185,16 @@ $formations = [
                 <!-- Contenu -->
                 <div class="formation-contenu">
                     <h2>{{ $formation['titre'] }}</h2>
-                    
+
                     <p class="formation-description">{{ $formation['description'] }}</p>
-                    
+
                     <!-- Points clés -->
                     <div class="points-cles">
                         @foreach($formation['points'] as $point)
                             <span class="point-tag">{{ $point }}</span>
                         @endforeach
                     </div>
-                    
+
                     <!-- Détails -->
                     <div class="formation-details">
                         <div class="detail-item">
@@ -189,7 +204,7 @@ $formations = [
                             </svg>
                             <span><strong>Durée :</strong> {{ $formation['duree'] }}</span>
                         </div>
-                        
+
                         <div class="detail-item">
                             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor">
                                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
@@ -197,7 +212,7 @@ $formations = [
                             </svg>
                             <span><strong>Formateur :</strong> {{ $formation['formateur'] }}</span>
                         </div>
-                        
+
                         <div class="detail-item">
                             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor">
                                 <path d="M9 11l3 3L22 4"/>
@@ -205,7 +220,7 @@ $formations = [
                             </svg>
                             <span><strong>Prérequis :</strong> {{ $formation['prerequis'] }}</span>
                         </div>
-                        
+
                         <div class="detail-item">
                             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor">
                                 <circle cx="12" cy="8" r="7"/>
@@ -226,21 +241,38 @@ $formations = [
 
                     <!-- Actions WhatsApp -->
                     <div class="formation-actions">
-                        <a href="{{ route('inscription') }}" 
-                           target="_blank" 
+                        <a href="https://wa.me/22892671533?text=Bonjour, j'ai des questions sur la formation : {{ urlencode($formation['titre']) }}"
+                           target="_blank"
+                           class="btn-renseigner">
+                           
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                            se renseigner
+                        </a>
+
+                        <a href=""
+                           target="_blank"
+                           class="btn-inscrire">
+                            s'inscrire
+                        </a>
+                    </div>
+                    {{-- <div class="formation-actions">
+                        <a href="{{ route('inscription') }}"
+                           target="_blank"
                            class="btn-inscrire">
                             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                             </svg>
                             S'inscrire
                         </a>
-                        
-                        <a href="https://wa.me/22892671533?text=Bonjour, j'ai des questions sur la formation : {{ urlencode($formation['titre']) }}" 
-                           target="_blank" 
+
+                        <a href="https://wa.me/22892671533?text=Bonjour, j'ai des questions sur la formation : {{ urlencode($formation['titre']) }}"
+                           target="_blank"
                            class="btn-renseigner">
                             Renseignements
                         </a>
-                    </div>
+                    </div> --}}
                 </div>
             </article>
         @empty
