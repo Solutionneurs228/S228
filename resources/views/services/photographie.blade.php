@@ -89,11 +89,11 @@
             <div class="relative group">
                 <div class="absolute -inset-4 bg-orange-200 rounded-2xl transform rotate-2 group-hover:rotate-1 transition-transform"></div>
                 <div class="relative rounded-2xl overflow-hidden shadow-2xl">
-                    <img src="/images/photo1.webp" alt="Photographie professionnelle" class="w-full h-[500px] object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <img src="/images/equipe0.webp" alt="notre équipe" class="w-full h-[500px] object-cover transform group-hover:scale-105 transition-transform duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div class="absolute bottom-6 left-6 text-white">
-                        <p class="text-sm font-medium text-orange-300 mb-1">Nos réalisations</p>
-                        <p class="text-lg font-bold">Shooting corporate & événementiel</p>
+                        <p class="text-sm font-medium text-orange-300 mb-1">Notre équipe</p>
+                        <p class="text-lg font-bold">photographes, cadreurs et monteurs de vidéo pro</p>
                     </div>
                 </div>
             </div>
@@ -183,7 +183,7 @@
                 </div>
 
                 <p class="text-gray-600 text-lg mb-6">
-                    Couverture complète de vos événements avec matériel professionnel 4K et montage cinématographique.
+                    Couverture complète de vos événements avec montage professionnel.
                 </p>
 
                 <ul class="space-y-4 mb-8">
@@ -233,12 +233,13 @@
                         <span class="text-gray-500">/ journée</span>
                     </div>
                     <ul class="text-sm text-gray-600 space-y-2 mb-4">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> 2 caméras 4K + drone</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Cadreurs professionnels</li>
                         <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Photographe professionnel</li>
                         <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Montage cinématographique</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Livraison 48h (USB + cloud)</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Livraison rapide</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Qualité impécable !</li>
                     </ul>
-                    <a href="#devis" class="block w-full text-center bg-orange-500 text-white py-3 rounded-lg font-semibold hover:bg-orange-600 transition-all">
+                    <a href="{{ route('devis') }}" class="block w-full text-center bg-orange-500 text-white py-3 rounded-lg font-semibold hover:bg-orange-600 transition-all">
                         Demander un Devis Personnalisé
                     </a>
                 </div>
@@ -339,14 +340,15 @@
             <p class="text-gray-400 mb-6">Découvrez nos réalisations publicitaires</p>
             <a href="{{ route('galerie') }}" class="inline-flex items-center gap-2 border-2 border-orange-500 text-orange-500 px-8 py-3 rounded-full font-semibold hover:bg-orange-500 hover:text-white transition-all">
                 <i class="fas fa-play-circle"></i>
-                Voir nos Vidéos
+                {{-- Voir nos Vidéos --}}
+                Voir notre galerie
             </a>
         </div>
     </div>
 </section>
 
 <!-- ==================== ÉQUIPEMENT ==================== -->
-<section class="py-16 bg-white">
+{{-- <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
             <h3 class="text-2xl font-bold text-gray-900">Notre Équipement Professionnel</h3>
@@ -376,7 +378,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 <!-- ==================== CTA FINAL ==================== -->
 <section id="devis" class="py-20 bg-orange-500">

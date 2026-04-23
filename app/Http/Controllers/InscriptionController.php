@@ -46,7 +46,7 @@ public function store(Request $request)
                 ['email' => 'solutionneurs228@gmail.com'],
             ],
             'subject' => 'Nouvelle Inscription à une formation',
-            'htmlContent' => view('emails.inscription', compact('inscription'))->render(),
+            'htmlContent' => view('emails.inscriptions', compact('inscription'))->render(),
         ]);
 
         // Log réponse Brevo (utile en prod)

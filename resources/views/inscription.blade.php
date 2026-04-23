@@ -68,7 +68,7 @@
                                 <div class="input-group">
                                     <label for="service" class="">Service</label>
                                     <select id="service" name="service">
-                                        <option value="">sélectionnez un service</option>
+                                        <option value="">sélectionnez une formation</option>
                                         <option value="Initiation à l'informatique">Initiation à l'informatique</option>
                                         <option value="Bureautique Avancée">Bureautique Avancée</option>
                                         <option value="Photographie - Vidéographie">Photographie - Vidéographie</option>

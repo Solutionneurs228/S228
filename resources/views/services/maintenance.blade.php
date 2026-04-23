@@ -109,9 +109,9 @@
                 <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
                     <i class="fas fa-laptop-medical"></i>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Réparation Ordinateurs</h3>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Réparation d'ordinateurs</h3>
                 <p class="text-gray-600 mb-4">
-                    Diagnostic et réparation de PC fixes et portables. Remplacement composants, récupération données, optimisation système.
+                    Diagnostic et réparation des ordinateurs de bureau et laptops. Remplacement composants, récupération données, optimisation système.
                 </p>
                 <ul class="space-y-2 text-sm text-gray-500 mb-6">
                     <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Remplacement écran</li>
@@ -156,23 +156,6 @@
             </div>
 
             <!-- Service 4 -->
-            <div class="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-brand-200">
-                <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-600 text-2xl mb-6 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300">
-                    <i class="fas fa-print"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Périphériques & Imprimantes</h3>
-                <p class="text-gray-600 mb-4">
-                    Installation et maintenance de périphériques. Imprimantes, scanners, projecteurs, équipements bureautiques.
-                </p>
-                <ul class="space-y-2 text-sm text-gray-500 mb-6">
-                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Installation drivers</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Réparation mécanique</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500 text-xs"></i> Configuration réseau</li>
-                </ul>
-                <span class="text-brand-600 font-semibold text-sm">À partir de 8 000 FCFA</span>
-            </div>
-
-            <!-- Service 5 -->
             <div class="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-brand-200">
                 <div class="w-16 h-16 bg-pink-100 rounded-2xl flex items-center justify-center text-pink-600 text-2xl mb-6 group-hover:bg-pink-600 group-hover:text-white transition-colors duration-300">
                     <i class="fas fa-database"></i>
@@ -269,7 +252,7 @@
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                     <h3 class="font-bold text-gray-900 mb-2">4. Livraison</h3>
-                    <p class="text-gray-600 text-sm">Test complet et garantie 6 mois. Support post-intervention inclus.</p>
+                    <p class="text-gray-600 text-sm">Test complet et garantie. Support post-intervention inclus.</p>
                 </div>
             </div>
         </div>
@@ -310,8 +293,8 @@
                     <li class="flex items-center gap-2"><i class="fas fa-check text-brand-300"></i> Devis détaillé</li>
                     <li class="flex items-center gap-2"><i class="fas fa-check text-brand-300"></i> Conseils personnalisés</li>
                 </ul>
-                <a href="#contact" class="block w-full py-3 text-center border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-brand-900 transition-all">
-                    Prendre RDV
+                <a href="https://wa.me/22892671533" target="_blank" class="block w-full py-3 text-center border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-brand-900 transition-all">
+                    discutez sur whatsapp
                 </a>
             </div>
 
@@ -329,10 +312,10 @@
                     <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> 1h d'intervention</li>
                     <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Déplacement inclus</li>
                     <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Pièces non comprises</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Garantie 6 mois</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Garantie</li>
                 </ul>
-                <a href="#contact" class="block w-full py-3 text-center bg-brand-600 text-white rounded-full font-semibold hover:bg-brand-700 transition-all">
-                    Choisir cette offre
+                <a href="{{ route('contact') }}" class="block w-full py-3 text-center bg-brand-600 text-white rounded-full font-semibold hover:bg-brand-700 transition-all">
+                    décrivez votre problème
                 </a>
             </div>
 
@@ -349,7 +332,7 @@
                     <li class="flex items-center gap-2"><i class="fas fa-check text-brand-300"></i> Support prioritaire 24/7</li>
                     <li class="flex items-center gap-2"><i class="fas fa-check text-brand-300"></i> Gestion parc informatique</li>
                 </ul>
-                <a href="#contact" class="block w-full py-3 text-center border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-brand-900 transition-all">
+                <a href="{{ route('devis') }}" class="block w-full py-3 text-center border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-brand-900 transition-all">
                     Demander un devis
                 </a>
             </div>
@@ -379,7 +362,7 @@
                     <i class="fas fa-chevron-down text-gray-400 transition-transform" :class="active === 1 ? 'rotate-180' : ''"></i>
                 </button>
                 <div x-show="active === 1" x-collapse class="px-6 pb-6 text-gray-600">
-                    Nous intervenons généralement dans les 2 à 4 heures suivant votre appel sur Lomé. Pour les autres régions, nous organisons des tournées régulières ou du support à distance.
+                    Nous intervenons généralement dans les 2 à 4 heures suivant votre appel.
                 </div>
             </div>
 
