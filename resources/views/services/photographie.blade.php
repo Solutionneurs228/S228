@@ -11,22 +11,22 @@
         <img src="/images/photo-hero.webp" alt="Photographie professionnelle" class="w-full h-full object-cover opacity-40">
         <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent"></div>
     </div>
-    
+
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl">
             <div class="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/20 rounded-full text-orange-300 text-sm font-medium mb-6 border border-orange-500/30">
                 <i class="fas fa-camera"></i>
                 <span>Production Audiovisuelle</span>
             </div>
-            
+
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
                 Capturons Vos <span class="text-orange-400">Moments</span> d'Exception
             </h1>
-            
+
             <p class="text-xl text-gray-300 mb-8 max-w-2xl">
                 Photographie et vidéographie professionnelle pour entreprises et particuliers au Togo. Qualité 4K, livraison rapide.
             </p>
-            
+
             <div class="flex flex-col sm:flex-row gap-4">
                 <a href="#devis" class="inline-flex items-center justify-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-full font-bold hover:bg-orange-600 transition-all transform hover:scale-105 shadow-xl">
                     <i class="fas fa-calendar-check"></i>
@@ -37,7 +37,7 @@
                     Discuter sur WhatsApp
                 </a>
             </div>
-            
+
             <!-- Stats -->
             <div class="mt-10 flex flex-wrap gap-8 text-gray-400">
                 <div class="flex items-center gap-2">
@@ -84,7 +84,7 @@
 <section id="photographie" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
-            
+
             <!-- Image -->
             <div class="relative group">
                 <div class="absolute -inset-4 bg-orange-200 rounded-2xl transform rotate-2 group-hover:rotate-1 transition-transform"></div>
@@ -171,7 +171,7 @@
 <section id="reportage" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
-            
+
             <!-- Content (ordre inversé sur desktop) -->
             <div class="order-2 lg:order-1">
                 <div class="flex items-center gap-3 mb-4">
@@ -270,7 +270,7 @@
 <!-- ==================== SERVICE 03 : PUBLICITÉ ==================== -->
 <section id="publicite" class="py-20 bg-gray-900 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div class="text-center max-w-3xl mx-auto mb-16">
             <span class="text-5xl font-bold text-gray-800">03</span>
             <h2 class="text-3xl font-bold mt-2 mb-4">Vidéos & Animations Publicitaires</h2>
@@ -281,7 +281,7 @@
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-            
+
             <!-- Type 1 -->
             <div class="bg-gray-800 rounded-2xl p-8 hover:bg-gray-750 transition-all border border-gray-700 hover:border-orange-500/50 group">
                 <div class="w-16 h-16 bg-orange-500/20 rounded-2xl flex items-center justify-center text-orange-400 text-2xl mb-6 group-hover:bg-orange-500 group-hover:text-white transition-all">
@@ -338,10 +338,10 @@
         <!-- Portfolio Preview -->
         <div class="mt-16 text-center">
             <p class="text-gray-400 mb-6">Découvrez nos réalisations publicitaires</p>
-            <a href="{{ route('galerie') }}" class="inline-flex items-center gap-2 border-2 border-orange-500 text-orange-500 px-8 py-3 rounded-full font-semibold hover:bg-orange-500 hover:text-white transition-all">
+            <a href="https://www.youtube.com/channel/UCaULICWG1CLnxcXZWCWdWog" target="_blank" class="inline-flex items-center gap-2 border-2 border-orange-500 text-orange-500 px-8 py-3 rounded-full font-semibold hover:bg-orange-500 hover:text-white transition-all">
                 <i class="fas fa-play-circle"></i>
                 {{-- Voir nos Vidéos --}}
-                Voir notre galerie
+                Visiter notre chaîne youtube
             </a>
         </div>
     </div>
@@ -354,7 +354,7 @@
             <h3 class="text-2xl font-bold text-gray-900">Notre Équipement Professionnel</h3>
             <p class="text-gray-600 mt-2">Du matériel de qualité broadcast pour des résultats exceptionnels</p>
         </div>
-        
+
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div class="p-6">
                 <i class="fas fa-camera text-4xl text-orange-500 mb-4"></i>
@@ -389,7 +389,7 @@
         <p class="text-orange-100 text-lg mb-8 max-w-2xl mx-auto">
             Contactez-nous maintenant pour discuter de votre projet et obtenir un devis personnalisé sous 24h.
         </p>
-        
+
         <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a href="tel:+22892671533" class="inline-flex items-center justify-center gap-2 bg-white text-orange-600 px-8 py-4 rounded-full font-bold hover:bg-orange-50 transition-all transform hover:scale-105 shadow-xl">
                 <i class="fas fa-phone-alt"></i>
@@ -400,7 +400,7 @@
                 Discuter sur WhatsApp
             </a>
         </div>
-        
+
         <p class="text-sm text-orange-200">
             <i class="fas fa-clock mr-1"></i> Réponse garantie sous 30 minutes
         </p>

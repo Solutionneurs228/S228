@@ -57,7 +57,7 @@ public function store(Request $request)
 
         return redirect()->back()->with(
             'success',
-            'Votre demande a été envoyée avec succès.'
+            'Votre inscription a été envoyée avec succès.'
         );
 
     } catch (\Throwable $e) {

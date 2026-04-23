@@ -14,7 +14,7 @@
             <pre>&lt;code&gt; your success &lt;/code&gt;</pre>
         </div>
     </div>
-    
+
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             <!-- Content -->
@@ -23,15 +23,15 @@
                     <i class="fas fa-code"></i>
                     <span>Développement Sur Mesure</span>
                 </div>
-                
+
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
                     Votre Projet Digital <span class="text-purple-300">Réalisé</span> par des Experts
                 </h1>
-                
+
                 <p class="text-xl text-purple-100 mb-8 max-w-xl">
                     Sites web professionnels, applications mobiles et solutions e-commerce. Technologies modernes, code propre, livraison rapide au Togo.
                 </p>
-                
+
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="#devis" class="inline-flex items-center justify-center gap-2 bg-white text-brand-900 px-8 py-4 rounded-full font-bold hover:bg-purple-50 transition-all transform hover:scale-105 shadow-xl">
                         <i class="fas fa-rocket"></i>
@@ -42,7 +42,7 @@
                         Conseil Gratuit
                     </a>
                 </div>
-                
+
                 <!-- Tech stack -->
                 <div class="mt-8 flex flex-wrap items-center gap-4 text-purple-200 text-sm">
                     <span class="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full">
@@ -59,7 +59,7 @@
                     </span>
                 </div>
             </div>
-            
+
             <!-- Code illustration -->
             <div class="hidden lg:block relative">
                 <div class="bg-gray-900 rounded-xl shadow-2xl overflow-hidden border border-gray-700 transform rotate-1 hover:rotate-0 transition-transform duration-500">
@@ -80,7 +80,7 @@
                         <div class="mt-4 text-green-400">✓ Projet livré avec succès !</div>
                     </div>
                 </div>
-                
+
                 <!-- Floating badge -->
                 <div class="absolute -bottom-4 -right-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg font-semibold animate-pulse">
                     <i class="fas fa-check-circle mr-1"></i> 50+ projets livrés
@@ -117,7 +117,7 @@
 <section id="sites-web" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
-            
+
             <!-- Image -->
             <div class="relative group">
                 <div class="absolute -inset-4 bg-brand-200 rounded-2xl transform rotate-2 group-hover:rotate-1 transition-transform"></div>
@@ -214,13 +214,14 @@
                 </div>
 
                 <div class="flex flex-wrap gap-3">
+                    
+                    <a href="{{ route('devis') }}" class="inline-flex items-center gap-2 border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-full font-semibold hover:border-brand-600 hover:text-brand-600 transition-all">
+                        <i class="fas fa-eye"></i>
+                        Demandez un devis
+                    </a>
                     <a href="https://wa.me/22892671533?text=Bonjour, je souhaite créer un site web" class="inline-flex items-center gap-2 bg-brand-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-brand-700 transition-all" target="_blank">
                         <i class="fab fa-whatsapp"></i>
-                        Demander un Devis
-                    </a>
-                    <a href="{{ route('galerie') }}" class="inline-flex items-center gap-2 border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-full font-semibold hover:border-brand-600 hover:text-brand-600 transition-all">
-                        <i class="fas fa-eye"></i>
-                        Voir nos Réalisations
+                        écrivez nous
                     </a>
                 </div>
             </div>
@@ -232,7 +233,7 @@
 <section id="applications" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
-            
+
             <!-- Content -->
             <div class="order-2 lg:order-1">
                 <div class="flex items-center gap-3 mb-4">
@@ -346,7 +347,7 @@
 <section id="portfolio" class="py-20 bg-gradient-to-b from-gray-50 to-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
-            
+
             <!-- Image -->
             <div class="relative group">
                 <div class="absolute -inset-4 bg-orange-200 rounded-2xl transform rotate-2 group-hover:rotate-1 transition-transform"></div>
@@ -376,7 +377,7 @@
                     </div>
                     <img src="/images/web1.webp" alt="Site CV Portfolio" class="w-full h-48 object-cover opacity-50">
                 </div>
-                
+
                 <!-- Badge -->
                 <div class="absolute -bottom-4 -right-4 bg-orange-500 text-white px-4 py-2 rounded-lg shadow-lg font-semibold">
                     <i class="fas fa-star mr-1"></i> Impact garanti
@@ -469,7 +470,7 @@
             <h3 class="text-2xl font-bold text-gray-900">Nos Technologies</h3>
             <p class="text-gray-600 mt-2">Des outils modernes pour des résultats professionnels</p>
         </div>
-        
+
         <div class="grid grid-cols-3 md:grid-cols-6 gap-8 text-center">
             <div class="p-4 hover:bg-gray-50 rounded-xl transition-colors">
                 <i class="fab fa-laravel text-4xl text-red-500 mb-2"></i>
@@ -508,7 +509,7 @@
         <p class="text-brand-200 text-lg mb-8 max-w-2xl mx-auto">
             De l'idée à la mise en ligne, nous vous accompagnons à chaque étape. Devis gratuit sous 24h.
         </p>
-        
+
         <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a href="https://wa.me/22892671533" class="inline-flex items-center justify-center gap-2 bg-white text-brand-900 px-8 py-4 rounded-full font-bold hover:bg-brand-50 transition-all transform hover:scale-105 shadow-xl" target="_blank">
                 <i class="fab fa-whatsapp text-xl"></i>
@@ -519,7 +520,7 @@
                 +228 92 67 15 33
             </a>
         </div>
-        
+
         <p class="text-sm text-brand-300">
             <i class="fas fa-clock mr-1"></i> Réponse sous 30 min • Devis gratuit • Garantie satisfaction
         </p>
