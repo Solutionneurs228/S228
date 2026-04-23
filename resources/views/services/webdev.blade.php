@@ -130,7 +130,7 @@
                         </div>
                         <span class="text-gray-400 text-xs ml-2">votre-entreprise.tg</span>
                     </div>
-                    <img src="/images/web1.webp" alt="Création de sites web" class="w-full h-[450px] object-cover">
+                    <img src="/images/web0.webp" alt="Création de sites web" class="w-full h-[450px] object-cover">
                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
                         <div class="flex items-center gap-3 text-white">
                             <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
@@ -464,7 +464,7 @@
 </section>
 
 <!-- ==================== TECHNOLOGIES ==================== -->
-<section class="py-16 bg-white border-t border-gray-200">
+{{-- <section class="py-16 bg-white border-t border-gray-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
             <h3 class="text-2xl font-bold text-gray-900">Nos Technologies</h3>
@@ -498,7 +498,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 <!-- ==================== CTA FINAL ==================== -->
 <section id="devis" class="py-20 bg-brand-900">

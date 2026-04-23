@@ -91,10 +91,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 use Illuminate\Support\Facades\Artisan;
 
-Route::get('/run-migrations-now', function () {
-    Artisan::call('migrate', ['--force' => true]);
-    return 'Migrations exécutées avec succès';
-});
+// Route::get('/run-migrations-now', function () {
+//     Artisan::call('migrate', ['--force' => true]);
+//     return 'Migrations exécutées avec succès';
+// });
 
 
 /*
